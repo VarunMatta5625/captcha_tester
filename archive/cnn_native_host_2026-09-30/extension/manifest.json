@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Instant CAPTCHA Paster",
+  "version": "3.0",
+  "description": "Fills the CAPTCHA using a locally trained CNN (local native host).",
+  "permissions": ["nativeMessaging"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://login.gitam.edu/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

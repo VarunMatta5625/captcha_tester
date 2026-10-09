@@ -1,0 +1,6 @@
+# Versions the project was last run with (python 3.13, macOS). Only needed for training/export.
+torch==2.14.0
+numpy==2.5.0
+Pillow==11.1.0
+jupyter
+# WASM rebuild only: emscripten (emcc) via brew/emsdk, not pip.

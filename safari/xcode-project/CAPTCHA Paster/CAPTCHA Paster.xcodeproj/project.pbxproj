@@ -1,0 +1,999 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181AE669306D624300A84731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE668306D624300A84731 /* AppDelegate.swift */; };
+		181AE66B306D624300A84731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE66A306D624300A84731 /* SceneDelegate.swift */; };
+		181AE66E306D624300A84731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181AE66C306D624300A84731 /* LaunchScreen.storyboard */; };
+		181AE671306D624300A84731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181AE66F306D624300A84731 /* Main.storyboard */; };
+		181AE67A306D624300A84731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE679306D624300A84731 /* AppDelegate.swift */; };
+		181AE67D306D624300A84731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181AE67B306D624300A84731 /* Main.storyboard */; };
+		181AE684306D624300A84731 /* CAPTCHA Paster Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 181AE683306D624300A84731 /* CAPTCHA Paster Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		181AE68E306D624300A84731 /* CAPTCHA Paster Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 181AE68D306D624300A84731 /* CAPTCHA Paster Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		181AE693306D624300A84731 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 181AE658306D624200A84731 /* Main.html */; };
+		181AE694306D624300A84731 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 181AE658306D624200A84731 /* Main.html */; };
+		181AE695306D624300A84731 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65A306D624200A84731 /* Icon.png */; };
+		181AE696306D624300A84731 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65A306D624200A84731 /* Icon.png */; };
+		181AE697306D624300A84731 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65B306D624200A84731 /* Style.css */; };
+		181AE698306D624300A84731 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65B306D624200A84731 /* Style.css */; };
+		181AE699306D624300A84731 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65C306D624200A84731 /* Script.js */; };
+		181AE69A306D624300A84731 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65C306D624200A84731 /* Script.js */; };
+		181AE69B306D624300A84731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE65D306D624200A84731 /* ViewController.swift */; };
+		181AE69C306D624300A84731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE65D306D624200A84731 /* ViewController.swift */; };
+		181AE69D306D624300A84731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65E306D624200A84731 /* Assets.xcassets */; };
+		181AE69E306D624300A84731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181AE65E306D624200A84731 /* Assets.xcassets */; };
+		181AE69F306D624300A84731 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE660306D624200A84731 /* SafariWebExtensionHandler.swift */; };
+		181AE6A0306D624300A84731 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE660306D624200A84731 /* SafariWebExtensionHandler.swift */; };
+		181AE6B9306D624300A84731 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B2306D624300A84731 /* background.js */; };
+		181AE6BA306D624300A84731 /* model in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B3306D624300A84731 /* model */; };
+		181AE6BB306D624300A84731 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B4306D624300A84731 /* manifest.json */; };
+		181AE6BC306D624300A84731 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B5306D624300A84731 /* README.txt */; };
+		181AE6BD306D624300A84731 /* model.wasm in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B6306D624300A84731 /* model.wasm */; };
+		181AE6BE306D624300A84731 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B7306D624300A84731 /* content.js */; };
+		181AE6BF306D624300A84731 /* model.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B8306D624300A84731 /* model.js */; };
+		181AE6C0306D624300A84731 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B2306D624300A84731 /* background.js */; };
+		181AE6C1306D624300A84731 /* model in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B3306D624300A84731 /* model */; };
+		181AE6C2306D624300A84731 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B4306D624300A84731 /* manifest.json */; };
+		181AE6C3306D624300A84731 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B5306D624300A84731 /* README.txt */; };
+		181AE6C4306D624300A84731 /* model.wasm in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B6306D624300A84731 /* model.wasm */; };
+		181AE6C5306D624300A84731 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B7306D624300A84731 /* content.js */; };
+		181AE6C6306D624300A84731 /* model.js in Resources */ = {isa = PBXBuildFile; fileRef = 181AE6B8306D624300A84731 /* model.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		181AE685306D624300A84731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181AE652306D624200A84731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181AE682306D624300A84731;
+			remoteInfo = "CAPTCHA Paster Extension (iOS)";
+		};
+		181AE68F306D624300A84731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181AE652306D624200A84731 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181AE68C306D624300A84731;
+			remoteInfo = "CAPTCHA Paster Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		181AE6A6306D624300A84731 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				181AE684306D624300A84731 /* CAPTCHA Paster Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE6AD306D624300A84731 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				181AE68E306D624300A84731 /* CAPTCHA Paster Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		181AE659306D624200A84731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		181AE65A306D624200A84731 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		181AE65B306D624200A84731 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		181AE65C306D624200A84731 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		181AE65D306D624200A84731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		181AE65E306D624200A84731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		181AE660306D624200A84731 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		181AE665306D624300A84731 /* CAPTCHA Paster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CAPTCHA Paster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181AE668306D624300A84731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		181AE66A306D624300A84731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		181AE66D306D624300A84731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		181AE670306D624300A84731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181AE672306D624300A84731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181AE677306D624300A84731 /* CAPTCHA Paster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CAPTCHA Paster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181AE679306D624300A84731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		181AE67C306D624300A84731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181AE67E306D624300A84731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181AE683306D624300A84731 /* CAPTCHA Paster Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CAPTCHA Paster Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181AE688306D624300A84731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181AE68D306D624300A84731 /* CAPTCHA Paster Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CAPTCHA Paster Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181AE692306D624300A84731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181AE6B2306D624300A84731 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		181AE6B3306D624300A84731 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = model; path = Resources/model; sourceTree = "<group>"; };
+		181AE6B4306D624300A84731 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		181AE6B5306D624300A84731 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.txt; path = Resources/README.txt; sourceTree = "<group>"; };
+		181AE6B6306D624300A84731 /* model.wasm */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.wasm; path = Resources/model.wasm; sourceTree = "<group>"; };
+		181AE6B7306D624300A84731 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
+		181AE6B8306D624300A84731 /* model.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = model.js; path = Resources/model.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		181AE662306D624300A84731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE674306D624300A84731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE680306D624300A84731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE68A306D624300A84731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181AE651306D624200A84731 = {
+			isa = PBXGroup;
+			children = (
+				181AE656306D624200A84731 /* Shared (App) */,
+				181AE65F306D624200A84731 /* Shared (Extension) */,
+				181AE667306D624300A84731 /* iOS (App) */,
+				181AE678306D624300A84731 /* macOS (App) */,
+				181AE687306D624300A84731 /* iOS (Extension) */,
+				181AE691306D624300A84731 /* macOS (Extension) */,
+				181AE666306D624300A84731 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		181AE656306D624200A84731 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				181AE65D306D624200A84731 /* ViewController.swift */,
+				181AE65E306D624200A84731 /* Assets.xcassets */,
+				181AE657306D624200A84731 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		181AE657306D624200A84731 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				181AE658306D624200A84731 /* Main.html */,
+				181AE65A306D624200A84731 /* Icon.png */,
+				181AE65B306D624200A84731 /* Style.css */,
+				181AE65C306D624200A84731 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		181AE65F306D624200A84731 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				181AE6B1306D624300A84731 /* Resources */,
+				181AE660306D624200A84731 /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		181AE666306D624300A84731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181AE665306D624300A84731 /* CAPTCHA Paster.app */,
+				181AE677306D624300A84731 /* CAPTCHA Paster.app */,
+				181AE683306D624300A84731 /* CAPTCHA Paster Extension.appex */,
+				181AE68D306D624300A84731 /* CAPTCHA Paster Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		181AE667306D624300A84731 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				181AE668306D624300A84731 /* AppDelegate.swift */,
+				181AE66A306D624300A84731 /* SceneDelegate.swift */,
+				181AE66C306D624300A84731 /* LaunchScreen.storyboard */,
+				181AE66F306D624300A84731 /* Main.storyboard */,
+				181AE672306D624300A84731 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		181AE678306D624300A84731 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				181AE679306D624300A84731 /* AppDelegate.swift */,
+				181AE67B306D624300A84731 /* Main.storyboard */,
+				181AE67E306D624300A84731 /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		181AE687306D624300A84731 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				181AE688306D624300A84731 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		181AE691306D624300A84731 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				181AE692306D624300A84731 /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		181AE6B1306D624300A84731 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				181AE6B2306D624300A84731 /* background.js */,
+				181AE6B3306D624300A84731 /* model */,
+				181AE6B4306D624300A84731 /* manifest.json */,
+				181AE6B5306D624300A84731 /* README.txt */,
+				181AE6B6306D624300A84731 /* model.wasm */,
+				181AE6B7306D624300A84731 /* content.js */,
+				181AE6B8306D624300A84731 /* model.js */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		181AE664306D624300A84731 /* CAPTCHA Paster (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181AE6A7306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster (iOS)" */;
+			buildPhases = (
+				181AE661306D624300A84731 /* Sources */,
+				181AE662306D624300A84731 /* Frameworks */,
+				181AE663306D624300A84731 /* Resources */,
+				181AE6A6306D624300A84731 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181AE686306D624300A84731 /* PBXTargetDependency */,
+			);
+			name = "CAPTCHA Paster (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "CAPTCHA Paster (iOS)";
+			productReference = 181AE665306D624300A84731 /* CAPTCHA Paster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		181AE676306D624300A84731 /* CAPTCHA Paster (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181AE6AE306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster (macOS)" */;
+			buildPhases = (
+				181AE673306D624300A84731 /* Sources */,
+				181AE674306D624300A84731 /* Frameworks */,
+				181AE675306D624300A84731 /* Resources */,
+				181AE6AD306D624300A84731 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181AE690306D624300A84731 /* PBXTargetDependency */,
+			);
+			name = "CAPTCHA Paster (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "CAPTCHA Paster (macOS)";
+			productReference = 181AE677306D624300A84731 /* CAPTCHA Paster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		181AE682306D624300A84731 /* CAPTCHA Paster Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181AE6A3306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster Extension (iOS)" */;
+			buildPhases = (
+				181AE67F306D624300A84731 /* Sources */,
+				181AE680306D624300A84731 /* Frameworks */,
+				181AE681306D624300A84731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CAPTCHA Paster Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "CAPTCHA Paster Extension (iOS)";
+			productReference = 181AE683306D624300A84731 /* CAPTCHA Paster Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		181AE68C306D624300A84731 /* CAPTCHA Paster Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181AE6AA306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster Extension (macOS)" */;
+			buildPhases = (
+				181AE689306D624300A84731 /* Sources */,
+				181AE68A306D624300A84731 /* Frameworks */,
+				181AE68B306D624300A84731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CAPTCHA Paster Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "CAPTCHA Paster Extension (macOS)";
+			productReference = 181AE68D306D624300A84731 /* CAPTCHA Paster Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		181AE652306D624200A84731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					181AE664306D624300A84731 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					181AE676306D624300A84731 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					181AE682306D624300A84731 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					181AE68C306D624300A84731 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = 181AE655306D624200A84731 /* Build configuration list for PBXProject "CAPTCHA Paster" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 181AE651306D624200A84731;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 181AE666306D624300A84731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				181AE664306D624300A84731 /* CAPTCHA Paster (iOS) */,
+				181AE676306D624300A84731 /* CAPTCHA Paster (macOS) */,
+				181AE682306D624300A84731 /* CAPTCHA Paster Extension (iOS) */,
+				181AE68C306D624300A84731 /* CAPTCHA Paster Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		181AE663306D624300A84731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE695306D624300A84731 /* Icon.png in Resources */,
+				181AE66E306D624300A84731 /* LaunchScreen.storyboard in Resources */,
+				181AE693306D624300A84731 /* Main.html in Resources */,
+				181AE699306D624300A84731 /* Script.js in Resources */,
+				181AE69D306D624300A84731 /* Assets.xcassets in Resources */,
+				181AE671306D624300A84731 /* Main.storyboard in Resources */,
+				181AE697306D624300A84731 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE675306D624300A84731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE696306D624300A84731 /* Icon.png in Resources */,
+				181AE698306D624300A84731 /* Style.css in Resources */,
+				181AE67D306D624300A84731 /* Main.storyboard in Resources */,
+				181AE69A306D624300A84731 /* Script.js in Resources */,
+				181AE69E306D624300A84731 /* Assets.xcassets in Resources */,
+				181AE694306D624300A84731 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE681306D624300A84731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE6C5306D624300A84731 /* content.js in Resources */,
+				181AE6C6306D624300A84731 /* model.js in Resources */,
+				181AE6C1306D624300A84731 /* model in Resources */,
+				181AE6C2306D624300A84731 /* manifest.json in Resources */,
+				181AE6C4306D624300A84731 /* model.wasm in Resources */,
+				181AE6C3306D624300A84731 /* README.txt in Resources */,
+				181AE6C0306D624300A84731 /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE68B306D624300A84731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE6BE306D624300A84731 /* content.js in Resources */,
+				181AE6BF306D624300A84731 /* model.js in Resources */,
+				181AE6BA306D624300A84731 /* model in Resources */,
+				181AE6BB306D624300A84731 /* manifest.json in Resources */,
+				181AE6BD306D624300A84731 /* model.wasm in Resources */,
+				181AE6BC306D624300A84731 /* README.txt in Resources */,
+				181AE6B9306D624300A84731 /* background.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		181AE661306D624300A84731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE69B306D624300A84731 /* ViewController.swift in Sources */,
+				181AE669306D624300A84731 /* AppDelegate.swift in Sources */,
+				181AE66B306D624300A84731 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE673306D624300A84731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE69C306D624300A84731 /* ViewController.swift in Sources */,
+				181AE67A306D624300A84731 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE67F306D624300A84731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE69F306D624300A84731 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181AE689306D624300A84731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181AE6A0306D624300A84731 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		181AE686306D624300A84731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181AE682306D624300A84731 /* CAPTCHA Paster Extension (iOS) */;
+			targetProxy = 181AE685306D624300A84731 /* PBXContainerItemProxy */;
+		};
+		181AE690306D624300A84731 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181AE68C306D624300A84731 /* CAPTCHA Paster Extension (macOS) */;
+			targetProxy = 181AE68F306D624300A84731 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		181AE658306D624200A84731 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181AE659306D624200A84731 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		181AE66C306D624300A84731 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181AE66D306D624300A84731 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		181AE66F306D624300A84731 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181AE670306D624300A84731 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		181AE67B306D624300A84731 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181AE67C306D624300A84731 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		181AE6A1306D624300A84731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		181AE6A2306D624300A84731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		181AE6A4306D624300A84731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster.Extension;
+				PRODUCT_NAME = "CAPTCHA Paster Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		181AE6A5306D624300A84731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster.Extension;
+				PRODUCT_NAME = "CAPTCHA Paster Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		181AE6A8306D624300A84731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster;
+				PRODUCT_NAME = "CAPTCHA Paster";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		181AE6A9306D624300A84731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster;
+				PRODUCT_NAME = "CAPTCHA Paster";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		181AE6AB306D624300A84731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster.Extension;
+				PRODUCT_NAME = "CAPTCHA Paster Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		181AE6AC306D624300A84731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster.Extension;
+				PRODUCT_NAME = "CAPTCHA Paster Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		181AE6AF306D624300A84731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster;
+				PRODUCT_NAME = "CAPTCHA Paster";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		181AE6B0306D624300A84731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CAPTCHA Paster";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.CaptchaPaster;
+				PRODUCT_NAME = "CAPTCHA Paster";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181AE655306D624200A84731 /* Build configuration list for PBXProject "CAPTCHA Paster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181AE6A1306D624300A84731 /* Debug */,
+				181AE6A2306D624300A84731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181AE6A3306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181AE6A4306D624300A84731 /* Debug */,
+				181AE6A5306D624300A84731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181AE6A7306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181AE6A8306D624300A84731 /* Debug */,
+				181AE6A9306D624300A84731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181AE6AA306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181AE6AB306D624300A84731 /* Debug */,
+				181AE6AC306D624300A84731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181AE6AE306D624300A84731 /* Build configuration list for PBXNativeTarget "CAPTCHA Paster (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181AE6AF306D624300A84731 /* Debug */,
+				181AE6B0306D624300A84731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 181AE652306D624200A84731 /* Project object */;
+}

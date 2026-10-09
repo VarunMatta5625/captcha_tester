@@ -1,0 +1,2 @@
+#!/bin/bash
+exec "/Users/varunmatta/miniconda3/bin/python3" -B "/Users/varunmatta/Drive/Varun/Projects/captcha_tester/host/vision_host.py" 2>> "/Users/varunmatta/Library/Logs/captcha-paster-host.log"

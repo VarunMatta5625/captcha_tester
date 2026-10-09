@@ -1,0 +1,2218 @@
+{
+ "reviews": {
+  "57710": {
+   "got": "d5JMd",
+   "raw": "d5JMd",
+   "truth": "d5JMd",
+   "correct": true,
+   "time": "2026-09-29T17:21:23",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "18741": {
+   "got": "9dhJ9",
+   "raw": "9dhJ9",
+   "truth": "9dhJ9",
+   "correct": true,
+   "time": "2026-09-29T17:21:27",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "91531": {
+   "got": "Lf9MF",
+   "raw": "Lf9MF",
+   "truth": "Lf9MF",
+   "correct": true,
+   "time": "2026-09-29T17:21:32",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "120811": {
+   "got": "5etRi",
+   "raw": "5etRi",
+   "truth": "5etRi",
+   "correct": true,
+   "time": "2026-09-29T17:21:35",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "70021": {
+   "got": "8HTAd",
+   "raw": "8HTAd",
+   "truth": "8HTAd",
+   "correct": true,
+   "time": "2026-09-29T17:21:38",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "50772": {
+   "got": "jQHB2",
+   "raw": "jQHB2",
+   "truth": "jQHB2",
+   "correct": true,
+   "time": "2026-09-29T17:21:41",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "79123": {
+   "got": "8YyMd",
+   "raw": "8YyMd",
+   "truth": "8YyMd",
+   "correct": true,
+   "time": "2026-09-29T17:21:50",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "3365": {
+   "got": "Td62G",
+   "raw": "Td62G",
+   "truth": "Td62G",
+   "correct": true,
+   "time": "2026-09-29T17:21:53",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "15889": {
+   "got": "qTrj9",
+   "raw": "qTrj9",
+   "truth": "qTrj9",
+   "correct": true,
+   "time": "2026-09-29T17:21:59",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "52646": {
+   "got": "YT4gt",
+   "raw": "YT4gt",
+   "truth": "YT4gt",
+   "correct": true,
+   "time": "2026-09-29T17:22:02",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "94667": {
+   "got": "4RMFj",
+   "raw": "4RMFj",
+   "truth": "4RmFj",
+   "correct": false,
+   "time": "2026-09-29T17:22:37",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "107913": {
+   "got": "BR21Q",
+   "raw": "BR21Q",
+   "truth": "BR2tQ",
+   "correct": false,
+   "time": "2026-09-29T17:23:04",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "71461": {
+   "got": "3HbgG",
+   "raw": "3HbgG",
+   "truth": "3HbgG",
+   "correct": true,
+   "time": "2026-09-29T17:23:11",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "108085": {
+   "got": "Eh4rn",
+   "raw": "Eh4rn",
+   "truth": "Eh4rn",
+   "correct": true,
+   "time": "2026-09-29T17:23:15",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "54258": {
+   "got": "Q5bg8",
+   "raw": "Q5bg8",
+   "truth": "Q5bg8",
+   "correct": true,
+   "time": "2026-09-29T17:23:29",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "11186": {
+   "got": "i6HI2",
+   "raw": "і6HI2",
+   "truth": "j6Hj2",
+   "correct": false,
+   "time": "2026-09-29T17:23:36",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "17684": {
+   "got": "Ah6M4",
+   "raw": "Ah6M4",
+   "truth": "Ah6M4",
+   "correct": true,
+   "time": "2026-09-29T17:23:39",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "40421": {
+   "got": "4RfNi",
+   "raw": "4RfNi",
+   "truth": "4RfNi",
+   "correct": true,
+   "time": "2026-09-29T17:23:44",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "123884": {
+   "got": "jAt8R",
+   "raw": "jAt8R",
+   "truth": "jAt8R",
+   "correct": true,
+   "time": "2026-09-29T17:23:51",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "77838": {
+   "got": "QQ999",
+   "raw": "QQ999",
+   "truth": "QQq99",
+   "correct": false,
+   "time": "2026-09-29T17:23:58",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "113845": {
+   "got": "J3bn5",
+   "raw": "J3bn5",
+   "truth": "J3bn5",
+   "correct": true,
+   "time": "2026-09-29T17:25:35",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "59740": {
+   "got": "Gmg8R",
+   "raw": "Gmg8R",
+   "truth": "Gmg8R",
+   "correct": true,
+   "time": "2026-09-29T17:25:38",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "13924": {
+   "got": "2R6M9",
+   "raw": "2R6M9",
+   "truth": "2R6M9",
+   "correct": true,
+   "time": "2026-09-29T17:25:41",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "65451": {
+   "got": "3H6ae",
+   "raw": "3H6ae",
+   "truth": "3H6ae",
+   "correct": true,
+   "time": "2026-09-29T17:25:44",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "25703": {
+   "got": "TM5Aj",
+   "raw": "TM5Aj",
+   "truth": "TM5Aj",
+   "correct": true,
+   "time": "2026-09-29T17:25:46",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "81028": {
+   "got": "nMFT4",
+   "raw": "nMFT4",
+   "truth": "nMFT4",
+   "correct": true,
+   "time": "2026-09-29T17:25:49",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "102259": {
+   "got": "6RrBj",
+   "raw": "6RrBj",
+   "truth": "6RrBj",
+   "correct": true,
+   "time": "2026-09-29T17:25:54",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "35088": {
+   "got": "G2dHg",
+   "raw": "G2dHg",
+   "truth": "G2dHg",
+   "correct": true,
+   "time": "2026-09-29T17:25:57",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "87563": {
+   "got": "9GM99",
+   "raw": "9GM99",
+   "truth": "qGMq9",
+   "correct": false,
+   "time": "2026-09-29T17:26:07",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "31610": {
+   "got": "Rqh3t",
+   "raw": "Rqh3t",
+   "truth": "Rqh3t",
+   "correct": true,
+   "time": "2026-09-29T17:26:20",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "85787": {
+   "got": "9Y2Qh",
+   "raw": "9Y2Qh",
+   "truth": "9Y2Qh",
+   "correct": true,
+   "time": "2026-09-29T17:26:32",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "124994": {
+   "got": "t9JN5",
+   "raw": "t9JN5",
+   "truth": "t9JN5",
+   "correct": true,
+   "time": "2026-09-29T17:26:37",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "24950": {
+   "got": "G2ja2",
+   "raw": "G2ja2",
+   "truth": "G2ja2",
+   "correct": true,
+   "time": "2026-09-29T17:26:39",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "61986": {
+   "got": "NJ2YG",
+   "raw": "NJ2YG",
+   "truth": "NJ2yG",
+   "correct": false,
+   "time": "2026-09-29T17:26:50",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "85820": {
+   "got": "Fbt5L",
+   "raw": "Fbt5L",
+   "truth": "Fbt5L",
+   "correct": true,
+   "time": "2026-09-29T17:26:54",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "96046": {
+   "got": "9h4GH",
+   "raw": "9h4GH",
+   "truth": "gh4GH",
+   "correct": false,
+   "time": "2026-09-29T17:26:59",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "7934": {
+   "got": "L2LdE",
+   "raw": "L2LdE",
+   "truth": "L2LdE",
+   "correct": true,
+   "time": "2026-09-29T17:27:05",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "89479": {
+   "got": "J6eM8",
+   "raw": "J6eM8",
+   "truth": "J6eM8",
+   "correct": true,
+   "time": "2026-09-29T17:27:12",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "21158": {
+   "got": "9MaHg",
+   "raw": "9MaHg",
+   "truth": "9MaHg",
+   "correct": true,
+   "time": "2026-09-29T17:27:16",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "112428": {
+   "got": "AjFM9",
+   "raw": "AjFM9",
+   "truth": "AjFM9",
+   "correct": true,
+   "time": "2026-09-29T17:27:21",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "26410": {
+   "got": "5DE2",
+   "raw": "5,DE2",
+   "truth": "5rDE2",
+   "correct": false,
+   "time": "2026-09-29T17:27:34",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "73122": {
+   "got": "Bm5rn",
+   "raw": "Bm5rn",
+   "truth": "Dm5rn",
+   "correct": false,
+   "time": "2026-09-29T17:27:38",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "13029": {
+   "got": "BmiY5",
+   "raw": "BmiY5",
+   "truth": "BmiY5",
+   "correct": true,
+   "time": "2026-09-29T17:28:04",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "106635": {
+   "got": "YJm8d",
+   "raw": "YJm8d",
+   "truth": "YJm8d",
+   "correct": true,
+   "time": "2026-09-29T17:28:08",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "33293": {
+   "got": "igaYF",
+   "raw": "igaYF",
+   "truth": "i8aYF",
+   "correct": false,
+   "time": "2026-09-29T17:28:12",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "107568": {
+   "got": "aL2Mt",
+   "raw": "aL2Mt",
+   "truth": "qL2Mt",
+   "correct": false,
+   "time": "2026-09-29T17:28:16",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "21161": {
+   "got": "44Mhr",
+   "raw": "44Mhr",
+   "truth": "44Mhr",
+   "correct": true,
+   "time": "2026-09-29T17:28:24",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "109256": {
+   "got": "8A4in",
+   "raw": "8A4in",
+   "truth": "8A4in",
+   "correct": true,
+   "time": "2026-09-29T17:28:29",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "50194": {
+   "got": "6gDgE",
+   "raw": "6gDgE",
+   "truth": "6gDgE",
+   "correct": true,
+   "time": "2026-09-29T17:28:33",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "87708": {
+   "got": "b53QE",
+   "raw": "b53QE",
+   "truth": "b53QE",
+   "correct": true,
+   "time": "2026-09-29T17:28:37",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "3064": {
+   "got": "6DEQY",
+   "raw": "6DEQY",
+   "truth": "6DEqY",
+   "correct": false,
+   "time": "2026-09-29T17:28:42",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "86938": {
+   "got": "8MYjE",
+   "raw": "8MYjE",
+   "truth": "8MYjE",
+   "correct": true,
+   "time": "2026-09-29T17:29:03",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "68424": {
+   "got": "9nENn",
+   "raw": "9nENn",
+   "truth": "9nENn",
+   "correct": true,
+   "time": "2026-09-29T17:31:53",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "17833": {
+   "got": "8YRrh",
+   "raw": "8YRrh",
+   "truth": "8YRrh",
+   "correct": true,
+   "time": "2026-09-29T17:32:03",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "27695": {
+   "got": "D59fD",
+   "raw": "D591D",
+   "truth": "D59fD",
+   "correct": true,
+   "time": "2026-09-29T17:32:06",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "94112": {
+   "got": "hndG2",
+   "raw": "hndG2",
+   "truth": "hndG2",
+   "correct": true,
+   "time": "2026-09-29T17:32:12",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "9934": {
+   "got": "rGAGe",
+   "raw": "rGAGe",
+   "truth": "rGA6e",
+   "correct": false,
+   "time": "2026-09-29T17:32:19",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "80444": {
+   "got": "3Q4YL",
+   "raw": "3Q4YL",
+   "truth": "3Q4yL",
+   "correct": false,
+   "time": "2026-09-29T17:32:27",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "105201": {
+   "got": "mG3tm",
+   "raw": "mG3tm",
+   "truth": "mG3tm",
+   "correct": true,
+   "time": "2026-09-29T17:32:32",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "69529": {
+   "got": "R9NeH",
+   "raw": "R9NeH",
+   "truth": "R9NeH",
+   "correct": true,
+   "time": "2026-09-29T17:32:35",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "4101": {
+   "got": "5MFtm",
+   "raw": "5MFtm",
+   "truth": "5MFtm",
+   "correct": true,
+   "time": "2026-09-29T17:32:38",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "122184": {
+   "got": "RY9T2",
+   "raw": "RY9T2",
+   "truth": "RYgT2",
+   "correct": false,
+   "time": "2026-09-29T17:32:45",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "98435": {
+   "got": "bYiN3",
+   "raw": "bYiN3",
+   "truth": "bYiN3",
+   "correct": true,
+   "time": "2026-09-29T17:32:54",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "117298": {
+   "got": "j4GM",
+   "raw": "j4GÌM",
+   "truth": "j4GjM",
+   "correct": false,
+   "time": "2026-09-29T17:33:03",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "23357": {
+   "got": "YN6b8",
+   "raw": "YN6b8",
+   "truth": "YN6b8",
+   "correct": true,
+   "time": "2026-09-29T17:33:10",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "114738": {
+   "got": "a2DBr",
+   "raw": "a2DBr",
+   "truth": "a2DBr",
+   "correct": true,
+   "time": "2026-09-29T17:33:13",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "102144": {
+   "got": "F8i4t",
+   "raw": "F8i4t",
+   "truth": "F8i4t",
+   "correct": true,
+   "time": "2026-09-29T17:33:16",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "81383": {
+   "got": "FF5ga",
+   "raw": "FF5ga",
+   "truth": "FF59a",
+   "correct": false,
+   "time": "2026-09-29T17:33:26",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "113577": {
+   "got": "Jm86B",
+   "raw": "Jm86B",
+   "truth": "Jm86B",
+   "correct": true,
+   "time": "2026-09-29T17:33:30",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "30798": {
+   "got": "Lt2Nt",
+   "raw": "Lt2Nt",
+   "truth": "Lt2Nt",
+   "correct": true,
+   "time": "2026-09-29T17:33:33",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "115933": {
+   "got": "NF3tH",
+   "raw": "NF3tH",
+   "truth": "NF3tH",
+   "correct": true,
+   "time": "2026-09-29T17:33:36",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "56278": {
+   "got": "m8DgN",
+   "raw": "m8DgN",
+   "truth": "m8DgN",
+   "correct": true,
+   "time": "2026-09-29T17:33:39",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "10573": {
+   "got": "HJq4n",
+   "raw": "HJq4n",
+   "truth": "HJq4n",
+   "correct": true,
+   "time": "2026-09-29T17:33:48",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "8146": {
+   "got": "4yTTF",
+   "raw": "4yTTF",
+   "truth": "4yTTF",
+   "correct": true,
+   "time": "2026-09-29T17:33:51",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "26839": {
+   "got": "3rjLa",
+   "raw": "3rjLa",
+   "truth": "3rjLa",
+   "correct": true,
+   "time": "2026-09-29T17:33:53",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "105304": {
+   "got": "T2eMq",
+   "raw": "T2eMq",
+   "truth": "T2eMq",
+   "correct": true,
+   "time": "2026-09-29T17:33:56",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "116631": {
+   "got": "Ai962",
+   "raw": "Ai962",
+   "truth": "Aiq62",
+   "correct": false,
+   "time": "2026-09-29T17:34:01",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "4725": {
+   "got": "DE4jh",
+   "raw": "DE4jh",
+   "truth": "DE4jh",
+   "correct": true,
+   "time": "2026-09-29T17:34:09",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "52224": {
+   "got": "Faght",
+   "raw": "Faght",
+   "truth": "Fa9ht",
+   "correct": false,
+   "time": "2026-09-29T17:34:17",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "101867": {
+   "got": "iF4jR",
+   "raw": "¡F4jR",
+   "truth": "iF4jR",
+   "correct": true,
+   "time": "2026-09-29T17:34:20",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "46806": {
+   "got": "TNJt8",
+   "raw": "TNJt8",
+   "truth": "TNJt8",
+   "correct": true,
+   "time": "2026-09-29T17:34:24",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "115860": {
+   "got": "E3Hmd",
+   "raw": "E3Hmd",
+   "truth": "E3Hmd",
+   "correct": true,
+   "time": "2026-09-29T17:34:26",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "18511": {
+   "got": "yAF9Y",
+   "raw": "yAF9Y",
+   "truth": "yAF9Y",
+   "correct": true,
+   "time": "2026-09-29T17:34:34",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "51428": {
+   "got": "8NYNa",
+   "raw": "8NYNa",
+   "truth": "8NYNq",
+   "correct": false,
+   "time": "2026-09-29T17:34:49",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "125600": {
+   "got": "jan5Q",
+   "raw": "janSQ",
+   "truth": "jah8Q",
+   "correct": false,
+   "time": "2026-09-29T17:36:04",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "64244": {
+   "got": "E9rBA",
+   "raw": "E9,BA",
+   "truth": "E9rBA",
+   "correct": true,
+   "time": "2026-09-29T17:36:08",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "18906": {
+   "got": "TgG5h",
+   "raw": "TgG5h",
+   "truth": "TgG5h",
+   "correct": true,
+   "time": "2026-09-29T17:36:19",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "61838": {
+   "got": "2ALTe",
+   "raw": "2ALTe",
+   "truth": "2ALTe",
+   "correct": true,
+   "time": "2026-09-29T17:36:22",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "94919": {
+   "got": "4nAMq",
+   "raw": "4nAMq",
+   "truth": "4nAMq",
+   "correct": true,
+   "time": "2026-09-29T17:36:28",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "79838": {
+   "got": "6aJ9i",
+   "raw": "6aJ9i",
+   "truth": "6aJ9i",
+   "correct": true,
+   "time": "2026-09-29T17:36:32",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "46333": {
+   "got": "L5dHM",
+   "raw": "L5dHM",
+   "truth": "L5dHM",
+   "correct": true,
+   "time": "2026-09-29T17:36:36",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "60575": {
+   "got": "DrQ9",
+   "raw": "DrQ9г",
+   "truth": "DrQ9r",
+   "correct": false,
+   "time": "2026-09-29T17:36:45",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "116640": {
+   "got": "Tb2E5",
+   "raw": "Тb2Е5",
+   "truth": "Tb2E5",
+   "correct": true,
+   "time": "2026-09-29T17:36:56",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "90051": {
+   "got": "4T3bh",
+   "raw": "4T3bh",
+   "truth": "4T3bh",
+   "correct": true,
+   "time": "2026-09-29T17:36:59",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "103617": {
+   "got": "HiNH5",
+   "raw": "HiNH5",
+   "truth": "HiNH5",
+   "correct": true,
+   "time": "2026-09-29T17:37:02",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "102466": {
+   "got": "LY84t",
+   "raw": "LY84t",
+   "truth": "LY84t",
+   "correct": true,
+   "time": "2026-09-29T17:37:05",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "97394": {
+   "got": "qye2Y",
+   "raw": "qye2Y",
+   "truth": "qye2Y",
+   "correct": true,
+   "time": "2026-09-29T17:37:09",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "83085": {
+   "got": "QG6bN",
+   "raw": "QG6bN",
+   "truth": "QG6bN",
+   "correct": true,
+   "time": "2026-09-29T17:37:12",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "40128": {
+   "got": "b5mB2",
+   "raw": "b5mB2",
+   "truth": "b5mB2",
+   "correct": true,
+   "time": "2026-09-29T17:37:16",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "114100": {
+   "got": "R3GJi",
+   "raw": "R3GJi",
+   "truth": "R3GJi",
+   "correct": true,
+   "time": "2026-09-29T17:37:19",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "121323": {
+   "got": "AqF5a",
+   "raw": "AqF5a",
+   "truth": "AqF5a",
+   "correct": true,
+   "time": "2026-09-29T17:37:22",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "11779": {
+   "got": "iA8Ti",
+   "raw": "¡A8Ti",
+   "truth": "iA8Ti",
+   "correct": true,
+   "time": "2026-09-29T17:37:25",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "3317": {
+   "got": "L65Mh",
+   "raw": "L65Mh",
+   "truth": "L65Mh",
+   "correct": true,
+   "time": "2026-09-29T17:37:32",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "91630": {
+   "got": "eJD8h",
+   "raw": "eJD8h",
+   "truth": "eJD8h",
+   "correct": true,
+   "time": "2026-09-29T17:37:35",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "113979": {
+   "got": "e6NGN",
+   "raw": "e6NGN",
+   "truth": "e6NGN",
+   "correct": true,
+   "time": "2026-09-29T17:37:38",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "91535": {
+   "got": "Mbg5m",
+   "raw": "Mbg5m",
+   "truth": "Mb95m",
+   "correct": false,
+   "time": "2026-09-29T17:37:45",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "43762": {
+   "got": "bYBR5",
+   "raw": "bYBR5",
+   "truth": "bYBR5",
+   "correct": true,
+   "time": "2026-09-29T17:37:52",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "111285": {
+   "got": "J96Ni",
+   "raw": "J96Ni",
+   "truth": "J96Ni",
+   "correct": true,
+   "time": "2026-09-29T17:37:56",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "54120": {
+   "got": "3jNab",
+   "raw": "3/Nab",
+   "truth": "3iNab",
+   "correct": false,
+   "time": "2026-09-29T17:38:00",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "83962": {
+   "got": "YYh5L",
+   "raw": "YYh5L",
+   "truth": "yyh5L",
+   "correct": false,
+   "time": "2026-09-29T17:38:06",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "76853": {
+   "got": "YEdm8",
+   "raw": "YEdm8",
+   "truth": "YEdm8",
+   "correct": true,
+   "time": "2026-09-29T17:38:18",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "38172": {
+   "got": "3ggMy",
+   "raw": "3ggMy",
+   "truth": "3ggMy",
+   "correct": true,
+   "time": "2026-09-29T17:38:30",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2
+   }
+  },
+  "78361": {
+   "got": "L5Qdq",
+   "raw": "L5Qdq",
+   "truth": "L5Qdq",
+   "correct": true,
+   "time": "2026-09-29T17:44:59",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "63069": {
+   "got": "iDE9E",
+   "raw": "¡DE9E",
+   "truth": "jDE9E",
+   "correct": false,
+   "time": "2026-09-29T17:45:06",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "64501": {
+   "got": "j8jgR",
+   "raw": "j8jgR",
+   "truth": "j8jgR",
+   "correct": true,
+   "time": "2026-09-29T17:45:10",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "76552": {
+   "got": "gG5Ja",
+   "raw": "gG5Ja",
+   "truth": "gG5Ja",
+   "correct": true,
+   "time": "2026-09-29T17:45:13",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "34489": {
+   "got": "yQ2Fy",
+   "raw": "yQ2Fy",
+   "truth": "yQ2Fy",
+   "correct": true,
+   "time": "2026-09-29T17:45:18",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "17272": {
+   "got": "NH8mQ",
+   "raw": "NH8mQ",
+   "truth": "NH8mQ",
+   "correct": true,
+   "time": "2026-09-29T17:45:21",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "105901": {
+   "got": "8fbJ2",
+   "raw": "8fbJ2",
+   "truth": "8fbJ2",
+   "correct": true,
+   "time": "2026-09-29T17:45:24",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "14793": {
+   "got": "Adr6y",
+   "raw": "Adr6y",
+   "truth": "Adr6y",
+   "correct": true,
+   "time": "2026-09-29T17:45:27",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "111217": {
+   "got": "64Fi9",
+   "raw": "64Fi9",
+   "truth": "64Fi9",
+   "correct": true,
+   "time": "2026-09-29T17:45:31",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  },
+  "110814": {
+   "got": "HQL2m",
+   "raw": "HQL2m",
+   "truth": "HQL2m",
+   "correct": true,
+   "time": "2026-09-29T17:45:36",
+   "params": {
+    "LETTER_MAX": 35,
+    "LEVEL_TOL": 6,
+    "WIN": 3,
+    "MAX_GAP": 2,
+    "SCALE": 2,
+    "THICKEN": 3,
+    "BLUR": 1.5
+   }
+  }
+ },
+ "confusions": {
+  "a": {
+   "seen": 13,
+   "wrong": 0,
+   "as": {}
+  },
+  "b": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "c": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "d": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "e": {
+   "seen": 10,
+   "wrong": 0,
+   "as": {}
+  },
+  "f": {
+   "seen": 4,
+   "wrong": 0,
+   "as": {}
+  },
+  "g": {
+   "seen": 16,
+   "wrong": 2,
+   "as": {
+    "9": [
+     {
+      "image": "96046",
+      "pos": 0,
+      "truth": "gh4GH",
+      "got": "9h4GH",
+      "time": "2026-09-29T17:26:59"
+     },
+     {
+      "image": "122184",
+      "pos": 2,
+      "truth": "RYgT2",
+      "got": "RY9T2",
+      "time": "2026-09-29T17:32:45"
+     }
+    ]
+   }
+  },
+  "h": {
+   "seen": 17,
+   "wrong": 1,
+   "as": {
+    "n": [
+     {
+      "image": "125600",
+      "pos": 2,
+      "truth": "jah8Q",
+      "got": "jan5Q",
+      "time": "2026-09-29T17:36:04"
+     }
+    ]
+   }
+  },
+  "i": {
+   "seen": 17,
+   "wrong": 1,
+   "as": {
+    "j": [
+     {
+      "image": "54120",
+      "pos": 1,
+      "truth": "3iNab",
+      "got": "3jNab",
+      "time": "2026-09-29T17:38:00"
+     }
+    ]
+   }
+  },
+  "j": {
+   "seen": 20,
+   "wrong": 4,
+   "as": {
+    "i": [
+     {
+      "image": "11186",
+      "pos": 0,
+      "truth": "j6Hj2",
+      "got": "i6HI2",
+      "time": "2026-09-29T17:23:36"
+     },
+     {
+      "image": "63069",
+      "pos": 0,
+      "truth": "jDE9E",
+      "got": "iDE9E",
+      "time": "2026-09-29T17:45:06"
+     }
+    ],
+    "I": [
+     {
+      "image": "11186",
+      "pos": 3,
+      "truth": "j6Hj2",
+      "got": "i6HI2",
+      "time": "2026-09-29T17:23:36"
+     }
+    ],
+    "(missing)": [
+     {
+      "image": "117298",
+      "pos": 3,
+      "truth": "j4GjM",
+      "got": "j4GM",
+      "time": "2026-09-29T17:33:03"
+     }
+    ]
+   }
+  },
+  "k": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "l": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "m": {
+   "seen": 16,
+   "wrong": 1,
+   "as": {
+    "M": [
+     {
+      "image": "94667",
+      "pos": 2,
+      "truth": "4RmFj",
+      "got": "4RMFj",
+      "time": "2026-09-29T17:22:37"
+     }
+    ]
+   }
+  },
+  "n": {
+   "seen": 10,
+   "wrong": 0,
+   "as": {}
+  },
+  "o": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "p": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "q": {
+   "seen": 15,
+   "wrong": 7,
+   "as": {
+    "9": [
+     {
+      "image": "77838",
+      "pos": 2,
+      "truth": "QQq99",
+      "got": "QQ999",
+      "time": "2026-09-29T17:23:58"
+     },
+     {
+      "image": "87563",
+      "pos": 0,
+      "truth": "qGMq9",
+      "got": "9GM99",
+      "time": "2026-09-29T17:26:07"
+     },
+     {
+      "image": "87563",
+      "pos": 3,
+      "truth": "qGMq9",
+      "got": "9GM99",
+      "time": "2026-09-29T17:26:07"
+     },
+     {
+      "image": "116631",
+      "pos": 2,
+      "truth": "Aiq62",
+      "got": "Ai962",
+      "time": "2026-09-29T17:34:01"
+     }
+    ],
+    "a": [
+     {
+      "image": "107568",
+      "pos": 0,
+      "truth": "qL2Mt",
+      "got": "aL2Mt",
+      "time": "2026-09-29T17:28:16"
+     },
+     {
+      "image": "51428",
+      "pos": 4,
+      "truth": "8NYNq",
+      "got": "8NYNa",
+      "time": "2026-09-29T17:34:49"
+     }
+    ],
+    "Q": [
+     {
+      "image": "3064",
+      "pos": 3,
+      "truth": "6DEqY",
+      "got": "6DEQY",
+      "time": "2026-09-29T17:28:42"
+     }
+    ]
+   }
+  },
+  "r": {
+   "seen": 14,
+   "wrong": 2,
+   "as": {
+    "(missing)": [
+     {
+      "image": "26410",
+      "pos": 1,
+      "truth": "5rDE2",
+      "got": "5DE2",
+      "time": "2026-09-29T17:27:34"
+     },
+     {
+      "image": "60575",
+      "pos": 4,
+      "truth": "DrQ9r",
+      "got": "DrQ9",
+      "time": "2026-09-29T17:36:45"
+     }
+    ]
+   }
+  },
+  "s": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "t": {
+   "seen": 17,
+   "wrong": 1,
+   "as": {
+    "1": [
+     {
+      "image": "107913",
+      "pos": 3,
+      "truth": "BR2tQ",
+      "got": "BR21Q",
+      "time": "2026-09-29T17:23:04"
+     }
+    ]
+   }
+  },
+  "u": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "v": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "w": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "x": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "y": {
+   "seen": 12,
+   "wrong": 4,
+   "as": {
+    "Y": [
+     {
+      "image": "61986",
+      "pos": 3,
+      "truth": "NJ2yG",
+      "got": "NJ2YG",
+      "time": "2026-09-29T17:26:50"
+     },
+     {
+      "image": "80444",
+      "pos": 3,
+      "truth": "3Q4yL",
+      "got": "3Q4YL",
+      "time": "2026-09-29T17:32:27"
+     },
+     {
+      "image": "83962",
+      "pos": 0,
+      "truth": "yyh5L",
+      "got": "YYh5L",
+      "time": "2026-09-29T17:38:06"
+     },
+     {
+      "image": "83962",
+      "pos": 1,
+      "truth": "yyh5L",
+      "got": "YYh5L",
+      "time": "2026-09-29T17:38:06"
+     }
+    ]
+   }
+  },
+  "z": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "A": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "B": {
+   "seen": 9,
+   "wrong": 0,
+   "as": {}
+  },
+  "C": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "D": {
+   "seen": 12,
+   "wrong": 1,
+   "as": {
+    "B": [
+     {
+      "image": "73122",
+      "pos": 0,
+      "truth": "Dm5rn",
+      "got": "Bm5rn",
+      "time": "2026-09-29T17:27:38"
+     }
+    ]
+   }
+  },
+  "E": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "F": {
+   "seen": 18,
+   "wrong": 0,
+   "as": {}
+  },
+  "G": {
+   "seen": 17,
+   "wrong": 0,
+   "as": {}
+  },
+  "H": {
+   "seen": 17,
+   "wrong": 0,
+   "as": {}
+  },
+  "I": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "J": {
+   "seen": 16,
+   "wrong": 0,
+   "as": {}
+  },
+  "K": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "L": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "M": {
+   "seen": 22,
+   "wrong": 0,
+   "as": {}
+  },
+  "N": {
+   "seen": 20,
+   "wrong": 0,
+   "as": {}
+  },
+  "O": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "P": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "Q": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "R": {
+   "seen": 16,
+   "wrong": 0,
+   "as": {}
+  },
+  "S": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "T": {
+   "seen": 16,
+   "wrong": 0,
+   "as": {}
+  },
+  "U": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "V": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "W": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "X": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "Y": {
+   "seen": 18,
+   "wrong": 0,
+   "as": {}
+  },
+  "Z": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "0": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "1": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "2": {
+   "seen": 26,
+   "wrong": 0,
+   "as": {}
+  },
+  "3": {
+   "seen": 15,
+   "wrong": 0,
+   "as": {}
+  },
+  "4": {
+   "seen": 21,
+   "wrong": 0,
+   "as": {}
+  },
+  "5": {
+   "seen": 26,
+   "wrong": 0,
+   "as": {}
+  },
+  "6": {
+   "seen": 20,
+   "wrong": 1,
+   "as": {
+    "G": [
+     {
+      "image": "9934",
+      "pos": 3,
+      "truth": "rGA6e",
+      "got": "rGAGe",
+      "time": "2026-09-29T17:32:19"
+     }
+    ]
+   }
+  },
+  "7": {
+   "seen": 0,
+   "wrong": 0,
+   "as": {}
+  },
+  "8": {
+   "seen": 25,
+   "wrong": 2,
+   "as": {
+    "g": [
+     {
+      "image": "33293",
+      "pos": 1,
+      "truth": "i8aYF",
+      "got": "igaYF",
+      "time": "2026-09-29T17:28:12"
+     }
+    ],
+    "5": [
+     {
+      "image": "125600",
+      "pos": 3,
+      "truth": "jah8Q",
+      "got": "jan5Q",
+      "time": "2026-09-29T17:36:04"
+     }
+    ]
+   }
+  },
+  "9": {
+   "seen": 25,
+   "wrong": 3,
+   "as": {
+    "g": [
+     {
+      "image": "81383",
+      "pos": 3,
+      "truth": "FF59a",
+      "got": "FF5ga",
+      "time": "2026-09-29T17:33:26"
+     },
+     {
+      "image": "52224",
+      "pos": 2,
+      "truth": "Fa9ht",
+      "got": "Faght",
+      "time": "2026-09-29T17:34:17"
+     },
+     {
+      "image": "91535",
+      "pos": 2,
+      "truth": "Mb95m",
+      "got": "Mbg5m",
+      "time": "2026-09-29T17:37:45"
+     }
+    ]
+   }
+  }
+ },
+ "extra": [],
+ "summary": {
+  "images": 122,
+  "exact": 96,
+  "chars": 610,
+  "chars_wrong": 30,
+  "top_confusions": [
+   "q -> 9 x4",
+   "y -> Y x4",
+   "9 -> g x3",
+   "g -> 9 x2",
+   "j -> i x2",
+   "q -> a x2",
+   "r -> (missing) x2",
+   "h -> n x1",
+   "i -> j x1",
+   "j -> I x1",
+   "j -> (missing) x1",
+   "m -> M x1",
+   "q -> Q x1",
+   "t -> 1 x1",
+   "D -> B x1",
+   "6 -> G x1",
+   "8 -> g x1",
+   "8 -> 5 x1"
+  ]
+ }
+}

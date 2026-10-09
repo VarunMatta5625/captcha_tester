@@ -1,0 +1,5802 @@
+{
+ "82382": {
+  "truth": "3B6Bg",
+  "model": "3B6Bg",
+  "vision": "3B68g",
+  "model_right": true,
+  "confidence": 0.8438158631324768,
+  "time": "2026-09-30T10:21:53"
+ },
+ "22524": {
+  "truth": "4rNjq",
+  "model": "4rNjq",
+  "vision": "4rNjg",
+  "model_right": true,
+  "confidence": 0.7260047793388367,
+  "time": "2026-09-30T10:21:56"
+ },
+ "111378": {
+  "truth": "TgTJq",
+  "model": "TgTJq",
+  "vision": "TgTJa",
+  "model_right": true,
+  "confidence": 0.6503719687461853,
+  "time": "2026-09-30T10:21:59"
+ },
+ "83347": {
+  "truth": "bgBF9",
+  "model": "bgBF9",
+  "vision": "6gBF9",
+  "model_right": true,
+  "confidence": 0.8688870072364807,
+  "time": "2026-09-30T10:24:08"
+ },
+ "11647": {
+  "truth": "9TNq3",
+  "model": "9TNq3",
+  "vision": "aTNq3",
+  "model_right": true,
+  "confidence": 0.4817522168159485,
+  "time": "2026-09-30T10:24:12"
+ },
+ "97071": {
+  "truth": "5mRqM",
+  "model": "5mRqM",
+  "vision": "5mRgM",
+  "model_right": true,
+  "confidence": 0.8271247148513794,
+  "time": "2026-09-30T10:24:22"
+ },
+ "79749": {
+  "truth": "qtY8q",
+  "model": "qtY8q",
+  "vision": "aty8g",
+  "model_right": true,
+  "confidence": 0.2831433415412903,
+  "time": "2026-09-30T10:24:47"
+ },
+ "35545": {
+  "truth": "8RYb8",
+  "model": "8Rybg",
+  "vision": "8Ryb8",
+  "model_right": false,
+  "confidence": 0.468330055475235,
+  "time": "2026-09-30T10:25:00"
+ },
+ "3454": {
+  "truth": "yMg3M",
+  "model": "YM93M",
+  "vision": "yM93M",
+  "model_right": false,
+  "confidence": 0.6234374046325684,
+  "time": "2026-09-30T10:25:11"
+ },
+ "5550": {
+  "truth": "8Qnnq",
+  "model": "8Qnnq",
+  "vision": "8Qnng",
+  "model_right": true,
+  "confidence": 0.6386156678199768,
+  "time": "2026-09-30T10:25:14"
+ },
+ "33480": {
+  "truth": "b9q2F",
+  "model": "b992F",
+  "vision": "6992F",
+  "model_right": false,
+  "confidence": 0.7821316719055176,
+  "time": "2026-09-30T10:25:20"
+ },
+ "67997": {
+  "truth": "qyBF8",
+  "model": "qyBF8",
+  "vision": "QyBF8",
+  "model_right": true,
+  "confidence": 0.42455270886421204,
+  "time": "2026-09-30T10:25:23"
+ },
+ "41370": {
+  "truth": "fYQq6",
+  "model": "fYQq6",
+  "vision": "fYQg6",
+  "model_right": true,
+  "confidence": 0.518584668636322,
+  "time": "2026-09-30T10:25:28"
+ },
+ "35643": {
+  "truth": "iJ5q8",
+  "model": "iJ5q8",
+  "vision": "fJ5q8",
+  "model_right": true,
+  "confidence": 0.5846385359764099,
+  "time": "2026-09-30T10:25:34"
+ },
+ "1961": {
+  "truth": "f6LYq",
+  "model": "f6LY9",
+  "vision": "FGLY9",
+  "model_right": false,
+  "confidence": 0.6200867295265198,
+  "time": "2026-09-30T10:25:41"
+ },
+ "5247": {
+  "truth": "i9rFT",
+  "model": "i9rFT",
+  "vision": "igrFT",
+  "model_right": true,
+  "confidence": 0.6726622581481934,
+  "time": "2026-09-30T10:25:46"
+ },
+ "16771": {
+  "truth": "2De9y",
+  "model": "2De9y",
+  "vision": "2De9Y",
+  "model_right": true,
+  "confidence": 0.47450172901153564,
+  "time": "2026-09-30T10:25:49"
+ },
+ "33754": {
+  "truth": "2jmgY",
+  "model": "2jmgY",
+  "vision": "2JmgY",
+  "model_right": true,
+  "confidence": 0.39027920365333557,
+  "time": "2026-09-30T10:25:59"
+ },
+ "31648": {
+  "truth": "Ma9rn",
+  "model": "Ma9rn",
+  "vision": "Magrn",
+  "model_right": true,
+  "confidence": 0.8578009605407715,
+  "time": "2026-09-30T10:26:08"
+ },
+ "103643": {
+  "truth": "9hdiT",
+  "model": "9hdiT",
+  "vision": "5hdiT",
+  "model_right": true,
+  "confidence": 0.8315964937210083,
+  "time": "2026-09-30T10:26:12"
+ },
+ "79766": {
+  "truth": "T8aTy",
+  "model": "T8aTy",
+  "vision": "TgaTy",
+  "model_right": true,
+  "confidence": 0.49643078446388245,
+  "time": "2026-09-30T10:26:15"
+ },
+ "68937": {
+  "truth": "8LygJ",
+  "model": "8LygJ",
+  "vision": "5LygJ",
+  "model_right": true,
+  "confidence": 0.8427234292030334,
+  "time": "2026-09-30T10:26:18"
+ },
+ "10495": {
+  "truth": "A9b8m",
+  "model": "A9b8m",
+  "vision": "A968m",
+  "model_right": true,
+  "confidence": 0.4913083016872406,
+  "time": "2026-09-30T10:26:21"
+ },
+ "62892": {
+  "truth": "gEL46",
+  "model": "gEL46",
+  "vision": "9EL46",
+  "model_right": true,
+  "confidence": 0.6609151363372803,
+  "time": "2026-09-30T10:26:24"
+ },
+ "69918": {
+  "truth": "6dYAq",
+  "model": "6dYAq",
+  "vision": "6dYAg",
+  "model_right": true,
+  "confidence": 0.6098595857620239,
+  "time": "2026-09-30T10:26:27"
+ },
+ "103914": {
+  "truth": "3iqFT",
+  "model": "3iqFT",
+  "vision": "3iQFT",
+  "model_right": true,
+  "confidence": 0.4326339066028595,
+  "time": "2026-09-30T10:26:29"
+ },
+ "23402": {
+  "truth": "99AFd",
+  "model": "99AFd",
+  "vision": "9gAFd",
+  "model_right": true,
+  "confidence": 0.6558550000190735,
+  "time": "2026-09-30T10:26:32"
+ },
+ "105288": {
+  "truth": "LNr92",
+  "model": "LNrg2",
+  "vision": "LNr92",
+  "model_right": false,
+  "confidence": 0.49053192138671875,
+  "time": "2026-09-30T10:26:41"
+ },
+ "61844": {
+  "truth": "9M6Qj",
+  "model": "9M6Qj",
+  "vision": "9M6QJ",
+  "model_right": true,
+  "confidence": 0.5338444709777832,
+  "time": "2026-09-30T10:26:44"
+ },
+ "117608": {
+  "truth": "8TEd9",
+  "model": "8TEd9",
+  "vision": "5TEd9",
+  "model_right": true,
+  "confidence": 0.7586174607276917,
+  "time": "2026-09-30T10:26:47"
+ },
+ "38969": {
+  "truth": "Eq6H8",
+  "model": "Eq6H8",
+  "vision": "E96H8",
+  "model_right": true,
+  "confidence": 0.7731484174728394,
+  "time": "2026-09-30T10:26:51"
+ },
+ "58482": {
+  "truth": "6iT9D",
+  "model": "6iT9D",
+  "vision": "5iT9D",
+  "model_right": true,
+  "confidence": 0.6545050740242004,
+  "time": "2026-09-30T10:26:56"
+ },
+ "33160": {
+  "truth": "AT49r",
+  "model": "AT49r",
+  "vision": "AT49T",
+  "model_right": true,
+  "confidence": 0.5555951595306396,
+  "time": "2026-09-30T10:27:29"
+ },
+ "124728": {
+  "truth": "gtnA5",
+  "model": "gtnA5",
+  "vision": "9tn45",
+  "model_right": true,
+  "confidence": 0.5405840873718262,
+  "time": "2026-09-30T10:27:32"
+ },
+ "34690": {
+  "truth": "9DY2h",
+  "model": "9DY2h",
+  "vision": "qDY2h",
+  "model_right": true,
+  "confidence": 0.42490729689598083,
+  "time": "2026-09-30T10:27:35"
+ },
+ "24311": {
+  "truth": "F9f9r",
+  "model": "F9f9r",
+  "vision": "Fgf9r",
+  "model_right": true,
+  "confidence": 0.5462779998779297,
+  "time": "2026-09-30T10:27:38"
+ },
+ "65690": {
+  "truth": "ag6F3",
+  "model": "ag6F3",
+  "vision": "a96F3",
+  "model_right": true,
+  "confidence": 0.5677332878112793,
+  "time": "2026-09-30T10:27:40"
+ },
+ "5813": {
+  "truth": "N42g4",
+  "model": "N42g4",
+  "vision": "N4294",
+  "model_right": true,
+  "confidence": 0.5692499876022339,
+  "time": "2026-09-30T10:27:43"
+ },
+ "26194": {
+  "truth": "BMaq2",
+  "model": "BMaq2",
+  "vision": "8Maq2",
+  "model_right": true,
+  "confidence": 0.8349542021751404,
+  "time": "2026-09-30T10:27:46"
+ },
+ "112722": {
+  "truth": "qJA69",
+  "model": "qJA69",
+  "vision": "QJA69",
+  "model_right": true,
+  "confidence": 0.6576453447341919,
+  "time": "2026-09-30T10:27:49"
+ },
+ "103515": {
+  "truth": "LH5q3",
+  "model": "LH5q3",
+  "vision": "LH5Q3",
+  "model_right": true,
+  "confidence": 0.7164753675460815,
+  "time": "2026-09-30T10:27:51"
+ },
+ "102275": {
+  "truth": "G9b3h",
+  "model": "G9b3h",
+  "vision": "Ggb3h",
+  "model_right": true,
+  "confidence": 0.4367586374282837,
+  "time": "2026-09-30T10:27:54"
+ },
+ "105948": {
+  "truth": "95aAe",
+  "model": "95aAe",
+  "vision": "q5aAe",
+  "model_right": true,
+  "confidence": 0.4321744441986084,
+  "time": "2026-09-30T10:27:57"
+ },
+ "46436": {
+  "truth": "93BYM",
+  "model": "93BYM",
+  "vision": "93ByM",
+  "model_right": true,
+  "confidence": 0.4978121221065521,
+  "time": "2026-09-30T10:28:00"
+ },
+ "91003": {
+  "truth": "tEFr9",
+  "model": "tEFr9",
+  "vision": "tEfr9",
+  "model_right": true,
+  "confidence": 0.8602181077003479,
+  "time": "2026-09-30T10:28:04"
+ },
+ "8622": {
+  "truth": "T2qN9",
+  "model": "T2qN9",
+  "vision": "T2QN9",
+  "model_right": true,
+  "confidence": 0.5137057304382324,
+  "time": "2026-09-30T10:28:07"
+ },
+ "81723": {
+  "truth": "Ae46E",
+  "model": "Ae46E",
+  "vision": "qe46E",
+  "model_right": true,
+  "confidence": 0.7714038491249084,
+  "time": "2026-09-30T10:28:09"
+ },
+ "28061": {
+  "truth": "y2NqB",
+  "model": "y2NqB",
+  "vision": "Y2NqB",
+  "model_right": true,
+  "confidence": 0.5596923232078552,
+  "time": "2026-09-30T10:28:11"
+ },
+ "37225": {
+  "truth": "y98iL",
+  "model": "y98iL",
+  "vision": "Y98iL",
+  "model_right": true,
+  "confidence": 0.4540799856185913,
+  "time": "2026-09-30T10:28:14"
+ },
+ "106687": {
+  "truth": "Aj6d3",
+  "model": "Aj6d3",
+  "vision": "Aj6g3",
+  "model_right": true,
+  "confidence": 0.9070333242416382,
+  "time": "2026-09-30T10:28:16"
+ },
+ "77592": {
+  "truth": "5Dqqd",
+  "model": "5Dqad",
+  "vision": "5Dqgd",
+  "model_right": false,
+  "confidence": 0.3173200488090515,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:13"
+ },
+ "84396": {
+  "truth": "q9LTe",
+  "model": "q9LTe",
+  "vision": "q9LTe",
+  "model_right": true,
+  "confidence": 0.45726147294044495,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:18"
+ },
+ "66437": {
+  "truth": "4Qqeh",
+  "model": "4Qqeh",
+  "vision": "4Qgeh",
+  "model_right": true,
+  "confidence": 0.4441970884799957,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:21"
+ },
+ "117600": {
+  "truth": "jGEq5",
+  "model": "jGEq5",
+  "vision": "jGEQ5",
+  "model_right": true,
+  "confidence": 0.3964294493198395,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:24"
+ },
+ "72670": {
+  "truth": "j2DLg",
+  "model": "j2DLg",
+  "vision": "j2DL9",
+  "model_right": true,
+  "confidence": 0.34844470024108887,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:27"
+ },
+ "63020": {
+  "truth": "geEa9",
+  "model": "geEa9",
+  "vision": "geE89",
+  "model_right": true,
+  "confidence": 0.44057267904281616,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:31"
+ },
+ "67639": {
+  "truth": "9nYqQ",
+  "model": "9nYaQ",
+  "vision": "9nYaQ",
+  "model_right": false,
+  "confidence": 0.37107840180397034,
+  "source": "uncertain",
+  "time": "2026-09-30T10:37:37"
+ },
+ "78617": {
+  "truth": "5NaLq",
+  "model": "5NaLq",
+  "vision": "5NaLq",
+  "model_right": true,
+  "confidence": 0.42062312364578247,
+  "source": "uncertain",
+  "time": "2026-09-30T10:38:53"
+ },
+ "22024": {
+  "truth": "RgRyi",
+  "model": "RgRyi",
+  "vision": "RgRyi",
+  "model_right": true,
+  "confidence": 0.45060303807258606,
+  "source": "uncertain",
+  "time": "2026-09-30T10:38:55"
+ },
+ "54178": {
+  "truth": "Fg5Dh",
+  "model": "Fg5Dh",
+  "vision": "F95Dh",
+  "model_right": true,
+  "confidence": 0.450740247964859,
+  "source": "uncertain",
+  "time": "2026-09-30T10:38:57"
+ },
+ "82054": {
+  "truth": "d3qDE",
+  "model": "d39DE",
+  "vision": "d3GDE",
+  "model_right": false,
+  "confidence": 0.36007818579673767,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:03"
+ },
+ "124033": {
+  "truth": "jTHg3",
+  "model": "jTHg3",
+  "vision": "iTHg3",
+  "model_right": true,
+  "confidence": 0.4609622061252594,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:06"
+ },
+ "92264": {
+  "truth": "6FTeq",
+  "model": "6FTeq",
+  "vision": "6FTeq",
+  "model_right": true,
+  "confidence": 0.4457731544971466,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:09"
+ },
+ "57241": {
+  "truth": "49TBN",
+  "model": "49TBN",
+  "vision": "4QTBN",
+  "model_right": true,
+  "confidence": 0.44307631254196167,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:12"
+ },
+ "7072": {
+  "truth": "FA8Tn",
+  "model": "FAgTn",
+  "vision": "FAgTn",
+  "model_right": false,
+  "confidence": 0.41487520933151245,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:17"
+ },
+ "50790": {
+  "truth": "5FG8q",
+  "model": "5FGgq",
+  "vision": "5FG8a",
+  "model_right": false,
+  "confidence": 0.30040013790130615,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:24"
+ },
+ "59": {
+  "truth": "9LD2i",
+  "model": "9LD2j",
+  "vision": "9LD2i",
+  "model_right": false,
+  "confidence": 0.39655163884162903,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:35"
+ },
+ "3678": {
+  "truth": "G89t2",
+  "model": "G8gi2",
+  "vision": "G8gf2",
+  "model_right": false,
+  "confidence": 0.36917075514793396,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:44"
+ },
+ "739": {
+  "truth": "6qqAF",
+  "model": "69aAF",
+  "vision": "69QAF",
+  "model_right": false,
+  "confidence": 0.29588431119918823,
+  "source": "uncertain",
+  "time": "2026-09-30T10:39:49"
+ },
+ "98628": {
+  "truth": "3D5qq",
+  "model": "3D5q9",
+  "vision": "3D5q9",
+  "model_right": false,
+  "confidence": 0.21113742887973785,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:06"
+ },
+ "76950": {
+  "truth": "E59hb",
+  "model": "E59hb",
+  "vision": "E59hb",
+  "model_right": true,
+  "confidence": 0.444590300321579,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:10"
+ },
+ "79521": {
+  "truth": "TqLQ9",
+  "model": "TaLQ9",
+  "vision": "TALQ9",
+  "model_right": false,
+  "confidence": 0.3698529303073883,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:16"
+ },
+ "118956": {
+  "truth": "rFL5q",
+  "model": "rFL5q",
+  "vision": "rFL59",
+  "model_right": true,
+  "confidence": 0.45920807123184204,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:20"
+ },
+ "19287": {
+  "truth": "5LN9q",
+  "model": "5LN9q",
+  "vision": "5LN9g",
+  "model_right": true,
+  "confidence": 0.42520079016685486,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:25"
+ },
+ "99290": {
+  "truth": "BmY93",
+  "model": "BmYg3",
+  "vision": "BmYg3",
+  "model_right": false,
+  "confidence": 0.44115230441093445,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:32"
+ },
+ "61041": {
+  "truth": "6AQ2q",
+  "model": "6AQ2q",
+  "vision": "6AQ29",
+  "model_right": true,
+  "confidence": 0.4044807553291321,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:42"
+ },
+ "23512": {
+  "truth": "gTJ8q",
+  "model": "gTJ8q",
+  "vision": "gTJ8q",
+  "model_right": true,
+  "confidence": 0.3911198079586029,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:45"
+ },
+ "37858": {
+  "truth": "Gdyg5",
+  "model": "Gdy95",
+  "vision": "Gdyg5",
+  "model_right": false,
+  "confidence": 0.46350058913230896,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:53"
+ },
+ "71224": {
+  "truth": "q9Bjh",
+  "model": "99Bjh",
+  "vision": "q9Bjh",
+  "model_right": false,
+  "confidence": 0.40196308493614197,
+  "source": "uncertain",
+  "time": "2026-09-30T10:40:58"
+ },
+ "49880": {
+  "truth": "6RQjq",
+  "model": "6RQjq",
+  "vision": "6RQjq",
+  "model_right": true,
+  "confidence": 0.4449197053909302,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:04"
+ },
+ "24065": {
+  "truth": "98TDq",
+  "model": "98TDq",
+  "vision": "98TDq",
+  "model_right": true,
+  "confidence": 0.4552328586578369,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:06"
+ },
+ "81479": {
+  "truth": "qj4YT",
+  "model": "aJ4YT",
+  "vision": "9J4YT",
+  "model_right": false,
+  "confidence": 0.37327542901039124,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:12"
+ },
+ "13405": {
+  "truth": "y5RYq",
+  "model": "y5RYa",
+  "vision": "y5RYq",
+  "model_right": false,
+  "confidence": 0.46077844500541687,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:19"
+ },
+ "28294": {
+  "truth": "2Qb8D",
+  "model": "2QbgD",
+  "vision": "2Qb8D",
+  "model_right": false,
+  "confidence": 0.4192310869693756,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:26"
+ },
+ "67033": {
+  "truth": "39qEE",
+  "model": "39qEE",
+  "vision": "399EE",
+  "model_right": true,
+  "confidence": 0.38675692677497864,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:29"
+ },
+ "27611": {
+  "truth": "t9FJ6",
+  "model": "t9FJ6",
+  "vision": "tQFJ6",
+  "model_right": true,
+  "confidence": 0.39903056621551514,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:35"
+ },
+ "50418": {
+  "truth": "Fqg4q",
+  "model": "Fag4q",
+  "vision": "Fag4q",
+  "model_right": false,
+  "confidence": 0.453986793756485,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:42"
+ },
+ "81581": {
+  "truth": "qLJN2",
+  "model": "qLJN2",
+  "vision": "GLJN2",
+  "model_right": true,
+  "confidence": 0.4098375737667084,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:45"
+ },
+ "119284": {
+  "truth": "2Mqh9",
+  "model": "2M9h9",
+  "vision": "2Mah9",
+  "model_right": false,
+  "confidence": 0.4002702236175537,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:50"
+ },
+ "79751": {
+  "truth": "NY84q",
+  "model": "NY84q",
+  "vision": "NY84g",
+  "model_right": true,
+  "confidence": 0.4533328413963318,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:53"
+ },
+ "75918": {
+  "truth": "i9qrG",
+  "model": "f9arG",
+  "vision": "fggrG",
+  "model_right": false,
+  "confidence": 0.3633285462856293,
+  "source": "uncertain",
+  "time": "2026-09-30T10:41:58"
+ },
+ "33330": {
+  "truth": "q8LY5",
+  "model": "q8LY5",
+  "vision": "q8LY5",
+  "model_right": true,
+  "confidence": 0.40927115082740784,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:02"
+ },
+ "21008": {
+  "truth": "q9LnT",
+  "model": "99LnT",
+  "vision": "q9LnT",
+  "model_right": false,
+  "confidence": 0.3441885709762573,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:06"
+ },
+ "57236": {
+  "truth": "qQT8T",
+  "model": "qQT8T",
+  "vision": "qQT8T",
+  "model_right": true,
+  "confidence": 0.37933245301246643,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:09"
+ },
+ "109344": {
+  "truth": "tAnq4",
+  "model": "tAnq4",
+  "vision": "tAna4",
+  "model_right": true,
+  "confidence": 0.4161854088306427,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:13"
+ },
+ "123682": {
+  "truth": "qN84G",
+  "model": "qN84G",
+  "vision": "qNg4G",
+  "model_right": true,
+  "confidence": 0.4137464463710785,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:16"
+ },
+ "34323": {
+  "truth": "qAHi9",
+  "model": "9AHi9",
+  "vision": "9AHi9",
+  "model_right": false,
+  "confidence": 0.46068260073661804,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:22"
+ },
+ "116024": {
+  "truth": "j9bHA",
+  "model": "jgbHA",
+  "vision": "igbHA",
+  "model_right": false,
+  "confidence": 0.4556428790092468,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:29"
+ },
+ "33015": {
+  "truth": "qGm8q",
+  "model": "qGmg9",
+  "vision": "qGmgq",
+  "model_right": false,
+  "confidence": 0.40844470262527466,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:35"
+ },
+ "110482": {
+  "truth": "J4nqR",
+  "model": "J4nqR",
+  "vision": "J4nqR",
+  "model_right": true,
+  "confidence": 0.4446778893470764,
+  "source": "uncertain",
+  "time": "2026-09-30T10:42:41"
+ },
+ "25819": {
+  "truth": "y5bgT",
+  "model": "y56gT",
+  "vision": "y56gm",
+  "model_right": false,
+  "confidence": 0.45758727192878723,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:06"
+ },
+ "113692": {
+  "truth": "JD8qd",
+  "model": "JD8qd",
+  "vision": "JD8gd",
+  "model_right": true,
+  "confidence": 0.46361762285232544,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:09"
+ },
+ "43442": {
+  "truth": "2mdLt",
+  "model": "2mdLt",
+  "vision": "2mgLt",
+  "model_right": true,
+  "confidence": 0.4011779725551605,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:19"
+ },
+ "33716": {
+  "truth": "BNJ4q",
+  "model": "BNJ4q",
+  "vision": "BNJ4Q",
+  "model_right": true,
+  "confidence": 0.3427455425262451,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:22"
+ },
+ "28273": {
+  "truth": "R9j34",
+  "model": "R9j34",
+  "vision": "Raj34",
+  "model_right": true,
+  "confidence": 0.335431843996048,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:30"
+ },
+ "113617": {
+  "truth": "M2qq3",
+  "model": "M2qq3",
+  "vision": "M2aq3",
+  "model_right": true,
+  "confidence": 0.3378193974494934,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:32"
+ },
+ "75833": {
+  "truth": "3rTL9",
+  "model": "3rTLg",
+  "vision": "3rTLg",
+  "model_right": false,
+  "confidence": 0.4464905858039856,
+  "source": "uncertain",
+  "time": "2026-09-30T10:44:39"
+ },
+ "106603": {
+  "truth": "Hm8F4",
+  "model": "HmgF4",
+  "vision": "HmgF4",
+  "model_right": false,
+  "confidence": 0.46159806847572327,
+  "source": "uncertain",
+  "time": "2026-09-30T10:45:55"
+ },
+ "7451": {
+  "truth": "qf2gQ",
+  "model": "qf2gQ",
+  "vision": "qf2gQ",
+  "model_right": true,
+  "confidence": 0.458911269903183,
+  "source": "uncertain",
+  "time": "2026-09-30T10:45:59"
+ },
+ "29483": {
+  "truth": "Jg3g5",
+  "model": "Jg3g5",
+  "vision": "Jg395",
+  "model_right": true,
+  "confidence": 0.4480728805065155,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:01"
+ },
+ "5276": {
+  "truth": "qyNf3",
+  "model": "qyNf3",
+  "vision": "qyNf3",
+  "model_right": true,
+  "confidence": 0.39725667238235474,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:05"
+ },
+ "101095": {
+  "truth": "rNTt9",
+  "model": "rNTt9",
+  "vision": "rNTt9",
+  "model_right": true,
+  "confidence": 0.40324169397354126,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:07"
+ },
+ "102781": {
+  "truth": "D8Q3q",
+  "model": "D8Q3q",
+  "vision": "D8Q3g",
+  "model_right": true,
+  "confidence": 0.44151896238327026,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:10"
+ },
+ "35995": {
+  "truth": "BN6eq",
+  "model": "BN6eq",
+  "vision": "BN6ea",
+  "model_right": true,
+  "confidence": 0.45044633746147156,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:12"
+ },
+ "80666": {
+  "truth": "Ed2gq",
+  "model": "Ed2gq",
+  "vision": "Ed2ga",
+  "model_right": true,
+  "confidence": 0.3921966552734375,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:15"
+ },
+ "48525": {
+  "truth": "bqQ2E",
+  "model": "bqQ2E",
+  "vision": "baQ2E",
+  "model_right": true,
+  "confidence": 0.4482303559780121,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:18"
+ },
+ "25818": {
+  "truth": "B36qr",
+  "model": "B36qr",
+  "vision": "B36gr",
+  "model_right": true,
+  "confidence": 0.43142279982566833,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:21"
+ },
+ "6435": {
+  "truth": "2nLHq",
+  "model": "2nLHq",
+  "vision": "2ntH9",
+  "model_right": true,
+  "confidence": 0.4453918933868408,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:23"
+ },
+ "48807": {
+  "truth": "49hTn",
+  "model": "49hTn",
+  "vision": "49hTn",
+  "model_right": true,
+  "confidence": 0.4403574764728546,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:27"
+ },
+ "108875": {
+  "truth": "q4JTy",
+  "model": "94JTY",
+  "vision": "Q4JTY",
+  "model_right": false,
+  "confidence": 0.413465291261673,
+  "source": "uncertain",
+  "time": "2026-09-30T10:46:57"
+ },
+ "68706": {
+  "truth": "8yqAg",
+  "model": "8yqAg",
+  "vision": "8yqAg",
+  "model_right": true,
+  "confidence": 0.4280962347984314,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:02"
+ },
+ "3927": {
+  "truth": "iBH9a",
+  "model": "iBHga",
+  "vision": "iBHga",
+  "model_right": false,
+  "confidence": 0.44268080592155457,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:05"
+ },
+ "118524": {
+  "truth": "MQ9qF",
+  "model": "MQ9qF",
+  "vision": "MQ9gF",
+  "model_right": true,
+  "confidence": 0.43493950366973877,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:10"
+ },
+ "1427": {
+  "truth": "tY8td",
+  "model": "tYgtD",
+  "vision": "tYgtD",
+  "model_right": false,
+  "confidence": 0.46117594838142395,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:15"
+ },
+ "28265": {
+  "truth": "Gfbh9",
+  "model": "Gibh9",
+  "vision": "Gfbh9",
+  "model_right": false,
+  "confidence": 0.43448856472969055,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:25"
+ },
+ "21078": {
+  "truth": "qJR4D",
+  "model": "qJR4D",
+  "vision": "AJRAD",
+  "model_right": true,
+  "confidence": 0.25011003017425537,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:37"
+ },
+ "7727": {
+  "truth": "8qTJB",
+  "model": "8qTJB",
+  "vision": "8QTJB",
+  "model_right": true,
+  "confidence": 0.4413115084171295,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:42"
+ },
+ "30813": {
+  "truth": "YbyJ9",
+  "model": "YbyJg",
+  "vision": "YbyJg",
+  "model_right": false,
+  "confidence": 0.4537334740161896,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:46"
+ },
+ "125419": {
+  "truth": "D8YGg",
+  "model": "D8YGg",
+  "vision": "D3YGg",
+  "model_right": true,
+  "confidence": 0.40598586201667786,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:51"
+ },
+ "13212": {
+  "truth": "qDQ2Y",
+  "model": "qDQ2Y",
+  "vision": "qDQ2Y",
+  "model_right": true,
+  "confidence": 0.431347131729126,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:55"
+ },
+ "101557": {
+  "truth": "mLqB4",
+  "model": "mL9B4",
+  "vision": "mi9B4",
+  "model_right": false,
+  "confidence": 0.4239586889743805,
+  "source": "uncertain",
+  "time": "2026-09-30T10:47:58"
+ },
+ "96157": {
+  "truth": "YL62q",
+  "model": "YL629",
+  "vision": "YL62Q",
+  "model_right": false,
+  "confidence": 0.40848103165626526,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:02"
+ },
+ "64595": {
+  "truth": "r9LNi",
+  "model": "rgLNi",
+  "vision": "T9LNi",
+  "model_right": false,
+  "confidence": 0.384189248085022,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:06"
+ },
+ "86026": {
+  "truth": "LHjg3",
+  "model": "LHjg3",
+  "vision": "LHJg3",
+  "model_right": true,
+  "confidence": 0.39160263538360596,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:10"
+ },
+ "59591": {
+  "truth": "96g4J",
+  "model": "g6g4J",
+  "vision": "g6g4J",
+  "model_right": false,
+  "confidence": 0.4488027095794678,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:24"
+ },
+ "96056": {
+  "truth": "jY9mt",
+  "model": "jY9mt",
+  "vision": "jr9mg",
+  "model_right": true,
+  "confidence": 0.4285336434841156,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:32"
+ },
+ "107326": {
+  "truth": "a5LdF",
+  "model": "a5LdF",
+  "vision": "95LdF",
+  "model_right": true,
+  "confidence": 0.23316337168216705,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:35"
+ },
+ "57144": {
+  "truth": "nqAq9",
+  "model": "nqAq9",
+  "vision": "naAq9",
+  "model_right": true,
+  "confidence": 0.41342881321907043,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:38"
+ },
+ "60111": {
+  "truth": "HaA2b",
+  "model": "HaA2b",
+  "vision": "Haq26",
+  "model_right": true,
+  "confidence": 0.2988041341304779,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:41"
+ },
+ "121444": {
+  "truth": "BgEHi",
+  "model": "BgEHi",
+  "vision": "BgEHi",
+  "model_right": true,
+  "confidence": 0.4213671386241913,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:43"
+ },
+ "2166": {
+  "truth": "qq4YH",
+  "model": "9q4YH",
+  "vision": "aqAYH",
+  "model_right": false,
+  "confidence": 0.4403250515460968,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:48"
+ },
+ "79449": {
+  "truth": "HD9ni",
+  "model": "HDgni",
+  "vision": "HD9Ni",
+  "model_right": false,
+  "confidence": 0.4503571391105652,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:52"
+ },
+ "61369": {
+  "truth": "e2Miq",
+  "model": "e2Miq",
+  "vision": "e2Mjq",
+  "model_right": true,
+  "confidence": 0.36606135964393616,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:56"
+ },
+ "14382": {
+  "truth": "jqD22",
+  "model": "jqD22",
+  "vision": "iqD22",
+  "model_right": true,
+  "confidence": 0.3738355040550232,
+  "source": "uncertain",
+  "time": "2026-09-30T10:48:58"
+ },
+ "97861": {
+  "truth": "JQ2gm",
+  "model": "JQ2gm",
+  "vision": "JD2am",
+  "model_right": true,
+  "confidence": 0.4298553466796875,
+  "source": "uncertain",
+  "time": "2026-09-30T10:49:00"
+ },
+ "51194": {
+  "truth": "Tqq8A",
+  "model": "Ta98A",
+  "vision": "Tag8A",
+  "model_right": false,
+  "confidence": 0.41370561718940735,
+  "source": "uncertain",
+  "time": "2026-09-30T10:49:05"
+ },
+ "119228": {
+  "truth": "BqrH6",
+  "model": "B9rH6",
+  "vision": "BarH6",
+  "model_right": false,
+  "confidence": 0.34754350781440735,
+  "source": "uncertain",
+  "time": "2026-09-30T10:49:12"
+ },
+ "118544": {
+  "truth": "gB2Tg",
+  "model": "9B2Tg",
+  "vision": "9B2Tg",
+  "model_right": false,
+  "confidence": 0.4565225839614868,
+  "source": "uncertain",
+  "time": "2026-09-30T10:49:18"
+ },
+ "8457": {
+  "truth": "2QA9q",
+  "model": "2QA9q",
+  "vision": "2QA9a",
+  "model_right": true,
+  "confidence": 0.4210911691188812,
+  "source": "uncertain",
+  "time": "2026-09-30T10:49:26"
+ },
+ "14083": {
+  "truth": "Lrqe9",
+  "model": "Lrae9",
+  "vision": "Lrqeg",
+  "model_right": false,
+  "confidence": 0.32602623105049133,
+  "source": "uncertain",
+  "time": "2026-09-30T10:49:31"
+ },
+ "34986": {
+  "truth": "9bRQm",
+  "model": "9bRQm",
+  "vision": "96RQm",
+  "model_right": true,
+  "confidence": 0.4513793885707855,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:22"
+ },
+ "36340": {
+  "truth": "qJjQ9",
+  "model": "qJjQ9",
+  "vision": "QJJQ9",
+  "model_right": true,
+  "confidence": 0.30483025312423706,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:25"
+ },
+ "106475": {
+  "truth": "9t8aG",
+  "model": "9t8aG",
+  "vision": "5t8aG",
+  "model_right": true,
+  "confidence": 0.43913835287094116,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:27"
+ },
+ "42776": {
+  "truth": "A48Bq",
+  "model": "A48Bq",
+  "vision": "A48Bq",
+  "model_right": true,
+  "confidence": 0.4499734342098236,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:30"
+ },
+ "36716": {
+  "truth": "bqQ9T",
+  "model": "bqQ9T",
+  "vision": "64Q9T",
+  "model_right": true,
+  "confidence": 0.26183706521987915,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:34"
+ },
+ "106289": {
+  "truth": "nHGg6",
+  "model": "nHGg6",
+  "vision": "nHGg6",
+  "model_right": true,
+  "confidence": 0.44659480452537537,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:37"
+ },
+ "88195": {
+  "truth": "69Y2Q",
+  "model": "69Y2Q",
+  "vision": "69Y2Q",
+  "model_right": true,
+  "confidence": 0.30860766768455505,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:40"
+ },
+ "51379": {
+  "truth": "TBaA4",
+  "model": "TBaA4",
+  "vision": "mBaq4",
+  "model_right": true,
+  "confidence": 0.40679600834846497,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:45"
+ },
+ "119407": {
+  "truth": "q5GfB",
+  "model": "q5GfB",
+  "vision": "q5GFB",
+  "model_right": true,
+  "confidence": 0.3533705472946167,
+  "source": "uncertain",
+  "time": "2026-09-30T10:56:49"
+ },
+ "118491": {
+  "truth": "RDHq9",
+  "model": "RDHq9",
+  "vision": "RDHa9",
+  "model_right": true,
+  "confidence": 0.4653606712818146,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:25"
+ },
+ "6820": {
+  "truth": "q5H3R",
+  "model": "q5H3R",
+  "vision": "q5H3R",
+  "model_right": true,
+  "confidence": 0.4419257938861847,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:30"
+ },
+ "94916": {
+  "truth": "eqy9G",
+  "model": "eqy9G",
+  "vision": "eqy9G",
+  "model_right": true,
+  "confidence": 0.45289725065231323,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:34"
+ },
+ "42079": {
+  "truth": "qg5Jh",
+  "model": "qg5Jh",
+  "vision": "qg5Jh",
+  "model_right": true,
+  "confidence": 0.3893534243106842,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:37"
+ },
+ "9814": {
+  "truth": "iq63Q",
+  "model": "ia63Q",
+  "vision": "j963Q",
+  "model_right": false,
+  "confidence": 0.3186885714530945,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:44"
+ },
+ "116343": {
+  "truth": "eT4G9",
+  "model": "eT4G9",
+  "vision": "eT4G9",
+  "model_right": true,
+  "confidence": 0.4252064824104309,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:53"
+ },
+ "111557": {
+  "truth": "6DqDm",
+  "model": "6DqDm",
+  "vision": "6D9Dm",
+  "model_right": true,
+  "confidence": 0.45354607701301575,
+  "source": "uncertain",
+  "time": "2026-09-30T10:59:56"
+ },
+ "3402": {
+  "truth": "6B2m9",
+  "model": "6B2mg",
+  "vision": "682mg",
+  "model_right": false,
+  "confidence": 0.4370199739933014,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:05"
+ },
+ "13187": {
+  "truth": "98ibL",
+  "model": "98jbL",
+  "vision": "98ibL",
+  "model_right": false,
+  "confidence": 0.4333936870098114,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:12"
+ },
+ "32991": {
+  "truth": "q93F4",
+  "model": "q93F4",
+  "vision": "q93F4",
+  "model_right": true,
+  "confidence": 0.4593190848827362,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:15"
+ },
+ "24362": {
+  "truth": "N8b9N",
+  "model": "N8b9N",
+  "vision": "N698N",
+  "model_right": true,
+  "confidence": 0.37194469571113586,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:32"
+ },
+ "24460": {
+  "truth": "qaN8D",
+  "model": "qaN8D",
+  "vision": "qaN8D",
+  "model_right": true,
+  "confidence": 0.448466032743454,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:35"
+ },
+ "113993": {
+  "truth": "HN34q",
+  "model": "HN34a",
+  "vision": "HN34q",
+  "model_right": false,
+  "confidence": 0.3132234513759613,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:41"
+ },
+ "108346": {
+  "truth": "9Y2Ae",
+  "model": "9Y2Ae",
+  "vision": "9y2qe",
+  "model_right": true,
+  "confidence": 0.4430117905139923,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:45"
+ },
+ "97391": {
+  "truth": "NrR98",
+  "model": "NrR98",
+  "vision": "NrR9g",
+  "model_right": true,
+  "confidence": 0.4630294442176819,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:48"
+ },
+ "70293": {
+  "truth": "4aiLa",
+  "model": "4aiLa",
+  "vision": "4qiLa",
+  "model_right": true,
+  "confidence": 0.45073261857032776,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:51"
+ },
+ "100824": {
+  "truth": "jgNb4",
+  "model": "jgNb4",
+  "vision": "igNb4",
+  "model_right": true,
+  "confidence": 0.4027574360370636,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:54"
+ },
+ "101441": {
+  "truth": "yrTq2",
+  "model": "yrTq2",
+  "vision": "yrTq2",
+  "model_right": true,
+  "confidence": 0.4426933228969574,
+  "source": "uncertain",
+  "time": "2026-09-30T11:00:57"
+ },
+ "115517": {
+  "truth": "YGgfD",
+  "model": "YGgfD",
+  "vision": "YGgfD",
+  "model_right": true,
+  "confidence": 0.4632662236690521,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:02"
+ },
+ "17579": {
+  "truth": "Qq8hE",
+  "model": "Q98hE",
+  "vision": "Q98hE",
+  "model_right": false,
+  "confidence": 0.39897289872169495,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:06"
+ },
+ "52787": {
+  "truth": "9h98L",
+  "model": "9h98L",
+  "vision": "T8646",
+  "model_right": true,
+  "confidence": 0.4552534222602844,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:11"
+ },
+ "79292": {
+  "truth": "394FQ",
+  "model": "394FQ",
+  "vision": "3g4FQ",
+  "model_right": true,
+  "confidence": 0.42961230874061584,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:14"
+ },
+ "115398": {
+  "truth": "yT9FY",
+  "model": "yT9FY",
+  "vision": "YT9FY",
+  "model_right": true,
+  "confidence": 0.4511650800704956,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:18"
+ },
+ "16394": {
+  "truth": "n3Eqq",
+  "model": "n3Eaq",
+  "vision": "n3Egq",
+  "model_right": false,
+  "confidence": 0.4593766927719116,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:27"
+ },
+ "53460": {
+  "truth": "nGE2q",
+  "model": "nGE2q",
+  "vision": "nGE2q",
+  "model_right": true,
+  "confidence": 0.45901697874069214,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:31"
+ },
+ "57590": {
+  "truth": "g6QJA",
+  "model": "g6QJA",
+  "vision": "96QJA",
+  "model_right": true,
+  "confidence": 0.44159120321273804,
+  "source": "uncertain",
+  "time": "2026-09-30T11:01:35"
+ },
+ "33554": {
+  "truth": "8qbD6",
+  "model": "8qbD6",
+  "vision": "8gbD6",
+  "model_right": true,
+  "confidence": 0.4643690586090088,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:17"
+ },
+ "87198": {
+  "truth": "AqN4j",
+  "model": "AqNAj",
+  "vision": "AqNAj",
+  "model_right": false,
+  "confidence": 0.42204487323760986,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:26"
+ },
+ "76733": {
+  "truth": "yqHJ2",
+  "model": "yqHJ2",
+  "vision": "yqHJ2",
+  "model_right": true,
+  "confidence": 0.4383757412433624,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:32"
+ },
+ "121373": {
+  "truth": "BL44q",
+  "model": "BL44q",
+  "vision": "BL44Q",
+  "model_right": true,
+  "confidence": 0.387227863073349,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:33"
+ },
+ "47633": {
+  "truth": "96naL",
+  "model": "96naL",
+  "vision": "9gnaL",
+  "model_right": true,
+  "confidence": 0.41702988743782043,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:36"
+ },
+ "4180": {
+  "truth": "jMG9f",
+  "model": "fMG9f",
+  "vision": "iMG9f",
+  "model_right": false,
+  "confidence": 0.3688042461872101,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:41"
+ },
+ "6272": {
+  "truth": "gEEi6",
+  "model": "gEEi6",
+  "vision": "gEEi6",
+  "model_right": true,
+  "confidence": 0.4632030427455902,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:45"
+ },
+ "72785": {
+  "truth": "H4qgB",
+  "model": "H4qgB",
+  "vision": "H49gB",
+  "model_right": true,
+  "confidence": 0.44345441460609436,
+  "source": "uncertain",
+  "time": "2026-09-30T11:02:51"
+ },
+ "25118": {
+  "truth": "EdDi9",
+  "model": "EdDi9",
+  "vision": "EdDi9",
+  "model_right": true,
+  "confidence": 0.4498811364173889,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:04"
+ },
+ "98176": {
+  "truth": "qf2G4",
+  "model": "qf2G4",
+  "vision": "qf2G4",
+  "model_right": true,
+  "confidence": 0.4120468497276306,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:08"
+ },
+ "99331": {
+  "truth": "r8L9B",
+  "model": "r8j9B",
+  "vision": "r8L9B",
+  "model_right": false,
+  "confidence": 0.2675265371799469,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:13"
+ },
+ "117165": {
+  "truth": "9i4N6",
+  "model": "gi4N6",
+  "vision": "gj4N6",
+  "model_right": false,
+  "confidence": 0.43448442220687866,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:21"
+ },
+ "73602": {
+  "truth": "T6r9a",
+  "model": "T6r9a",
+  "vision": "T6f9a",
+  "model_right": true,
+  "confidence": 0.45593899488449097,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:26"
+ },
+ "57033": {
+  "truth": "qb2QF",
+  "model": "qb2QF",
+  "vision": "qb2QF",
+  "model_right": true,
+  "confidence": 0.3466587960720062,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:29"
+ },
+ "35": {
+  "truth": "qi6eN",
+  "model": "qi6eN",
+  "vision": "qi6eN",
+  "model_right": true,
+  "confidence": 0.45350292325019836,
+  "source": "uncertain",
+  "time": "2026-09-30T11:03:33"
+ },
+ "126634": {
+  "truth": "JMQq8",
+  "model": "JMQq8",
+  "vision": "JMQ98",
+  "model_right": true,
+  "confidence": 0.4303584098815918,
+  "source": "uncertain",
+  "time": "2026-09-30T11:05:45"
+ },
+ "92724": {
+  "truth": "jJqY4",
+  "model": "jJqY4",
+  "vision": "iJaY4",
+  "model_right": true,
+  "confidence": 0.4502679109573364,
+  "source": "uncertain",
+  "time": "2026-09-30T11:06:17"
+ },
+ "46699": {
+  "truth": "9R528",
+  "model": "9R528",
+  "vision": "9R528",
+  "model_right": true,
+  "confidence": 0.47729817032814026,
+  "source": "uncertain",
+  "time": "2026-09-30T11:07:59"
+ },
+ "112915": {
+  "truth": "Y5qRA",
+  "model": "Y5qRA",
+  "vision": "Y5qRA",
+  "model_right": true,
+  "confidence": 0.4635550081729889,
+  "source": "uncertain",
+  "time": "2026-09-30T11:08:41"
+ },
+ "71738": {
+  "truth": "Aj6Lq",
+  "model": "Aj6L9",
+  "vision": "Aj6f9",
+  "model_right": false,
+  "confidence": 0.47089868783950806,
+  "source": "uncertain",
+  "time": "2026-09-30T11:08:49"
+ },
+ "12734": {
+  "truth": "aQ9i5",
+  "model": "aQ9i5",
+  "vision": "aQ9j5",
+  "model_right": true,
+  "confidence": 0.3198961615562439,
+  "source": "uncertain",
+  "time": "2026-09-30T11:08:53"
+ },
+ "4808": {
+  "truth": "3b8Mg",
+  "model": "3b8Mg",
+  "vision": "3b8Mg",
+  "model_right": true,
+  "confidence": 0.5074973702430725,
+  "source": "uncertain",
+  "time": "2026-09-30T11:08:58"
+ },
+ "24929": {
+  "truth": "yL9fY",
+  "model": "YL9fY",
+  "vision": "YL9fy",
+  "model_right": false,
+  "confidence": 0.4177095890045166,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:02"
+ },
+ "64897": {
+  "truth": "gR8Qr",
+  "model": "gR8Qr",
+  "vision": "9R8Qr",
+  "model_right": true,
+  "confidence": 0.49784815311431885,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:19"
+ },
+ "84847": {
+  "truth": "9tYnD",
+  "model": "9tYnD",
+  "vision": "gtYnD",
+  "model_right": true,
+  "confidence": 0.5011383295059204,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:23"
+ },
+ "57771": {
+  "truth": "QbN92",
+  "model": "Q6N92",
+  "vision": "Q6N92",
+  "model_right": false,
+  "confidence": 0.4914565086364746,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:30"
+ },
+ "34383": {
+  "truth": "2Jgqt",
+  "model": "2Jgqt",
+  "vision": "2Jgqt",
+  "model_right": true,
+  "confidence": 0.46850916743278503,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:34"
+ },
+ "18098": {
+  "truth": "h9mAB",
+  "model": "h9mAB",
+  "vision": "hgmAB",
+  "model_right": true,
+  "confidence": 0.4590144157409668,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:38"
+ },
+ "50587": {
+  "truth": "QjL9r",
+  "model": "QjL9r",
+  "vision": "QjL9r",
+  "model_right": true,
+  "confidence": 0.5047577023506165,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:41"
+ },
+ "117234": {
+  "truth": "AQtj9",
+  "model": "AQtj9",
+  "vision": "AQtJ9",
+  "model_right": true,
+  "confidence": 0.5049044489860535,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:45"
+ },
+ "76229": {
+  "truth": "i5F94",
+  "model": "j5F94",
+  "vision": "j5F94",
+  "model_right": false,
+  "confidence": 0.4342596232891083,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:51"
+ },
+ "2351": {
+  "truth": "JqbJ6",
+  "model": "JqbJ6",
+  "vision": "jabJ6",
+  "model_right": true,
+  "confidence": 0.4741641581058502,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:56"
+ },
+ "51112": {
+  "truth": "Mqqa3",
+  "model": "Mq9a3",
+  "vision": "Mq9a3",
+  "model_right": false,
+  "confidence": 0.5086211562156677,
+  "source": "uncertain",
+  "time": "2026-09-30T11:09:59"
+ },
+ "91180": {
+  "truth": "DenG8",
+  "model": "DenGg",
+  "vision": "DenGg",
+  "model_right": false,
+  "confidence": 0.468425989151001,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:05"
+ },
+ "84384": {
+  "truth": "qTR4J",
+  "model": "qTR4J",
+  "vision": "ATR4J",
+  "model_right": true,
+  "confidence": 0.44186466932296753,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:09"
+ },
+ "12043": {
+  "truth": "8etD9",
+  "model": "8etD9",
+  "vision": "8etDg",
+  "model_right": true,
+  "confidence": 0.4845943748950958,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:14"
+ },
+ "69034": {
+  "truth": "5YdAq",
+  "model": "5YdAq",
+  "vision": "5YdAq",
+  "model_right": true,
+  "confidence": 0.47682860493659973,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:18"
+ },
+ "25278": {
+  "truth": "tJ69F",
+  "model": "tJ69F",
+  "vision": "fJ69F",
+  "model_right": true,
+  "confidence": 0.3976002335548401,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:21"
+ },
+ "9159": {
+  "truth": "gRr8E",
+  "model": "gRr8E",
+  "vision": "gRigE",
+  "model_right": true,
+  "confidence": 0.4798305630683899,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:25"
+ },
+ "4674": {
+  "truth": "6q4QL",
+  "model": "694QL",
+  "vision": "644QL",
+  "model_right": false,
+  "confidence": 0.4550020396709442,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:31"
+ },
+ "43169": {
+  "truth": "jAy9Q",
+  "model": "jAy9Q",
+  "vision": "iAy9Q",
+  "model_right": true,
+  "confidence": 0.4786430299282074,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:37"
+ },
+ "99436": {
+  "truth": "agqF9",
+  "model": "agqFg",
+  "vision": "agqF9",
+  "model_right": false,
+  "confidence": 0.504982590675354,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:45"
+ },
+ "80820": {
+  "truth": "YGqB5",
+  "model": "YGqB5",
+  "vision": "YG9B5",
+  "model_right": true,
+  "confidence": 0.4607912600040436,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:49"
+ },
+ "10111": {
+  "truth": "qyD8D",
+  "model": "qyD8D",
+  "vision": "qYD8D",
+  "model_right": true,
+  "confidence": 0.4433678388595581,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:53"
+ },
+ "108329": {
+  "truth": "Y25Eq",
+  "model": "Y25Eq",
+  "vision": "Y25Eq",
+  "model_right": true,
+  "confidence": 0.49812960624694824,
+  "source": "uncertain",
+  "time": "2026-09-30T11:10:57"
+ },
+ "56325": {
+  "truth": "6mEi9",
+  "model": "6mEj9",
+  "vision": "6mEj9",
+  "model_right": false,
+  "confidence": 0.48946255445480347,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:04"
+ },
+ "48208": {
+  "truth": "yj9H8",
+  "model": "yj9H8",
+  "vision": "yjqH8",
+  "model_right": true,
+  "confidence": 0.48590177297592163,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:10"
+ },
+ "57895": {
+  "truth": "8Lqqn",
+  "model": "8L9qn",
+  "vision": "8Lagn",
+  "model_right": false,
+  "confidence": 0.3451036810874939,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:18"
+ },
+ "70245": {
+  "truth": "gh9NB",
+  "model": "gh9NB",
+  "vision": "gh9NB",
+  "model_right": true,
+  "confidence": 0.4616796374320984,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:25"
+ },
+ "13013": {
+  "truth": "Qan68",
+  "model": "Qan68",
+  "vision": "Qan6g",
+  "model_right": true,
+  "confidence": 0.5027896761894226,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:29"
+ },
+ "28663": {
+  "truth": "Yqm6E",
+  "model": "Y9M6E",
+  "vision": "Y9M6E",
+  "model_right": false,
+  "confidence": 0.4741652309894562,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:33"
+ },
+ "3017": {
+  "truth": "Ed9qd",
+  "model": "Edgad",
+  "vision": "Edgad",
+  "model_right": false,
+  "confidence": 0.33657410740852356,
+  "source": "uncertain",
+  "time": "2026-09-30T11:11:51"
+ },
+ "19634": {
+  "truth": "gEY63",
+  "model": "gEY63",
+  "vision": "9EY63",
+  "model_right": true,
+  "confidence": 0.5004322528839111,
+  "source": "uncertain",
+  "time": "2026-09-30T11:15:48"
+ },
+ "77976": {
+  "truth": "mTT93",
+  "model": "mTT93",
+  "vision": "miT93",
+  "model_right": true,
+  "confidence": 0.4356628358364105,
+  "source": "uncertain",
+  "time": "2026-09-30T11:15:51"
+ },
+ "75180": {
+  "truth": "g6E4L",
+  "model": "96E4L",
+  "vision": "96E4L",
+  "model_right": false,
+  "confidence": 0.45884740352630615,
+  "source": "uncertain",
+  "time": "2026-09-30T11:15:58"
+ },
+ "36064": {
+  "truth": "jqH8M",
+  "model": "jqH8M",
+  "vision": "jqH5M",
+  "model_right": true,
+  "confidence": 0.3550124764442444,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:04"
+ },
+ "125337": {
+  "truth": "qr9BH",
+  "model": "qr9BH",
+  "vision": "9r9BH",
+  "model_right": true,
+  "confidence": 0.48307955265045166,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:07"
+ },
+ "101783": {
+  "truth": "M9qaB",
+  "model": "M9qaB",
+  "vision": "MgqaB",
+  "model_right": true,
+  "confidence": 0.4969087541103363,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:10"
+ },
+ "31527": {
+  "truth": "ahaA8",
+  "model": "ahaq8",
+  "vision": "ahaq8",
+  "model_right": false,
+  "confidence": 0.3974144458770752,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:16"
+ },
+ "112904": {
+  "truth": "gA8jt",
+  "model": "gA8jt",
+  "vision": "948jt",
+  "model_right": true,
+  "confidence": 0.44691428542137146,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:20"
+ },
+ "57031": {
+  "truth": "GbB9h",
+  "model": "GbBgh",
+  "vision": "GbBgh",
+  "model_right": false,
+  "confidence": 0.4908027946949005,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:27"
+ },
+ "8677": {
+  "truth": "6eRTf",
+  "model": "6eRTf",
+  "vision": "6gRTf",
+  "model_right": true,
+  "confidence": 0.46226274967193604,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:31"
+ },
+ "83926": {
+  "truth": "6gy9R",
+  "model": "69y9R",
+  "vision": "69y9R",
+  "model_right": false,
+  "confidence": 0.48436182737350464,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:50"
+ },
+ "95406": {
+  "truth": "q55gE",
+  "model": "q55gE",
+  "vision": "955gE",
+  "model_right": true,
+  "confidence": 0.465261846780777,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:53"
+ },
+ "13174": {
+  "truth": "YJg8m",
+  "model": "YJg8m",
+  "vision": "YJg8m",
+  "model_right": true,
+  "confidence": 0.5042362213134766,
+  "source": "uncertain",
+  "time": "2026-09-30T11:16:58"
+ },
+ "44805": {
+  "truth": "Fr9gq",
+  "model": "Fr9gq",
+  "vision": "Fr9gq",
+  "model_right": true,
+  "confidence": 0.4945632517337799,
+  "source": "uncertain",
+  "time": "2026-09-30T11:17:46"
+ },
+ "37183": {
+  "truth": "HyYg5",
+  "model": "Hyyg5",
+  "vision": "Hyyg5",
+  "model_right": false,
+  "confidence": 0.44786086678504944,
+  "source": "uncertain",
+  "time": "2026-09-30T11:17:51"
+ },
+ "109326": {
+  "truth": "j8YgL",
+  "model": "j8YgL",
+  "vision": "i8YgL",
+  "model_right": true,
+  "confidence": 0.33699798583984375,
+  "source": "uncertain",
+  "time": "2026-09-30T11:17:55"
+ },
+ "16026": {
+  "truth": "4Ergb",
+  "model": "4ETgb",
+  "vision": "4ETgb",
+  "model_right": false,
+  "confidence": 0.4870355725288391,
+  "source": "uncertain",
+  "time": "2026-09-30T11:17:59"
+ },
+ "38242": {
+  "truth": "Nq8nL",
+  "model": "Nq8nL",
+  "vision": "Nq8nL",
+  "model_right": true,
+  "confidence": 0.4177621006965637,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:02"
+ },
+ "11445": {
+  "truth": "9DLHb",
+  "model": "9DLH6",
+  "vision": "9DLH6",
+  "model_right": false,
+  "confidence": 0.4458044469356537,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:07"
+ },
+ "64666": {
+  "truth": "QMg9Q",
+  "model": "QMg9Q",
+  "vision": "QMggQ",
+  "model_right": true,
+  "confidence": 0.41949763894081116,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:12"
+ },
+ "73926": {
+  "truth": "9hQqL",
+  "model": "9hQqL",
+  "vision": "9hQaL",
+  "model_right": true,
+  "confidence": 0.4558402895927429,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:16"
+ },
+ "89647": {
+  "truth": "Tqi3B",
+  "model": "Tqi3B",
+  "vision": "Tqi38",
+  "model_right": true,
+  "confidence": 0.4576184153556824,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:19"
+ },
+ "109862": {
+  "truth": "6qQbL",
+  "model": "6qQbL",
+  "vision": "f9Dbg",
+  "model_right": true,
+  "confidence": 0.46063366532325745,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:22"
+ },
+ "114500": {
+  "truth": "tYg4T",
+  "model": "tYg4T",
+  "vision": "tYg4T",
+  "model_right": true,
+  "confidence": 0.46812137961387634,
+  "source": "uncertain",
+  "time": "2026-09-30T11:18:26"
+ },
+ "106807": {
+  "truth": "q4LQf",
+  "model": "q4LQf",
+  "vision": "94LQf",
+  "model_right": true,
+  "confidence": 0.47148746252059937,
+  "source": "uncertain",
+  "time": "2026-09-30T11:19:05"
+ },
+ "123043": {
+  "truth": "b6q9T",
+  "model": "66q9T",
+  "vision": "66q9T",
+  "model_right": false,
+  "confidence": 0.48037680983543396,
+  "source": "uncertain",
+  "time": "2026-09-30T11:19:39"
+ },
+ "70332": {
+  "truth": "n2AA2",
+  "model": "n2AA2",
+  "vision": "n2Aq2",
+  "model_right": true,
+  "confidence": 0.49008044600486755,
+  "source": "uncertain",
+  "time": "2026-09-30T11:19:42"
+ },
+ "40939": {
+  "truth": "rH9Mh",
+  "model": "rH9Mn",
+  "vision": "rHgMn",
+  "model_right": false,
+  "confidence": 0.487407922744751,
+  "source": "uncertain",
+  "time": "2026-09-30T11:19:50"
+ },
+ "43033": {
+  "truth": "Nei9F",
+  "model": "Nej9F",
+  "vision": "Nei9F",
+  "model_right": false,
+  "confidence": 0.43973079323768616,
+  "source": "uncertain",
+  "time": "2026-09-30T11:19:54"
+ },
+ "2730": {
+  "truth": "b4Nig",
+  "model": "b4Nig",
+  "vision": "bANi9",
+  "model_right": true,
+  "confidence": 0.44649192690849304,
+  "source": "uncertain",
+  "time": "2026-09-30T11:19:57"
+ },
+ "92004": {
+  "truth": "8m9rB",
+  "model": "8m9rB",
+  "vision": "8mgrB",
+  "model_right": true,
+  "confidence": 0.5004115104675293,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:01"
+ },
+ "116005": {
+  "truth": "Ri9R5",
+  "model": "Ri9R5",
+  "vision": "Ri9R5",
+  "model_right": true,
+  "confidence": 0.44600144028663635,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:03"
+ },
+ "59822": {
+  "truth": "9hbDY",
+  "model": "9hbDY",
+  "vision": "ghbDY",
+  "model_right": true,
+  "confidence": 0.4567568302154541,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:05"
+ },
+ "16569": {
+  "truth": "59Da9",
+  "model": "5gDa9",
+  "vision": "5gDag",
+  "model_right": false,
+  "confidence": 0.4712076485157013,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:12"
+ },
+ "44080": {
+  "truth": "g96Ai",
+  "model": "g96Ai",
+  "vision": "996Aj",
+  "model_right": true,
+  "confidence": 0.44576022028923035,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:16"
+ },
+ "55247": {
+  "truth": "Mny9r",
+  "model": "Mny9r",
+  "vision": "Mnygr",
+  "model_right": true,
+  "confidence": 0.4766164720058441,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:18"
+ },
+ "11791": {
+  "truth": "QBQ9t",
+  "model": "QBQ9t",
+  "vision": "QgQgt",
+  "model_right": true,
+  "confidence": 0.4444007873535156,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:21"
+ },
+ "19639": {
+  "truth": "FA6q2",
+  "model": "FA692",
+  "vision": "FA692",
+  "model_right": false,
+  "confidence": 0.49996888637542725,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:28"
+ },
+ "26214": {
+  "truth": "gQAN4",
+  "model": "gQAN4",
+  "vision": "9QAN4",
+  "model_right": true,
+  "confidence": 0.4622800052165985,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:32"
+ },
+ "102391": {
+  "truth": "bgD9A",
+  "model": "bgDgA",
+  "vision": "bgDgA",
+  "model_right": false,
+  "confidence": 0.4980071783065796,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:36"
+ },
+ "100224": {
+  "truth": "95E8Q",
+  "model": "95E8Q",
+  "vision": "95E8Q",
+  "model_right": true,
+  "confidence": 0.48587891459465027,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:40"
+ },
+ "25928": {
+  "truth": "3qjRn",
+  "model": "3qjRn",
+  "vision": "39jRn",
+  "model_right": true,
+  "confidence": 0.5047411322593689,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:43"
+ },
+ "98220": {
+  "truth": "9DNj3",
+  "model": "9DNi3",
+  "vision": "9DNi3",
+  "model_right": false,
+  "confidence": 0.48486950993537903,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:50"
+ },
+ "118517": {
+  "truth": "iiDn9",
+  "model": "iiDng",
+  "vision": "iiDng",
+  "model_right": false,
+  "confidence": 0.5016893744468689,
+  "source": "uncertain",
+  "time": "2026-09-30T11:20:59"
+ },
+ "36899": {
+  "truth": "n5grN",
+  "model": "n5grN",
+  "vision": "n5grN",
+  "model_right": true,
+  "confidence": 0.48664990067481995,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:03"
+ },
+ "10571": {
+  "truth": "fq4FB",
+  "model": "f94FB",
+  "vision": "f94FB",
+  "model_right": false,
+  "confidence": 0.4806751310825348,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:09"
+ },
+ "41776": {
+  "truth": "9dFjB",
+  "model": "9dFiB",
+  "vision": "gdFiB",
+  "model_right": false,
+  "confidence": 0.4894496500492096,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:16"
+ },
+ "14829": {
+  "truth": "9fFjG",
+  "model": "9fFJG",
+  "vision": "9fFjG",
+  "model_right": false,
+  "confidence": 0.4440424144268036,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:21"
+ },
+ "58317": {
+  "truth": "YY4n9",
+  "model": "YY4n9",
+  "vision": "YY4ng",
+  "model_right": true,
+  "confidence": 0.45767730474472046,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:25"
+ },
+ "74535": {
+  "truth": "qhRm3",
+  "model": "9hRm3",
+  "vision": "9hRm3",
+  "model_right": false,
+  "confidence": 0.49550727009773254,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:28"
+ },
+ "46621": {
+  "truth": "gi9mE",
+  "model": "gi9mE",
+  "vision": "gj9mE",
+  "model_right": true,
+  "confidence": 0.47365114092826843,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:34"
+ },
+ "21813": {
+  "truth": "Lr49q",
+  "model": "LT49q",
+  "vision": "LT499",
+  "model_right": false,
+  "confidence": 0.4985792636871338,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:38"
+ },
+ "50428": {
+  "truth": "Jg4LL",
+  "model": "Jg4LL",
+  "vision": "Jg4LL",
+  "model_right": true,
+  "confidence": 0.4950256645679474,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:42"
+ },
+ "6607": {
+  "truth": "h3qJG",
+  "model": "h3qJG",
+  "vision": "h3aJG",
+  "model_right": true,
+  "confidence": 0.3928850293159485,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:49"
+ },
+ "59969": {
+  "truth": "yRq8B",
+  "model": "yRq8B",
+  "vision": "YRq8B",
+  "model_right": true,
+  "confidence": 0.4924890995025635,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:52"
+ },
+ "74131": {
+  "truth": "jNAq8",
+  "model": "jNAq8",
+  "vision": "jNA98",
+  "model_right": true,
+  "confidence": 0.5104212164878845,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:57"
+ },
+ "95414": {
+  "truth": "MeT29",
+  "model": "MeT29",
+  "vision": "MeT2g",
+  "model_right": true,
+  "confidence": 0.47952839732170105,
+  "source": "uncertain",
+  "time": "2026-09-30T11:21:59"
+ },
+ "98120": {
+  "truth": "dqRb6",
+  "model": "dqRb6",
+  "vision": "dqRD6",
+  "model_right": true,
+  "confidence": 0.5090063214302063,
+  "source": "uncertain",
+  "time": "2026-09-30T11:22:03"
+ },
+ "71518": {
+  "truth": "hmg2J",
+  "model": "hmg2J",
+  "vision": "hm92J",
+  "model_right": true,
+  "confidence": 0.48025965690612793,
+  "source": "uncertain",
+  "time": "2026-09-30T11:22:06"
+ },
+ "99775": {
+  "truth": "FJng5",
+  "model": "FJng5",
+  "vision": "Fjng5",
+  "model_right": true,
+  "confidence": 0.4259212613105774,
+  "source": "uncertain",
+  "time": "2026-09-30T11:22:09"
+ },
+ "98751": {
+  "truth": "94Fm5",
+  "model": "94Fm5",
+  "vision": "94Fm5",
+  "model_right": true,
+  "confidence": 0.45258545875549316,
+  "source": "uncertain",
+  "time": "2026-09-30T11:22:13"
+ },
+ "96890": {
+  "truth": "jE88q",
+  "model": "jE88q",
+  "vision": "jEg8q",
+  "model_right": true,
+  "confidence": 0.5064350962638855,
+  "source": "uncertain",
+  "time": "2026-09-30T11:22:16"
+ },
+ "32116": {
+  "truth": "mRTa9",
+  "model": "mRTa9",
+  "vision": "mRrag",
+  "model_right": true,
+  "confidence": 0.50142502784729,
+  "source": "uncertain",
+  "time": "2026-09-30T11:22:22"
+ },
+ "114669": {
+  "truth": "LhBq9",
+  "model": "LhBq9",
+  "vision": "LhB99",
+  "model_right": true,
+  "confidence": 0.506016731262207,
+  "source": "uncertain",
+  "time": "2026-09-30T11:24:45"
+ },
+ "107820": {
+  "truth": "qm58N",
+  "model": "qm58N",
+  "vision": "9m58N",
+  "model_right": true,
+  "confidence": 0.49192875623703003,
+  "source": "uncertain",
+  "time": "2026-09-30T11:24:48"
+ },
+ "55829": {
+  "truth": "y4qD2",
+  "model": "y4qD2",
+  "vision": "y49D2",
+  "model_right": true,
+  "confidence": 0.4616187512874603,
+  "source": "uncertain",
+  "time": "2026-09-30T11:24:52"
+ },
+ "68858": {
+  "truth": "f8FTy",
+  "model": "f8FTY",
+  "vision": "fgFTY",
+  "model_right": false,
+  "confidence": 0.49344196915626526,
+  "source": "uncertain",
+  "time": "2026-09-30T11:24:58"
+ },
+ "124718": {
+  "truth": "rf5J9",
+  "model": "rf5J9",
+  "vision": "rf5Jg",
+  "model_right": true,
+  "confidence": 0.4495966136455536,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:05"
+ },
+ "6614": {
+  "truth": "B9jBE",
+  "model": "B9iBE",
+  "vision": "B9iBE",
+  "model_right": false,
+  "confidence": 0.47113317251205444,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:10"
+ },
+ "71209": {
+  "truth": "jAT3q",
+  "model": "jAT3q",
+  "vision": "iAT39",
+  "model_right": true,
+  "confidence": 0.4669815003871918,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:15"
+ },
+ "81338": {
+  "truth": "48Ddh",
+  "model": "4gDdh",
+  "vision": "4gDdh",
+  "model_right": false,
+  "confidence": 0.5125665664672852,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:18"
+ },
+ "106591": {
+  "truth": "4ge6Y",
+  "model": "4ge6Y",
+  "vision": "4ge6Y",
+  "model_right": true,
+  "confidence": 0.4954826831817627,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:22"
+ },
+ "41629": {
+  "truth": "9tr5T",
+  "model": "9tT5T",
+  "vision": "9tT5T",
+  "model_right": false,
+  "confidence": 0.42347952723503113,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:27"
+ },
+ "61": {
+  "truth": "FH2rq",
+  "model": "FH2rq",
+  "vision": "FH2r9",
+  "model_right": true,
+  "confidence": 0.5112322568893433,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:36"
+ },
+ "5759": {
+  "truth": "a9YYd",
+  "model": "a9YYd",
+  "vision": "a9Yyd",
+  "model_right": true,
+  "confidence": 0.43083634972572327,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:39"
+ },
+ "102393": {
+  "truth": "8qHj4",
+  "model": "8qHj4",
+  "vision": "8qHj4",
+  "model_right": true,
+  "confidence": 0.5070392489433289,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:42"
+ },
+ "88024": {
+  "truth": "tgQJ3",
+  "model": "fgQJ3",
+  "vision": "fgQJ3",
+  "model_right": false,
+  "confidence": 0.36027398705482483,
+  "source": "uncertain",
+  "time": "2026-09-30T11:25:56"
+ },
+ "28404": {
+  "truth": "9yTDf",
+  "model": "9yTDf",
+  "vision": "9YTDf",
+  "model_right": true,
+  "confidence": 0.4756556451320648,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:02"
+ },
+ "32584": {
+  "truth": "a8Jeq",
+  "model": "a8Jeq",
+  "vision": "agJeq",
+  "model_right": true,
+  "confidence": 0.4237348735332489,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:04"
+ },
+ "60298": {
+  "truth": "6Bng9",
+  "model": "6Bng9",
+  "vision": "68ng9",
+  "model_right": true,
+  "confidence": 0.409260630607605,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:09"
+ },
+ "112701": {
+  "truth": "adgDD",
+  "model": "adgDD",
+  "vision": "ad9DD",
+  "model_right": true,
+  "confidence": 0.46805641055107117,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:12"
+ },
+ "39699": {
+  "truth": "9LE3Q",
+  "model": "9LE3Q",
+  "vision": "9LE3Q",
+  "model_right": true,
+  "confidence": 0.44973140954971313,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:16"
+ },
+ "71403": {
+  "truth": "ijF9R",
+  "model": "ijF9R",
+  "vision": "ijFDR",
+  "model_right": true,
+  "confidence": 0.4366697669029236,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:19"
+ },
+ "118082": {
+  "truth": "yjRq5",
+  "model": "yjRq5",
+  "vision": "yjR95",
+  "model_right": true,
+  "confidence": 0.48512670397758484,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:21"
+ },
+ "80008": {
+  "truth": "ti4N9",
+  "model": "ti4N9",
+  "vision": "ti4Ng",
+  "model_right": true,
+  "confidence": 0.49508923292160034,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:24"
+ },
+ "115445": {
+  "truth": "RhD93",
+  "model": "RhD93",
+  "vision": "RhD93",
+  "model_right": true,
+  "confidence": 0.46889328956604004,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:26"
+ },
+ "15297": {
+  "truth": "qrJN9",
+  "model": "qrJN9",
+  "vision": "QrJN9",
+  "model_right": true,
+  "confidence": 0.40154749155044556,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:29"
+ },
+ "57752": {
+  "truth": "nB96t",
+  "model": "nBg6t",
+  "vision": "nBg6t",
+  "model_right": false,
+  "confidence": 0.49851882457733154,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:36"
+ },
+ "90087": {
+  "truth": "gm9A4",
+  "model": "gm9A4",
+  "vision": "gmg44",
+  "model_right": true,
+  "confidence": 0.48008260130882263,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:40"
+ },
+ "121450": {
+  "truth": "qQQq6",
+  "model": "9QQ96",
+  "vision": "9QQ96",
+  "model_right": false,
+  "confidence": 0.4928547739982605,
+  "source": "uncertain",
+  "time": "2026-09-30T11:26:47"
+ },
+ "69723": {
+  "truth": "Q9qHq",
+  "model": "Q9qHq",
+  "vision": "Q9qH9",
+  "model_right": true,
+  "confidence": 0.5092655420303345,
+  "source": "uncertain",
+  "time": "2026-09-30T11:28:46"
+ },
+ "77363": {
+  "truth": "9FYtD",
+  "model": "9FYtD",
+  "vision": "9FYtD",
+  "model_right": true,
+  "confidence": 0.44077807664871216,
+  "source": "uncertain",
+  "time": "2026-09-30T11:28:48"
+ },
+ "73839": {
+  "truth": "hT95i",
+  "model": "hT95i",
+  "vision": "hTa5i",
+  "model_right": true,
+  "confidence": 0.3815196752548218,
+  "source": "uncertain",
+  "time": "2026-09-30T11:28:51"
+ },
+ "27036": {
+  "truth": "H22gn",
+  "model": "H22gn",
+  "vision": "H22gn",
+  "model_right": true,
+  "confidence": 0.4029073417186737,
+  "source": "uncertain",
+  "time": "2026-09-30T11:28:53"
+ },
+ "34080": {
+  "truth": "M8Y99",
+  "model": "M8Y99",
+  "vision": "M8Y99",
+  "model_right": true,
+  "confidence": 0.45989349484443665,
+  "source": "uncertain",
+  "time": "2026-09-30T11:28:57"
+ },
+ "50171": {
+  "truth": "eqjJ9",
+  "model": "eqjJ9",
+  "vision": "eAjJ9",
+  "model_right": true,
+  "confidence": 0.4294385015964508,
+  "source": "uncertain",
+  "time": "2026-09-30T11:28:59"
+ },
+ "56682": {
+  "truth": "QiJ39",
+  "model": "QiJ39",
+  "vision": "QiJ3g",
+  "model_right": true,
+  "confidence": 0.4766288101673126,
+  "source": "uncertain",
+  "time": "2026-09-30T11:29:02"
+ },
+ "698": {
+  "truth": "2L9gH",
+  "model": "2L9gH",
+  "vision": "2f9gH",
+  "model_right": true,
+  "confidence": 0.4817257225513458,
+  "source": "uncertain",
+  "time": "2026-09-30T11:29:06"
+ },
+ "108034": {
+  "truth": "jH84f",
+  "model": "jH84f",
+  "vision": "jHg4f",
+  "model_right": true,
+  "confidence": 0.5032127499580383,
+  "source": "uncertain",
+  "time": "2026-09-30T11:29:09"
+ },
+ "72981": {
+  "truth": "D6J5q",
+  "model": "D6J5q",
+  "vision": "D6J59",
+  "model_right": true,
+  "confidence": 0.46983078122138977,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:02"
+ },
+ "59941": {
+  "truth": "9Ay8L",
+  "model": "9Ay8L",
+  "vision": "9AY8L",
+  "model_right": true,
+  "confidence": 0.4954701066017151,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:05"
+ },
+ "45142": {
+  "truth": "qtA6Y",
+  "model": "qtA6Y",
+  "vision": "atq6Y",
+  "model_right": true,
+  "confidence": 0.45489442348480225,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:07"
+ },
+ "102570": {
+  "truth": "e9E8Y",
+  "model": "e9E8Y",
+  "vision": "e9E8y",
+  "model_right": true,
+  "confidence": 0.49334385991096497,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:10"
+ },
+ "236": {
+  "truth": "FF6q2",
+  "model": "FF6q2",
+  "vision": "FF692",
+  "model_right": true,
+  "confidence": 0.5055090188980103,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:12"
+ },
+ "18475": {
+  "truth": "8iTb9",
+  "model": "8iTb9",
+  "vision": "8iTbg",
+  "model_right": true,
+  "confidence": 0.4833528995513916,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:14"
+ },
+ "94905": {
+  "truth": "y6qY3",
+  "model": "y6qY3",
+  "vision": "y6qy3",
+  "model_right": true,
+  "confidence": 0.47916918992996216,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:17"
+ },
+ "30944": {
+  "truth": "99nBn",
+  "model": "99nBn",
+  "vision": "g9ngn",
+  "model_right": true,
+  "confidence": 0.43606144189834595,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:20"
+ },
+ "115876": {
+  "truth": "6dQyg",
+  "model": "6dQyg",
+  "vision": "64Qyg",
+  "model_right": true,
+  "confidence": 0.48467251658439636,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:23"
+ },
+ "2529": {
+  "truth": "9g4By",
+  "model": "9g4By",
+  "vision": "9g4By",
+  "model_right": true,
+  "confidence": 0.4543289542198181,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:27"
+ },
+ "81714": {
+  "truth": "3LAdT",
+  "model": "3LAdT",
+  "vision": "3LAgT",
+  "model_right": true,
+  "confidence": 0.44433489441871643,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:30"
+ },
+ "37121": {
+  "truth": "R2qi5",
+  "model": "R2qi5",
+  "vision": "R2qj5",
+  "model_right": true,
+  "confidence": 0.4159085154533386,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:34"
+ },
+ "109685": {
+  "truth": "DY2F9",
+  "model": "DY2F9",
+  "vision": "DY2F9",
+  "model_right": true,
+  "confidence": 0.47672736644744873,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:38"
+ },
+ "88744": {
+  "truth": "gB96f",
+  "model": "gBg6f",
+  "vision": "gBg6f",
+  "model_right": false,
+  "confidence": 0.4576226770877838,
+  "source": "uncertain",
+  "time": "2026-09-30T11:30:49"
+ },
+ "101334": {
+  "truth": "EAh9h",
+  "model": "EAhgh",
+  "vision": "EAhgh",
+  "model_right": false,
+  "confidence": 0.5167480707168579,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:15"
+ },
+ "34948": {
+  "truth": "5q6y9",
+  "model": "5q6y9",
+  "vision": "5q6y9",
+  "model_right": true,
+  "confidence": 0.5206306576728821,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:26"
+ },
+ "49289": {
+  "truth": "DgH8e",
+  "model": "DgHge",
+  "vision": "DgHge",
+  "model_right": false,
+  "confidence": 0.5214334726333618,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:33"
+ },
+ "119349": {
+  "truth": "iq9G5",
+  "model": "iq9G5",
+  "vision": "iq9G5",
+  "model_right": true,
+  "confidence": 0.4840235412120819,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:35"
+ },
+ "6855": {
+  "truth": "95FNY",
+  "model": "95FNY",
+  "vision": "95FNY",
+  "model_right": true,
+  "confidence": 0.467447429895401,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:37"
+ },
+ "88062": {
+  "truth": "q6Dyq",
+  "model": "96Dyq",
+  "vision": "D6Dyq",
+  "model_right": false,
+  "confidence": 0.4821148216724396,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:43"
+ },
+ "77854": {
+  "truth": "mye95",
+  "model": "mye95",
+  "vision": "mye95",
+  "model_right": true,
+  "confidence": 0.4441663920879364,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:46"
+ },
+ "118783": {
+  "truth": "L93Jb",
+  "model": "L93Jb",
+  "vision": "Lg3Jb",
+  "model_right": true,
+  "confidence": 0.5077623128890991,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:51"
+ },
+ "2656": {
+  "truth": "qRE2N",
+  "model": "9RE2N",
+  "vision": "9RE2N",
+  "model_right": false,
+  "confidence": 0.5030757188796997,
+  "source": "uncertain",
+  "time": "2026-09-30T11:40:56"
+ },
+ "38199": {
+  "truth": "9Yf4j",
+  "model": "9Yf4j",
+  "vision": "9Yf4J",
+  "model_right": true,
+  "confidence": 0.5215302109718323,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:01"
+ },
+ "84319": {
+  "truth": "8Rqyq",
+  "model": "8Rqyq",
+  "vision": "8RqYq",
+  "model_right": true,
+  "confidence": 0.5122784972190857,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:04"
+ },
+ "95997": {
+  "truth": "Nqnf4",
+  "model": "Nqnf4",
+  "vision": "Nanf4",
+  "model_right": true,
+  "confidence": 0.4662494361400604,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:07"
+ },
+ "15875": {
+  "truth": "g2HgE",
+  "model": "g2HgE",
+  "vision": "92HgE",
+  "model_right": true,
+  "confidence": 0.5112707614898682,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:10"
+ },
+ "13579": {
+  "truth": "qg9eY",
+  "model": "9g9eY",
+  "vision": "9g9eY",
+  "model_right": false,
+  "confidence": 0.4541945457458496,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:17"
+ },
+ "64431": {
+  "truth": "9b9iJ",
+  "model": "9bgiJ",
+  "vision": "9bgiJ",
+  "model_right": false,
+  "confidence": 0.43877217173576355,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:23"
+ },
+ "26389": {
+  "truth": "eY9Y2",
+  "model": "eY9Y2",
+  "vision": "eY9y2",
+  "model_right": true,
+  "confidence": 0.5231042504310608,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:27"
+ },
+ "97655": {
+  "truth": "R96Ej",
+  "model": "R96Ei",
+  "vision": "R96Ei",
+  "model_right": false,
+  "confidence": 0.47501692175865173,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:34"
+ },
+ "9346": {
+  "truth": "M3qyR",
+  "model": "M3qYR",
+  "vision": "M3qYR",
+  "model_right": false,
+  "confidence": 0.45797115564346313,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:42"
+ },
+ "70976": {
+  "truth": "fjF9j",
+  "model": "fjF9j",
+  "vision": "fJF9j",
+  "model_right": true,
+  "confidence": 0.41118112206459045,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:45"
+ },
+ "77858": {
+  "truth": "jF5Bq",
+  "model": "jF5B9",
+  "vision": "jF5B9",
+  "model_right": false,
+  "confidence": 0.4596364498138428,
+  "source": "uncertain",
+  "time": "2026-09-30T11:41:55"
+ },
+ "61037": {
+  "truth": "q6DDe",
+  "model": "96DDe",
+  "vision": "96DDe",
+  "model_right": false,
+  "confidence": 0.5086455941200256,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:00"
+ },
+ "42553": {
+  "truth": "Mdyt9",
+  "model": "MdYt9",
+  "vision": "MdYt9",
+  "model_right": false,
+  "confidence": 0.5079779624938965,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:05"
+ },
+ "97044": {
+  "truth": "f9bG9",
+  "model": "f9bG9",
+  "vision": "fgbG9",
+  "model_right": true,
+  "confidence": 0.4921054244041443,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:10"
+ },
+ "122076": {
+  "truth": "q4T6T",
+  "model": "94T6T",
+  "vision": "94T6T",
+  "model_right": false,
+  "confidence": 0.4688566029071808,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:18"
+ },
+ "94111": {
+  "truth": "iEy69",
+  "model": "iEy69",
+  "vision": "iEy69",
+  "model_right": true,
+  "confidence": 0.46808674931526184,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:22"
+ },
+ "55556": {
+  "truth": "Nq84b",
+  "model": "Nq84b",
+  "vision": "Nq846",
+  "model_right": true,
+  "confidence": 0.5279891490936279,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:30"
+ },
+ "24711": {
+  "truth": "g9LJf",
+  "model": "99LJf",
+  "vision": "99LJf",
+  "model_right": false,
+  "confidence": 0.5261307954788208,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:37"
+ },
+ "72833": {
+  "truth": "gQJT8",
+  "model": "gQJT8",
+  "vision": "9QJT8",
+  "model_right": true,
+  "confidence": 0.5147736072540283,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:42"
+ },
+ "105520": {
+  "truth": "idG9y",
+  "model": "idG9y",
+  "vision": "idG9Y",
+  "model_right": true,
+  "confidence": 0.5045409202575684,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:46"
+ },
+ "1566": {
+  "truth": "5gMtg",
+  "model": "5gMtg",
+  "vision": "5gMrg",
+  "model_right": true,
+  "confidence": 0.3023657500743866,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:49"
+ },
+ "86016": {
+  "truth": "BqEY6",
+  "model": "BqEY6",
+  "vision": "B9EY6",
+  "model_right": true,
+  "confidence": 0.4879862666130066,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:51"
+ },
+ "10725": {
+  "truth": "Hb59e",
+  "model": "Hb5ge",
+  "vision": "Hb5ge",
+  "model_right": false,
+  "confidence": 0.48236843943595886,
+  "source": "uncertain",
+  "time": "2026-09-30T11:42:57"
+ },
+ "119967": {
+  "truth": "qYhd3",
+  "model": "qYhd3",
+  "vision": "ayhd3",
+  "model_right": true,
+  "confidence": 0.44823434948921204,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:00"
+ },
+ "7698": {
+  "truth": "69jTQ",
+  "model": "69jTQ",
+  "vision": "6aiTQ",
+  "model_right": true,
+  "confidence": 0.3352864682674408,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:03"
+ },
+ "120722": {
+  "truth": "93JiE",
+  "model": "93JjE",
+  "vision": "93JjE",
+  "model_right": false,
+  "confidence": 0.48902490735054016,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:10"
+ },
+ "56673": {
+  "truth": "yLy9m",
+  "model": "yLy9m",
+  "vision": "yLY9m",
+  "model_right": true,
+  "confidence": 0.4262363612651825,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:15"
+ },
+ "56606": {
+  "truth": "6LJqY",
+  "model": "6LJ9Y",
+  "vision": "6LJ9Y",
+  "model_right": false,
+  "confidence": 0.4411114752292633,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:22"
+ },
+ "13343": {
+  "truth": "6FTqt",
+  "model": "6FTat",
+  "vision": "6FT9t",
+  "model_right": false,
+  "confidence": 0.32753878831863403,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:27"
+ },
+ "40322": {
+  "truth": "T2jqR",
+  "model": "T2j9R",
+  "vision": "T2j9R",
+  "model_right": false,
+  "confidence": 0.46769747138023376,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:33"
+ },
+ "17937": {
+  "truth": "2gLan",
+  "model": "29Lah",
+  "vision": "2gLan",
+  "model_right": false,
+  "confidence": 0.40927571058273315,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:39"
+ },
+ "61685": {
+  "truth": "nTFb9",
+  "model": "nTFb9",
+  "vision": "nTF69",
+  "model_right": true,
+  "confidence": 0.48261377215385437,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:43"
+ },
+ "95677": {
+  "truth": "92emB",
+  "model": "92emB",
+  "vision": "92emB",
+  "model_right": true,
+  "confidence": 0.4511261582374573,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:46"
+ },
+ "67369": {
+  "truth": "2dJqy",
+  "model": "2dJ9y",
+  "vision": "2dj9y",
+  "model_right": false,
+  "confidence": 0.4672139585018158,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:53"
+ },
+ "119605": {
+  "truth": "2iQj9",
+  "model": "2iQj9",
+  "vision": "2fQj9",
+  "model_right": true,
+  "confidence": 0.5014321208000183,
+  "source": "uncertain",
+  "time": "2026-09-30T11:43:56"
+ },
+ "43885": {
+  "truth": "qg35L",
+  "model": "9g35L",
+  "vision": "9g35L",
+  "model_right": false,
+  "confidence": 0.4701738655567169,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:01"
+ },
+ "14494": {
+  "truth": "g4Bea",
+  "model": "g4Bea",
+  "vision": "94Bea",
+  "model_right": true,
+  "confidence": 0.5035960078239441,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:04"
+ },
+ "32227": {
+  "truth": "GmH9T",
+  "model": "GmH9T",
+  "vision": "GmHig",
+  "model_right": true,
+  "confidence": 0.5128094553947449,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:06"
+ },
+ "98134": {
+  "truth": "yg2yE",
+  "model": "yg2yE",
+  "vision": "yg2yE",
+  "model_right": true,
+  "confidence": 0.4655354917049408,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:08"
+ },
+ "90093": {
+  "truth": "Aq9r8",
+  "model": "Aq9r8",
+  "vision": "Aqgr8",
+  "model_right": true,
+  "confidence": 0.500956118106842,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:11"
+ },
+ "49559": {
+  "truth": "qq26D",
+  "model": "9q26D",
+  "vision": "9926D",
+  "model_right": false,
+  "confidence": 0.4347539246082306,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:16"
+ },
+ "19097": {
+  "truth": "H9tBe",
+  "model": "H9tBe",
+  "vision": "HgtBe",
+  "model_right": true,
+  "confidence": 0.4934329688549042,
+  "source": "uncertain",
+  "time": "2026-09-30T11:44:59"
+ },
+ "65987": {
+  "truth": "DQqq8",
+  "model": "DQqq8",
+  "vision": "DQ9q8",
+  "model_right": true,
+  "confidence": 0.4937150776386261,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:01"
+ },
+ "72923": {
+  "truth": "5YTqr",
+  "model": "5YTqr",
+  "vision": "5yTqr",
+  "model_right": true,
+  "confidence": 0.5161175727844238,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:04"
+ },
+ "99273": {
+  "truth": "QY5Aq",
+  "model": "QY5Aq",
+  "vision": "QY5A9",
+  "model_right": true,
+  "confidence": 0.5178245306015015,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:06"
+ },
+ "109278": {
+  "truth": "iTJA9",
+  "model": "iTJA9",
+  "vision": "iTJAg",
+  "model_right": true,
+  "confidence": 0.5240445733070374,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:08"
+ },
+ "44034": {
+  "truth": "Jy4qt",
+  "model": "Jy4qt",
+  "vision": "JyAqt",
+  "model_right": true,
+  "confidence": 0.5272318124771118,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:10"
+ },
+ "87035": {
+  "truth": "FBe98",
+  "model": "FBeg8",
+  "vision": "FBeg8",
+  "model_right": false,
+  "confidence": 0.482100248336792,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:18"
+ },
+ "76066": {
+  "truth": "Dq2qN",
+  "model": "Dq2qN",
+  "vision": "Dq2gN",
+  "model_right": true,
+  "confidence": 0.5114671587944031,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:29"
+ },
+ "85525": {
+  "truth": "6hd8N",
+  "model": "6hdgN",
+  "vision": "6hdgN",
+  "model_right": false,
+  "confidence": 0.4398498237133026,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:52"
+ },
+ "47173": {
+  "truth": "8GAqA",
+  "model": "8GAqA",
+  "vision": "8GA9A",
+  "model_right": true,
+  "confidence": 0.46892738342285156,
+  "source": "uncertain",
+  "time": "2026-09-30T11:45:56"
+ },
+ "92507": {
+  "truth": "3tEm9",
+  "model": "3tEm9",
+  "vision": "3tEmg",
+  "model_right": true,
+  "confidence": 0.46848514676094055,
+  "source": "uncertain",
+  "time": "2026-09-30T11:46:24"
+ },
+ "59834": {
+  "truth": "DBM8t",
+  "model": "DBM8t",
+  "vision": "DBMgt",
+  "model_right": true,
+  "confidence": 0.45362815260887146,
+  "source": "uncertain",
+  "time": "2026-09-30T11:46:29"
+ },
+ "33379": {
+  "truth": "Bg6ie",
+  "model": "Bg6ie",
+  "vision": "B96ie",
+  "model_right": true,
+  "confidence": 0.47417107224464417,
+  "source": "uncertain",
+  "time": "2026-09-30T11:46:42"
+ },
+ "100086": {
+  "truth": "Y5qMi",
+  "model": "Y5qMi",
+  "vision": "Y5qMj",
+  "model_right": true,
+  "confidence": 0.5115815997123718,
+  "source": "uncertain",
+  "time": "2026-09-30T11:46:58"
+ },
+ "32903": {
+  "truth": "jYF29",
+  "model": "jYF29",
+  "vision": "jYF29",
+  "model_right": true,
+  "confidence": 0.5290715098381042,
+  "source": "uncertain",
+  "time": "2026-09-30T11:48:59"
+ },
+ "70369": {
+  "truth": "q3dF6",
+  "model": "q3dF6",
+  "vision": "93DF6",
+  "model_right": true,
+  "confidence": 0.4913812279701233,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:02"
+ },
+ "1728": {
+  "truth": "H6Lg5",
+  "model": "H6Lg5",
+  "vision": "H6L95",
+  "model_right": true,
+  "confidence": 0.4768194258213043,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:08"
+ },
+ "30977": {
+  "truth": "fMh4B",
+  "model": "fMh4B",
+  "vision": "fMg4B",
+  "model_right": true,
+  "confidence": 0.4849848747253418,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:16"
+ },
+ "118445": {
+  "truth": "eQJM9",
+  "model": "eQJMg",
+  "vision": "eQJMg",
+  "model_right": false,
+  "confidence": 0.5075452327728271,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:34"
+ },
+ "93689": {
+  "truth": "8Dn9j",
+  "model": "8Dn9j",
+  "vision": "8Dn9f",
+  "model_right": true,
+  "confidence": 0.5113485455513,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:37"
+ },
+ "38020": {
+  "truth": "Nm96Y",
+  "model": "Nm96Y",
+  "vision": "Nm96y",
+  "model_right": true,
+  "confidence": 0.5088427662849426,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:43"
+ },
+ "83528": {
+  "truth": "H8Ji4",
+  "model": "H8Ji4",
+  "vision": "HgJi4",
+  "model_right": true,
+  "confidence": 0.4642687737941742,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:45"
+ },
+ "77372": {
+  "truth": "A3gQ5",
+  "model": "A3gQ5",
+  "vision": "A39Q5",
+  "model_right": true,
+  "confidence": 0.45965445041656494,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:48"
+ },
+ "18666": {
+  "truth": "Jb9q8",
+  "model": "Jb998",
+  "vision": "Jb998",
+  "model_right": false,
+  "confidence": 0.506871223449707,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:54"
+ },
+ "122021": {
+  "truth": "a9QnG",
+  "model": "a9QnG",
+  "vision": "agQnG",
+  "model_right": true,
+  "confidence": 0.49386337399482727,
+  "source": "uncertain",
+  "time": "2026-09-30T11:49:58"
+ },
+ "77263": {
+  "truth": "F85gM",
+  "model": "F85gM",
+  "vision": "F859M",
+  "model_right": true,
+  "confidence": 0.46858862042427063,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:01"
+ },
+ "23288": {
+  "truth": "y93YE",
+  "model": "y93YE",
+  "vision": "y93yE",
+  "model_right": true,
+  "confidence": 0.4847840368747711,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:04"
+ },
+ "10761": {
+  "truth": "BTgj4",
+  "model": "BT9j4",
+  "vision": "BT9J4",
+  "model_right": false,
+  "confidence": 0.43219318985939026,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:09"
+ },
+ "2495": {
+  "truth": "TNq6m",
+  "model": "TNq6m",
+  "vision": "TN96m",
+  "model_right": true,
+  "confidence": 0.49129369854927063,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:12"
+ },
+ "111003": {
+  "truth": "tQg8y",
+  "model": "tQg8y",
+  "vision": "tQg8y",
+  "model_right": true,
+  "confidence": 0.438978910446167,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:15"
+ },
+ "7447": {
+  "truth": "6Bhy5",
+  "model": "6Bhy5",
+  "vision": "6ghy5",
+  "model_right": true,
+  "confidence": 0.4617123603820801,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:18"
+ },
+ "72252": {
+  "truth": "g3BrQ",
+  "model": "g3BrQ",
+  "vision": "93BrQ",
+  "model_right": true,
+  "confidence": 0.4450671672821045,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:21"
+ },
+ "6377": {
+  "truth": "96RMM",
+  "model": "96RMM",
+  "vision": "96RMM",
+  "model_right": true,
+  "confidence": 0.45350486040115356,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:23"
+ },
+ "121868": {
+  "truth": "Bh6Eg",
+  "model": "Bh6Eg",
+  "vision": "Bh6E9",
+  "model_right": true,
+  "confidence": 0.4930623173713684,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:25"
+ },
+ "123558": {
+  "truth": "b8nDa",
+  "model": "b8nDa",
+  "vision": "bgnDa",
+  "model_right": true,
+  "confidence": 0.5041408538818359,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:27"
+ },
+ "91580": {
+  "truth": "qMY55",
+  "model": "qMY55",
+  "vision": "qMy55",
+  "model_right": true,
+  "confidence": 0.45580431818962097,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:29"
+ },
+ "21308": {
+  "truth": "9E9Gj",
+  "model": "9EgGj",
+  "vision": "9EgGj",
+  "model_right": false,
+  "confidence": 0.4693784713745117,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:48"
+ },
+ "116513": {
+  "truth": "bj9Yh",
+  "model": "bj9yh",
+  "vision": "bj9yh",
+  "model_right": false,
+  "confidence": 0.5219806432723999,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:52"
+ },
+ "125147": {
+  "truth": "M6Gqy",
+  "model": "M6Gqy",
+  "vision": "M6Gay",
+  "model_right": true,
+  "confidence": 0.5018562078475952,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:56"
+ },
+ "120310": {
+  "truth": "qh4yL",
+  "model": "qh4yL",
+  "vision": "anAyL",
+  "model_right": true,
+  "confidence": 0.4488013982772827,
+  "source": "uncertain",
+  "time": "2026-09-30T11:50:59"
+ },
+ "81263": {
+  "truth": "qrJL3",
+  "model": "qrJL3",
+  "vision": "arJL3",
+  "model_right": true,
+  "confidence": 0.3823036551475525,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:01"
+ },
+ "88285": {
+  "truth": "Dq9Lr",
+  "model": "Dq9Lr",
+  "vision": "D99Lr",
+  "model_right": true,
+  "confidence": 0.4618055522441864,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:04"
+ },
+ "93648": {
+  "truth": "HHbga",
+  "model": "HHbga",
+  "vision": "HHbga",
+  "model_right": true,
+  "confidence": 0.4588240683078766,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:06"
+ },
+ "29735": {
+  "truth": "3yGD9",
+  "model": "3yGD9",
+  "vision": "3YGD9",
+  "model_right": true,
+  "confidence": 0.4884341359138489,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:11"
+ },
+ "49722": {
+  "truth": "4TyQq",
+  "model": "4TyQq",
+  "vision": "4TYQq",
+  "model_right": true,
+  "confidence": 0.5172800421714783,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:14"
+ },
+ "693": {
+  "truth": "GEg84",
+  "model": "Ge984",
+  "vision": "GeY84",
+  "model_right": false,
+  "confidence": 0.4599367082118988,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:20"
+ },
+ "11722": {
+  "truth": "94jJL",
+  "model": "94jJL",
+  "vision": "94jJL",
+  "model_right": true,
+  "confidence": 0.45780178904533386,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:24"
+ },
+ "104360": {
+  "truth": "y3AH9",
+  "model": "y3AHg",
+  "vision": "y3AH9",
+  "model_right": false,
+  "confidence": 0.5076207518577576,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:32"
+ },
+ "123780": {
+  "truth": "jD4b9",
+  "model": "jD4b9",
+  "vision": "jD469",
+  "model_right": true,
+  "confidence": 0.46003493666648865,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:35"
+ },
+ "48601": {
+  "truth": "yQ99G",
+  "model": "yQ99G",
+  "vision": "YQ99G",
+  "model_right": true,
+  "confidence": 0.4574725329875946,
+  "source": "uncertain",
+  "time": "2026-09-30T11:51:38"
+ },
+ "16784": {
+  "truth": "g86Eb",
+  "model": "986Eb",
+  "vision": "986Eb",
+  "model_right": false,
+  "confidence": 0.521490216255188,
+  "source": "uncertain",
+  "time": "2026-09-30T12:09:29"
+ },
+ "41434": {
+  "truth": "4db8L",
+  "model": "4dbgL",
+  "vision": "4dbgL",
+  "model_right": false,
+  "confidence": 0.49365881085395813,
+  "source": "uncertain",
+  "time": "2026-09-30T12:09:40"
+ },
+ "111008": {
+  "truth": "fyA8d",
+  "model": "fyA8d",
+  "vision": "fyAgd",
+  "model_right": true,
+  "confidence": 0.5048761367797852,
+  "source": "uncertain",
+  "time": "2026-09-30T12:09:46"
+ },
+ "97531": {
+  "truth": "5gL3f",
+  "model": "5gL3f",
+  "vision": "5gL3f",
+  "model_right": true,
+  "confidence": 0.4801822006702423,
+  "source": "uncertain",
+  "time": "2026-09-30T12:09:51"
+ },
+ "14018": {
+  "truth": "mFAg3",
+  "model": "mFAg3",
+  "vision": "mFA93",
+  "model_right": true,
+  "confidence": 0.4807177782058716,
+  "source": "uncertain",
+  "time": "2026-09-30T12:09:53"
+ },
+ "78925": {
+  "truth": "bMt92",
+  "model": "6Mt92",
+  "vision": "6Mt92",
+  "model_right": false,
+  "confidence": 0.4941430389881134,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:10"
+ },
+ "2796": {
+  "truth": "E94aB",
+  "model": "E94aB",
+  "vision": "Eg4aB",
+  "model_right": true,
+  "confidence": 0.5259396433830261,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:20"
+ },
+ "25884": {
+  "truth": "HNqb9",
+  "model": "HNqb9",
+  "vision": "HNq69",
+  "model_right": true,
+  "confidence": 0.5000101327896118,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:23"
+ },
+ "9104": {
+  "truth": "igQ49",
+  "model": "fgQ49",
+  "vision": "fgQ49",
+  "model_right": false,
+  "confidence": 0.44368976354599,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:28"
+ },
+ "68150": {
+  "truth": "9FDjJ",
+  "model": "9FDJJ",
+  "vision": "9FDJJ",
+  "model_right": false,
+  "confidence": 0.4593851566314697,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:37"
+ },
+ "79512": {
+  "truth": "T2LqB",
+  "model": "T2L9B",
+  "vision": "T2L9B",
+  "model_right": false,
+  "confidence": 0.4831285774707794,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:44"
+ },
+ "58891": {
+  "truth": "MTjr9",
+  "model": "MTjr9",
+  "vision": "MTjr9",
+  "model_right": true,
+  "confidence": 0.4104500710964203,
+  "source": "uncertain",
+  "time": "2026-09-30T12:10:57"
+ },
+ "32520": {
+  "truth": "9Ji9n",
+  "model": "9Ji9n",
+  "vision": "9Jj9n",
+  "model_right": true,
+  "confidence": 0.5195523500442505,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:00"
+ },
+ "122369": {
+  "truth": "NAj5g",
+  "model": "NAi5g",
+  "vision": "NAj5g",
+  "model_right": false,
+  "confidence": 0.334512323141098,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:06"
+ },
+ "48592": {
+  "truth": "g5EJy",
+  "model": "g5EJy",
+  "vision": "g5EJY",
+  "model_right": true,
+  "confidence": 0.48017942905426025,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:14"
+ },
+ "122049": {
+  "truth": "ET29G",
+  "model": "ET29G",
+  "vision": "ET29G",
+  "model_right": true,
+  "confidence": 0.5045554041862488,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:17"
+ },
+ "12475": {
+  "truth": "qq4gR",
+  "model": "q94gR",
+  "vision": "q94gR",
+  "model_right": false,
+  "confidence": 0.4684295356273651,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:23"
+ },
+ "116919": {
+  "truth": "DQba9",
+  "model": "DQbag",
+  "vision": "DQbag",
+  "model_right": false,
+  "confidence": 0.5254530310630798,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:28"
+ },
+ "43887": {
+  "truth": "gBi8y",
+  "model": "gBi8y",
+  "vision": "gBi8y",
+  "model_right": true,
+  "confidence": 0.49361059069633484,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:31"
+ },
+ "493": {
+  "truth": "fjG5q",
+  "model": "fjG5q",
+  "vision": "fJG5q",
+  "model_right": true,
+  "confidence": 0.4354143738746643,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:33"
+ },
+ "32440": {
+  "truth": "eF5qr",
+  "model": "eF5qr",
+  "vision": "er5qr",
+  "model_right": true,
+  "confidence": 0.4749148488044739,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:36"
+ },
+ "78226": {
+  "truth": "Lhb9A",
+  "model": "Lhb9A",
+  "vision": "Lh69A",
+  "model_right": true,
+  "confidence": 0.5001011490821838,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:39"
+ },
+ "81117": {
+  "truth": "qH5Rj",
+  "model": "qH5Rj",
+  "vision": "qH5RJ",
+  "model_right": true,
+  "confidence": 0.3986818790435791,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:42"
+ },
+ "91983": {
+  "truth": "Ty55q",
+  "model": "Ty55q",
+  "vision": "Ty559",
+  "model_right": true,
+  "confidence": 0.5294178128242493,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:44"
+ },
+ "104257": {
+  "truth": "q8i6F",
+  "model": "q8i6F",
+  "vision": "98f6F",
+  "model_right": true,
+  "confidence": 0.4907796084880829,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:47"
+ },
+ "58121": {
+  "truth": "GGqr5",
+  "model": "GG9r5",
+  "vision": "GG9T5",
+  "model_right": false,
+  "confidence": 0.5221955180168152,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:52"
+ },
+ "22243": {
+  "truth": "aD2jq",
+  "model": "aD2jq",
+  "vision": "aD2Jq",
+  "model_right": true,
+  "confidence": 0.5053096413612366,
+  "source": "uncertain",
+  "time": "2026-09-30T12:11:54"
+ },
+ "31094": {
+  "truth": "y29Ey",
+  "model": "Y29EY",
+  "vision": "Y29EY",
+  "model_right": false,
+  "confidence": 0.530275821685791,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:00"
+ },
+ "86778": {
+  "truth": "YY3qr",
+  "model": "YY3qr",
+  "vision": "YY39r",
+  "model_right": true,
+  "confidence": 0.5120076537132263,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:03"
+ },
+ "52891": {
+  "truth": "9F9rq",
+  "model": "9F9rq",
+  "vision": "9Fgtq",
+  "model_right": true,
+  "confidence": 0.5254278779029846,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:18"
+ },
+ "71581": {
+  "truth": "g6Bit",
+  "model": "96Bjt",
+  "vision": "96Bjt",
+  "model_right": false,
+  "confidence": 0.4085778295993805,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:28"
+ },
+ "100321": {
+  "truth": "9QNjn",
+  "model": "9QNjn",
+  "vision": "9QNJn",
+  "model_right": true,
+  "confidence": 0.48246893286705017,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:32"
+ },
+ "93268": {
+  "truth": "D2hEq",
+  "model": "D2hEq",
+  "vision": "D2hE9",
+  "model_right": true,
+  "confidence": 0.5323692560195923,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:35"
+ },
+ "48420": {
+  "truth": "bbqB5",
+  "model": "bbq85",
+  "vision": "bbq85",
+  "model_right": false,
+  "confidence": 0.44354957342147827,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:41"
+ },
+ "20153": {
+  "truth": "JG29g",
+  "model": "JG29g",
+  "vision": "JG2gg",
+  "model_right": true,
+  "confidence": 0.4704849421977997,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:47"
+ },
+ "28701": {
+  "truth": "aBbd9",
+  "model": "aBbd9",
+  "vision": "agbdg",
+  "model_right": true,
+  "confidence": 0.47070884704589844,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:50"
+ },
+ "6590": {
+  "truth": "Lq5Jm",
+  "model": "Lq5Jm",
+  "vision": "L95Jm",
+  "model_right": true,
+  "confidence": 0.42381659150123596,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:53"
+ },
+ "124290": {
+  "truth": "3n9iR",
+  "model": "3ngiR",
+  "vision": "3ngiR",
+  "model_right": false,
+  "confidence": 0.5137724876403809,
+  "source": "uncertain",
+  "time": "2026-09-30T12:12:59"
+ },
+ "95737": {
+  "truth": "39aAB",
+  "model": "39aAB",
+  "vision": "39aAB",
+  "model_right": true,
+  "confidence": 0.4171577990055084,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:05"
+ },
+ "32002": {
+  "truth": "Lgy3E",
+  "model": "Lgy3E",
+  "vision": "Lgy3E",
+  "model_right": true,
+  "confidence": 0.4657714068889618,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:07"
+ },
+ "15954": {
+  "truth": "2f6Tg",
+  "model": "2f6T9",
+  "vision": "2f6T9",
+  "model_right": false,
+  "confidence": 0.47153523564338684,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:13"
+ },
+ "43001": {
+  "truth": "qA9AE",
+  "model": "qA9AE",
+  "vision": "9A9AE",
+  "model_right": true,
+  "confidence": 0.5286285281181335,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:17"
+ },
+ "82230": {
+  "truth": "A9irG",
+  "model": "AgirG",
+  "vision": "AgirG",
+  "model_right": false,
+  "confidence": 0.522361159324646,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:22"
+ },
+ "125852": {
+  "truth": "jq93D",
+  "model": "j993D",
+  "vision": "j993D",
+  "model_right": false,
+  "confidence": 0.523935079574585,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:28"
+ },
+ "108182": {
+  "truth": "m28Ne",
+  "model": "m2gNe",
+  "vision": "m2gNe",
+  "model_right": false,
+  "confidence": 0.458680123090744,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:32"
+ },
+ "123759": {
+  "truth": "q3M4g",
+  "model": "q3M4g",
+  "vision": "93M4g",
+  "model_right": true,
+  "confidence": 0.5289996266365051,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:35"
+ },
+ "21075": {
+  "truth": "ffQY9",
+  "model": "ffQy9",
+  "vision": "ffQy9",
+  "model_right": false,
+  "confidence": 0.484596848487854,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:42"
+ },
+ "115268": {
+  "truth": "m9rNj",
+  "model": "m9rNj",
+  "vision": "m9rNJ",
+  "model_right": true,
+  "confidence": 0.3450073301792145,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:46"
+ },
+ "59114": {
+  "truth": "Y3yge",
+  "model": "Y3yge",
+  "vision": "Y3yge",
+  "model_right": true,
+  "confidence": 0.4916456639766693,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:50"
+ },
+ "7169": {
+  "truth": "L843q",
+  "model": "L843q",
+  "vision": "f843q",
+  "model_right": true,
+  "confidence": 0.48012930154800415,
+  "source": "uncertain",
+  "time": "2026-09-30T12:13:53"
+ },
+ "72562": {
+  "truth": "q29fH",
+  "model": "q29fH",
+  "vision": "929fH",
+  "model_right": true,
+  "confidence": 0.438097208738327,
+  "source": "uncertain",
+  "time": "2026-09-30T12:14:37"
+ },
+ "80010": {
+  "truth": "tb9QT",
+  "model": "t69QT",
+  "vision": "t69QT",
+  "model_right": false,
+  "confidence": 0.5080962181091309,
+  "source": "uncertain",
+  "time": "2026-09-30T12:14:43"
+ },
+ "122694": {
+  "truth": "92r6E",
+  "model": "92r6E",
+  "vision": "92r6E",
+  "model_right": true,
+  "confidence": 0.49278807640075684,
+  "source": "uncertain",
+  "time": "2026-09-30T12:14:45"
+ },
+ "50339": {
+  "truth": "RDg9j",
+  "model": "RD99j",
+  "vision": "RD99j",
+  "model_right": false,
+  "confidence": 0.46573197841644287,
+  "source": "uncertain",
+  "time": "2026-09-30T12:14:51"
+ },
+ "36312": {
+  "truth": "J9nn9",
+  "model": "J9nn9",
+  "vision": "Jinng",
+  "model_right": true,
+  "confidence": 0.5203894376754761,
+  "source": "uncertain",
+  "time": "2026-09-30T12:14:55"
+ },
+ "79805": {
+  "truth": "L3gyJ",
+  "model": "L3gyJ",
+  "vision": "L3gYJ",
+  "model_right": true,
+  "confidence": 0.4883953928947449,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:04"
+ },
+ "105829": {
+  "truth": "Y9YyF",
+  "model": "y9YyF",
+  "vision": "y9YyF",
+  "model_right": false,
+  "confidence": 0.5079795718193054,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:12"
+ },
+ "79821": {
+  "truth": "4YtgL",
+  "model": "4YtgL",
+  "vision": "4YtgL",
+  "model_right": true,
+  "confidence": 0.4825328588485718,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:18"
+ },
+ "113395": {
+  "truth": "mg9RA",
+  "model": "mg9RA",
+  "vision": "m99RA",
+  "model_right": true,
+  "confidence": 0.5355929732322693,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:20"
+ },
+ "13140": {
+  "truth": "D6Jqh",
+  "model": "D6J9h",
+  "vision": "D6Jah",
+  "model_right": false,
+  "confidence": 0.3884205222129822,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:25"
+ },
+ "94146": {
+  "truth": "gEd99",
+  "model": "gEdg9",
+  "vision": "gEdgg",
+  "model_right": false,
+  "confidence": 0.5043280720710754,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:33"
+ },
+ "35892": {
+  "truth": "h3bDg",
+  "model": "h3bDg",
+  "vision": "h3bDg",
+  "model_right": true,
+  "confidence": 0.4918885827064514,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:36"
+ },
+ "43296": {
+  "truth": "YqB45",
+  "model": "YqB45",
+  "vision": "Yq845",
+  "model_right": true,
+  "confidence": 0.4992959797382355,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:39"
+ },
+ "812": {
+  "truth": "hqQg2",
+  "model": "hqQg2",
+  "vision": "hqQ92",
+  "model_right": true,
+  "confidence": 0.5187145471572876,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:41"
+ },
+ "102736": {
+  "truth": "bR9EF",
+  "model": "6R9EF",
+  "vision": "6RgEF",
+  "model_right": false,
+  "confidence": 0.4562872648239136,
+  "source": "uncertain",
+  "time": "2026-09-30T12:15:56"
+ },
+ "12504": {
+  "truth": "89nAQ",
+  "model": "89nAQ",
+  "vision": "8gnAQ",
+  "model_right": true,
+  "confidence": 0.4655192196369171,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:09"
+ },
+ "69746": {
+  "truth": "gbA3h",
+  "model": "g6A3h",
+  "vision": "96A3h",
+  "model_right": false,
+  "confidence": 0.534211277961731,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:16"
+ },
+ "41412": {
+  "truth": "5T9eb",
+  "model": "5T9eb",
+  "vision": "5T9eb",
+  "model_right": true,
+  "confidence": 0.44892004132270813,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:18"
+ },
+ "41034": {
+  "truth": "qQa9J",
+  "model": "qQa9J",
+  "vision": "qQagJ",
+  "model_right": true,
+  "confidence": 0.4527139365673065,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:28"
+ },
+ "110171": {
+  "truth": "Mtgt2",
+  "model": "Mtgt2",
+  "vision": "Mygt2",
+  "model_right": true,
+  "confidence": 0.37450942397117615,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:31"
+ },
+ "29811": {
+  "truth": "rjEG9",
+  "model": "rjEGg",
+  "vision": "rjEGg",
+  "model_right": false,
+  "confidence": 0.4434010982513428,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:38"
+ },
+ "100357": {
+  "truth": "iH5q6",
+  "model": "fH5q6",
+  "vision": "fH596",
+  "model_right": false,
+  "confidence": 0.4736064374446869,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:44"
+ },
+ "107512": {
+  "truth": "YqTG3",
+  "model": "YqTG3",
+  "vision": "Y9TG3",
+  "model_right": true,
+  "confidence": 0.5319358706474304,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:47"
+ },
+ "21773": {
+  "truth": "Bj8Jq",
+  "model": "Bj8Jq",
+  "vision": "Bi8Jq",
+  "model_right": true,
+  "confidence": 0.3592930734157562,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:51"
+ },
+ "36964": {
+  "truth": "B69ry",
+  "model": "B69rY",
+  "vision": "B69rY",
+  "model_right": false,
+  "confidence": 0.49672698974609375,
+  "source": "uncertain",
+  "time": "2026-09-30T12:16:57"
+ },
+ "90656": {
+  "truth": "mdJQ2",
+  "model": "mdJQ2",
+  "vision": "mgJQ2",
+  "model_right": true,
+  "confidence": 0.4996250569820404,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:02"
+ },
+ "29074": {
+  "truth": "Mt6qq",
+  "model": "Mt6qq",
+  "vision": "Mt69g",
+  "model_right": true,
+  "confidence": 0.5255039930343628,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:05"
+ },
+ "62300": {
+  "truth": "8QgEA",
+  "model": "8QgEA",
+  "vision": "8Q9EA",
+  "model_right": true,
+  "confidence": 0.4776460826396942,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:08"
+ },
+ "59110": {
+  "truth": "2gbLb",
+  "model": "2gbLb",
+  "vision": "296Lb",
+  "model_right": true,
+  "confidence": 0.5357389450073242,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:10"
+ },
+ "119042": {
+  "truth": "BqnA9",
+  "model": "BqnA9",
+  "vision": "BqnAg",
+  "model_right": true,
+  "confidence": 0.5276347398757935,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:14"
+ },
+ "34061": {
+  "truth": "Jyer9",
+  "model": "Jyer9",
+  "vision": "JYer9",
+  "model_right": true,
+  "confidence": 0.4696754217147827,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:16"
+ },
+ "77159": {
+  "truth": "Nq9mL",
+  "model": "Nq9mL",
+  "vision": "NggmL",
+  "model_right": true,
+  "confidence": 0.515920102596283,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:20"
+ },
+ "113740": {
+  "truth": "YnN8t",
+  "model": "YnNgt",
+  "vision": "YnNgt",
+  "model_right": false,
+  "confidence": 0.47513094544410706,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:26"
+ },
+ "23120": {
+  "truth": "g2N8H",
+  "model": "g2NgH",
+  "vision": "g2NgH",
+  "model_right": false,
+  "confidence": 0.44611865282058716,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:35"
+ },
+ "7739": {
+  "truth": "Lmq9Y",
+  "model": "Lmq9Y",
+  "vision": "Lmq9Y",
+  "model_right": true,
+  "confidence": 0.4635341465473175,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:44"
+ },
+ "39349": {
+  "truth": "58Mfi",
+  "model": "58Mfi",
+  "vision": "5gMfi",
+  "model_right": true,
+  "confidence": 0.5324304103851318,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:47"
+ },
+ "94289": {
+  "truth": "qe5nB",
+  "model": "qe5nB",
+  "vision": "qe5n8",
+  "model_right": true,
+  "confidence": 0.5003913640975952,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:49"
+ },
+ "7126": {
+  "truth": "Bi9eb",
+  "model": "Bi9eb",
+  "vision": "Bigeb",
+  "model_right": true,
+  "confidence": 0.5362350940704346,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:51"
+ },
+ "67117": {
+  "truth": "G2qAR",
+  "model": "G2qAR",
+  "vision": "G29AR",
+  "model_right": true,
+  "confidence": 0.5175610184669495,
+  "source": "uncertain",
+  "time": "2026-09-30T12:17:53"
+ },
+ "101073": {
+  "truth": "dqA9t",
+  "model": "dgAgt",
+  "vision": "dgAgt",
+  "model_right": false,
+  "confidence": 0.4907989501953125,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:01"
+ },
+ "34355": {
+  "truth": "9EtdH",
+  "model": "9EtdH",
+  "vision": "5EidH",
+  "model_right": true,
+  "confidence": 0.41788625717163086,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:04"
+ },
+ "63329": {
+  "truth": "Q2jqh",
+  "model": "Q2jqh",
+  "vision": "D2jah",
+  "model_right": true,
+  "confidence": 0.44946447014808655,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:10"
+ },
+ "11011": {
+  "truth": "9BYiF",
+  "model": "9BYiF",
+  "vision": "9ByiF",
+  "model_right": true,
+  "confidence": 0.48586928844451904,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:13"
+ },
+ "72055": {
+  "truth": "Aqhi6",
+  "model": "Aqhi6",
+  "vision": "Aqhj6",
+  "model_right": true,
+  "confidence": 0.5040066242218018,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:16"
+ },
+ "24301": {
+  "truth": "649Am",
+  "model": "649Am",
+  "vision": "64gAm",
+  "model_right": true,
+  "confidence": 0.5264692306518555,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:19"
+ },
+ "8257": {
+  "truth": "6Lmrq",
+  "model": "6Lmrq",
+  "vision": "6fmr9",
+  "model_right": true,
+  "confidence": 0.5250942707061768,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:22"
+ },
+ "18497": {
+  "truth": "bQq3N",
+  "model": "bQ93N",
+  "vision": "bQ93N",
+  "model_right": false,
+  "confidence": 0.5208500027656555,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:28"
+ },
+ "42090": {
+  "truth": "g8aAD",
+  "model": "g8aAD",
+  "vision": "98aAD",
+  "model_right": true,
+  "confidence": 0.526054859161377,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:32"
+ },
+ "112718": {
+  "truth": "ye9DJ",
+  "model": "yegDJ",
+  "vision": "yegDJ",
+  "model_right": false,
+  "confidence": 0.4492296874523163,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:37"
+ },
+ "7485": {
+  "truth": "L9DyH",
+  "model": "L9DyH",
+  "vision": "L9DYH",
+  "model_right": true,
+  "confidence": 0.49622052907943726,
+  "source": "uncertain",
+  "time": "2026-09-30T12:18:42"
+ },
+ "34212": {
+  "truth": "g8Li9",
+  "model": "g8Li9",
+  "vision": "g8Li9",
+  "model_right": true,
+  "confidence": 0.516514003276825,
+  "source": "uncertain",
+  "time": "2026-09-30T12:19:50"
+ },
+ "12817": {
+  "truth": "8qjAD",
+  "model": "8qjAD",
+  "vision": "8qJAD",
+  "model_right": true,
+  "confidence": 0.4928837716579437,
+  "source": "uncertain",
+  "time": "2026-09-30T12:19:56"
+ },
+ "58832": {
+  "truth": "y66Ab",
+  "model": "y66Ab",
+  "vision": "y66qb",
+  "model_right": true,
+  "confidence": 0.4880021810531616,
+  "source": "uncertain",
+  "time": "2026-09-30T12:19:59"
+ },
+ "110786": {
+  "truth": "YGMG9",
+  "model": "YGMG9",
+  "vision": "YGMG9",
+  "model_right": true,
+  "confidence": 0.44286060333251953,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:02"
+ },
+ "72253": {
+  "truth": "qnY8Y",
+  "model": "qnY8Y",
+  "vision": "anY8Y",
+  "model_right": true,
+  "confidence": 0.44358187913894653,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:04"
+ },
+ "107462": {
+  "truth": "g9DYi",
+  "model": "g9Dyi",
+  "vision": "g9Dyi",
+  "model_right": false,
+  "confidence": 0.4685015380382538,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:13"
+ },
+ "60098": {
+  "truth": "Hm9mj",
+  "model": "Hm9mj",
+  "vision": "Hm9my",
+  "model_right": true,
+  "confidence": 0.5209587216377258,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:18"
+ },
+ "2426": {
+  "truth": "egy5r",
+  "model": "egy5r",
+  "vision": "egy5r",
+  "model_right": true,
+  "confidence": 0.4607211947441101,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:20"
+ },
+ "106796": {
+  "truth": "TgH9R",
+  "model": "TgH9R",
+  "vision": "TgHgR",
+  "model_right": true,
+  "confidence": 0.4890965223312378,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:23"
+ },
+ "60996": {
+  "truth": "9i6Ry",
+  "model": "9i6Ry",
+  "vision": "gi6Ry",
+  "model_right": true,
+  "confidence": 0.4478416442871094,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:25"
+ },
+ "66819": {
+  "truth": "966LD",
+  "model": "966LD",
+  "vision": "966LD",
+  "model_right": true,
+  "confidence": 0.5307138562202454,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:29"
+ },
+ "32644": {
+  "truth": "Rtq2y",
+  "model": "Rtq2y",
+  "vision": "Rt92y",
+  "model_right": true,
+  "confidence": 0.4873755872249603,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:31"
+ },
+ "79910": {
+  "truth": "gnEb8",
+  "model": "gnE68",
+  "vision": "gnEb8",
+  "model_right": false,
+  "confidence": 0.5150039792060852,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:38"
+ },
+ "120505": {
+  "truth": "Fa9iy",
+  "model": "Fa9iy",
+  "vision": "Fagiy",
+  "model_right": true,
+  "confidence": 0.47901153564453125,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:40"
+ },
+ "75434": {
+  "truth": "yND9q",
+  "model": "yND9q",
+  "vision": "yNDgq",
+  "model_right": true,
+  "confidence": 0.5320633053779602,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:43"
+ },
+ "112031": {
+  "truth": "6qAj9",
+  "model": "6qAj9",
+  "vision": "69Aj9",
+  "model_right": true,
+  "confidence": 0.4198858439922333,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:47"
+ },
+ "55103": {
+  "truth": "3m9nH",
+  "model": "3m9nH",
+  "vision": "3mgnH",
+  "model_right": true,
+  "confidence": 0.5103136897087097,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:50"
+ },
+ "39156": {
+  "truth": "y2Gng",
+  "model": "y2Gng",
+  "vision": "y2Gng",
+  "model_right": true,
+  "confidence": 0.4372703731060028,
+  "source": "uncertain",
+  "time": "2026-09-30T12:20:52"
+ },
+ "90067": {
+  "truth": "H6qYy",
+  "model": "H6qYY",
+  "vision": "H6qYy",
+  "model_right": false,
+  "confidence": 0.5133984684944153,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:01"
+ },
+ "81987": {
+  "truth": "G8Lgm",
+  "model": "G8L9m",
+  "vision": "G8L9m",
+  "model_right": false,
+  "confidence": 0.4595237672328949,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:08"
+ },
+ "26327": {
+  "truth": "Fjgb4",
+  "model": "Fjgb4",
+  "vision": "Figb4",
+  "model_right": true,
+  "confidence": 0.4914756715297699,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:11"
+ },
+ "117580": {
+  "truth": "q6Jyf",
+  "model": "96Jyf",
+  "vision": "96Jyf",
+  "model_right": false,
+  "confidence": 0.46342286467552185,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:15"
+ },
+ "6567": {
+  "truth": "q5Yf6",
+  "model": "95Yf6",
+  "vision": "95Yf6",
+  "model_right": false,
+  "confidence": 0.5272223353385925,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:19"
+ },
+ "86378": {
+  "truth": "nRY9A",
+  "model": "nRY9A",
+  "vision": "nRYgA",
+  "model_right": true,
+  "confidence": 0.4515613317489624,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:25"
+ },
+ "88845": {
+  "truth": "4aqNB",
+  "model": "4aqNB",
+  "vision": "4a9NB",
+  "model_right": true,
+  "confidence": 0.46081432700157166,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:29"
+ },
+ "69430": {
+  "truth": "i3rqL",
+  "model": "i3rqL",
+  "vision": "f3rqL",
+  "model_right": true,
+  "confidence": 0.40956687927246094,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:48"
+ },
+ "112197": {
+  "truth": "Nr9i4",
+  "model": "Nrgi4",
+  "vision": "Nrgi4",
+  "model_right": false,
+  "confidence": 0.4752485156059265,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:54"
+ },
+ "31441": {
+  "truth": "hEqF6",
+  "model": "hEqF6",
+  "vision": "hEqF6",
+  "model_right": true,
+  "confidence": 0.47165554761886597,
+  "source": "uncertain",
+  "time": "2026-09-30T12:21:57"
+ },
+ "75703": {
+  "truth": "6NDng",
+  "model": "6NDng",
+  "vision": "6NDng",
+  "model_right": true,
+  "confidence": 0.47414764761924744,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:00"
+ },
+ "124237": {
+  "truth": "F96ty",
+  "model": "F96fy",
+  "vision": "F96fy",
+  "model_right": false,
+  "confidence": 0.44265538454055786,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:05"
+ },
+ "114415": {
+  "truth": "qq6bN",
+  "model": "qq6bN",
+  "vision": "Nqgbb",
+  "model_right": true,
+  "confidence": 0.4635646641254425,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:08"
+ },
+ "103894": {
+  "truth": "39qLn",
+  "model": "399Ln",
+  "vision": "399Ln",
+  "model_right": false,
+  "confidence": 0.48816752433776855,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:15"
+ },
+ "31815": {
+  "truth": "6Ljg4",
+  "model": "6Ljg4",
+  "vision": "6Lj94",
+  "model_right": true,
+  "confidence": 0.4737507700920105,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:19"
+ },
+ "26053": {
+  "truth": "99rLE",
+  "model": "99rLE",
+  "vision": "99rLE",
+  "model_right": true,
+  "confidence": 0.47681185603141785,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:22"
+ },
+ "48438": {
+  "truth": "98LQ4",
+  "model": "98LQ4",
+  "vision": "98LQ4",
+  "model_right": true,
+  "confidence": 0.48983234167099,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:24"
+ },
+ "47753": {
+  "truth": "DQ59t",
+  "model": "DQ59t",
+  "vision": "DQ5gt",
+  "model_right": true,
+  "confidence": 0.46858611702919006,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:26"
+ },
+ "58090": {
+  "truth": "4gyNj",
+  "model": "4gyNj",
+  "vision": "49yNJ",
+  "model_right": true,
+  "confidence": 0.3826616704463959,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:28"
+ },
+ "27230": {
+  "truth": "8LgFY",
+  "model": "8LgFY",
+  "vision": "8LgFY",
+  "model_right": true,
+  "confidence": 0.5141922235488892,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:31"
+ },
+ "111281": {
+  "truth": "5dn6B",
+  "model": "5dn6B",
+  "vision": "5gn68",
+  "model_right": true,
+  "confidence": 0.5221327543258667,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:34"
+ },
+ "32764": {
+  "truth": "9nBm8",
+  "model": "9nBm8",
+  "vision": "9n8m8",
+  "model_right": true,
+  "confidence": 0.49926483631134033,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:36"
+ },
+ "102939": {
+  "truth": "Le9HT",
+  "model": "Le9HT",
+  "vision": "LegHT",
+  "model_right": true,
+  "confidence": 0.4702448844909668,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:38"
+ },
+ "4305": {
+  "truth": "jL9G2",
+  "model": "jL9G2",
+  "vision": "iLgG2",
+  "model_right": true,
+  "confidence": 0.4467307925224304,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:41"
+ },
+ "81225": {
+  "truth": "q6Y6F",
+  "model": "96Y6F",
+  "vision": "96Y6F",
+  "model_right": false,
+  "confidence": 0.5031249523162842,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:47"
+ },
+ "44711": {
+  "truth": "jtBB9",
+  "model": "jtBB9",
+  "vision": "jtB3g",
+  "model_right": true,
+  "confidence": 0.48699772357940674,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:50"
+ },
+ "1158": {
+  "truth": "j9QNy",
+  "model": "j9QNy",
+  "vision": "j9QNY",
+  "model_right": true,
+  "confidence": 0.5342896580696106,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:54"
+ },
+ "9458": {
+  "truth": "gD9T6",
+  "model": "gD9T6",
+  "vision": "9D9T6",
+  "model_right": true,
+  "confidence": 0.5071583986282349,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:56"
+ },
+ "57004": {
+  "truth": "9aMDN",
+  "model": "9aMDN",
+  "vision": "9aMDN",
+  "model_right": true,
+  "confidence": 0.4602726995944977,
+  "source": "uncertain",
+  "time": "2026-09-30T12:22:58"
+ },
+ "57815": {
+  "truth": "63gEt",
+  "model": "63gEt",
+  "vision": "639Et",
+  "model_right": true,
+  "confidence": 0.4768792986869812,
+  "source": "uncertain",
+  "time": "2026-09-30T12:23:03"
+ },
+ "88898": {
+  "truth": "FTqg6",
+  "model": "FT9g6",
+  "vision": "FT4g6",
+  "model_right": false,
+  "confidence": 0.512644350528717,
+  "source": "uncertain",
+  "time": "2026-09-30T12:23:08"
+ },
+ "74022": {
+  "truth": "qRAy6",
+  "model": "qRAy6",
+  "vision": "qRAY6",
+  "model_right": true,
+  "confidence": 0.49948999285697937,
+  "source": "uncertain",
+  "time": "2026-09-30T12:23:11"
+ },
+ "84271": {
+  "truth": "Rgbm6",
+  "model": "Rgbm6",
+  "vision": "R9bm6",
+  "model_right": true,
+  "confidence": 0.4405178129673004,
+  "source": "uncertain",
+  "time": "2026-09-30T12:24:56"
+ },
+ "3510": {
+  "truth": "E92mF",
+  "model": "E92mF",
+  "vision": "Eg2mF",
+  "model_right": true,
+  "confidence": 0.4907650649547577,
+  "source": "uncertain",
+  "time": "2026-09-30T12:24:59"
+ },
+ "114913": {
+  "truth": "bt8gR",
+  "model": "bT89R",
+  "vision": "bT89R",
+  "model_right": false,
+  "confidence": 0.49976497888565063,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:05"
+ },
+ "54796": {
+  "truth": "38Hi8",
+  "model": "38Hi8",
+  "vision": "3gHi8",
+  "model_right": true,
+  "confidence": 0.5316309332847595,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:07"
+ },
+ "102627": {
+  "truth": "B2F6g",
+  "model": "B2F6g",
+  "vision": "B2F69",
+  "model_right": true,
+  "confidence": 0.478217750787735,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:10"
+ },
+ "101676": {
+  "truth": "q84D5",
+  "model": "984D5",
+  "vision": "984D5",
+  "model_right": false,
+  "confidence": 0.4567241072654724,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:15"
+ },
+ "98303": {
+  "truth": "8MfE9",
+  "model": "8MfE9",
+  "vision": "8MfEg",
+  "model_right": true,
+  "confidence": 0.47590965032577515,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:18"
+ },
+ "21614": {
+  "truth": "Rd4qN",
+  "model": "Rd4qN",
+  "vision": "Rd49N",
+  "model_right": true,
+  "confidence": 0.4508642852306366,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:21"
+ },
+ "115679": {
+  "truth": "q2Ny9",
+  "model": "q2Ny9",
+  "vision": "q2Ny9",
+  "model_right": true,
+  "confidence": 0.5345524549484253,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:24"
+ },
+ "50942": {
+  "truth": "e5iBg",
+  "model": "e5iBg",
+  "vision": "e5iBg",
+  "model_right": true,
+  "confidence": 0.4726801812648773,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:26"
+ },
+ "87595": {
+  "truth": "Y9eDE",
+  "model": "Y9eDE",
+  "vision": "YgeDE",
+  "model_right": true,
+  "confidence": 0.45441362261772156,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:28"
+ },
+ "50410": {
+  "truth": "Ebb6b",
+  "model": "Ebb6b",
+  "vision": "99993",
+  "model_right": true,
+  "confidence": 0.4832260012626648,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:31"
+ },
+ "40416": {
+  "truth": "4jbMg",
+  "model": "4jbMg",
+  "vision": "4jbMg",
+  "model_right": true,
+  "confidence": 0.4723181426525116,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:33"
+ },
+ "121801": {
+  "truth": "g6iDi",
+  "model": "g6iDi",
+  "vision": "96fDi",
+  "model_right": true,
+  "confidence": 0.43736732006073,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:39"
+ },
+ "117870": {
+  "truth": "yMJ93",
+  "model": "yMj93",
+  "vision": "yMj93",
+  "model_right": false,
+  "confidence": 0.4321160316467285,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:51"
+ },
+ "90972": {
+  "truth": "qyE89",
+  "model": "qyE8g",
+  "vision": "qyE8g",
+  "model_right": false,
+  "confidence": 0.4583542048931122,
+  "source": "uncertain",
+  "time": "2026-09-30T12:25:57"
+ },
+ "89171": {
+  "truth": "8gjG5",
+  "model": "8gjG5",
+  "vision": "89jG5",
+  "model_right": true,
+  "confidence": 0.5284686088562012,
+  "source": "uncertain",
+  "time": "2026-09-30T12:26:01"
+ },
+ "5451": {
+  "truth": "qgb3R",
+  "model": "q9b3R",
+  "vision": "99b3R",
+  "model_right": false,
+  "confidence": 0.5033374428749084,
+  "source": "uncertain",
+  "time": "2026-09-30T12:26:06"
+ },
+ "14238": {
+  "truth": "fqFh9",
+  "model": "fqFh9",
+  "vision": "F9Fh9",
+  "model_right": true,
+  "confidence": 0.4994785785675049,
+  "source": "uncertain",
+  "time": "2026-09-30T12:26:09"
+ },
+ "109968": {
+  "truth": "iF95N",
+  "model": "iF95N",
+  "vision": "iF95N",
+  "model_right": true,
+  "confidence": 0.5001888871192932,
+  "source": "uncertain",
+  "time": "2026-09-30T12:26:11"
+ },
+ "72992": {
+  "truth": "qHjD5",
+  "model": "qHjD5",
+  "vision": "qHjD5",
+  "model_right": true,
+  "confidence": 0.48207560181617737,
+  "source": "uncertain",
+  "time": "2026-09-30T12:26:14"
+ },
+ "53296": {
+  "truth": "HbEq4",
+  "model": "HbE94",
+  "vision": "HDE94",
+  "model_right": false,
+  "confidence": 0.474256694316864,
+  "source": "uncertain",
+  "time": "2026-09-30T12:26:26"
+ },
+ "33444": {
+  "truth": "4t8jQ",
+  "model": "4t8JQ",
+  "vision": "4fgjQ",
+  "model_right": false,
+  "confidence": 0.4484635591506958,
+  "source": "uncertain",
+  "time": "2026-09-30T12:31:57"
+ },
+ "25577": {
+  "truth": "bF3qY",
+  "model": "6F3qY",
+  "vision": "6F3QY",
+  "model_right": false,
+  "confidence": 0.517923891544342,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:02"
+ },
+ "72244": {
+  "truth": "q449Q",
+  "model": "q449Q",
+  "vision": "9449Q",
+  "model_right": true,
+  "confidence": 0.5080379247665405,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:04"
+ },
+ "32397": {
+  "truth": "q9qH8",
+  "model": "q9qH8",
+  "vision": "99qH8",
+  "model_right": true,
+  "confidence": 0.4893937408924103,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:08"
+ },
+ "103435": {
+  "truth": "984Db",
+  "model": "984Db",
+  "vision": "984D6",
+  "model_right": true,
+  "confidence": 0.52143394947052,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:12"
+ },
+ "82684": {
+  "truth": "y6qbL",
+  "model": "y69bL",
+  "vision": "y69bL",
+  "model_right": false,
+  "confidence": 0.5084128379821777,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:17"
+ },
+ "95451": {
+  "truth": "9Njj2",
+  "model": "9Nij2",
+  "vision": "9Nii2",
+  "model_right": false,
+  "confidence": 0.4597373306751251,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:22"
+ },
+ "44067": {
+  "truth": "B59a8",
+  "model": "B59a8",
+  "vision": "B59a8",
+  "model_right": true,
+  "confidence": 0.4969486892223358,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:28"
+ },
+ "52858": {
+  "truth": "Ey9ab",
+  "model": "Eygab",
+  "vision": "Eygab",
+  "model_right": false,
+  "confidence": 0.500984251499176,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:35"
+ },
+ "78123": {
+  "truth": "t96qG",
+  "model": "t96qG",
+  "vision": "t96qG",
+  "model_right": true,
+  "confidence": 0.46087607741355896,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:37"
+ },
+ "29731": {
+  "truth": "9D8i2",
+  "model": "9D8i2",
+  "vision": "9D8j2",
+  "model_right": true,
+  "confidence": 0.45714643597602844,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:40"
+ },
+ "121954": {
+  "truth": "b59bG",
+  "model": "b59bG",
+  "vision": "b59bG",
+  "model_right": true,
+  "confidence": 0.5380818843841553,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:43"
+ },
+ "111356": {
+  "truth": "A8gYf",
+  "model": "A8gYf",
+  "vision": "A8gYf",
+  "model_right": true,
+  "confidence": 0.5080543160438538,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:46"
+ },
+ "35377": {
+  "truth": "iA59t",
+  "model": "iA59t",
+  "vision": "fA59t",
+  "model_right": true,
+  "confidence": 0.46303102374076843,
+  "source": "uncertain",
+  "time": "2026-09-30T12:32:52"
+ },
+ "64829": {
+  "truth": "ayJJ9",
+  "model": "aYJJ9",
+  "vision": "aYJJ9",
+  "model_right": false,
+  "confidence": 0.4916471838951111,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:01"
+ },
+ "62419": {
+  "truth": "4qFAi",
+  "model": "49FAi",
+  "vision": "49FAi",
+  "model_right": false,
+  "confidence": 0.5149734020233154,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:05"
+ },
+ "101040": {
+  "truth": "yEfi9",
+  "model": "yEfi9",
+  "vision": "YEfi9",
+  "model_right": true,
+  "confidence": 0.5205153822898865,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:09"
+ },
+ "115647": {
+  "truth": "JTjh9",
+  "model": "JTjh9",
+  "vision": "JTih9",
+  "model_right": true,
+  "confidence": 0.4314918518066406,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:14"
+ },
+ "1735": {
+  "truth": "8TGqn",
+  "model": "8TGqn",
+  "vision": "8TGan",
+  "model_right": true,
+  "confidence": 0.4698783755302429,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:17"
+ },
+ "34237": {
+  "truth": "g3A6j",
+  "model": "g3A6j",
+  "vision": "g3A6j",
+  "model_right": true,
+  "confidence": 0.4333146810531616,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:21"
+ },
+ "103682": {
+  "truth": "fJ9E5",
+  "model": "fJ9E5",
+  "vision": "fJgE5",
+  "model_right": true,
+  "confidence": 0.49669310450553894,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:25"
+ },
+ "1037": {
+  "truth": "5NJy9",
+  "model": "5NJY9",
+  "vision": "5NJY9",
+  "model_right": false,
+  "confidence": 0.4821823239326477,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:32"
+ },
+ "102060": {
+  "truth": "iT8q8",
+  "model": "fT8q8",
+  "vision": "fT898",
+  "model_right": false,
+  "confidence": 0.531186580657959,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:38"
+ },
+ "29690": {
+  "truth": "Rg3Ly",
+  "model": "Rg3Ly",
+  "vision": "Rg3LY",
+  "model_right": true,
+  "confidence": 0.49887001514434814,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:43"
+ },
+ "8939": {
+  "truth": "5iHqy",
+  "model": "5iHqy",
+  "vision": "5jHay",
+  "model_right": true,
+  "confidence": 0.5132024884223938,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:46"
+ },
+ "78453": {
+  "truth": "g54dQ",
+  "model": "954dQ",
+  "vision": "954dQ",
+  "model_right": false,
+  "confidence": 0.5198399424552917,
+  "source": "uncertain",
+  "time": "2026-09-30T12:33:57"
+ },
+ "69686": {
+  "truth": "ajHh9",
+  "model": "ajHhg",
+  "vision": "ajHh9",
+  "model_right": false,
+  "confidence": 0.5293937921524048,
+  "source": "uncertain",
+  "time": "2026-09-30T12:34:03"
+ },
+ "23686": {
+  "truth": "94Dhb",
+  "model": "94Dhb",
+  "vision": "94Dhb",
+  "model_right": true,
+  "confidence": 0.4949943721294403,
+  "source": "uncertain",
+  "time": "2026-09-30T12:34:08"
+ }
+}

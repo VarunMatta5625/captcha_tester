@@ -1,0 +1,8 @@
+.DS_Store
+.ipynb_checkpoints/
+dist/
+training/v2/cache/
+training/v1/labeled/
+training/v1/rejected/
+safari/xcode-project/CAPTCHA Paster/build/
+training/data/varun/
