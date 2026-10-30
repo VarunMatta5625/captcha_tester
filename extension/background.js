@@ -1,6 +1,6 @@
 // Reads captchas with the trained CNN (model.js + model.wasm + model/). Runs entirely inside the extension:
 // no native host, no Python, same on macOS, Linux and Windows.
-import { createModel, readCaptcha, toGray } from './model.js';
+import { createModel, readCaptcha, toInk } from './model.js';
 
 let modelPromise = null;
 
@@ -20,7 +20,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       const n = model.width * model.height;
       if (message.rgba.length !== 4 * n) throw new Error(`expected ${model.width}x${model.height} pixels`);
       const start = performance.now();
-      const { text, confidence } = readCaptcha(model, toGray(message.rgba, n));
+      const { text, confidence } = readCaptcha(model, toInk(message.rgba, n));
       sendResponse({ code: text, raw: text, confidence: Math.round(confidence * 1000) / 1000,
                      ms: Math.round(performance.now() - start) });
     })

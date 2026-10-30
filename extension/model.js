@@ -2,12 +2,15 @@
 // (both from export_model.py, BatchNorm folded in); the number crunching runs in model.wasm
 // (wasm/kernels.c, WebAssembly + SIMD). No libraries, works in any Chrome.
 
-// canvas RGBA pixels -> grayscale exactly like Pillow's convert("L"), which training used
-export function toGray(rgba, n) {
+// canvas RGBA pixels -> letters only, exactly like training's prep.ink (scripts/prep.py): the captcha's letters
+// are red and its speckle noise gray, so a pixel is letter (0) when red beats green and blue by more than 60,
+// else paper (255)
+const RED_MIN = 60;
+export function toInk(rgba, n) {
   const gray = new Uint8Array(n);
   for (let p = 0; p < n; p++) {
     const r = rgba[4 * p], g = rgba[4 * p + 1], b = rgba[4 * p + 2];
-    gray[p] = (r * 19595 + g * 38470 + b * 7471 + 0x8000) >>> 16;
+    gray[p] = r - g > RED_MIN && r - b > RED_MIN ? 0 : 255;
   }
   return gray;
 }

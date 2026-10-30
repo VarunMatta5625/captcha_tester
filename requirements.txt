@@ -3,4 +3,6 @@ torch==2.14.0
 numpy==2.5.0
 Pillow==11.1.0
 jupyter
+matplotlib
+tqdm
 # WASM rebuild only: emscripten (emcc) via brew/emsdk, not pip.

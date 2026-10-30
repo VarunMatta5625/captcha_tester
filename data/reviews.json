@@ -1,0 +1,902 @@
+{
+ "5252": {
+  "truth": "Qy398",
+  "model": "Qy3g8",
+  "vision": "Qy398",
+  "model_right": false,
+  "confidence": 0.5238675475120544,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:15"
+ },
+ "85689": {
+  "truth": "mgAH8",
+  "model": "mgAH8",
+  "vision": "mg4H8",
+  "model_right": true,
+  "confidence": 0.5072348713874817,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:19"
+ },
+ "73879": {
+  "truth": "jR6tH",
+  "model": "jR6tH",
+  "vision": "jR6EH",
+  "model_right": true,
+  "confidence": 0.5262720584869385,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:23"
+ },
+ "30987": {
+  "truth": "N6GjE",
+  "model": "N6GjE",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.5622825026512146,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:27"
+ },
+ "28888": {
+  "truth": "j8HyE",
+  "model": "j8HyE",
+  "vision": "J8HyE",
+  "model_right": true,
+  "confidence": 0.5564960241317749,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:31"
+ },
+ "95659": {
+  "truth": "j325J",
+  "model": "i325J",
+  "vision": "f325J",
+  "model_right": false,
+  "confidence": 0.5178329348564148,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:37"
+ },
+ "548": {
+  "truth": "Yga2Y",
+  "model": "Yga2Y",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.47029829025268555,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:40"
+ },
+ "18019": {
+  "truth": "YJn2q",
+  "model": "YJn2q",
+  "vision": "YJn29",
+  "model_right": true,
+  "confidence": 0.4925854504108429,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:42"
+ },
+ "89866": {
+  "truth": "H6LEj",
+  "model": "H6LEj",
+  "vision": "H6LEi",
+  "model_right": true,
+  "confidence": 0.4559728503227234,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:21:48"
+ },
+ "83084": {
+  "truth": "6N9aJ",
+  "model": "6NgaJ",
+  "vision": "6N9aJ",
+  "model_right": false,
+  "confidence": 0.5193845629692078,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:02"
+ },
+ "19734": {
+  "truth": "H8ng5",
+  "model": "H8ng5",
+  "vision": "H8n95",
+  "model_right": true,
+  "confidence": 0.5681518912315369,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:06"
+ },
+ "77336": {
+  "truth": "jrd9Y",
+  "model": "jrdgY",
+  "vision": "JrdgY",
+  "model_right": false,
+  "confidence": 0.4660835564136505,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:14"
+ },
+ "70250": {
+  "truth": "jf5GH",
+  "model": "if5GH",
+  "vision": "jf5GH",
+  "model_right": false,
+  "confidence": 0.5072829127311707,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:20"
+ },
+ "74285": {
+  "truth": "niqD9",
+  "model": "niqDg",
+  "vision": "njqDg",
+  "model_right": false,
+  "confidence": 0.5425998568534851,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:31"
+ },
+ "98683": {
+  "truth": "ijAG9",
+  "model": "ijAGg",
+  "vision": "iiAG9",
+  "model_right": false,
+  "confidence": 0.4940730929374695,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:39"
+ },
+ "8357": {
+  "truth": "D99ey",
+  "model": "D99ey",
+  "vision": "D9geY",
+  "model_right": true,
+  "confidence": 0.5348383784294128,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:42"
+ },
+ "16416": {
+  "truth": "3YMb3",
+  "model": "3YMb3",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.5699355602264404,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:44"
+ },
+ "65822": {
+  "truth": "LqR5j",
+  "model": "LqR5i",
+  "vision": "LqR5j",
+  "model_right": false,
+  "confidence": 0.46424469351768494,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:53"
+ },
+ "13824": {
+  "truth": "RN9Tf",
+  "model": "RN9Tf",
+  "vision": "RNgTf",
+  "model_right": true,
+  "confidence": 0.5203244686126709,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:22:56"
+ },
+ "64760": {
+  "truth": "b59Bn",
+  "model": "b59Bn",
+  "vision": "659Bn",
+  "model_right": true,
+  "confidence": 0.4167644679546356,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:00"
+ },
+ "62851": {
+  "truth": "tb5fQ",
+  "model": "tb5fQ",
+  "vision": "fb5fQ",
+  "model_right": true,
+  "confidence": 0.45051857829093933,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:03"
+ },
+ "90737": {
+  "truth": "jFN8f",
+  "model": "jFN8f",
+  "vision": "jFN5f",
+  "model_right": true,
+  "confidence": 0.5490633845329285,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:05"
+ },
+ "88975": {
+  "truth": "gNfY4",
+  "model": "gNfY4",
+  "vision": "9NfY4",
+  "model_right": true,
+  "confidence": 0.4248640239238739,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:10"
+ },
+ "80151": {
+  "truth": "9ynnq",
+  "model": "9ynnq",
+  "vision": "gynng",
+  "model_right": true,
+  "confidence": 0.45347464084625244,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:13"
+ },
+ "41429": {
+  "truth": "g9iDR",
+  "model": "99iDR",
+  "vision": "99fDR",
+  "model_right": false,
+  "confidence": 0.5171187520027161,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:19"
+ },
+ "10705": {
+  "truth": "8tNjy",
+  "model": "8tNiy",
+  "vision": "etNjy",
+  "model_right": false,
+  "confidence": 0.557894766330719,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:27"
+ },
+ "92764": {
+  "truth": "jR5e3",
+  "model": "iR5e3",
+  "vision": "JR5e3",
+  "model_right": false,
+  "confidence": 0.5353374481201172,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:35"
+ },
+ "88785": {
+  "truth": "MY9if",
+  "model": "MY9if",
+  "vision": "Mygif",
+  "model_right": true,
+  "confidence": 0.5591526627540588,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:39"
+ },
+ "77977": {
+  "truth": "6Tntf",
+  "model": "6Tntf",
+  "vision": "6Tnff",
+  "model_right": true,
+  "confidence": 0.4859093725681305,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:46"
+ },
+ "64207": {
+  "truth": "LjLf5",
+  "model": "LjLf5",
+  "vision": "LJLf5",
+  "model_right": true,
+  "confidence": 0.4229138493537903,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:51"
+ },
+ "47460": {
+  "truth": "Yf4tt",
+  "model": "Yf4tt",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.2847176492214203,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:54"
+ },
+ "7239": {
+  "truth": "jj85L",
+  "model": "ji85L",
+  "vision": "if85L",
+  "model_right": false,
+  "confidence": 0.48478761315345764,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:23:59"
+ },
+ "45977": {
+  "truth": "mMDY8",
+  "model": "mMDY8",
+  "vision": "mMDYi",
+  "model_right": true,
+  "confidence": 0.46168968081474304,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:04"
+ },
+ "90579": {
+  "truth": "hfn6T",
+  "model": "hfn6T",
+  "vision": "hfn5T",
+  "model_right": true,
+  "confidence": 0.5606843829154968,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:06"
+ },
+ "34654": {
+  "truth": "j8H3F",
+  "model": "i8H3F",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.5015355944633484,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:11"
+ },
+ "1788": {
+  "truth": "qL5jy",
+  "model": "qL5jY",
+  "vision": "qL5jy",
+  "model_right": false,
+  "confidence": 0.5318245887756348,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:28"
+ },
+ "6900": {
+  "truth": "Gb3jh",
+  "model": "Gb3ih",
+  "vision": "Gb3jh",
+  "model_right": false,
+  "confidence": 0.4699227511882782,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:41"
+ },
+ "43217": {
+  "truth": "5FqmY",
+  "model": "5FqmY",
+  "vision": "5F9mY",
+  "model_right": true,
+  "confidence": 0.5484603047370911,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:46"
+ },
+ "2963": {
+  "truth": "6MyGY",
+  "model": "6MyGY",
+  "vision": "6MYGY",
+  "model_right": true,
+  "confidence": 0.4832744300365448,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:24:55"
+ },
+ "46188": {
+  "truth": "tMDD9",
+  "model": "tMDDg",
+  "vision": "tMDD9",
+  "model_right": false,
+  "confidence": 0.550896167755127,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:01"
+ },
+ "27808": {
+  "truth": "h53QJ",
+  "model": "h53QJ",
+  "vision": "n53QJ",
+  "model_right": true,
+  "confidence": 0.43988850712776184,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:05"
+ },
+ "3705": {
+  "truth": "Jq2Aa",
+  "model": "Jq2Aa",
+  "vision": "J92Aa",
+  "model_right": true,
+  "confidence": 0.46738874912261963,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:14"
+ },
+ "65271": {
+  "truth": "YAR6h",
+  "model": "YAR6h",
+  "vision": "yAR6h",
+  "model_right": true,
+  "confidence": 0.47558504343032837,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:21"
+ },
+ "31951": {
+  "truth": "j3RjL",
+  "model": "i3RjL",
+  "vision": "i3RiL",
+  "model_right": false,
+  "confidence": 0.43517518043518066,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:27"
+ },
+ "68099": {
+  "truth": "BfG8g",
+  "model": "BfG8g",
+  "vision": "BfG89",
+  "model_right": true,
+  "confidence": 0.4198917746543884,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:33"
+ },
+ "65095": {
+  "truth": "Gmga9",
+  "model": "Gmgag",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.4654415249824524,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:39"
+ },
+ "33768": {
+  "truth": "ygGJ8",
+  "model": "ygGJ8",
+  "vision": "ygGJe",
+  "model_right": true,
+  "confidence": 0.4927797317504883,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:46"
+ },
+ "77676": {
+  "truth": "3A2jj",
+  "model": "3A2jj",
+  "vision": "3A2Jj",
+  "model_right": true,
+  "confidence": 0.4812735319137573,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:50"
+ },
+ "21631": {
+  "truth": "n9rdJ",
+  "model": "n9rdJ",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.5326036810874939,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:25:59"
+ },
+ "26664": {
+  "truth": "A9DjM",
+  "model": "A9DjM",
+  "vision": "A9DJM",
+  "model_right": true,
+  "confidence": 0.5689771175384521,
+  "reviewed_with": "captcha_cnn_v2.pt",
+  "time": "2026-10-30T16:26:07"
+ },
+ "2036": {
+  "truth": "5YGmL",
+  "model": "5YGmL",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.5933369994163513,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:19"
+ },
+ "73240": {
+  "truth": "AnF9g",
+  "model": "AnF9g",
+  "vision": "AnFgg",
+  "model_right": true,
+  "confidence": 0.634821355342865,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:23"
+ },
+ "59885": {
+  "truth": "gg8AA",
+  "model": "gg8AA",
+  "vision": "998AA",
+  "model_right": true,
+  "confidence": 0.6089789867401123,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:26"
+ },
+ "90201": {
+  "truth": "GyY8r",
+  "model": "GYY8r",
+  "vision": "GyY8r",
+  "model_right": false,
+  "confidence": 0.4038216471672058,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:33"
+ },
+ "23569": {
+  "truth": "d6iYm",
+  "model": "d6iYm",
+  "vision": "d6jYm",
+  "model_right": true,
+  "confidence": 0.6148748993873596,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:36"
+ },
+ "51553": {
+  "truth": "YyA26",
+  "model": "YyA26",
+  "vision": "YYA26",
+  "model_right": true,
+  "confidence": 0.6347271800041199,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:40"
+ },
+ "72030": {
+  "truth": "qjj8A",
+  "model": "qij8A",
+  "vision": "qjj8A",
+  "model_right": false,
+  "confidence": 0.5387130379676819,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:45"
+ },
+ "33551": {
+  "truth": "j5MyH",
+  "model": "j5MyH",
+  "vision": "i5MyH",
+  "model_right": true,
+  "confidence": 0.6380905508995056,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:50"
+ },
+ "91219": {
+  "truth": "g3NB9",
+  "model": "93NB9",
+  "vision": "g3NB9",
+  "model_right": false,
+  "confidence": 0.5900554060935974,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:28:55"
+ },
+ "72347": {
+  "truth": "ARq6t",
+  "model": "ARq6t",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.38927584886550903,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:03"
+ },
+ "94499": {
+  "truth": "8QnDj",
+  "model": "8QnDj",
+  "vision": "8QnDi",
+  "model_right": true,
+  "confidence": 0.53037029504776,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:11"
+ },
+ "23834": {
+  "truth": "gbE8Y",
+  "model": "gbE8Y",
+  "vision": "gbEgY",
+  "model_right": true,
+  "confidence": 0.529598593711853,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:14"
+ },
+ "18844": {
+  "truth": "4DyYf",
+  "model": "4DyYf",
+  "vision": "4DYYf",
+  "model_right": true,
+  "confidence": 0.5927610397338867,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:18"
+ },
+ "8213": {
+  "truth": "dRq66",
+  "model": "dRq66",
+  "vision": "dRg66",
+  "model_right": true,
+  "confidence": 0.37497931718826294,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:22"
+ },
+ "68327": {
+  "truth": "3Mn29",
+  "model": "3Mn29",
+  "vision": "3Mn2g",
+  "model_right": true,
+  "confidence": 0.48997950553894043,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:25"
+ },
+ "76275": {
+  "truth": "rq6G3",
+  "model": "rq6G3",
+  "vision": "r96G3",
+  "model_right": true,
+  "confidence": 0.6371607184410095,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:28"
+ },
+ "58013": {
+  "truth": "H9tr4",
+  "model": "H9tr4",
+  "vision": "Hgtr4",
+  "model_right": true,
+  "confidence": 0.47080639004707336,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:31"
+ },
+ "72566": {
+  "truth": "yy98L",
+  "model": "yy98L",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.5404028296470642,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:33"
+ },
+ "57898": {
+  "truth": "8gJgq",
+  "model": "8gJgq",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.5919380187988281,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:40"
+ },
+ "55337": {
+  "truth": "gRHn6",
+  "model": "gRHn6",
+  "vision": "9RHn6",
+  "model_right": true,
+  "confidence": 0.513416051864624,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:48"
+ },
+ "2964": {
+  "truth": "MR8iy",
+  "model": "MR8iy",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.4767265021800995,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:53"
+ },
+ "22037": {
+  "truth": "D9bta",
+  "model": "D9bta",
+  "vision": "Dgbta",
+  "model_right": true,
+  "confidence": 0.49572864174842834,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:29:58"
+ },
+ "64552": {
+  "truth": "fGj4h",
+  "model": "fGj4h",
+  "vision": "fGi4h",
+  "model_right": true,
+  "confidence": 0.36520305275917053,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:00"
+ },
+ "16130": {
+  "truth": "8hrLj",
+  "model": "5hrLj",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.41059866547584534,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:06"
+ },
+ "63956": {
+  "truth": "5Fryh",
+  "model": "5Fryh",
+  "vision": "5Fryn",
+  "model_right": true,
+  "confidence": 0.4825407564640045,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:11"
+ },
+ "70036": {
+  "truth": "6Dq89",
+  "model": "6D989",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.4481770694255829,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:21"
+ },
+ "29615": {
+  "truth": "89eRY",
+  "model": "89eRY",
+  "vision": "8geRY",
+  "model_right": true,
+  "confidence": 0.49555298686027527,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:29"
+ },
+ "14522": {
+  "truth": "3ERYy",
+  "model": "3ERYY",
+  "vision": "JERYY",
+  "model_right": false,
+  "confidence": 0.5096630454063416,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:36"
+ },
+ "15925": {
+  "truth": "QR5yy",
+  "model": "QR5yy",
+  "vision": "QR5YY",
+  "model_right": true,
+  "confidence": 0.6007876396179199,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:40"
+ },
+ "12581": {
+  "truth": "9jyE2",
+  "model": "9jyE2",
+  "vision": "9jYE2",
+  "model_right": true,
+  "confidence": 0.462173193693161,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:43"
+ },
+ "66852": {
+  "truth": "G3fyN",
+  "model": "G3fyN",
+  "vision": "G3fYN",
+  "model_right": true,
+  "confidence": 0.4907029867172241,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:45"
+ },
+ "14788": {
+  "truth": "ytBg4",
+  "model": "ytBg4",
+  "vision": "ytB94",
+  "model_right": true,
+  "confidence": 0.5941205024719238,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:49"
+ },
+ "75215": {
+  "truth": "eLLJ9",
+  "model": "eLLJ9",
+  "vision": "eLLJg",
+  "model_right": true,
+  "confidence": 0.5731773972511292,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:52"
+ },
+ "3036": {
+  "truth": "qg4iH",
+  "model": "q94iH",
+  "vision": "994fH",
+  "model_right": false,
+  "confidence": 0.5670444965362549,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:30:58"
+ },
+ "45942": {
+  "truth": "mjDQ6",
+  "model": "miDQ6",
+  "vision": "mjDQ6",
+  "model_right": false,
+  "confidence": 0.4416102170944214,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:05"
+ },
+ "34744": {
+  "truth": "8gqYa",
+  "model": "8gqYa",
+  "vision": "8gqya",
+  "model_right": true,
+  "confidence": 0.6345086097717285,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:10"
+ },
+ "97910": {
+  "truth": "hG29j",
+  "model": "hG29j",
+  "vision": "hG2gj",
+  "model_right": true,
+  "confidence": 0.5083620548248291,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:13"
+ },
+ "55979": {
+  "truth": "b2N5D",
+  "model": "b2N5D",
+  "vision": "62N5D",
+  "model_right": true,
+  "confidence": 0.6130884289741516,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:15"
+ },
+ "99365": {
+  "truth": "a6yAb",
+  "model": "a6yAb",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.40773072838783264,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:18"
+ },
+ "77286": {
+  "truth": "i9MyR",
+  "model": "i9MyR",
+  "vision": "i9MYR",
+  "model_right": true,
+  "confidence": 0.43480241298675537,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:22"
+ },
+ "21471": {
+  "truth": "jL9q2",
+  "model": "jL9q2",
+  "vision": "iL992",
+  "model_right": true,
+  "confidence": 0.5653243064880371,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:27"
+ },
+ "31978": {
+  "truth": "b5YTf",
+  "model": "b5YTf",
+  "vision": "b5yTf",
+  "model_right": true,
+  "confidence": 0.5142615437507629,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:30"
+ },
+ "24680": {
+  "truth": "66EYt",
+  "model": "66EYt",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.512754499912262,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:34"
+ },
+ "68198": {
+  "truth": "j8rbF",
+  "model": "j8rbF",
+  "vision": "i8r6F",
+  "model_right": true,
+  "confidence": 0.48229309916496277,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:38"
+ },
+ "20165": {
+  "truth": "jFRf4",
+  "model": "jFRf4",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.4940791428089142,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:44"
+ },
+ "54616": {
+  "truth": "LY86n",
+  "model": "LY86n",
+  "vision": "LYgen",
+  "model_right": true,
+  "confidence": 0.5987841486930847,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:53"
+ },
+ "6280": {
+  "truth": "5YtyJ",
+  "model": "5YtyJ",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.4422195553779602,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:31:56"
+ },
+ "17550": {
+  "truth": "Rt6GA",
+  "model": "Rt6GA",
+  "vision": "Rf6GA",
+  "model_right": true,
+  "confidence": 0.5091149210929871,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:32:00"
+ },
+ "1335": {
+  "truth": "99hNt",
+  "model": "99hNt",
+  "vision": "9ghNt",
+  "model_right": true,
+  "confidence": 0.5588911771774292,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:32:04"
+ },
+ "90887": {
+  "truth": "QA6ij",
+  "model": "QA6ij",
+  "vision": "QA5ij",
+  "model_right": true,
+  "confidence": 0.6283591389656067,
+  "reviewed_with": "captcha_cnn_v2_ft.pt",
+  "time": "2026-10-30T16:32:08"
+ }
+}

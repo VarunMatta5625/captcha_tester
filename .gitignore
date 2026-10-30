@@ -1,8 +1,12 @@
 .DS_Store
 .ipynb_checkpoints/
+cache/
 dist/
-training/v2/cache/
-training/v1/labeled/
-training/v1/rejected/
-safari/xcode-project/CAPTCHA Paster/build/
-training/data/varun/
+data/captchas.zip
+archive/v1_2026-10-30/dist/
+archive/v1_2026-10-30/training/data/varun.zip
+archive/v1_2026-10-30/training/data/varun/
+archive/v1_2026-10-30/training/v1/labeled/
+archive/v1_2026-10-30/training/v1/rejected/
+archive/v1_2026-10-30/training/v2/cache/
+archive/v1_2026-10-30/safari/xcode-project/CAPTCHA Paster/build/

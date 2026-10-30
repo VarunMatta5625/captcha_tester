@@ -286,19 +286,20 @@
   }
  ],
  "floats": 1819929,
- "source": "captcha_cnn.pt",
+ "source": "captcha_cnn_v2_ft.pt",
  "scores": {
   "reviewed": {
-   "exact": 0.9246153831481934,
-   "char": 0.9846153855323792
+   "exact": 1.0,
+   "char": 1.0
   },
   "gold": {
-   "exact": 0.9342105388641357,
-   "char": 0.9868420958518982
+   "exact": 0.9850000143051147,
+   "char": 0.996999979019165
   },
   "test": {
-   "exact": 0.8226103782653809,
-   "char": 0.9592241644859314
+   "exact": 0.9742833375930786,
+   "char": 0.9948264360427856
   }
- }
+ },
+ "preprocess": "prep.ink: red mask (r - g > 60 and r - b > 60) -> letters 0, rest 255"
 }

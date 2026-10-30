@@ -22,14 +22,16 @@ Low confidence (below about 0.5) means the read is a guess: check the box before
 
 Update the model
 ----------------
-Replace model/model.json and model/weights.bin with newly exported ones, then click the
-reload icon on the extension in chrome://extensions.
+From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v2_ft.pt)
+rewrites model/model.json and model/weights.bin. Then click the reload icon on the extension in
+chrome://extensions. model.js keeps only the red pixels (the letters) before reading, the same
+prep.ink step training uses (scripts/prep.py); change both together or not at all.
 
 Files
 -----
 manifest.json    extension definition
 content.js       reads the captcha image on the page and fills the answer
 background.js    loads the model and reads captchas
-model.js         runs the network (layer order, softmax)
-model.wasm       the heavy maths, compiled to WebAssembly (from wasm/kernels.c)
+model.js         red-letter mask + runs the network (layer order, softmax)
+model.wasm       the heavy maths, compiled to WebAssembly (archive/v1_2026-10-30/wasm/kernels.c)
 model/           trained weights (model.json + weights.bin)
