@@ -19,6 +19,8 @@ Check it is working
 Right-click the login page -> Inspect -> Console. Each captcha logs a line like
     [CAPTCHA] Pasted mMy2g (confidence 0.922, model 30 ms, total 60 ms)
 Low confidence (below about 0.5) means the read is a guess: check the box before submitting.
+A rejected read logs
+    [CAPTCHA] Site rejected the model's read, saved captcha_mistakes/20261031-025337_model-r6EAg_conf-0.900.png
 
 Captchas the model got wrong
 ----------------------------

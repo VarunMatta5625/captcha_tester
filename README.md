@@ -5,7 +5,7 @@ small CNN running inside the extension (WebAssembly, no Python, no native host),
 
 Read this file first when resuming work. Older history is in `archive/` (see `archive/README.md`).
 
-## Status (2026-10-30)
+## Status (2026-10-31)
 
 In Oct 2026 the captcha changed from black letters crossed by gray lines to **red letters on gray speckle**
 (same 150x45 size, 5 characters, font, 37-character alphabet). v1 (old captchas) is frozen in `archive/v1_2026-10-30/`.
@@ -14,7 +14,7 @@ In Oct 2026 the captcha changed from black letters crossed by gray lines to **re
 |---|---|---|
 | `captcha_cnn_ft_650.pt` | v1's best, old captchas only (teacher for v2) | 91.0% |
 | `captcha_cnn_v2.pt` | `data/labels.csv` rows where v1 model and Apple Vision agree (66k), from v1 weights | 96.0% |
-| `captcha_cnn_v2_ft.pt` | v2 + fine-tuned on 100 reviews | **98.5%**, **ships in extension 5.0** |
+| `captcha_cnn_v2_ft.pt` | v2 + fine-tuned on 100 reviews | **98.5%**, **ships in extension 5.1** |
 | `captcha_cnn_v3.pt` | `data/labels_v3.csv`: every v2_ft read with confidence >= 0.5 (69k) + reviews, from scratch | 98.5% |
 | `captcha_cnn_v3_ft.pt` | v3 + fine-tuned on 100 reviews | 98.5% |
 
@@ -24,7 +24,7 @@ v2_ft and v3 tie: at 3 misses in 200, gold can no longer separate models. Remain
 
 | Path | What |
 |---|---|
-| `extension/` | Chrome/Edge/Brave extension v5.1 (MV3). Load unpacked from here. See `extension/README.txt`. |
+| `extension/` | Chrome/Edge/Brave extension v5.1 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). |
 | `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v2_ft.pt`. |
 | `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). |
 | `notebooks/train_v2.ipynb` | Round 2: gold check, relabel (v1 model + Vision agree), train from v1 weights, review, fine-tune. |
@@ -85,6 +85,17 @@ python3 export_model.py models/<model>.pt   # default: models/captcha_cnn_v2_ft.
 Reload the extension in chrome://extensions. On login.gitam.edu the console (F12) logs
 `[CAPTCHA] Pasted xxxxx (confidence …)`. Update the Status table: which model ships.
 
+## Captchas the extension got wrong
+
+Since extension 5.1, pressing LOGIN with the model's read unchanged and getting "Invalid CAPTCHA" back saves that
+captcha to `~/Downloads/captcha_mistakes/<time>_model-<read>_conf-<confidence>.png` (time UTC). Wrong-password
+failures, successful logins and retyped codes save nothing. The site shows a new captcha straight away, so the right
+answer is unknown: the file name only says what the model read (wrong) and how sure it was.
+
+These are real-world misses, the most useful images for the next round. Nothing imports them yet: label them by hand
+(usually one character off; known confusions A/4, a/e, g/9) before training on them, and keep them out of gold.
+Chrome extensions can only write under Downloads, so they land there, not in this folder.
+
 ## Rules (break these and scores stop meaning anything)
 
 - **Gold is never trained on, relabeled or reviewed.** Every script skips `GOLD` ids. Compare models on gold only;
@@ -113,3 +124,5 @@ Reload the extension in chrome://extensions. On login.gitam.edu the console (F12
   Vision labels for 100k new captchas, 200-captcha gold (checked: v1 model 91.0%). Round 2: v2 96.0%, v2_ft 98.5%
   (100 reviews). Round 3: v3 / v3_ft 98.5%. Extension 5.0 (red mask in `model.js`) ships v2_ft; JS output verified
   identical to PyTorch on all 200 gold. Captcha PNGs zipped, loose copies deleted.
+- 2026-10-31: extension 5.1 (same model, v2_ft): captchas the site rejects as "Invalid CAPTCHA" are saved to
+  `~/Downloads/captcha_mistakes/` for retraining (new `downloads` permission).
