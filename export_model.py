@@ -1,6 +1,6 @@
 """Export a trained captcha CNN checkpoint for the extension's JavaScript runtime.
 
-    python3 export_model.py [checkpoint.pt]      (default: models/captcha_cnn_v4.pt)
+    python3 export_model.py [checkpoint.pt]      (default: models/captcha_cnn_v5.pt)
 
 Writes extension/model/model.json (layer list, alphabet) and extension/model/weights.bin
 (float32, little-endian). BatchNorm layers are folded into the conv before them, so the
@@ -61,4 +61,4 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "models", "captcha_cnn_v4.pt"))
+    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "models", "captcha_cnn_v5.pt"))

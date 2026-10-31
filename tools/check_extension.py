@@ -1,6 +1,6 @@
 """Check a checkpoint the way the extension will run it, before shipping.
 
-    python3 tools/check_extension.py [models/<model>.pt]      (default: models/captcha_cnn_v4.pt)
+    python3 tools/check_extension.py [models/<model>.pt]      (default: models/captcha_cnn_v5.pt)
 
 Exports the checkpoint to a temporary folder (export_model.py), then reads gold (data/gold.csv) and the site's
 rejections (data/site_mistakes/labels.csv) twice: with PyTorch (prep.clean or prep.ink, per the checkpoint's
@@ -81,4 +81,4 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "models", "captcha_cnn_v4.pt"))
+    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "models", "captcha_cnn_v5.pt"))

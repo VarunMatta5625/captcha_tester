@@ -5,7 +5,7 @@ small CNN running inside the extension (WebAssembly, no Python, no native host),
 
 Read this file first when resuming work. Older history is in `archive/` (see `archive/README.md`).
 
-## Status (2026-10-31)
+## Status (2026-11-01)
 
 Captcha styles so far (all 150x45, 5 characters, same 37-character alphabet):
 
@@ -16,32 +16,30 @@ Captcha styles so far (all 150x45, 5 characters, same 37-character alphabet):
    2026-10-31 the model reads **three levels** (`prep.clean`: letters 0, blobs 128, paper 255; +1.5 points on gold in a
    controlled test). The new **J** has no top bar:
    every old model reads it as **3** (v3 outputs J for 0.1% of characters, ~2.7% expected). Other weak pairs: B/8, y/Y,
-   g/9, a/e. Extension 5.1 (v2_ft) failed on it; **extension 5.2 ships v4** (three-level), which reads all 8 style-3
-   captchas the site rejected from 5.1.
+   g/9, a/e. Extension 5.1 (v2_ft) failed on it; 5.2 shipped v4 (three-level); **extension 5.3 ships v5**.
 
-Round v4 (`notebooks/train_v4.ipynb`): 100k style-3 captchas, 200 gold checked (2 labels fixed after a recheck).
-Gold scores below use the corrected gold. Site = the 8 style-3 captchas the site rejected from 5.1
-(`data/site_mistakes/`).
+100k style-3 captchas, 200 gold checked (2 labels fixed after a recheck). Site = the 8 style-3 captchas the site
+rejected from 5.1 (`data/site_mistakes/`). Disputed = the 20 test captchas where v4 and v4_ft disagree (truth read
+by eye; v4 and v4_ft's main difference, so the best check of real accuracy beyond gold).
 
-| Model (`models/`) | Trained on | Gold (style 3 unless noted) |
-|---|---|---|
-| `captcha_cnn_v3.pt` | style 2 (see archive) | 86.0%, 1/8 site; teacher for v4 |
-| `captcha_cnn_v4.pt` | v3 + Vision agree and Vision's J fixes (57k), from v3's weights, **three-level** (`prep.clean`) | **97.0%**, 8/8 site; JS == PyTorch on all 208; **ships in extension 5.2** |
-| `captcha_cnn_v4_ft.pt` | not trained: v4 + reviews (optional; remaining misses are mostly 6 read as 5) | |
+| Model (`models/`) | Trained on | Gold | Site | Disputed |
+|---|---|---|---|---|
+| `captcha_cnn_v4_ft.pt` | v4 fine-tuned on the 88 hard cases in `data/reviews.json` (labelled by Claude from the image, spot-checked); teacher of round 5 | 100% | 8/8 | 15/20 (reads some 8 as B, 9 as g) |
+| `captcha_cnn_v5.pt` | round 5: v4_ft's labels where it agrees with Vision or its weakest character >= 0.7 (~96k) + the 88 reviews, three-level, from scratch | **100%** | **8/8** | **19/20** (one 8 read as B); JS == PyTorch on all 208; **ships in extension 5.3** |
 
-Archived for comparison: v2_ft (extension 5.1; style 3 gold 87.5%, 0/8 site) in `archive/v2_2026-10-31/models/`,
-v4 two-level (same labels and settings as v4, letters-only input; 94.5%, 6/8 site) and the input-variant experiment
-in `archive/three_level_switch_2026-10-31/`.
+Archived: v3 (teacher of round 4, 86.0%) and v4 (extension 5.2, 97.0%, 8/8, 5/20 disputed: 6 as 5, J as 3, y as Y)
+with round 4 in `archive/round4_2026-11-01/`; v2_ft (extension 5.1; style 3 gold 87.5%, 0/8 site) in
+`archive/v2_2026-10-31/models/`; v4 two-level (94.5%, 6/8 site) and the input-variant experiment in
+`archive/three_level_switch_2026-10-31/`.
 
 ## Layout
 
 | Path | What |
 |---|---|
-| `extension/` | Chrome/Edge/Brave extension v5.2 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). |
-| `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v4.pt`. Writes the checkpoint's `levels` into `model.json`. |
-| `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). `dist/captcha-paster/` = the unzipped current version. |
-| `notebooks/train_v4.ipynb` | Round 4 (style 3): gold check, relabel (v3 + Vision agree, or Vision's J where v3 says 3), train three-level from v3 weights, review, fine-tune. Shipped (5.2). |
-| `notebooks/train_v5.ipynb` | Round 5, set up and not run: relabel with v4 (agree with Vision, or confidence >= 0.7), three-level from scratch. Template for later rounds (style-2 rounds are in the archive). |
+| `extension/` | Chrome/Edge/Brave extension v5.3 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). |
+| `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v5.pt`. Writes the checkpoint's `levels` into `model.json`. |
+| `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). `dist/captcha-paster/` = the unzipped current version; the previous zip is kept as the rollback (5.2 = v4). |
+| `notebooks/train_v5.ipynb` | Round 5 (run, shipped in 5.3): relabel with v4_ft (agree with Vision, or confidence >= 0.7), plus reviews, three-level from scratch. Template for later rounds (round 4 and style-2 rounds are in the archive). |
 | `scripts/prep.py` | Shared by notebooks and scripts: reads captchas from the zip (`<id>.png`, any folder inside), `clean()` three-level image the CNN reads, `ink()` letters only (Vision, two-level models), Apple Vision helpers. |
 | `scripts/label_vision.py` | Terminal, from the project root: Vision reads every captcha -> `data/labels_vision.csv` (~8 min, resumable). |
 | `scripts/audit_gold.py` | Builds + pre-labels the gold set (first run), then lets you check it (Enter / type correction). |
@@ -50,10 +48,10 @@ in `archive/three_level_switch_2026-10-31/`.
 | `scripts/finetune.py` | Fine-tunes `MODEL_PATH` on all reviews (+ 5,000 anchors) -> `FT_PATH`. Always restarts from the baseline. |
 | `data/captchas.zip` | **The captchas of the current style** (`<id>.png`, numeric ids, stored uncompressed). Git-ignored, not regenerable: back it up. Style 3: 100,000 captchas (787 MB). |
 | `data/gold.csv` | 200 hand-checked test captchas (`label`, pre-label `model`, `vision`, `checked` time). Never trained on. |
-| `data/reviews.json` | Your typed answers: the only human labels besides gold. Shared by all rounds of one captcha style. None yet for style 3. |
+| `data/reviews.json` | Your typed answers: the only human labels besides gold. Shared by all rounds of one captcha style. Style 3: 88 hard cases (v4's weakest reads), labelled by Claude from the image and spot-checked (`labeled_by`). |
 | `data/site_mistakes/` | Style-3 captchas the live site rejected (saved by the extension), with `labels.csv` (truth read from the image, not hand-checked). Hard cases for the next round; not gold. |
 | `data/labels_vision.csv` | Apple Vision's read of every captcha (`vision` = valid 5-char read or ""; `raw`). |
-| `data/labels_v4.csv` | Training labels written by round 4's relabel cell (`labels_v5.csv`: round 5's, once run). |
+| `data/labels_v5.csv` | Training labels written by round 5's relabel cell (round 4's are in `archive/round4_2026-11-01/`). |
 | `tools/ocr` | Apple Vision OCR binary (`tools/ocr.swift`). macOS only. |
 | `tools/run_round.py` | Runs a round notebook headless up to the review loop (sections 1–11) and saves its outputs; needs gold already checked. |
 | `tools/check_extension.py` | Before shipping: runs a checkpoint through the extension's own `model.js` + `model.wasm` in Node and PyTorch on gold + `data/site_mistakes/`; every read must match. |
@@ -79,27 +77,31 @@ All zips are git-ignored. Keep them backed up (Drive): every label and model ref
 Setup: `pip install -r requirements.txt` (torch, numpy, Pillow, jupyter, matplotlib, tqdm), then
 `cd notebooks && jupyter lab`. Notebooks use paths relative to `notebooks/` and run on `mps` (Apple Silicon) or CPU.
 
-**Round 5: ready to run** (`notebooks/train_v5.ipynb`, set up, never run). Teacher v4, labels = v4 agrees with Vision
-or v4's weakest character >= 0.7 (`MIN_CONF`; ~96k labels), three-level, from scratch, same gold. A 1-epoch smoke test
-of exactly this pipeline already scored 100% on gold (200/200) and 8/8 site rejections, so expect >= v4's 97%.
-1. Optional, if 5.2 has saved misses: move `~/Downloads/captcha_mistakes/*.png` into `data/site_mistakes/` and add a
-   row per file to its `labels.csv` (`truth` = what the image says). They are scored, not trained on.
-2. `python3 tools/run_round.py notebooks/train_v5.ipynb` from the project root (~12 min, no input): relabel ->
-   `data/labels_v5.csv`, train -> `models/captcha_cnn_v5.pt`, section 10 prints gold for v4 vs v5.
-3. `python3 tools/check_extension.py models/captcha_cnn_v5.pt` and the same with no argument (v4): compare gold and
-   site scores; every JS read must match PyTorch.
-4. If v5 beats v4: ship it (below; version 5.3), add a row to the Status table, commit.
+**Round 5** (done, ships in 5.3): `notebooks/train_v5.ipynb`. Teacher v4_ft, labels = v4_ft agrees with Vision or
+its weakest character >= 0.7 (`MIN_CONF`; 4.2% dropped), plus the 88 reviews, three-level, from scratch, 10 epochs
+(~12 min headless). Gold 100% from epoch 7; test 99.63% (agreement with v4_ft's labels).
 
-**Any later round** (relabel with the best model, retrain): copy the latest `notebooks/train_vN.ipynb` to
-`train_vN+1.ipynb`; in its setup cell set `TEACHER` = best model so far, `LABELS_CSV`, `MODEL_PATH`, `FT_PATH`
-(`vN+1`), and the relabel knobs `VISION_FIXES` / `MIN_CONF` (see `scripts/relabel.py`); update the intro and the
-section-10 names; then steps 2–4 above.
+**Next round (6)**: v5 already scores 100% on gold, so gold can no longer tell a better model apart. Wait for real
+misses first: when 5.3 saves rejected captchas, label them (below) and use them as the score that matters.
+1. Move `~/Downloads/captcha_mistakes/*.png` into `data/site_mistakes/` and add a row per file to its `labels.csv`
+   (`truth` = what the image says). They are scored, not trained on. Optionally add some to `data/reviews.json`
+   (review loop below) so they are trained on next time.
+2. Copy `notebooks/train_v5.ipynb` to `train_v6.ipynb`; in its setup cell set `TEACHER = "../models/captcha_cnn_v5.pt"`,
+   `LABELS_CSV`, `MODEL_PATH`, `FT_PATH` to `v6`, and the relabel knobs `VISION_FIXES` / `MIN_CONF` (see
+   `scripts/relabel.py`); update the intro and the section-10 names.
+3. `python3 tools/run_round.py notebooks/train_v6.ipynb` from the project root (~12 min, no input): relabel ->
+   `data/labels_v6.csv`, train -> `models/captcha_cnn_v6.pt`, section 10 prints gold for teacher vs new.
+4. `python3 tools/check_extension.py models/captcha_cnn_v6.pt` and the same with no argument (the shipped v5): compare
+   gold and site scores; every JS read must match PyTorch.
+5. If v6 beats v5: ship it (below; version 5.4), update the Status table, archive the previous round like
+   `archive/round4_2026-11-01/` (its notebook, labels, and models no longer needed; keep the new round's teacher), commit.
 
 **Review loop** (optional, any round): open the round notebook, run sections 1–3, 6–8, then 12 review 50 ->
 13 fine-tune -> 14 what changed on gold. Repeat while gold improves. `FOCUS` in `scripts/review.py` picks
-characters (6 read as 5 is v4's main miss).
+characters (remaining weak pair: 8 read as B). Labelling hard cases from the image outside the notebook (as for the
+88 style-3 reviews) works too: add entries to `data/reviews.json` in the same format.
 
-**Round 4** (done, ships in 5.2): `notebooks/train_v4.ipynb` (gold check, relabel with v3 + Vision, three-level
+**Round 4** (done, shipped in 5.2): archived in `archive/round4_2026-11-01/` (relabel with v3 + Vision, three-level
 from v3's weights).
 
 **New captcha style**: archive the workspace like `archive/v2_2026-10-31/` (data, round notebooks, cache; ids will
@@ -112,7 +114,7 @@ character pairs) before trusting either.
 
 ```
 python3 tools/check_extension.py models/<model>.pt   # JS == PyTorch on every gold/site captcha, else stop
-python3 export_model.py models/<model>.pt   # default: models/captcha_cnn_v4.pt
+python3 export_model.py models/<model>.pt   # default: models/captcha_cnn_v5.pt
 # bump "version" in extension/manifest.json
 ./build_zip.sh                              # optional: dist/captcha-paster-<version>.zip
 ```
@@ -131,7 +133,7 @@ answer is unknown: the file name only says what the model read (wrong) and how s
 These are real-world misses, the most useful images for the next round. Nothing imports them yet: move them into
 `data/site_mistakes/`, label them in its `labels.csv` (usually one character off; known confusions J/3, 6/5, B/8, y/Y,
 a/e) before training on them, and keep them out of gold. Chrome extensions can only write under Downloads, so they
-land there first. The Downloads folder was emptied when 5.2 shipped: anything new there is a 5.2 miss.
+land there first. The Downloads folder was empty when 5.3 shipped (5.2 saved no misses): anything new there is a 5.3 miss.
 
 ## Rules (break these and scores stop meaning anything)
 
@@ -181,3 +183,7 @@ land there first. The Downloads folder was emptied when 5.2 shipped: anything ne
 - 2026-10-31: round 5 made plug-and-play: `train_v5.ipynb` (teacher v4, `MIN_CONF` 0.7, from scratch),
   `relabel.py` knobs moved to the notebook (`VISION_FIXES`, `MIN_CONF`, new `confident` source),
   `tools/run_round.py` runs a round headless. Smoke test (1 epoch, outputs discarded): gold 200/200, site 8/8.
+- 2026-11-01: v4 fine-tuned on 88 hard style-3 cases labelled by Claude from the image (`data/reviews.json`) ->
+  v4_ft (gold 100%, but reads some 8 as B and 9 as g). Round 5 run with v4_ft as teacher: v5 gold 100%, 8/8 site,
+  19/20 on the captchas v4 and v4_ft disagree on (v4 5/20, v4_ft 15/20). Extension 5.3 ships v5 (JS == PyTorch on
+  208/208); 5.2 zip kept as the rollback. Round 4 (notebook, labels, v3, v4) archived to `archive/round4_2026-11-01/`.

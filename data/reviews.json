@@ -1,0 +1,882 @@
+{
+ "92717": {
+  "truth": "tBAi6",
+  "model": "tBAi5",
+  "vision": "tBAiG",
+  "model_right": false,
+  "confidence": 0.439,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "35934": {
+  "truth": "MqB6m",
+  "model": "MqB5m",
+  "vision": "MqB5m",
+  "model_right": false,
+  "confidence": 0.342,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "40283": {
+  "truth": "REb6i",
+  "model": "REb6i",
+  "vision": "REb5i",
+  "model_right": true,
+  "confidence": 0.418,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "41": {
+  "truth": "j6E2q",
+  "model": "j5E2q",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.402,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "34843": {
+  "truth": "JL3i6",
+  "model": "JL3i6",
+  "vision": "JL3i5",
+  "model_right": true,
+  "confidence": 0.433,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "53839": {
+  "truth": "Li6y9",
+  "model": "Li6y9",
+  "vision": "Li5y9",
+  "model_right": true,
+  "confidence": 0.439,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "83067": {
+  "truth": "m6F3d",
+  "model": "m5F3d",
+  "vision": "m5F3d",
+  "model_right": false,
+  "confidence": 0.416,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "11718": {
+  "truth": "B6Qe6",
+  "model": "B6Qe6",
+  "vision": "B5Qe5",
+  "model_right": true,
+  "confidence": 0.422,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "20836": {
+  "truth": "6BYhJ",
+  "model": "5BYhJ",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.413,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "89825": {
+  "truth": "LaM6q",
+  "model": "LaM6q",
+  "vision": "LaM6G",
+  "model_right": true,
+  "confidence": 0.389,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "83261": {
+  "truth": "5Nq6J",
+  "model": "5Nq6J",
+  "vision": "5Nq63",
+  "model_right": true,
+  "confidence": 0.352,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "21708": {
+  "truth": "6iNtM",
+  "model": "5iNtM",
+  "vision": "GiNtM",
+  "model_right": false,
+  "confidence": 0.371,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "95245": {
+  "truth": "fj6yG",
+  "model": "fj6yG",
+  "vision": "fj6yG",
+  "model_right": true,
+  "confidence": 0.45,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "99834": {
+  "truth": "j6Li2",
+  "model": "j6Li2",
+  "vision": "j5Li2",
+  "model_right": true,
+  "confidence": 0.382,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "96350": {
+  "truth": "hh6H6",
+  "model": "hh6H5",
+  "vision": "hh6H5",
+  "model_right": false,
+  "confidence": 0.392,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "19188": {
+  "truth": "Gm63N",
+  "model": "Gm63N",
+  "vision": "Gm53N",
+  "model_right": true,
+  "confidence": 0.44,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "18417": {
+  "truth": "THE6a",
+  "model": "THE5a",
+  "vision": "THE6a",
+  "model_right": false,
+  "confidence": 0.35,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "53046": {
+  "truth": "nR6iq",
+  "model": "nR5iq",
+  "vision": "nR5ig",
+  "model_right": false,
+  "confidence": 0.445,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "88837": {
+  "truth": "6Him3",
+  "model": "6Him3",
+  "vision": "5Him3",
+  "model_right": true,
+  "confidence": 0.443,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "17254": {
+  "truth": "yy6yA",
+  "model": "yy6yA",
+  "vision": "yy6yq",
+  "model_right": true,
+  "confidence": 0.457,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "66417": {
+  "truth": "6F8Qe",
+  "model": "5F8Qe",
+  "vision": "6F5Qe",
+  "model_right": false,
+  "confidence": 0.401,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "66666": {
+  "truth": "b6bDi",
+  "model": "b5bDi",
+  "vision": "b5bDi",
+  "model_right": false,
+  "confidence": 0.412,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "40747": {
+  "truth": "m5nMG",
+  "model": "m5nMG",
+  "vision": "f6nMG",
+  "model_right": true,
+  "confidence": 0.315,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "18078": {
+  "truth": "6r3aD",
+  "model": "5r3aD",
+  "vision": "5r3aD",
+  "model_right": false,
+  "confidence": 0.446,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "86275": {
+  "truth": "MR6t5",
+  "model": "MR5t5",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.447,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "11050": {
+  "truth": "4iJM6",
+  "model": "4iJM6",
+  "vision": "4i3M5",
+  "model_right": true,
+  "confidence": 0.424,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "3763": {
+  "truth": "DJ36d",
+  "model": "DJ36d",
+  "vision": "DJ35d",
+  "model_right": true,
+  "confidence": 0.418,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "74717": {
+  "truth": "Dh6yM",
+  "model": "Dh6yM",
+  "vision": "Dh5YM",
+  "model_right": true,
+  "confidence": 0.46,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "53271": {
+  "truth": "4nB6D",
+  "model": "4nB5D",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.37,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "72595": {
+  "truth": "bfAA6",
+  "model": "bfAA6",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.435,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "17147": {
+  "truth": "6r2E4",
+  "model": "5r2E4",
+  "vision": "5r2E4",
+  "model_right": false,
+  "confidence": 0.402,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "298": {
+  "truth": "eTyF6",
+  "model": "eTyF6",
+  "vision": "eTyF6",
+  "model_right": true,
+  "confidence": 0.464,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "11558": {
+  "truth": "6FtFj",
+  "model": "6FtFj",
+  "vision": "6FtFi",
+  "model_right": true,
+  "confidence": 0.388,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "63058": {
+  "truth": "95T6i",
+  "model": "95T5i",
+  "vision": "95T5i",
+  "model_right": false,
+  "confidence": 0.442,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "64020": {
+  "truth": "J6HyG",
+  "model": "J6HyG",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.435,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "34082": {
+  "truth": "Mm5eb",
+  "model": "Mm5eb",
+  "vision": "Mm5eb",
+  "model_right": true,
+  "confidence": 0.43,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "42175": {
+  "truth": "y6B46",
+  "model": "y6B45",
+  "vision": "y6B46",
+  "model_right": false,
+  "confidence": 0.41,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "82240": {
+  "truth": "6bLaY",
+  "model": "6bLaY",
+  "vision": "6bLaY",
+  "model_right": true,
+  "confidence": 0.462,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "32818": {
+  "truth": "8fFy6",
+  "model": "8fFy6",
+  "vision": "8fFy5",
+  "model_right": true,
+  "confidence": 0.446,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "50431": {
+  "truth": "nMrj6",
+  "model": "nMrj5",
+  "vision": "nMrj5",
+  "model_right": false,
+  "confidence": 0.466,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "92192": {
+  "truth": "MyG6A",
+  "model": "MyG6A",
+  "vision": "MYG6A",
+  "model_right": true,
+  "confidence": 0.336,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "25168": {
+  "truth": "y8rfL",
+  "model": "y8rfL",
+  "vision": "YBrfL",
+  "model_right": true,
+  "confidence": 0.429,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "94906": {
+  "truth": "iyL3Q",
+  "model": "iyL3Q",
+  "vision": "iYL3Q",
+  "model_right": true,
+  "confidence": 0.437,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "96476": {
+  "truth": "yA9Gg",
+  "model": "YA9Gg",
+  "vision": "YA9Gg",
+  "model_right": false,
+  "confidence": 0.449,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "30332": {
+  "truth": "y2MyY",
+  "model": "y2MyY",
+  "vision": "Y2MYY",
+  "model_right": true,
+  "confidence": 0.443,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "11060": {
+  "truth": "LRya8",
+  "model": "LRya8",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.442,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "6327": {
+  "truth": "8dbyA",
+  "model": "8dbyA",
+  "vision": "5dbyA",
+  "model_right": true,
+  "confidence": 0.391,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "19300": {
+  "truth": "yED2N",
+  "model": "yED2N",
+  "vision": "YED2N",
+  "model_right": true,
+  "confidence": 0.438,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "3725": {
+  "truth": "yn2T3",
+  "model": "yn2T3",
+  "vision": "yn2T3",
+  "model_right": true,
+  "confidence": 0.453,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "28406": {
+  "truth": "tTy8D",
+  "model": "tTY8D",
+  "vision": "tTY8D",
+  "model_right": false,
+  "confidence": 0.421,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "19024": {
+  "truth": "Qybn5",
+  "model": "QYbn5",
+  "vision": "Qybn5",
+  "model_right": false,
+  "confidence": 0.416,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "17250": {
+  "truth": "yrYg6",
+  "model": "yrYg6",
+  "vision": "YrYg6",
+  "model_right": true,
+  "confidence": 0.406,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "45246": {
+  "truth": "emYf4",
+  "model": "emyf4",
+  "vision": "emyf4",
+  "model_right": false,
+  "confidence": 0.386,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "89100": {
+  "truth": "q3Qy9",
+  "model": "q3Qy9",
+  "vision": "q3QY9",
+  "model_right": true,
+  "confidence": 0.445,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "23933": {
+  "truth": "9tGGy",
+  "model": "9tGGY",
+  "vision": "9tGGY",
+  "model_right": false,
+  "confidence": 0.464,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "63328": {
+  "truth": "5JQya",
+  "model": "5JQya",
+  "vision": "53Qya",
+  "model_right": true,
+  "confidence": 0.441,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "11318": {
+  "truth": "y8tLN",
+  "model": "Y8tLN",
+  "vision": "Y5tLN",
+  "model_right": false,
+  "confidence": 0.442,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "75635": {
+  "truth": "6HTyB",
+  "model": "6HTYB",
+  "vision": "6HTyB",
+  "model_right": false,
+  "confidence": 0.404,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "58656": {
+  "truth": "yA5Tg",
+  "model": "YA5Tg",
+  "vision": "YA5Tg",
+  "model_right": false,
+  "confidence": 0.456,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "54608": {
+  "truth": "y2mEt",
+  "model": "y2mEt",
+  "vision": "y2mEt",
+  "model_right": true,
+  "confidence": 0.453,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "90017": {
+  "truth": "mYJn2",
+  "model": "mYJn2",
+  "vision": "mYJn2",
+  "model_right": true,
+  "confidence": 0.267,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "44684": {
+  "truth": "8hQGy",
+  "model": "8hQGy",
+  "vision": "8hQGY",
+  "model_right": true,
+  "confidence": 0.406,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "87630": {
+  "truth": "yg6Hq",
+  "model": "yg6Hq",
+  "vision": "yq6Ha",
+  "model_right": true,
+  "confidence": 0.455,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "62484": {
+  "truth": "2QGgJ",
+  "model": "2QGg3",
+  "vision": "2QGg3",
+  "model_right": false,
+  "confidence": 0.464,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "56825": {
+  "truth": "HJ8qy",
+  "model": "H38qy",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.429,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "74430": {
+  "truth": "mi9J2",
+  "model": "mi932",
+  "vision": "mi932",
+  "model_right": false,
+  "confidence": 0.455,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "62149": {
+  "truth": "3qJ8j",
+  "model": "3q38j",
+  "vision": "3qf8j",
+  "model_right": false,
+  "confidence": 0.444,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "85159": {
+  "truth": "4eH4J",
+  "model": "4eH43",
+  "vision": "4eH4f",
+  "model_right": false,
+  "confidence": 0.438,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "10326": {
+  "truth": "Jr9qQ",
+  "model": "3r9qQ",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.452,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "83795": {
+  "truth": "jB9Jn",
+  "model": "jB93n",
+  "vision": "jB93n",
+  "model_right": false,
+  "confidence": 0.435,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "42247": {
+  "truth": "fJ5ar",
+  "model": "fJ5ar",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.468,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "52338": {
+  "truth": "3mJrN",
+  "model": "3m3rN",
+  "vision": "3mirN",
+  "model_right": false,
+  "confidence": 0.425,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "33852": {
+  "truth": "bfFJ6",
+  "model": "bfFJ6",
+  "vision": "bfF36",
+  "model_right": true,
+  "confidence": 0.465,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "78674": {
+  "truth": "tJG6G",
+  "model": "tJG6G",
+  "vision": "f3G6G",
+  "model_right": true,
+  "confidence": 0.453,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "993": {
+  "truth": "TJ5tn",
+  "model": "T35tn",
+  "vision": "T35tn",
+  "model_right": false,
+  "confidence": 0.45,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "53275": {
+  "truth": "eLdJ6",
+  "model": "eLdJ6",
+  "vision": "eLd36",
+  "model_right": true,
+  "confidence": 0.423,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "2226": {
+  "truth": "m9JH5",
+  "model": "m9JH5",
+  "vision": "m9JH5",
+  "model_right": true,
+  "confidence": 0.454,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "31530": {
+  "truth": "6J3Eb",
+  "model": "6J3Eb",
+  "vision": "",
+  "model_right": true,
+  "confidence": 0.457,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "96329": {
+  "truth": "89r8H",
+  "model": "89rBH",
+  "vision": "89r5H",
+  "model_right": false,
+  "confidence": 0.347,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "62273": {
+  "truth": "2hiAB",
+  "model": "2hiA8",
+  "vision": "2hiA9",
+  "model_right": false,
+  "confidence": 0.29,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "4009": {
+  "truth": "2JBie",
+  "model": "2J8ie",
+  "vision": "23Bie",
+  "model_right": false,
+  "confidence": 0.389,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "69402": {
+  "truth": "YBt2E",
+  "model": "Y8t2E",
+  "vision": "Y8t2E",
+  "model_right": false,
+  "confidence": 0.425,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "71894": {
+  "truth": "Hh6B4",
+  "model": "Hh684",
+  "vision": "Hh684",
+  "model_right": false,
+  "confidence": 0.388,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "94478": {
+  "truth": "B3m8i",
+  "model": "B3mBi",
+  "vision": "",
+  "model_right": false,
+  "confidence": 0.413,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "35424": {
+  "truth": "dBE8q",
+  "model": "d8E8q",
+  "vision": "JBE8Q",
+  "model_right": false,
+  "confidence": 0.381,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "86329": {
+  "truth": "5BN8y",
+  "model": "5BN8y",
+  "vision": "5BN8Y",
+  "model_right": true,
+  "confidence": 0.376,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "40013": {
+  "truth": "LEmB3",
+  "model": "LEmB3",
+  "vision": "LEmB3",
+  "model_right": true,
+  "confidence": 0.425,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ },
+ "62824": {
+  "truth": "9EBd5",
+  "model": "9E8d5",
+  "vision": "9E8d5",
+  "model_right": false,
+  "confidence": 0.456,
+  "reviewed_with": "captcha_cnn_v4.pt",
+  "time": "2026-10-31T23:47:40",
+  "labeled_by": "claude (from the image, spot-checked by the user)"
+ }
+}

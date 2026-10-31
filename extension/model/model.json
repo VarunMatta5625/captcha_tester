@@ -286,19 +286,19 @@
   }
  ],
  "floats": 1819929,
- "source": "captcha_cnn_v4.pt",
+ "source": "captcha_cnn_v5.pt",
  "scores": {
   "val": {
-   "exact": 0.9655472636222839,
-   "char": 0.9929354190826416
+   "exact": 0.9976242184638977,
+   "char": 0.9995248317718506
   },
   "test": {
-   "exact": 0.9682387709617615,
-   "char": 0.993508517742157
+   "exact": 0.9963328242301941,
+   "char": 0.9992665648460388
   },
   "gold": {
-   "exact": 0.9700000286102295,
-   "char": 0.9929999709129333
+   "exact": 1.0,
+   "char": 1.0
   }
  },
  "preprocess": "prep.clean: letters (r - g > 60 and r - b > 60) 0, blobs (r + g + b < 600) 128, rest 255",

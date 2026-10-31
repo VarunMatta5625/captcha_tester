@@ -32,7 +32,7 @@ where you retyped the code yourself save nothing. The right answer is unknown; l
 
 Update the model
 ----------------
-From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v4.pt)
+From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v5.pt)
 rewrites model/model.json and model/weights.bin. Then click the reload icon on the extension in
 chrome://extensions. model.js cleans the image before reading exactly like training (scripts/prep.py):
 red letters 0, gray blobs 128, paper 255 (prep.clean), or letters only for models exported without
