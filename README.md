@@ -24,7 +24,7 @@ v2_ft and v3 tie: at 3 misses in 200, gold can no longer separate models. Remain
 
 | Path | What |
 |---|---|
-| `extension/` | Chrome/Edge/Brave extension v5.0 (MV3). Load unpacked from here. See `extension/README.txt`. |
+| `extension/` | Chrome/Edge/Brave extension v5.1 (MV3). Load unpacked from here. See `extension/README.txt`. |
 | `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v2_ft.pt`. |
 | `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). |
 | `notebooks/train_v2.ipynb` | Round 2: gold check, relabel (v1 model + Vision agree), train from v1 weights, review, fine-tune. |

@@ -20,6 +20,14 @@ Right-click the login page -> Inspect -> Console. Each captcha logs a line like
     [CAPTCHA] Pasted mMy2g (confidence 0.922, model 30 ms, total 60 ms)
 Low confidence (below about 0.5) means the read is a guess: check the box before submitting.
 
+Captchas the model got wrong
+----------------------------
+When you press LOGIN with the model's answer and the site replies "Invalid CAPTCHA", the rejected
+captcha is saved automatically to
+    Downloads/captcha_mistakes/<time>_model-<model's read>_conf-<confidence>.png
+(time is UTC). Only rejected reads are saved: correct reads, wrong-password failures and logins
+where you retyped the code yourself save nothing. The right answer is unknown; label these later.
+
 Update the model
 ----------------
 From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v2_ft.pt)
@@ -30,8 +38,8 @@ prep.ink step training uses (scripts/prep.py); change both together or not at al
 Files
 -----
 manifest.json    extension definition
-content.js       reads the captcha image on the page and fills the answer
-background.js    loads the model and reads captchas
+content.js       reads the captcha image on the page, fills the answer, spots rejected reads
+background.js    loads the model, reads captchas, saves misread ones (downloads)
 model.js         red-letter mask + runs the network (layer order, softmax)
 model.wasm       the heavy maths, compiled to WebAssembly (archive/v1_2026-10-30/wasm/kernels.c)
 model/           trained weights (model.json + weights.bin)

@@ -13,7 +13,24 @@ function getModel() {
   return modelPromise;
 }
 
+// A captcha the site rejected the model's read for -> Downloads/captcha_mistakes/
+// <time>_model-<read>_conf-<confidence>.png (the right answer is unknown; label it later)
+function saveMistake({ png, code, confidence }) {
+  if (!png?.startsWith('data:image/png;base64,') || !/^[A-Za-z0-9]{5}$/.test(code) ||
+      !(confidence >= 0 && confidence <= 1)) {
+    return Promise.reject(new Error('bad captcha or code'));
+  }
+  const time = new Date().toISOString().replace(/[-:]/g, '').replace('T', '-').slice(0, 15); // 20261031-142530
+  const filename = `captcha_mistakes/${time}_model-${code}_conf-${confidence.toFixed(3)}.png`;
+  return chrome.downloads.download({ url: png, filename, conflictAction: 'uniquify', saveAs: false })
+    .then(() => ({ filename }));
+}
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === 'saveMistake') {
+    saveMistake(message).then(sendResponse, (e) => sendResponse({ error: String(e) }));
+    return true;
+  }
   if (message.action !== 'solve') return;
   getModel()
     .then((model) => {
