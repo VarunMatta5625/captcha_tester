@@ -7,12 +7,20 @@
 #   model == Vision    that read, source "agree"                   -> training / val / test
 #   model != Vision    Vision's read, source "vision_fix", where every differing character is in VISION_FIXES
 #                      (the teacher can't read a glyph the new font changed, Vision can)  -> training / val / test
+#                      else the model's read, source "confident", if its weakest character has confidence >= MIN_CONF
+#                      (a strong teacher reads better than Vision on this font)  -> training / val / test
 #                      otherwise the model's read, source "disagree" -> not trained on; review.py shows these first
+#
+# Set in the notebook's setup cell (the defaults trust neither):
+#   VISION_FIXES  (teacher's char, Vision's char) pairs where Vision wins. Round 4: {("3", "J")}, v3 read the new J
+#                 (no top bar) as 3 and all 23 such Vision reads in a 500-captcha sample were right. Empty once the
+#                 teacher reads J.
+#   MIN_CONF      None, or e.g. 0.7: trust the teacher's confident reads even where Vision disagrees. Round 5 (teacher
+#                 v4): an experiment trained on v4's reads with confidence >= 0.7 scored 97-98% on gold.
 import json
 
-# (teacher's char, Vision's char) pairs where Vision is trusted. 2026-10-31 font: v3 reads the new J (no top bar)
-# as 3; all 23 such Vision reads in a 500-captcha sample were right. Empty it once the teacher reads J.
-VISION_FIXES = {("3", "J")}
+VISION_FIXES = globals().get("VISION_FIXES", set())
+MIN_CONF = globals().get("MIN_CONF")
 
 reviews = json.load(open(REVIEWS)) if os.path.exists(REVIEWS) else {}
 assert not set(GOLD) & set(reviews), "a gold captcha is in the reviews"
@@ -37,6 +45,8 @@ with open(LABELS_CSV, "w", newline="") as f:
             label, source = read, "agree"
         elif VISION[i] and all(d in VISION_FIXES for d in diff):
             label, source = VISION[i], "vision_fix"
+        elif MIN_CONF is not None and conf >= MIN_CONF:
+            label, source = read, "confident"
         else:
             label, source = read, "disagree"
             pairs.update(diff)
@@ -44,7 +54,7 @@ with open(LABELS_CSV, "w", newline="") as f:
         w.writerow([i, label, source, f"{conf:.3f}", read, VISION[i]])
 
 print(f"wrote {LABELS_CSV}: {count['agree']} agree with Vision, {count['vision_fix']} Vision fixes {sorted(VISION_FIXES)}, "
-      f"{count['disagree']} disagree, {count['review']} your reviews; gold's {len(GOLD)} left out "
+      f"{count['confident']} confident (>= {MIN_CONF}), {count['disagree']} disagree, {count['review']} your reviews; gold's {len(GOLD)} left out "
       f"(the notebook's splits cell picks what trains)")
 print("  disagreeing characters (teacher -> Vision):", pairs.most_common(12))
 print(f"  of the disagreements, Vision gave no valid read on {sum(not VISION[i] for i in ids if i not in reviews)}")
