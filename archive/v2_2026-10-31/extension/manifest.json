@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Instant CAPTCHA Paster",
+  "version": "5.1",
+  "description": "Fills the CAPTCHA (red-letter style) with a locally trained CNN that runs inside the extension, and saves captchas it got wrong for retraining.",
+  "permissions": [
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://login.gitam.edu/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+}

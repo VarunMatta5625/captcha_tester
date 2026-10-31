@@ -32,16 +32,17 @@ where you retyped the code yourself save nothing. The right answer is unknown; l
 
 Update the model
 ----------------
-From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v2_ft.pt)
+From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v4.pt)
 rewrites model/model.json and model/weights.bin. Then click the reload icon on the extension in
-chrome://extensions. model.js keeps only the red pixels (the letters) before reading, the same
-prep.ink step training uses (scripts/prep.py); change both together or not at all.
+chrome://extensions. model.js cleans the image before reading exactly like training (scripts/prep.py):
+red letters 0, gray blobs 128, paper 255 (prep.clean), or letters only for models exported without
+"levels": 3 (prep.ink); change both together or not at all.
 
 Files
 -----
 manifest.json    extension definition
 content.js       reads the captcha image on the page, fills the answer, spots rejected reads
 background.js    loads the model, reads captchas, saves misread ones (downloads)
-model.js         red-letter mask + runs the network (layer order, softmax)
+model.js         image cleaning (letters / blobs / paper) + runs the network (layer order, softmax)
 model.wasm       the heavy maths, compiled to WebAssembly (archive/v1_2026-10-30/wasm/kernels.c)
 model/           trained weights (model.json + weights.bin)

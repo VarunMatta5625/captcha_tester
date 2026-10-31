@@ -1,0 +1,15 @@
+three_s0_init-v4 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 6, 'lr': 0.0005, 'patience': 3, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 0, 'min_conf': 0.7, 'init': '/Users/varunmatta/Drive/Varun/Projects/captcha_tester/models/captcha_cnn_v4.pt'}
+three_s0_init-v4 epoch  1  loss 0.882  val 97.93%  gold 96.50%  68s
+three_s0_init-v4 epoch  2  loss 0.747  val 98.22%  gold 97.00%  68s
+three_s0_init-v4 epoch  3  loss 0.743  val 98.30%  gold 97.50%  68s
+three_s0_init-v4 epoch  4  loss 0.739  val 98.84%  gold 96.00%  68s
+three_s0_init-v4 epoch  5  loss 0.736  val 98.79%  gold 96.50%  68s
+three_s0_init-v4 epoch  6  loss 0.734  val 98.74%  gold 96.50%  68s
+three_s0_init-v4 DONE  val 98.84%  test 98.97%  gold 96.00%
+binary_s0_init-v4 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 6, 'lr': 0.0005, 'patience': 3, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 0, 'min_conf': 0.7, 'init': '/Users/varunmatta/Drive/Varun/Projects/captcha_tester/models/captcha_cnn_v4.pt'}
+binary_s0_init-v4 epoch  1  loss 0.739  val 99.76%  gold 93.50%  68s
+binary_s0_init-v4 epoch  2  loss 0.742  val 98.71%  gold 92.50%  67s
+binary_s0_init-v4 epoch  3  loss 0.740  val 99.69%  gold 94.50%  68s
+binary_s0_init-v4 epoch  4  loss 0.735  val 99.74%  gold 94.50%  68s
+binary_s0_init-v4 DONE  val 99.76%  test 99.73%  gold 93.50%
+EXTRA DONE

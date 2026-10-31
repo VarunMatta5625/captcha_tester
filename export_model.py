@@ -1,6 +1,6 @@
 """Export a trained captcha CNN checkpoint for the extension's JavaScript runtime.
 
-    python3 export_model.py [checkpoint.pt]      (default: models/captcha_cnn_v2_ft.pt)
+    python3 export_model.py [checkpoint.pt]      (default: models/captcha_cnn_v4.pt)
 
 Writes extension/model/model.json (layer list, alphabet) and extension/model/weights.bin
 (float32, little-endian). BatchNorm layers are folded into the conv before them, so the
@@ -53,11 +53,12 @@ def main(path):
     meta = {"alphabet": ckpt["alphabet"], "length": ckpt["length"], "height": h, "width": w,
             "layers": layers, "heads": heads, "floats": offset,
             "source": os.path.basename(path), "scores": ckpt.get("scores", {}),
-            "preprocess": ckpt.get("preprocess", "")}
+            "preprocess": ckpt.get("preprocess", ""),
+            "levels": ckpt.get("levels", 2)}   # model.js clean(): 3 = prep.clean, 2 = prep.ink (v1-v3, v4_binary)
     with open(os.path.join(OUT, "model.json"), "w") as f:
         json.dump(meta, f, indent=1)
     print(f"exported {os.path.basename(path)}: {offset} weights ({offset * 4 / 1e6:.1f} MB) -> {OUT}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "models", "captcha_cnn_v2_ft.pt"))
+    main(sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "models", "captcha_cnn_v4.pt"))

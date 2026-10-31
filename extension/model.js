@@ -2,15 +2,16 @@
 // (both from export_model.py, BatchNorm folded in); the number crunching runs in model.wasm
 // (wasm/kernels.c, WebAssembly + SIMD). No libraries, works in any Chrome.
 
-// canvas RGBA pixels -> letters only, exactly like training's prep.ink (scripts/prep.py): the captcha's letters
-// are red and its speckle noise gray, so a pixel is letter (0) when red beats green and blue by more than 60,
-// else paper (255)
-const RED_MIN = 60;
-export function toInk(rgba, n) {
+// canvas RGBA pixels -> what the model reads, exactly like training's prep.clean (scripts/prep.py): the letters
+// are red and the blobs and speckle gray, so a pixel is letter (0) when red beats green and blue by more than 60,
+// else blob (128) when darker than 200 on average, else paper (255). levels = 2 (v1-v3 and v4_binary, trained on
+// prep.ink): blobs count as paper.
+const RED_MIN = 60, BLOB_MAX = 200;
+export function clean(rgba, n, levels) {
   const gray = new Uint8Array(n);
   for (let p = 0; p < n; p++) {
     const r = rgba[4 * p], g = rgba[4 * p + 1], b = rgba[4 * p + 2];
-    gray[p] = r - g > RED_MIN && r - b > RED_MIN ? 0 : 255;
+    gray[p] = r - g > RED_MIN && r - b > RED_MIN ? 0 : levels === 3 && r + g + b < 3 * BLOB_MAX ? 128 : 255;
   }
   return gray;
 }
@@ -31,7 +32,7 @@ export async function createModel(meta, weights, wasmBytes) {
     biggest = Math.max(biggest, c * h * w);
   }
   const bufA = k.alloc(4 * biggest), bufB = k.alloc(4 * biggest);
-  return { ...meta, k, at, bufA, bufB };
+  return { levels: 2, ...meta, k, at, bufA, bufB };   // model.json without levels: a two-level model
 }
 
 // gray: Uint8Array of model.height * model.width pixels -> { text, confidence of weakest character }

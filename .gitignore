@@ -3,6 +3,8 @@
 cache/
 dist/
 data/captchas.zip
+archive/v2_2026-10-31/data/captchas.zip
+archive/v2_2026-10-31/cache/
 archive/v1_2026-10-30/dist/
 archive/v1_2026-10-30/training/data/varun.zip
 archive/v1_2026-10-30/training/data/varun/

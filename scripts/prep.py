@@ -1,4 +1,4 @@
-"""Image and Apple Vision helpers for the v2 captchas (red letters on gray speckle noise).
+"""Image and Apple Vision helpers for the red-letter captchas (since 2026-10-31: bold font on large gray blobs).
 
 Imported by the notebook (`sys.path` gets ../scripts) and by label_vision.py, so the CNN and Vision
 always see the same cleaned image.
@@ -10,36 +10,51 @@ from PIL import Image, ImageFilter, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OCR = os.path.join(ROOT, "tools", "ocr")   # Apple Vision, accurate mode (built from tools/ocr.swift)
-IMAGES_ZIP = os.path.join(ROOT, "data", "captchas.zip")   # the 100,000 captchas as captchas/<id>.png (no loose copies)
+IMAGES_ZIP = os.path.join(ROOT, "data", "captchas.zip")   # the captchas as <id>.png, any folder inside (no loose copies)
 ALPHABET = "2345689ABDEFGHJLMNQRTYabdefghijmnqrty"   # v1's classes; gold checking reports any others
 LENGTH = 5
 RED_MIN = 60   # letter pixel: red beats both green and blue by more than this (speckle is gray, r = g = b)
+BLOB_MAX = 200   # blob pixel: not a letter and darker than this (mean of r, g, b); lighter speckle is paper
 
 
-_zips = {}   # one open ZipFile per process (label_vision.py's workers each open their own)
+_zips = {}   # one (ZipFile, id -> member name) per process (label_vision.py's workers each open their own)
 
 
 def _zip():
     if IMAGES_ZIP not in _zips:
-        _zips[IMAGES_ZIP] = zipfile.ZipFile(IMAGES_ZIP)
+        z = zipfile.ZipFile(IMAGES_ZIP)
+        names = {os.path.basename(n)[:-4]: n for n in z.namelist()
+                 if n.endswith(".png") and not os.path.basename(n).startswith(".")}
+        _zips[IMAGES_ZIP] = z, names
     return _zips[IMAGES_ZIP]
 
 
 def captcha_ids():
     """Every captcha id in the zip, in numeric order."""
-    return sorted((os.path.basename(n)[:-4] for n in _zip().namelist() if n.endswith(".png")), key=int)
+    return sorted(_zip()[1], key=int)
 
 
 def open_captcha(i):
     """Captcha <i> as a PIL image, read straight from the zip."""
-    return Image.open(io.BytesIO(_zip().read(f"captchas/{i}.png")))
+    z, names = _zip()
+    return Image.open(io.BytesIO(z.read(names[i])))
+
+
+def clean(img):
+    """Captcha (PIL image) -> uint8 HxW the CNN reads: letters 0, gray blobs 128, everything else 255.
+    Keeping the blobs lets the model tell a stroke hidden under a blob from no stroke (new J vs 3, 6 vs 5).
+    Same as extension/model.js clean(); change both or neither."""
+    a = np.asarray(img.convert("RGB")).astype(np.int16)
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    letter = (r - g > RED_MIN) & (r - b > RED_MIN)
+    blob = ~letter & (r + g + b < 3 * BLOB_MAX)
+    return np.select([letter, blob], [0, 128], 255).astype(np.uint8)
 
 
 def ink(img):
-    """Captcha (PIL image) -> uint8 HxW, letters 0 (black) and everything else 255 (white)."""
-    a = np.asarray(img.convert("RGB")).astype(np.int16)
-    r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    return np.where((r - g > RED_MIN) & (r - b > RED_MIN), 0, 255).astype(np.uint8)
+    """Captcha (PIL image) -> uint8 HxW, letters 0 (black) and everything else 255 (white).
+    What Vision reads, and what the two-level models (v1-v3, v4_binary) were trained on."""
+    return np.where(clean(img) == 0, 0, 255).astype(np.uint8)
 
 
 def for_vision(img):

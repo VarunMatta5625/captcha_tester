@@ -1,0 +1,73 @@
+binary_s0 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 10, 'lr': 0.002, 'patience': 4, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 0, 'min_conf': 0.7, 'init': None}
+binary_s0 epoch  1  loss 2.798  val 83.37%  gold 82.50%  68s
+binary_s0 epoch  2  loss 0.923  val 97.60%  gold 93.50%  67s
+binary_s0 epoch  3  loss 0.809  val 98.06%  gold 95.50%  67s
+binary_s0 epoch  4  loss 0.781  val 98.87%  gold 94.00%  67s
+binary_s0 epoch  5  loss 0.767  val 98.55%  gold 96.50%  67s
+binary_s0 epoch  6  loss 0.758  val 99.36%  gold 96.00%  67s
+binary_s0 epoch  7  loss 0.750  val 99.24%  gold 94.00%  67s
+binary_s0 epoch  8  loss 0.744  val 99.20%  gold 95.50%  67s
+binary_s0 epoch  9  loss 0.740  val 99.42%  gold 95.00%  67s
+binary_s0 epoch 10  loss 0.738  val 99.45%  gold 95.00%  67s
+binary_s0 DONE  val 99.45%  test 99.44%  gold 95.00%
+three_s0 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 10, 'lr': 0.002, 'patience': 4, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 0, 'min_conf': 0.7, 'init': None}
+three_s0 epoch  1  loss 2.857  val 79.85%  gold 78.00%  68s
+three_s0 epoch  2  loss 0.921  val 97.89%  gold 95.00%  67s
+three_s0 epoch  3  loss 0.811  val 98.38%  gold 96.50%  68s
+three_s0 epoch  4  loss 0.783  val 98.54%  gold 97.50%  68s
+three_s0 epoch  5  loss 0.769  val 98.42%  gold 97.50%  68s
+three_s0 epoch  6  loss 0.759  val 98.55%  gold 98.50%  67s
+three_s0 epoch  7  loss 0.751  val 98.93%  gold 96.00%  67s
+three_s0 epoch  8  loss 0.745  val 98.71%  gold 97.00%  68s
+three_s0 epoch  9  loss 0.741  val 98.98%  gold 97.00%  68s
+three_s0 epoch 10  loss 0.739  val 99.06%  gold 97.00%  68s
+three_s0 DONE  val 99.06%  test 99.17%  gold 97.00%
+raw_s0 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 10, 'lr': 0.002, 'patience': 4, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 0, 'min_conf': 0.7, 'init': None}
+raw_s0 epoch  1  loss 2.827  val 81.85%  gold 81.50%  68s
+raw_s0 epoch  2  loss 0.913  val 97.70%  gold 99.00%  68s
+raw_s0 epoch  3  loss 0.812  val 98.05%  gold 97.00%  68s
+raw_s0 epoch  4  loss 0.786  val 97.48%  gold 97.00%  67s
+raw_s0 epoch  5  loss 0.772  val 98.43%  gold 95.50%  68s
+raw_s0 epoch  6  loss 0.762  val 98.57%  gold 97.00%  68s
+raw_s0 epoch  7  loss 0.754  val 98.39%  gold 98.00%  67s
+raw_s0 epoch  8  loss 0.747  val 98.66%  gold 95.50%  68s
+raw_s0 epoch  9  loss 0.743  val 98.66%  gold 97.00%  67s
+raw_s0 epoch 10  loss 0.741  val 98.65%  gold 96.50%  67s
+raw_s0 DONE  val 98.66%  test 98.84%  gold 95.50%
+binary_s1 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 10, 'lr': 0.002, 'patience': 4, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 1, 'min_conf': 0.7, 'init': None}
+binary_s1 epoch  1  loss 2.747  val 82.19%  gold 86.50%  69s
+binary_s1 epoch  2  loss 0.918  val 98.21%  gold 94.50%  68s
+binary_s1 epoch  3  loss 0.809  val 98.44%  gold 96.00%  67s
+binary_s1 epoch  4  loss 0.780  val 98.73%  gold 94.50%  67s
+binary_s1 epoch  5  loss 0.766  val 98.76%  gold 95.50%  67s
+binary_s1 epoch  6  loss 0.756  val 98.70%  gold 97.00%  67s
+binary_s1 epoch  7  loss 0.749  val 99.15%  gold 96.00%  67s
+binary_s1 epoch  8  loss 0.743  val 99.13%  gold 96.00%  67s
+binary_s1 epoch  9  loss 0.739  val 99.37%  gold 95.50%  67s
+binary_s1 epoch 10  loss 0.737  val 99.41%  gold 95.00%  67s
+binary_s1 DONE  val 99.41%  test 99.40%  gold 95.00%
+three_s1 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 10, 'lr': 0.002, 'patience': 4, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 1, 'min_conf': 0.7, 'init': None}
+three_s1 epoch  1  loss 2.761  val 80.26%  gold 83.00%  68s
+three_s1 epoch  2  loss 0.908  val 93.21%  gold 91.50%  67s
+three_s1 epoch  3  loss 0.810  val 97.95%  gold 99.00%  68s
+three_s1 epoch  4  loss 0.784  val 98.27%  gold 99.00%  68s
+three_s1 epoch  5  loss 0.769  val 98.54%  gold 96.50%  68s
+three_s1 epoch  6  loss 0.760  val 98.59%  gold 97.50%  68s
+three_s1 epoch  7  loss 0.752  val 98.82%  gold 93.00%  68s
+three_s1 epoch  8  loss 0.746  val 98.69%  gold 97.50%  68s
+three_s1 epoch  9  loss 0.742  val 99.03%  gold 95.50%  68s
+three_s1 epoch 10  loss 0.739  val 99.08%  gold 96.00%  68s
+three_s1 DONE  val 99.08%  test 99.14%  gold 96.00%
+raw_s1 {'train': 65229, 'test': 18637, 'val': 9319, 'gold': 200} {'epochs': 10, 'lr': 0.002, 'patience': 4, 'batch': 256, 'weight_decay': 0.0001, 'dropout': 0.3, 'smoothing': 0.1, 'seed': 1, 'min_conf': 0.7, 'init': None}
+raw_s1 epoch  1  loss 2.888  val 80.89%  gold 79.00%  68s
+raw_s1 epoch  2  loss 0.922  val 98.04%  gold 97.00%  68s
+raw_s1 epoch  3  loss 0.813  val 93.65%  gold 91.00%  68s
+raw_s1 epoch  4  loss 0.786  val 98.11%  gold 98.00%  68s
+raw_s1 epoch  5  loss 0.771  val 96.93%  gold 96.00%  68s
+raw_s1 epoch  6  loss 0.761  val 98.22%  gold 97.50%  68s
+raw_s1 epoch  7  loss 0.753  val 98.56%  gold 94.50%  68s
+raw_s1 epoch  8  loss 0.747  val 98.64%  gold 96.50%  68s
+raw_s1 epoch  9  loss 0.743  val 98.73%  gold 96.50%  68s
+raw_s1 epoch 10  loss 0.740  val 98.63%  gold 96.50%  68s
+raw_s1 DONE  val 98.73%  test 98.93%  gold 96.50%
+ALL DONE

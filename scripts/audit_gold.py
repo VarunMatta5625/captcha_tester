@@ -6,6 +6,7 @@
 # Every run: shows the unchecked rows, the ones where model and Vision disagree first.
 #   Enter = label is right, type the truth if not (exact case), s = skip, q = stop.
 #   Saved after every answer, so stop any time and re-run to continue.
+# Corrections by id (e.g. a gold miss that turns out to be a typo): set GOLD_FIXES = {"<id>": "<label>"} first.
 # Until every row is checked, gold scores are provisional: pre-labels come from the teacher, so they flatter it.
 import re
 from datetime import datetime
@@ -35,10 +36,24 @@ if not GOLD:
     print(f"built {GOLD_CSV}: {N_GOLD} captchas pre-labeled by {os.path.basename(TEACHER)}; "
           f"Vision agrees on {agree}")
 
+changed = []
+# corrections by id from the notebook: GOLD_FIXES = {"<id>": "<label>"} (exact case); re-running is harmless
+for i, ans in globals().get("GOLD_FIXES", {}).items():
+    i = str(i)
+    assert i in GOLD, f"{i} is not a gold captcha"
+    assert pattern.fullmatch(ans), f"{i}: {ans!r} is not {LENGTH} letters/digits"
+    if ans != GOLD[i]["label"]:
+        show(i)
+        print(f"{i}: {GOLD[i]['label']} -> {ans}")
+        changed.append((i, GOLD[i]["label"], ans))
+        GOLD[i]["label"] = ans
+        GOLD[i]["checked"] = datetime.now().isoformat(timespec="seconds")
+if changed:
+    save_gold()
+
 todo = sorted((i for i, g in GOLD.items() if not g["checked"]),
               key=lambda i: GOLD[i]["model"] == GOLD[i]["vision"])   # disagreements first
 print(f"{len(GOLD) - len(todo)}/{len(GOLD)} gold checked, {len(todo)} to go")
-changed = []
 for n, i in enumerate(todo, 1):
     g = GOLD[i]
     show(i)

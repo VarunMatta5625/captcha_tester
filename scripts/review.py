@@ -11,7 +11,7 @@ from datetime import datetime
 # hunt the latest model's mistakes (the teacher until a baseline exists)
 REVIEW_MODEL = next(p for p in (FT_PATH, MODEL_PATH, TEACHER) if os.path.exists(p))
 N_REVIEW = 50
-FOCUS = "ij9gyY56ae"   # only reads containing one of these characters ("" = any): v2 gold confusions
+FOCUS = "35B"   # only reads containing one of these characters ("" = any): style-3 gold, v3 read J as 3, 6 as 5, 8 as B
 POOL = 2000       # pick at random among this many most doubtful reads (disagreements first, then confidence)
 
 
