@@ -1,19 +1,34 @@
-// Reads the captcha, has the model (in background.js) solve it, fills the answer. Re-runs on every new captcha.
-// When the site rejects a code the model read, saves that captcha (Downloads/captcha_mistakes/) for retraining.
+// CAPTCHA reader + optional auto-login for login.gitam.edu. Misread captchas end up in
+// Downloads/captcha_mistakes/ for retraining.
 const img = document.getElementById('imgCaptcha');
 const input = document.getElementById('txtCaptchaInput');
-let latest = 0; // only the newest captcha's answer gets pasted
-let modelRead = null; // { code, confidence } the model pasted for the captcha on screen, null while reading or unsure
+const userInput = document.getElementById('txtusername');
+const passInput = document.getElementById('password');
+const submitBtn = document.getElementById('Submit');
+let latest = 0; // newest captcha wins
+let modelRead = null; // { code, confidence }
+let autoSubmitted = false;
 
-const W = 150, H = 45; // the model's input size (model/model.json)
-const SUBMITTED_KEY = 'captchaPasterSubmitted'; // sessionStorage: the submitted captcha, kept across the login POST
+const W = 150, H = 45; // the model's input size
+const SUBMITTED_KEY = 'captchaPasterSubmitted'; // sessionStorage keeps it across the login POST
+const ATTEMPTS_KEY = 'captchaPasterAutoAttempts';
+const BLOCKED_KEY = 'captchaPasterAutoBlocked';
+const MAX_ATTEMPTS = 2; // first press + one retry after an invalid captcha
+
+const settingsPromise = chrome.storage.local.get({
+  autofill: true, // fill the saved User ID and password into the login form
+  autoLogin: true, // also press LOGIN; implies autofill
+  username: '',
+  password: '',
+  minConfidence: 0.5,
+});
 
 function imagePixels() {
   const canvas = document.createElement('canvas');
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
-  ctx.drawImage(img, 0, 0, W, H); // the site's captchas are already 150x45, so this is a straight copy
+  ctx.drawImage(img, 0, 0, W, H); // captchas are already 150x45, a straight copy
   return Array.from(ctx.getImageData(0, 0, W, H).data);
 }
 
@@ -38,14 +53,14 @@ async function solve() {
     input.dispatchEvent(new Event('input', { bubbles: true }));
     modelRead = { code: reply.code, confidence: reply.confidence };
     console.log(`[CAPTCHA] Pasted ${reply.code} (confidence ${reply.confidence}, ` +
-      `model ${reply.ms} ms, total ${Math.round(performance.now() - started)} ms)`);
+                `model ${reply.ms} ms, total ${Math.round(performance.now() - started)} ms)`);
+    maybeAutoSubmit(await settingsPromise);
   } else {
     console.warn(`[CAPTCHA] Unsure (read "${reply.raw}"), left empty.`);
   }
 }
 
-// LOGIN pressed with the model's read unchanged: remember the captcha, in case the server rejects it.
-// (If the code was retyped, a rejection says nothing about the model.)
+// Keep the submitted captcha around (in the model's read, not a retyped one) for a possible rejection.
 function rememberSubmitted(event) {
   sessionStorage.removeItem(SUBMITTED_KEY);
   if (event.submitter?.id !== 'Submit' || !modelRead || input.value.trim() !== modelRead.code) return;
@@ -56,9 +71,7 @@ function rememberSubmitted(event) {
   }
 }
 
-// After the login POST the site reloads the login page (new captcha, password cleared) with
-// "Invalid CAPTCHA. Please try again (the code is case-sensitive)." when the code was wrong: save the misread
-// captcha. Any other message (wrong password etc.) means the model's read was fine.
+// A reload whose message mentions the captcha means the model's read was rejected: save that image.
 async function saveIfRejected(submitted) {
   const message = document.getElementById('lblmessage')?.textContent ?? '';
   if (!/captcha/i.test(message)) return;
@@ -67,15 +80,104 @@ async function saveIfRejected(submitted) {
   else console.log(`[CAPTCHA] Site rejected the model's read, saved ${reply.filename}`);
 }
 
-// read before the element check, so a successful login's page also clears it
+// ---- auto-login ----
+
+function fill(el, value) {
+  Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(el, value);
+  el.dispatchEvent(new Event('input', { bubbles: true }));
+  el.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
+function visible(id) {
+  const el = document.getElementById(id);
+  if (!el) return false;
+  return !!el.offsetParent || getComputedStyle(el).position === 'fixed';
+}
+
+// What this page load may do, based on the message the last attempt left behind: nothing on a
+// wrong password, one retry on an invalid captcha, and a reset when there is no message at all.
+// The site blocks a User ID after 5 failed logins, so this stays strictly behind those guards.
+function evaluateAutoLoginState() {
+  const message = (document.getElementById('lblmessage')?.textContent ?? '').trim();
+  const attempts = parseInt(sessionStorage.getItem(ATTEMPTS_KEY) || '0', 10) || 0;
+  if (!message) {
+    sessionStorage.removeItem(ATTEMPTS_KEY);
+    sessionStorage.removeItem(BLOCKED_KEY);
+    return { allowed: true, fillPassword: true };
+  }
+  if (/invalid captcha/i.test(message)) {
+    if (attempts >= MAX_ATTEMPTS) {
+      console.warn(`[CAPTCHA] Auto-login paused after ${attempts} rejected attempts in this tab, ` +
+                   'please check the login.');
+      return { allowed: false, fillPassword: true };
+    }
+    console.log(`[CAPTCHA] Login rejected the captcha, retrying automatically ` +
+                `(${attempts + 1} of ${MAX_ATTEMPTS}).`);
+    return { allowed: true, fillPassword: true };
+  }
+  if (!sessionStorage.getItem(BLOCKED_KEY)) {
+    sessionStorage.setItem(BLOCKED_KEY, '1');
+    console.warn(`[CAPTCHA] Auto-login stopped for this tab: "${message}". ` +
+                 'If the saved password changed, update it in the extension options and ' +
+                 'reopen the login page (a new tab is cleanest).');
+  }
+  return { allowed: false, fillPassword: false };
+}
+
+let autoState = { allowed: false, fillPassword: false }; // decided once at startup
+
+async function fillCredentials() {
+  const settings = await settingsPromise;
+  if (!settings.autofill && !settings.autoLogin) return;
+  if (!settings.password) {
+    console.warn('[CAPTCHA] Credential fill is on but no credentials are saved (extension options).');
+    return;
+  }
+  if (!userInput || !passInput) {
+    console.warn('[CAPTCHA] Credential fill skipped: the login fields were not found (site changed?).');
+    return;
+  }
+  fill(userInput, settings.username);
+  if (autoState.fillPassword) fill(passInput, settings.password);
+  maybeAutoSubmit(settings);
+}
+
+// The credential fill and the captcha read happen in either order; this fires only once both are done.
+function maybeAutoSubmit(settings) {
+  if (!settings.autoLogin || autoSubmitted || !autoState.allowed || !modelRead) return;
+  if (!submitBtn || submitBtn.disabled) return;
+  if (document.getElementById('lblRateLimit')) return; // rate-limit break active
+  if (visible('pnlGoogleCaptcha')) { // model cannot read reCAPTCHA
+    console.warn('[CAPTCHA] This login uses Google reCAPTCHA, not auto-submitting.');
+    return;
+  }
+  if (!userInput || !passInput) return;
+  if (userInput.value.trim() !== settings.username || passInput.value !== settings.password) return;
+  if (input.value.trim() !== modelRead.code) return; // captcha on screen is not the model's read
+  if (modelRead.confidence < settings.minConfidence) {
+    console.warn(`[CAPTCHA] Confidence ${modelRead.confidence} is below ${settings.minConfidence}, ` +
+                 'press LOGIN yourself or lower the minimum on the options page.');
+    return;
+  }
+  autoSubmitted = true;
+  const attempts = (parseInt(sessionStorage.getItem(ATTEMPTS_KEY) || '0', 10) || 0) + 1;
+  sessionStorage.setItem(ATTEMPTS_KEY, String(attempts));
+  console.log('[CAPTCHA] Auto-login: signing in.');
+  submitBtn.click(); // real click: the site's validating onclick runs, submitter stays 'Submit'
+}
+
+// read before the element check, so the post-login page also clears it
 const submitted = sessionStorage.getItem(SUBMITTED_KEY);
 sessionStorage.removeItem(SUBMITTED_KEY);
+
+autoState = evaluateAutoLoginState();
 
 if (!img || !input) {
   console.warn('[CAPTCHA] Captcha elements not found.');
 } else {
   if (submitted) saveIfRejected(submitted);
   input.form?.addEventListener('submit', rememberSubmitted);
-  img.addEventListener('load', solve); // fires for every refresh, however it is triggered
+  img.addEventListener('load', solve); // every refresh
   if (img.complete && img.naturalWidth) solve();
+  fillCredentials();
 }

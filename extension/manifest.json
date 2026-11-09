@@ -1,14 +1,31 @@
 {
   "manifest_version": 3,
   "name": "Instant CAPTCHA Paster",
-  "version": "5.3",
-  "description": "Fills the CAPTCHA (red-letter style) with a locally trained CNN that runs inside the extension, and saves captchas it got wrong for retraining.",
+  "version": "5.4",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "description": "Fills the GITAM CAPTCHA with a locally trained CNN, saves misreads for retraining, and can sign you in automatically.",
   "permissions": [
-    "downloads"
+    "downloads",
+    "storage"
   ],
   "background": {
     "service_worker": "background.js",
     "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Instant CAPTCHA Paster",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "content_scripts": [
     {
@@ -21,6 +38,10 @@
       "run_at": "document_idle"
     }
   ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "content_security_policy": {
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
   }

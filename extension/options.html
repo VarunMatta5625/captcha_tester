@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instant CAPTCHA Paster — auto-login</title>
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; max-width: 30rem; margin: 2rem auto; color: #1f2937; }
+  h1 { font-size: 1.1rem; margin: 0 0 0.3rem; }
+  p { margin: 0.3rem 0 1.1rem; color: #374151; }
+  .field { margin-bottom: 0.9rem; }
+  label { display: block; font-weight: 600; margin-bottom: 0.2rem; }
+  input[type=text], input[type=password], input[type=number] {
+    width: 100%; box-sizing: border-box; padding: 0.45rem 0.55rem;
+    border: 1px solid #cbd5d1; border-radius: 6px; font-size: 14px;
+  }
+  .checkline input { margin-right: 0.4rem; }
+  .checkline label { display: inline; font-weight: 500; }
+  .hint { color: #6b7280; font-size: 12px; margin-top: 0.2rem; }
+  .buttons { margin-top: 1.2rem; display: flex; gap: 0.5rem; }
+  button { padding: 0.5rem 1.4rem; border: 0; border-radius: 6px; font-size: 14px; cursor: pointer; }
+  #save { background: #007467; color: #fff; }
+  #save:hover { background: #005a50; }
+  #clear { background: #e5e7eb; color: #1f2937; }
+  #status { margin-top: 0.9rem; font-weight: 500; min-height: 1.2rem; }
+  #status.error { color: #b91c1c; }
+  #status.ok { color: #007467; }
+  .note {
+    margin-top: 1.4rem; padding: 0.7rem 0.9rem;
+    background: #fff6d9; border: 1px solid #f0d78c; border-radius: 6px;
+    font-size: 12.5px; color: #7a5b00;
+  }
+</style>
+</head>
+<body>
+<h1>Auto-login for login.gitam.edu</h1>
+<p>When the login page opens, the extension fills your User ID and password, reads the CAPTCHA, and presses LOGIN once.</p>
+
+<div class="field">
+  <label for="username">User ID</label>
+  <input id="username" type="text" maxlength="16" autocomplete="off" spellcheck="false">
+</div>
+
+<div class="field">
+  <label for="password">Password</label>
+  <input id="password" type="password" maxlength="20" autocomplete="off" spellcheck="false">
+</div>
+
+<div class="checkline field">
+  <input id="autofill" type="checkbox">
+  <label for="autofill">Auto populate credentials only</label>
+</div>
+
+<div class="checkline field">
+  <input id="autoLogin" type="checkbox">
+  <label for="autoLogin">Sign in automatically when the login page opens</label>
+</div>
+
+<div class="field">
+  <label for="minConfidence">Minimum CAPTCHA confidence to press LOGIN</label>
+  <input id="minConfidence" type="number" min="0" max="1" step="0.05" value="0.5">
+  <div class="hint">0 = always press LOGIN. 0.5 = leave risky reads to you, so a guess never burns one of the site's 5 attempts.</div>
+</div>
+
+<div class="buttons">
+  <button id="save" type="button">Save</button>
+  <button id="clear" type="button">Clear saved credentials</button>
+</div>
+<div id="status"></div>
+
+<div class="note">
+  The password is stored only inside this extension, on this machine only: never synced
+  to a Brave/Google account, never sent anywhere but login.gitam.edu. Extension storage
+  is not encrypted, so don't set this up on a shared computer. After a failed password
+  the login is not retried, and LOGIN is pressed at most twice per tab, so the site's
+  5-attempt lockout can never be triggered by the extension.
+</div>
+
+<script src="settings-ui.js"></script>
+</body>
+</html>
