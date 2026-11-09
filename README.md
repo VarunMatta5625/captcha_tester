@@ -4,6 +4,7 @@ Chrome extension ("Instant CAPTCHA Paster") that reads the 5-character login cap
 small CNN running inside the extension (WebAssembly, no Python, no native host), plus the workspace that trains it.
 
 Read this file first when resuming work. Older history is in `archive/` (see `archive/README.md`).
+Version history with technical detail, example images and test results: [`docs/CHANGELOG.md`](docs/CHANGELOG.md).
 
 ## Status (2026-11-10)
 
@@ -38,6 +39,7 @@ with round 4 in `archive/round4_2026-11-01/`; v2_ft (extension 5.1; style 3 gold
 | Path | What |
 |---|---|
 | `extension/` | Chrome/Edge/Brave extension v5.4 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). Auto-login: toolbar popup / options page (`popup.html`, `options.html`, shared `settings-ui.js`) store User ID + password in `chrome.storage.local`; `content.js` fills them and, if "Sign in automatically" is on, presses LOGIN (guards against the site's 5-failure lockout). |
+| `docs/` | `CHANGELOG.md` (every extension version: what changed, why, configs, tests) and its figures in `docs/images/` (rebuilt by `tools/make_doc_figures.py`). |
 | `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v5.pt`. Writes the checkpoint's `levels` into `model.json`. |
 | `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). `dist/captcha-paster/` = the unzipped current version; the previous zip is kept as the rollback (5.3 = v5 without auto-login; 5.2 = v4). |
 | `notebooks/train_v5.ipynb` | Round 5 (run, shipped in 5.3): relabel with v4_ft (agree with Vision, or confidence >= 0.7), plus reviews, three-level from scratch. Template for later rounds (round 4 and style-2 rounds are in the archive). |
