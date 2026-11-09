@@ -119,12 +119,30 @@ character pairs) before trusting either.
 python3 tools/check_extension.py models/<model>.pt   # JS == PyTorch on every gold/site captcha, else stop
 python3 export_model.py models/<model>.pt   # default: models/captcha_cnn_v5.pt
 # bump "version" in extension/manifest.json
-./build_zip.sh                              # optional: dist/captcha-paster-<version>.zip
+./build_zip.sh                              # dist/captcha-paster-<version>.zip (the release asset)
 ```
 
 Reload the extension in chrome://extensions (the circular arrow on its card; Load unpacked again if it was loaded from
 a folder that was replaced). On login.gitam.edu the console (F12) logs `[CAPTCHA] Pasted xxxxx (confidence …)`.
 Update the Status table: which model ships.
+
+Then release it (any extension version, model change or not):
+1. Add the version to `docs/CHANGELOG.md` (at-a-glance row + a section: what changed, why, config, tests) and a
+   line to the change log below. New figures: extend `tools/make_doc_figures.py`.
+2. Commit, then tag and publish:
+   ```
+   git tag -a v<version> -m "Extension <version>: <summary>" && git push origin main v<version>
+   gh release create v<version> dist/captcha-paster-<version>.zip --title "<version>: <summary>" --notes-file <notes.md>
+   ```
+   Release notes: user-facing (new, safety, tested, known issues, install), linking `docs/CHANGELOG.md` for detail.
+
+## GitHub
+
+`origin` = github.com/VarunMatta5625/captcha_tester, **private** (releases are private too).
+Collaborator: Quarkisinproton (write; personal-account repos have no admin role). Commits use the GitHub noreply
+address (`git config user.email` in this repo): the account blocks pushes that expose a private email.
+Releases: v5.4 is the first; older versions have no tags. Git-ignored data (captcha zips, `cache/`, `dist/`) is not
+on GitHub: the zips live only on Drive.
 
 ## Captchas the extension got wrong
 
@@ -197,3 +215,6 @@ misses saved by 5.3 (2026-11-02 to 11-06), not yet moved or labelled; 5.4 keeps 
   the rate-limit break or with Google reCAPTCHA. New `storage` permission, icons and logo. Built outside the repo
   (its zip carried v4's weights); merged keeping v5 and the commented `model.js` / `background.js` (same code).
   `check_extension.py`: JS == PyTorch on 208/208, gold 200/200, site 8/8. 5.3 zip kept as the rollback.
+- 2026-11-10: GitHub repo created (private, history rewritten to the noreply email before the first push),
+  `docs/CHANGELOG.md` with figures (`tools/make_doc_figures.py`), release v5.4 with the zip attached. README:
+  release steps, GitHub section.
