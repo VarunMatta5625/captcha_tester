@@ -17,7 +17,7 @@ Captcha styles so far (all 150x45, 5 characters, same 37-character alphabet):
    2026-10-31 the model reads **three levels** (`prep.clean`: letters 0, blobs 128, paper 255; +1.5 points on gold in a
    controlled test). The new **J** has no top bar:
    every old model reads it as **3** (v3 outputs J for 0.1% of characters, ~2.7% expected). Other weak pairs: B/8, y/Y,
-   g/9, a/e. Extension 5.1 (v2_ft) failed on it; 5.2 shipped v4 (three-level); 5.3 shipped v5; **extension 5.4 ships v5** plus auto-login
+   g/9, a/e. Extension 5.1 (v2_ft) failed on it; 5.2 shipped v4 (three-level); 5.3 shipped v5; **extensions 5.4 and 5.5 ship v5** plus auto-login
    (credential fill and optional LOGIN press, set up from the toolbar popup).
 
 100k style-3 captchas, 200 gold checked (2 labels fixed after a recheck). Site = the 8 style-3 captchas the site
@@ -27,7 +27,7 @@ by eye; v4 and v4_ft's main difference, so the best check of real accuracy beyon
 | Model (`models/`) | Trained on | Gold | Site | Disputed |
 |---|---|---|---|---|
 | `captcha_cnn_v4_ft.pt` | v4 fine-tuned on the 88 hard cases in `data/reviews.json` (labelled by Claude from the image, spot-checked); teacher of round 5 | 100% | 8/8 | 15/20 (reads some 8 as B, 9 as g) |
-| `captcha_cnn_v5.pt` | round 5: v4_ft's labels where it agrees with Vision or its weakest character >= 0.7 (~96k) + the 88 reviews, three-level, from scratch | **100%** | **8/8** | **19/20** (one 8 read as B); JS == PyTorch on all 208; **ships in extensions 5.3 and 5.4** |
+| `captcha_cnn_v5.pt` | round 5: v4_ft's labels where it agrees with Vision or its weakest character >= 0.7 (~96k) + the 88 reviews, three-level, from scratch | **100%** | **8/8** | **19/20** (one 8 read as B); JS == PyTorch on all 208; **ships in extensions 5.3, 5.4 and 5.5** |
 
 Archived: v3 (teacher of round 4, 86.0%) and v4 (extension 5.2, 97.0%, 8/8, 5/20 disputed: 6 as 5, J as 3, y as Y)
 with round 4 in `archive/round4_2026-11-01/`; v2_ft (extension 5.1; style 3 gold 87.5%, 0/8 site) in
@@ -38,10 +38,10 @@ with round 4 in `archive/round4_2026-11-01/`; v2_ft (extension 5.1; style 3 gold
 
 | Path | What |
 |---|---|
-| `extension/` | Chrome/Edge/Brave extension v5.4 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). Auto-login: toolbar popup / options page (`popup.html`, `options.html`, shared `settings-ui.js`) store User ID + password in `chrome.storage.local`; `content.js` fills them and, if "Sign in automatically" is on, presses LOGIN (guards against the site's 5-failure lockout). |
+| `extension/` | Chrome/Edge/Brave extension v5.5 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). Auto-login: toolbar popup / options page (`popup.html`, `options.html`, shared `settings-ui.js`) store User ID + password in `chrome.storage.local`; `content.js` fills them and, if "Sign in automatically" is on, presses LOGIN (guards against the site's 5-failure lockout). 5.5 rules: signs in on typed URL / bookmark / link, never on reload, after logout only with the sub-box "Also sign in after logging out". 5.4 is frozen in `archive/extension_5.4_2026-11-11/`. |
 | `docs/` | `CHANGELOG.md` (every extension version: what changed, why, configs, tests) and its figures in `docs/images/` (rebuilt by `tools/make_doc_figures.py`). |
 | `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v5.pt`. Writes the checkpoint's `levels` into `model.json`. |
-| `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). `dist/captcha-paster/` = the unzipped current version; the previous zip is kept as the rollback (5.3 = v5 without auto-login; 5.2 = v4). |
+| `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). `dist/captcha-paster/` = the unzipped current version; the previous zips are kept as the rollback (5.4 = auto-login without the rules; 5.3 = v5 without auto-login). |
 | `notebooks/train_v5.ipynb` | Round 5 (run, shipped in 5.3): relabel with v4_ft (agree with Vision, or confidence >= 0.7), plus reviews, three-level from scratch. Template for later rounds (round 4 and style-2 rounds are in the archive). |
 | `scripts/prep.py` | Shared by notebooks and scripts: reads captchas from the zip (`<id>.png`, any folder inside), `clean()` three-level image the CNN reads, `ink()` letters only (Vision, two-level models), Apple Vision helpers. |
 | `scripts/label_vision.py` | Terminal, from the project root: Vision reads every captcha -> `data/labels_vision.csv` (~8 min, resumable). |
@@ -80,12 +80,8 @@ All zips are git-ignored. Keep them backed up (Drive): every label and model ref
 Setup: `pip install -r requirements.txt` (torch, numpy, Pillow, jupyter, matplotlib, tqdm), then
 `cd notebooks && jupyter lab`. Notebooks use paths relative to `notebooks/` and run on `mps` (Apple Silicon) or CPU.
 
-**Round 5** (done, ships in 5.3): `notebooks/train_v5.ipynb`. Teacher v4_ft, labels = v4_ft agrees with Vision or
-its weakest character >= 0.7 (`MIN_CONF`; 4.2% dropped), plus the 88 reviews, three-level, from scratch, 10 epochs
-(~12 min headless). Gold 100% from epoch 7; test 99.63% (agreement with v4_ft's labels).
-
 **Next round (6)**: v5 already scores 100% on gold, so gold can no longer tell a better model apart. Wait for real
-misses first: when 5.3/5.4 save rejected captchas, label them (below) and use them as the score that matters.
+misses first: when 5.3/5.4/5.5 save rejected captchas, label them (below) and use them as the score that matters.
 1. Move `~/Downloads/captcha_mistakes/*.png` into `data/site_mistakes/` and add a row per file to its `labels.csv`
    (`truth` = what the image says). They are scored, not trained on. Optionally add some to `data/reviews.json`
    (review loop below) so they are trained on next time.
@@ -96,16 +92,13 @@ misses first: when 5.3/5.4 save rejected captchas, label them (below) and use th
    `data/labels_v6.csv`, train -> `models/captcha_cnn_v6.pt`, section 10 prints gold for teacher vs new.
 4. `python3 tools/check_extension.py models/captcha_cnn_v6.pt` and the same with no argument (the shipped v5): compare
    gold and site scores; every JS read must match PyTorch.
-5. If v6 beats v5: ship it (below; version 5.5), update the Status table, archive the previous round like
+5. If v6 beats v5: ship it (below; version 5.6), update the Status table, archive the previous round like
    `archive/round4_2026-11-01/` (its notebook, labels, and models no longer needed; keep the new round's teacher), commit.
 
 **Review loop** (optional, any round): open the round notebook, run sections 1–3, 6–8, then 12 review 50 ->
 13 fine-tune -> 14 what changed on gold. Repeat while gold improves. `FOCUS` in `scripts/review.py` picks
 characters (remaining weak pair: 8 read as B). Labelling hard cases from the image outside the notebook (as for the
 88 style-3 reviews) works too: add entries to `data/reviews.json` in the same format.
-
-**Round 4** (done, shipped in 5.2): archived in `archive/round4_2026-11-01/` (relabel with v3 + Vision, three-level
-from v3's weights).
 
 **New captcha style**: archive the workspace like `archive/v2_2026-10-31/` (data, round notebooks, cache; ids will
 clash with the new set), put the PNGs in `data/captchas.zip`, check `prep.clean` still separates letters, blobs
@@ -128,7 +121,7 @@ Update the Status table: which model ships.
 
 Then release it (any extension version, model change or not):
 1. Add the version to `docs/CHANGELOG.md` (at-a-glance row + a section: what changed, why, config, tests) and a
-   line to the change log below. New figures: extend `tools/make_doc_figures.py`.
+   line to the Timeline above. New figures: extend `tools/make_doc_figures.py`.
 2. Commit, then tag and publish:
    ```
    git tag -a v<version> -m "Extension <version>: <summary>" && git push origin main v<version>
@@ -183,38 +176,16 @@ misses saved by 5.3 (2026-11-02 to 11-06), not yet moved or labelled; 5.4 keeps 
 - `archive/v1_2026-10-30/training/v2/cache/all_images.npz` (820 MB) and `archive/v2_2026-10-31/cache/` (670 MB) are
   regenerable caches; delete if space matters.
 
-## Change log
+## Timeline
 
-- 2026-09-30: v1 shipped (extension 4.1, old captchas, gold 93.42%).
-- 2026-10-30: captcha style changed. Archived v1 to `archive/v1_2026-10-30/`. New workspace: red-letter mask,
-  Vision labels for 100k new captchas, 200-captcha gold (checked: v1 model 91.0%). Round 2: v2 96.0%, v2_ft 98.5%
-  (100 reviews). Round 3: v3 / v3_ft 98.5%. Extension 5.0 (red mask in `model.js`) ships v2_ft; JS output verified
-  identical to PyTorch on all 200 gold. Captcha PNGs zipped, loose copies deleted.
-- 2026-10-31: extension 5.1 (same model, v2_ft): captchas the site rejects as "Invalid CAPTCHA" are saved to
-  `~/Downloads/captcha_mistakes/` for retraining (new `downloads` permission).
-- 2026-10-31: captcha style 3 (bolder font, large gray blobs; new J reads as 3). Archived the style-2 workspace to
-  `archive/v2_2026-10-31/` (rounds v2/v3, unfinished hard-gold v4, data, models). Set up round 4: `train_v4.ipynb`
-  from v3's weights; `relabel.py` trusts Vision's J where v3 reads 3 (23/23 right in a 500-captcha sample);
-  `prep` accepts any folder inside the zip; the image cache is keyed by the zip file.
-- 2026-10-31: round 4 trained (gold 93.5%, two-level). Gold recheck fixed 19263 (hyJ42) and 79474 (j4rM8). An
-  input-variant experiment (two-level / three-level / raw RGB, 2 seeds each) favoured three-level, so the project
-  switched to it: `prep.clean` / `model.js clean()` (letters 0, blobs 128, paper 255). Checkpoints and `model.json`
-  carry `levels`, so two-level models keep working. v4 retrained three-level: gold 94.5% -> 97.0% (corrected gold),
-  8/8 site rejections. Extension 5.2 ships it (JS == PyTorch on 208/208). v2_ft and v4 two-level archived; the
-  9 saved rejections moved out of Downloads into `data/site_mistakes/` (and the style-2 one into the style-2 archive).
-- 2026-10-31: round 5 made plug-and-play: `train_v5.ipynb` (teacher v4, `MIN_CONF` 0.7, from scratch),
-  `relabel.py` knobs moved to the notebook (`VISION_FIXES`, `MIN_CONF`, new `confident` source),
-  `tools/run_round.py` runs a round headless. Smoke test (1 epoch, outputs discarded): gold 200/200, site 8/8.
-- 2026-11-01: v4 fine-tuned on 88 hard style-3 cases labelled by Claude from the image (`data/reviews.json`) ->
-  v4_ft (gold 100%, but reads some 8 as B and 9 as g). Round 5 run with v4_ft as teacher: v5 gold 100%, 8/8 site,
-  19/20 on the captchas v4 and v4_ft disagree on (v4 5/20, v4_ft 15/20). Extension 5.3 ships v5 (JS == PyTorch on
-  208/208); 5.2 zip kept as the rollback. Round 4 (notebook, labels, v3, v4) archived to `archive/round4_2026-11-01/`.
-- 2026-11-10: extension 5.4: auto-login. Toolbar popup + options page (User ID, password, minimum confidence
-  to press LOGIN) with two boxes: "Auto populate credentials only" and "Sign in automatically" (ticking it ticks
-  the first). Guards: no retry after a wrong password, at most one retry after "Invalid CAPTCHA", nothing during
-  the rate-limit break or with Google reCAPTCHA. New `storage` permission, icons and logo. Built outside the repo
-  (its zip carried v4's weights); merged keeping v5 and the commented `model.js` / `background.js` (same code).
-  `check_extension.py`: JS == PyTorch on 208/208, gold 200/200, site 8/8. 5.3 zip kept as the rollback.
-- 2026-11-10: GitHub repo created (private, history rewritten to the noreply email before the first push),
-  `docs/CHANGELOG.md` with figures (`tools/make_doc_figures.py`), release v5.4 with the zip attached. README:
-  release steps, GitHub section.
+Per-version detail (what, why, configs, tests) is in [`docs/CHANGELOG.md`](docs/CHANGELOG.md); older work in `archive/`.
+
+- 2026-09-30: v1 (extension 4.1, style 1, gold 93.4%).
+- 2026-10-30: style 2 (red letters on speckle): extension 5.0, models v2/v3.
+- 2026-10-31: extension 5.1 saves rejected captchas. Style 3 (blobs): v4 with three-level cleaning, extension 5.2.
+- 2026-11-01: v5 (round 5, teacher v4_ft), gold 100%, extension 5.3.
+- 2026-11-10: extension 5.4: auto-login. GitHub repo (private) created, release v5.4.
+- 2026-11-11: extension 5.5: auto sign-in rules (site opens yes, reload never, logout opt-in). Live check: logout from
+  `gstudent.gitam.edu/Home/Logout` reaches `login.gitam.edu/Login.aspx` as navigation type `navigate`, referrer
+  `https://gstudent.gitam.edu/`, empty message. Chrome (Default profile) loads the unpacked extension from
+  `extension/` itself: reload it in chrome://extensions after edits.

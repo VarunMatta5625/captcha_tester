@@ -31,6 +31,13 @@ tick one of the two boxes, Save:
 - "Sign in automatically": also presses LOGIN. Ticking it ticks the first box too; unticking
   the first box unticks it.
 
+- Auto sign-in rules: "Sign in automatically" presses LOGIN when you open the login page by typed
+  address, bookmark or a link, never on a reload or back/forward. Sub-box "Also sign in after
+  logging out" (off by default, only available while auto sign-in is on) also signs in when you
+  arrive from a gitam.edu page (logout, session timeout). Otherwise everything is still filled and
+  you press LOGIN. The retry after "Invalid CAPTCHA" is not affected. The console logs
+  `Page load: type ..., referrer ...`.
+
 Safety, in short:
 - The site pauses a User ID after 5 failed logins, so the extension is careful: no retry
   after a wrong password (it stops for the tab and leaves the password box empty), at most one

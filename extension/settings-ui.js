@@ -1,6 +1,6 @@
 // Shared form for the toolbar popup and the options page. Everything stays in
 // chrome.storage.local on this machine; the password is only ever placed into the login form.
-const DEFAULTS = { username: '', password: '', autofill: true, autoLogin: true, minConfidence: 0.5 };
+const DEFAULTS = { username: '', password: '', autofill: true, autoLogin: true, signInAfterLogout: false, minConfidence: 0.5 };
 const $ = (id) => document.getElementById(id);
 
 function setStatus(text, error = false) {
@@ -25,15 +25,22 @@ function validate() {
 }
 
 // Signing in needs the credentials filled, so autoLogin forces autofill on (and off takes it along).
+// "Sign in after logout" is a sub-rule of auto sign-in: only available (and kept) while that is on.
+function syncRules() {
+  if (!$('autoLogin').checked) $('signInAfterLogout').checked = false;
+  $('signInAfterLogout').disabled = !$('autoLogin').checked;
+}
 $('autoLogin').addEventListener('change', () => {
   if ($('autoLogin').checked) $('autofill').checked = true;
+  syncRules();
 });
 $('autofill').addEventListener('change', () => {
   if (!$('autofill').checked) $('autoLogin').checked = false;
+  syncRules();
 });
 
 function statusText(autofill, autoLogin) {
-  if (autoLogin) return 'Auto sign-in is on.';
+  if (autoLogin) return $('signInAfterLogout').checked ? 'Auto sign-in is on (site opens and after logout).' : 'Auto sign-in is on (site opens, not after logout).';
   if (autofill) return 'Credentials are filled in, you press LOGIN.';
   return 'Credential fill is off, only the captcha is filled.';
 }
@@ -46,6 +53,7 @@ $('save').addEventListener('click', () => {
     password: v.password,
     autofill: $('autofill').checked || $('autoLogin').checked,
     autoLogin: $('autoLogin').checked,
+    signInAfterLogout: $('autoLogin').checked && $('signInAfterLogout').checked,
     minConfidence: v.minConfidence,
   }).then(() => {
     setStatus(`Saved. ${statusText($('autofill').checked, $('autoLogin').checked)}`);
@@ -58,7 +66,9 @@ $('clear').addEventListener('click', () => {
     $('password').value = '';
     $('autofill').checked = true;
     $('autoLogin').checked = true;
+    $('signInAfterLogout').checked = false;
     $('minConfidence').value = '0.5';
+    syncRules();
     setStatus('Cleared. The captcha keeps being filled, nothing is signed in.', false);
   });
 });
@@ -68,7 +78,9 @@ chrome.storage.local.get(DEFAULTS).then((s) => {
   $('password').value = s.password;
   $('autofill').checked = s.autofill || s.autoLogin;
   $('autoLogin').checked = s.autoLogin;
+  $('signInAfterLogout').checked = s.autoLogin && s.signInAfterLogout;
   $('minConfidence').value = String(s.minConfidence);
+  syncRules();
   if (s.username && s.password) {
     setStatus(`Saved. ${statusText(s.autofill || s.autoLogin, s.autoLogin)}`);
   } else {

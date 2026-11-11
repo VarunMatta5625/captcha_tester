@@ -20,6 +20,7 @@ const settingsPromise = chrome.storage.local.get({
   autoLogin: true, // also press LOGIN; implies autofill
   username: '',
   password: '',
+  signInAfterLogout: false, // sub-rule of autoLogin; reloads never sign in
   minConfidence: 0.5,
 });
 
@@ -48,15 +49,13 @@ async function solve() {
   if (id !== latest) return;
   if (reply.error) {
     console.error('[CAPTCHA] Model error:', reply.error);
-  } else if (reply.code) {
+  } else {
     input.value = reply.code;
     input.dispatchEvent(new Event('input', { bubbles: true }));
     modelRead = { code: reply.code, confidence: reply.confidence };
     console.log(`[CAPTCHA] Pasted ${reply.code} (confidence ${reply.confidence}, ` +
                 `model ${reply.ms} ms, total ${Math.round(performance.now() - started)} ms)`);
     maybeAutoSubmit(await settingsPromise);
-  } else {
-    console.warn(`[CAPTCHA] Unsure (read "${reply.raw}"), left empty.`);
   }
 }
 
@@ -94,16 +93,23 @@ function visible(id) {
   return !!el.offsetParent || getComputedStyle(el).position === 'fixed';
 }
 
+const pressCount = () => parseInt(sessionStorage.getItem(ATTEMPTS_KEY), 10) || 0; // LOGIN presses in this tab
+
 // What this page load may do, based on the message the last attempt left behind: nothing on a
 // wrong password, one retry on an invalid captcha, and a reset when there is no message at all.
 // The site blocks a User ID after 5 failed logins, so this stays strictly behind those guards.
-function evaluateAutoLoginState() {
+function evaluateAutoLoginState(settings) {
   const message = (document.getElementById('lblmessage')?.textContent ?? '').trim();
-  const attempts = parseInt(sessionStorage.getItem(ATTEMPTS_KEY) || '0', 10) || 0;
+  const attempts = pressCount();
   if (!message) {
     sessionStorage.removeItem(ATTEMPTS_KEY);
     sessionStorage.removeItem(BLOCKED_KEY);
-    return { allowed: true, fillPassword: true };
+    const kind = loadKind();
+    const allowed = kind === 'open' || (kind === 'internal' && settings.signInAfterLogout);
+    if (!allowed) {
+      console.log(`[CAPTCHA] Page load kind "${kind}" is not an auto sign-in case: filling only, press LOGIN yourself.`);
+    }
+    return { allowed, fillPassword: true };
   }
   if (/invalid captcha/i.test(message)) {
     if (attempts >= MAX_ATTEMPTS) {
@@ -124,10 +130,22 @@ function evaluateAutoLoginState() {
   return { allowed: false, fillPassword: false };
 }
 
+// How this page load happened: 'reload' (reload, back/forward, restored tab), 'internal' (arrived from a
+// gitam.edu page: logout, session timeout), or 'open' (typed URL, bookmark, link from another site).
+function loadKind() {
+  const navType = performance.getEntriesByType('navigation')[0]?.type ?? 'navigate';
+  let referrerHost = '';
+  try { referrerHost = document.referrer ? new URL(document.referrer).hostname : ''; } catch { /* keep empty */ }
+  console.log(`[CAPTCHA] Page load: type ${navType}, referrer "${document.referrer}"`);
+  if (navType !== 'navigate') return 'reload';
+  return /(^|\.)gitam\.edu$/i.test(referrerHost) ? 'internal' : 'open';
+}
+
 let autoState = { allowed: false, fillPassword: false }; // decided once at startup
 
 async function fillCredentials() {
   const settings = await settingsPromise;
+  autoState = evaluateAutoLoginState(settings); // before any submit: maybeAutoSubmit stays closed until now
   if (!settings.autofill && !settings.autoLogin) return;
   if (!settings.password) {
     console.warn('[CAPTCHA] Credential fill is on but no credentials are saved (extension options).');
@@ -160,7 +178,7 @@ function maybeAutoSubmit(settings) {
     return;
   }
   autoSubmitted = true;
-  const attempts = (parseInt(sessionStorage.getItem(ATTEMPTS_KEY) || '0', 10) || 0) + 1;
+  const attempts = pressCount() + 1;
   sessionStorage.setItem(ATTEMPTS_KEY, String(attempts));
   console.log('[CAPTCHA] Auto-login: signing in.');
   submitBtn.click(); // real click: the site's validating onclick runs, submitter stays 'Submit'
@@ -169,8 +187,6 @@ function maybeAutoSubmit(settings) {
 // read before the element check, so the post-login page also clears it
 const submitted = sessionStorage.getItem(SUBMITTED_KEY);
 sessionStorage.removeItem(SUBMITTED_KEY);
-
-autoState = evaluateAutoLoginState();
 
 if (!img || !input) {
   console.warn('[CAPTCHA] Captcha elements not found.');

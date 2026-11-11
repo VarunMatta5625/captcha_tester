@@ -38,7 +38,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       if (message.rgba.length !== 4 * n) throw new Error(`expected ${model.width}x${model.height} pixels`);
       const start = performance.now();
       const { text, confidence } = readCaptcha(model, clean(message.rgba, n, model.levels));
-      sendResponse({ code: text, raw: text, confidence: Math.round(confidence * 1000) / 1000,
+      sendResponse({ code: text, confidence: Math.round(confidence * 1000) / 1000,
                      ms: Math.round(performance.now() - start) });
     })
     .catch((e) => {

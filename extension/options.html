@@ -52,7 +52,13 @@
 
 <div class="checkline field">
   <input id="autoLogin" type="checkbox">
-  <label for="autoLogin">Sign in automatically when the login page opens</label>
+  <label for="autoLogin">Auto sign-in when the site is opened</label>
+</div>
+
+<div class="checkline field">
+  <input id="signInAfterLogout" type="checkbox">
+  <label for="signInAfterLogout">Also sign in after logging out</label>
+  <div class="hint">Auto sign-in rules: with the box above ticked, LOGIN is pressed when the login page is opened by typed address, bookmark or a link. Never on a reload. After a logout (arriving from a gitam.edu page) only if this box is ticked; otherwise credentials and captcha are filled and you press LOGIN. "Invalid CAPTCHA" retries always work.</div>
 </div>
 
 <div class="field">

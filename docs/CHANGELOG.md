@@ -8,7 +8,7 @@ each version was tested.
 - [At a glance](#at-a-glance)
 - [How it works today](#how-it-works-today)
 - [The three captcha styles](#the-three-captcha-styles)
-- [Versions](#versions): [5.4](#54--2026-11-10-auto-login) · [5.3](#53--2026-11-01-v5-gold-100) ·
+- [Versions](#versions): [5.5](#55--2026-11-11-auto-sign-in-rules) · [5.4](#54--2026-11-10-auto-login) · [5.3](#53--2026-11-01-v5-gold-100) ·
   [5.2](#52--2026-10-31-style-3-three-level-cleaning) · [5.1](#51--2026-10-31-save-rejected-captchas) ·
   [5.0](#50--2026-10-30-style-2-red-letters) · [4.1 and earlier](#41-and-earlier--2026-09-30-from-apple-vision-to-an-in-browser-cnn)
 - [How models are tested](#how-models-are-tested)
@@ -18,7 +18,8 @@ each version was tested.
 
 | Extension | Date | Captcha style | Model | Gold (hand-checked) | Headline change |
 |---|---|---|---|---|---|
-| **5.4** | 2026-11-10 | 3 | v5 | **200/200 (100%)** | Auto-login: credential fill + optional sign-in |
+| **5.5** | 2026-11-11 | 3 | v5 | **200/200 (100%)** | Auto sign-in rules: site opens, optional after logout, never reload |
+| 5.4 | 2026-11-10 | 3 | v5 | 200/200 (100%) | Auto-login: credential fill + optional sign-in |
 | 5.3 | 2026-11-01 | 3 | v5 | 200/200 (100%) | New model (round 5) |
 | 5.2 | 2026-10-31 | 3 | v4 | 194/200 (97.0%) | Three-level image cleaning for the new blob style |
 | 5.1 | 2026-10-31 | 2 | v2_ft | 197/200 (98.5%) on style 2 | Saves captchas the site rejects |
@@ -73,6 +74,28 @@ unpacking. Ids repeat across styles, so labels never move between style workspac
 ---
 
 ## Versions
+
+### 5.5 — 2026-11-11: auto sign-in rules
+
+**Model unchanged (v5).** Auto-login now has rules for *when* it presses LOGIN (`loadKind()` in `content.js`):
+
+| Page load | Sign in? |
+|---|---|
+| Typed URL, bookmark, link from another site (navigation type `navigate`, referrer not on `gitam.edu`) | yes (if "Sign in automatically" is on) |
+| Arrived from a `gitam.edu` page: logout, session timeout | only with the new sub-box **Also sign in after logging out** (`signInAfterLogout`, default off, disabled unless auto sign-in is on) |
+| Reload, back/forward, restored tab | never (changed from 5.4, which signed in on reloads too) |
+| "Invalid CAPTCHA" retry | unchanged (max 2 presses per tab) |
+
+Credentials and captcha are still filled in every case; LOGIN is left to you. The decision now runs after the settings
+load (`fillCredentials`). Each load logs `[CAPTCHA] Page load: type ..., referrer ...`. Links from other `gitam.edu`
+pages count as "logout" (same referrer).
+
+**Tests.** Logging out of the portal (`gstudent.gitam.edu/Home/Logout`) lands on `login.gitam.edu/Login.aspx` with navigation
+type `navigate`, referrer `https://gstudent.gitam.edu/` and an empty `#lblmessage`, so it is classed "internal". The
+sign-in decision itself still needs a run of 5.5 on the live site (the browser was still running 5.4 during that check).
+Cleanup in this release: removed a dead "unsure" branch and the unused `raw` field (the model always returns a 5-character read); `tools/check_extension.py` still JS == PyTorch on 208/208. No automated test of the sign-in rules (needs the live site). 5.4 is frozen in `archive/extension_5.4_2026-11-11/`.
+
+---
 
 ### 5.4 — 2026-11-10: auto-login
 
