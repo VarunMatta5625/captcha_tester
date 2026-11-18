@@ -5,7 +5,7 @@ Do not edit snapshots: copy what you need out instead.
 
 | Folder | What |
 |---|---|
-| `extension_5.4_2026-11-11/` | Extension 5.4 (v5 + auto-login) before 5.5 added "only on first open". |
+| `extension_5.4_2026-11-11/` | Extension 5.4 (v5 + auto-login) before 5.5 added the auto sign-in rules (when the page may press LOGIN). |
 | `round4_2026-11-01/` | Round 4 (style 3) after v5 replaced it: `train_v4.ipynb`, `labels_v4.csv`, v4 (extension 5.2, gold 97.0%) and v3 (its teacher). See its `README.txt`. |
 | `three_level_switch_2026-10-31/` | The experiment behind the switch to three-level cleaning (two-level vs three-level vs raw RGB) and v4 two-level, the model it replaced. See its `README.txt`. |
 | `v2_2026-10-31/` | The v2 workspace (red letters on fine speckle): rounds v2/v3 (gold 98.5%), unfinished hard-gold v4, extension 5.1 and its model v2_ft, its 100k captchas in `data/captchas.zip`, the one style-2 captcha the site rejected (`data/site_mistakes/`). See its `README.txt`. |

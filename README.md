@@ -1,191 +1,407 @@
-# captcha_tester
+<div align="center">
 
-Chrome extension ("Instant CAPTCHA Paster") that reads the 5-character login captcha on `login.gitam.edu` with a
-small CNN running inside the extension (WebAssembly, no Python, no native host), plus the workspace that trains it.
+<img src="docs/images/banner.svg" alt="Instant CAPTCHA Paster: a small neural network that reads a login captcha inside your browser" width="100%">
 
-Read this file first when resuming work. Older history is in `archive/` (see `archive/README.md`).
-Version history with technical detail, example images and test results: [`docs/CHANGELOG.md`](docs/CHANGELOG.md).
+<br>
 
-## Status (2026-11-10)
+![Extension 5.5](https://img.shields.io/badge/extension-5.5-007467?style=flat-square)
+![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285f4?style=flat-square&logo=googlechrome&logoColor=white)
+![Chrome, Edge, Brave](https://img.shields.io/badge/browsers-Chrome%20%C2%B7%20Edge%20%C2%B7%20Brave-555?style=flat-square)
+![Gold 200/200](https://img.shields.io/badge/hand--checked%20gold-200%2F200-30d158?style=flat-square)
+![No runtime dependencies](https://img.shields.io/badge/runtime%20dependencies-none-ff9f0a?style=flat-square)
 
-Captcha styles so far (all 150x45, 5 characters, same 37-character alphabet):
+**A Chrome extension that reads the 5-character login captcha on `login.gitam.edu` with a small CNN running inside the browser (WebAssembly), and can fill your login and sign you in.**
 
-1. Black letters crossed by gray lines: v1, frozen in `archive/v1_2026-10-30/`.
-2. Red letters on fine gray speckle (2026-10-30): v2/v3, frozen in `archive/v2_2026-10-31/` (best gold 98.5%).
-3. **Now** (since 2026-10-31, between 03:02 and 08:04 UTC): same red letters in a **bolder font** with **large soft gray
-   blobs** drawn over them. Letters-only cleaning (`prep.ink`) leaves holes where blobs cover a letter, so since
-   2026-10-31 the model reads **three levels** (`prep.clean`: letters 0, blobs 128, paper 255; +1.5 points on gold in a
-   controlled test). The new **J** has no top bar:
-   every old model reads it as **3** (v3 outputs J for 0.1% of characters, ~2.7% expected). Other weak pairs: B/8, y/Y,
-   g/9, a/e. Extension 5.1 (v2_ft) failed on it; 5.2 shipped v4 (three-level); 5.3 shipped v5; **extensions 5.4 and 5.5 ship v5** plus auto-login
-   (credential fill and optional LOGIN press, set up from the toolbar popup).
+[Setup](#setup) · [Overview](#overview) · [Usage](#usage) · [How it works](#how-it-works) · [Security](#security) · [Known limits](#known-limits) · [Development](#development) · [Docs](#documentation-map)
 
-100k style-3 captchas, 200 gold checked (2 labels fixed after a recheck). Site = the 8 style-3 captchas the site
-rejected from 5.1 (`data/site_mistakes/`). Disputed = the 20 test captchas where v4 and v4_ft disagree (truth read
-by eye; v4 and v4_ft's main difference, so the best check of real accuracy beyond gold).
+<br>
 
-| Model (`models/`) | Trained on | Gold | Site | Disputed |
-|---|---|---|---|---|
-| `captcha_cnn_v4_ft.pt` | v4 fine-tuned on the 88 hard cases in `data/reviews.json` (labelled by Claude from the image, spot-checked); teacher of round 5 | 100% | 8/8 | 15/20 (reads some 8 as B, 9 as g) |
-| `captcha_cnn_v5.pt` | round 5: v4_ft's labels where it agrees with Vision or its weakest character >= 0.7 (~96k) + the 88 reviews, three-level, from scratch | **100%** | **8/8** | **19/20** (one 8 read as B); JS == PyTorch on all 208; **ships in extensions 5.3, 5.4 and 5.5** |
+<img src="docs/images/demo.gif" alt="Animated demo: the login page opens, the captcha is read and typed, a refresh is read again, then auto sign-in logs in without any click" width="100%">
 
-Archived: v3 (teacher of round 4, 86.0%) and v4 (extension 5.2, 97.0%, 8/8, 5/20 disputed: 6 as 5, J as 3, y as Y)
-with round 4 in `archive/round4_2026-11-01/`; v2_ft (extension 5.1; style 3 gold 87.5%, 0/8 site) in
-`archive/v2_2026-10-31/models/`; v4 two-level (94.5%, 6/8 site) and the input-variant experiment in
-`archive/three_level_switch_2026-10-31/`.
+</div>
 
-## Layout
+> [!NOTE]
+> **The login page in every screenshot and GIF here is a local mock**, not the real site, so no real account or page appears. The browser, the extension and the model are the real ones. The mock page is plain and unbranded, and every login in the pictures uses a fake User ID and password. The one exception is the folder picker in step 2 of the install, which is a clearly labelled illustration because it is an operating system window.
+
+---
+
+## Setup
+
+From download to a login page that fills itself: install, first run, first use. About five minutes.
+
+### 1. Install
+
+You need Chrome, Edge or Brave. Nothing else: no Python, no helper program.
+
+1. Download `captcha-paster-5.5.zip` from the [latest release](https://github.com/VarunMatta5625/captcha_tester/releases/latest) (about 7 MB; while the repository is private you must be signed in with access to it). Or clone this repository and use its `extension/` folder directly.
+2. Unzip it somewhere **permanent**: the browser keeps loading the extension from that folder. You get one folder, `captcha-paster`.
+3. Open `chrome://extensions` (Edge: `edge://extensions`, Brave: `brave://extensions`) and turn on **Developer mode**, top right.
+4. Click **Load unpacked** and choose the `captcha-paster` folder (the one that contains `manifest.json`).
+
+<p align="center">
+  <img src="docs/images/install.gif" alt="Three steps on the extensions page: turn on Developer mode, click Load unpacked, the Instant CAPTCHA Paster card appears" width="100%">
+</p>
+
+<details>
+<summary><b>The three steps as still pictures, and the folder picker</b></summary>
+
+<p align="center"><img src="docs/images/install-1.png" alt="Step 1: Developer mode switch is highlighted" width="100%"></p>
+<p align="center"><img src="docs/images/install-2.png" alt="Step 2: the Load unpacked button is highlighted" width="100%"></p>
+<p align="center"><img src="docs/images/install-3.png" alt="Step 3: the extension card with the reload arrow highlighted" width="100%"></p>
+
+The folder picker is an operating system window and cannot be captured from the page, so this is an **illustration**:
+
+<p align="center"><img src="docs/images/folder-picker.svg" alt="Illustration of the folder picker: choose the captcha-paster folder, then confirm" width="100%"></p>
+
+In these pictures the extension was loaded with a launch flag in a throwaway browser profile instead of the picker; the card is what you will see afterwards.
+
+</details>
+
+> [!TIP]
+> Pin the extension (puzzle-piece icon in the toolbar) to reach its settings in one click.
+
+### 2. First run
+
+Open `login.gitam.edu`. The captcha box fills itself, and again every time the captcha refreshes.
+
+<p align="center">
+  <img src="docs/images/first-run.gif" alt="The captcha box is empty while the image loads, then it fills with the read captcha" width="100%">
+</p>
+
+<details>
+<summary><b>Still picture of the empty state</b></summary>
+
+<p align="center"><img src="docs/images/first-run-1.png" alt="The login page while the captcha image is still loading: the captcha box is empty" width="100%"></p>
+
+</details>
+
+To see that it works, right-click the page, choose **Inspect**, then **Console**. Each captcha logs one line:
+
+```text
+[CAPTCHA] Pasted J2qgj (confidence 0.892, model 108 ms, total 214 ms)
+```
+
+A confidence below about 0.5 means the read is a guess: check the box before you submit.
+
+<p align="center">
+  <img src="docs/images/first-run-2.png" alt="The filled captcha box with numbered callouts and the console line" width="100%">
+</p>
+
+### 3. First use: let it sign in for you (optional)
+
+Click the toolbar icon, type your User ID and password, choose how far it should go, and **Save**.
+
+<p align="center">
+  <img src="docs/images/popup.gif" alt="The toolbar popup: type the User ID and password, see the linked checkboxes, set the minimum confidence, press Save" width="100%">
+</p>
+
+| Box | What it does |
+|---|---|
+| **Auto populate credentials only** | Fills User ID, password and captcha. You press LOGIN. |
+| **Auto sign-in when the site is opened** | Also presses LOGIN, once, when you open the login page by typed address, bookmark or link. Ticking it ticks the box above. |
+| **Also sign in after logging out** | Sub-box of auto sign-in, off by default. Also signs in when you arrive from a `gitam.edu` page (logout, session timeout). |
+| **Min CAPTCHA confidence to press LOGIN** | Default 0.5. Below it, the captcha is still filled and LOGIN is left to you. `0` means always press. |
+
+On a fresh install the first two boxes are ticked. A save of a User ID and password is what switches things on. (Release 5.5 has one bug here: with auto sign-in on and nothing saved yet, it presses LOGIN on the empty form. This is fixed in the source but not yet released, see [Known limits](#known-limits).)
+
+<details>
+<summary><b>The popup, step by step (still pictures)</b></summary>
+
+<p align="center"><img src="docs/images/popup-1.png" alt="Step 1: the popup opens with empty fields" width="100%"></p>
+<p align="center"><img src="docs/images/popup-2.png" alt="Step 2: User ID and password typed in" width="100%"></p>
+<p align="center"><img src="docs/images/popup-3.png" alt="Step 3: the three checkboxes explained" width="100%"></p>
+<p align="center"><img src="docs/images/popup-4.png" alt="The checkboxes are linked: unticking credential fill unticks auto sign-in and greys out the sub-box" width="100%"></p>
+<p align="center"><img src="docs/images/popup-5.png" alt="Step 4: minimum confidence, Save and the status line" width="100%"></p>
+
+</details>
+
+With only the first box ticked you get this, and the last click is yours:
+
+<p align="center">
+  <img src="docs/images/fill-only.png" alt="Login form with User ID, password and captcha filled, the LOGIN button highlighted as the user's click" width="100%">
+</p>
+
+With auto sign-in on, opening the page is enough:
+
+<p align="center">
+  <img src="docs/images/signin.gif" alt="The login page opens, then the portal home page appears without any click" width="100%">
+</p>
+
+<details>
+<summary><b>Auto sign-in as still pictures</b></summary>
+
+<p align="center"><img src="docs/images/signin-1.png" alt="The login page just opened, nothing filled yet" width="100%"></p>
+<p align="center"><img src="docs/images/signin-2.png" alt="The portal home page after the automatic sign-in, with the console lines" width="100%"></p>
+
+</details>
+
+> [!IMPORTANT]
+> The password is stored **unencrypted** in the extension's local storage on this machine (never synced). Do not use auto sign-in on a shared computer. Details in [Security](#security).
+
+<details>
+<summary><b>Update, remove, build the zip yourself</b></summary>
+
+- **Update:** replace the contents of the folder with the new release, then press the circular arrow on the extension's card in `chrome://extensions`.
+- **Remove:** `chrome://extensions`, **Remove**. This also deletes the saved password. **Clear** in the popup removes only the credentials.
+- **Build the zip yourself:** `./build_zip.sh` writes `dist/captcha-paster-<version>.zip` ([DEVELOPMENT.md](docs/DEVELOPMENT.md)).
+
+</details>
+
+---
+
+## Overview
+
+The login page shows a 150x45 captcha of five characters. The extension takes that image, cleans it, and feeds it to a 1.8-million-weight convolutional network that runs in WebAssembly **inside the extension itself**. The answer is typed into the captcha box in a fraction of a second.
+
+- **Nothing leaves your computer.** No server, no API, no Python, no native helper. The extension makes no network requests of its own.
+- **Works in any Chromium browser** (Chrome, Edge, Brave). The screenshots were made with Chromium 145; Windows and Linux are untested here (the code has nothing platform-specific).
+- **Optional auto-login** with safety guards that keep it from burning login attempts ([Usage](#usage)).
+- **Learns from its mistakes.** A captcha the site rejects is saved as a PNG for the next training round.
+- **A reproducible training workspace** is in this repository: data tools, notebooks, the export script and a check that the browser output equals the PyTorch output ([Development](#development)).
+
+```mermaid
+flowchart LR
+    A["Login page<br/>#imgCaptcha (150x45)"] -->|"canvas pixels"| B["content.js"]
+    B -->|"sendMessage<br/>{action: solve}"| C["background.js<br/>(service worker)"]
+    C --> D["clean()<br/>letters 0, blobs 128, paper 255"]
+    D --> E["CNN in model.wasm<br/>weights from model/"]
+    E -->|"text + confidence"| B
+    B -->|"types the read"| F["#txtCaptchaInput"]
+    B -->|"if allowed:<br/>fill login, press LOGIN"| G["#Submit"]
+    B -.->|"'Invalid CAPTCHA' after LOGIN"| H["Downloads/captcha_mistakes/*.png"]
+    style A fill:#fff,stroke:#007467
+    style E fill:#007467,color:#fff,stroke:none
+    style H fill:#fff4d6,stroke:#e0b64a
+```
+
+| Model | Style it was trained for | Hand-checked gold | Site rejections |
+|---|---|---|---|
+| **v5** (extensions 5.3 to 5.5) | style 3, the current captcha | **200/200** | **8/8** |
+
+<p align="center">
+  <img src="docs/images/accuracy.png" alt="Bar chart of the gold accuracy of the shipped model: 93.4 percent, 98.5, 97.0 and 100 percent" width="100%">
+</p>
+
+---
+
+## Usage
+
+### Every refresh is read
+
+<p align="center">
+  <img src="docs/images/refresh.gif" alt="Pressing Refresh four times: each new captcha is read and typed in" width="100%">
+</p>
+
+<details>
+<summary><b>The four captchas as still pictures</b></summary>
+
+<p align="center"><img src="docs/images/refresh-1.png" alt="First captcha read" width="100%"></p>
+<p align="center"><img src="docs/images/refresh-2.png" alt="Second captcha read after Refresh" width="100%"></p>
+<p align="center"><img src="docs/images/refresh-3.png" alt="Third captcha read after Refresh" width="100%"></p>
+<p align="center"><img src="docs/images/refresh-4.png" alt="Fourth captcha read after Refresh" width="100%"></p>
+
+</details>
+
+### When does auto sign-in press LOGIN?
+
+Pressing LOGIN is the risky part, because the extension assumes the site locks a User ID after 5 failed logins (see [Known limits](#known-limits)). So the extension decides on every page load, using what it can see:
+
+| How the page was opened | Signs in? |
+|---|---|
+| Typed address, bookmark, link from another site | **Yes**, if auto sign-in is on |
+| Arrived from a `gitam.edu` page (logout, session timeout) | Only with **Also sign in after logging out** |
+| Reload, back/forward, restored tab | **Never** |
+| Site said "Invalid CAPTCHA" after a press | One automatic retry (at most 2 presses per tab) |
+
+In every case the credentials and captcha are still filled. These are real console lines from the shipped extension against the mock page:
+
+<p align="center">
+  <img src="docs/images/rules.png" alt="Four columns of console output for: typed address signs in, reload fills only, logout with the sub-box off fills only, logout with the sub-box on signs in" width="100%">
+</p>
+
+The full decision, taken from `content.js`:
+
+```mermaid
+flowchart TD
+    L(["Login page loaded"]) --> M{"Message on the page<br/>(#lblmessage)?"}
+    M -- "none" --> K{"How was it opened?"}
+    K -- "typed, bookmark, link" --> OK1["Auto sign-in allowed"]
+    K -- "from a gitam.edu page" --> S{"'Also sign in<br/>after logging out' on?"}
+    S -- yes --> OK1
+    S -- no --> FILL["Fill only: you press LOGIN"]
+    K -- "reload, back/forward" --> FILL
+    M -- "Invalid CAPTCHA" --> R{"Already pressed<br/>2 times in this tab?"}
+    R -- no --> OK1
+    R -- yes --> STOP1["Stop for this tab"]
+    M -- "anything else<br/>(wrong password, locked ...)" --> STOP2["Stop for this tab,<br/>password box stays empty"]
+    OK1 --> G{"Guards all pass?"}
+    G -- "credentials saved, no rate-limit break,<br/>no reCAPTCHA, box still holds the model's read,<br/>confidence at or above the minimum" --> GO(["Press LOGIN (a real click)"])
+    G -- "any guard fails" --> FILL
+    style GO fill:#30d158,color:#0b1220,stroke:none
+    style STOP1 fill:#ffe3e0,stroke:#e5251b
+    style STOP2 fill:#ffe3e0,stroke:#e5251b
+```
+
+### When the site rejects a read
+
+If you press LOGIN (or auto sign-in does) with the model's read unchanged and the reloaded page says "Invalid CAPTCHA", the captcha is saved to `Downloads/captcha_mistakes/<time>_model-<read>_conf-<confidence>.png` (time in UTC). A wrong password, a successful login or a code you retyped saves nothing. The right answer is unknown: the file name only says what the model read.
+
+<p align="center">
+  <img src="docs/images/reject.gif" alt="The site says Invalid CAPTCHA, the extension retries once, is rejected again and stops, and both captchas are listed as saved files" width="100%">
+</p>
+
+<details>
+<summary><b>The rejection as still pictures</b></summary>
+
+<p align="center"><img src="docs/images/reject-1.png" alt="Invalid CAPTCHA shown, the extension retries" width="100%"></p>
+<p align="center"><img src="docs/images/reject-2.png" alt="Rejected twice: the extension stops" width="100%"></p>
+<p align="center"><img src="docs/images/reject-3.png" alt="The two rejected captchas listed as saved files" width="100%"></p>
+
+</details>
+
+In this demonstration the mock rejects every read on purpose, even correct ones, to show the retry limit and the saving. The saved images are what the next training round uses ([TRAINING.md](docs/TRAINING.md#next-round-6)). A browser extension may only write under Downloads, so they land there first.
+
+---
+
+## How it works
+
+### 1. Clean the image
+
+The captcha has red letters over gray speckle and blobs. The extension turns each pixel into one of three levels, exactly as training did (`extension/model.js` `clean()` equals `scripts/prep.py` `clean()`):
+
+```math
+\text{pixel} =
+\begin{cases}
+0 & \text{if } r-g > 60 \text{ and } r-b > 60 \quad (\text{letter})\\
+128 & \text{else if } r+g+b < 600 \quad (\text{blob})\\
+255 & \text{otherwise} \quad (\text{paper})
+\end{cases}
+```
+
+Keeping the blobs matters: a stroke hidden under a blob then looks different from no stroke, which is what separates the new bar-less **J** from a **3**.
+
+<p align="center">
+  <img src="docs/images/cleaning.gif" alt="Three captchas shown raw, letters only with holes where blobs were, and the three-level cleaning the model reads" width="100%">
+</p>
+
+### 2. Read five characters
+
+```mermaid
+flowchart LR
+    I["1 x 45 x 150<br/>image"] --> B1["Block 1<br/>32 ch"] --> B2["Block 2<br/>64 ch"] --> B3["Block 3<br/>128 ch"] --> B4["Block 4<br/>192 ch"] --> M["mean over height<br/>1,728 values"] --> L["Linear 512"] --> H["5 heads,<br/>37 classes each"]
+```
+
+<p align="center">
+  <img src="docs/images/network.svg" alt="The network: four convolution blocks, mean over height, a 512 unit layer and five heads of 37 classes" width="100%">
+</p>
+
+Each block is two 3x3 convolutions with ReLU and a 2x2 max-pool. BatchNorm is folded into the convolutions when the model is exported (`export_model.py`), so the browser needs only convolution, ReLU, max-pool and a linear layer, written as small WebAssembly SIMD kernels (`extension/model.wasm`). The alphabet has 37 case-sensitive characters, `2345689ABDEFGHJLMNQRTYabdefghijmnqrty` (the site never uses `0 O 1 l I 7`).
+
+<p align="center">
+  <img src="docs/images/reading.png" alt="For each of the five positions the three most likely characters and their probabilities, with the weakest position marked" width="100%">
+</p>
+
+The **confidence** shown in the console is the lowest of the five winning probabilities:
+
+```math
+\text{confidence} = \min_{k=1,\dots,5} \; \max_{j} \; \operatorname{softmax}(z_k)_j
+```
+
+so one doubtful character is enough to bring it down. (Training uses label smoothing 0.1, which is why a sure read tops out around 0.9 to 0.95, not 1.)
+
+### 3. Where the model came from
+
+The site changed its captcha twice in two days, and each change needed new data and a new model.
+
+<p align="center">
+  <img src="docs/images/styles.png" alt="Four gold captchas of each of the three styles, with the true label under each" width="100%">
+</p>
+
+```mermaid
+flowchart LR
+    Z[("100k captchas<br/>data/captchas.zip")] --> V["Apple Vision reads<br/>(label_vision.py)"]
+    Z --> T["Teacher model reads<br/>(relabel.py)"]
+    V --> C{"Teacher and Vision agree,<br/>or teacher is sure (>= 0.7)?"}
+    T --> C
+    C -- yes --> TR["Train from scratch<br/>96,894 labels"]
+    R["88 hand-labelled hard cases<br/>(reviews.json)"] --> TR
+    TR --> G{"200 hand-checked gold<br/>never trained on"}
+    G --> X["export_model.py<br/>then check_extension.py:<br/>browser == PyTorch"]
+    X --> S(["Ship in the extension"])
+```
+
+Gold is the only fair score: it is never trained on, relabelled or reviewed. The whole story, with training settings and test sets, is in [docs/CHANGELOG.md](docs/CHANGELOG.md); the recipe is in [docs/TRAINING.md](docs/TRAINING.md).
+
+---
+
+## Security
+
+What the code does, checked against `extension/`:
+
+| Property | How |
+|---|---|
+| **No network of its own** | The only `fetch` calls load the extension's own model files via `chrome.runtime.getURL`. There is no remote code, and no analytics. |
+| **Narrow reach** | Permissions are `storage` and `downloads` only. The content script runs only on `*://login.gitam.edu/*`. |
+| **Strict CSP** | Extension pages allow `script-src 'self' 'wasm-unsafe-eval'` (the WebAssembly kernels) and nothing else. |
+| **Credentials** | Stored in `chrome.storage.local` on this machine: never synced to a browser account, never sent anywhere except by placing them in the login form, which is submitted by the page itself. **Not encrypted.** |
+| **No credentials in the repository** | The settings form starts empty. |
+| **Saved files are validated** | Only a PNG data URL, a 5-character alphanumeric read and a confidence between 0 and 1 are accepted, and the file always goes to `Downloads/captcha_mistakes/`. |
+| **Lockout guards** | No retry after a wrong password, at most 2 presses per tab, nothing during a rate-limit break, nothing when Google reCAPTCHA is shown, nothing when the box no longer holds the model's read, nothing below the confidence minimum. |
+
+> [!WARNING]
+> The guards count per tab and start again whenever the login page is opened without a message. If the saved password is wrong, **every fresh open of the login page signs in once more** and costs one failed login. Correct the password (or untick auto sign-in) after the first failure.
+
+> [!NOTE]
+> This is a convenience tool for signing in to **your own** account. Whether using it is allowed under the site's terms is your responsibility.
+
+---
+
+## Known limits
+
+- **Release 5.5 presses LOGIN on empty fields** when auto sign-in is on (the default on a fresh install) and no credentials are saved yet. The fix is in the source (`extension/content.js`, see the "Unreleased" entry in the [changelog](docs/CHANGELOG.md)) but not in a published zip. Until a new version ships, save your credentials first or untick both boxes.
+- **A style change breaks it.** The model reads the current captcha style. If the site changes the captcha again, accuracy drops until a new round is trained ([TRAINING.md](docs/TRAINING.md#new-captcha-style)).
+- **Confident misses exist.** v5 still rejects some captchas that it reads with confidence 0.90 to 0.93 (the project's own earlier notes), so the confidence minimum cannot catch them. Each costs one login attempt; auto sign-in retries once. The weakest known pair is **8 read as B**.
+- **Hard-coded page.** It looks for the element ids `imgCaptcha`, `txtCaptchaInput`, `txtusername`, `password`, `Submit`, `lblmessage`. If the site renames them the console says `Captcha elements not found`.
+- **No Google reCAPTCHA.** If the login shows reCAPTCHA instead of the image, auto sign-in does nothing.
+- **The 5-attempt lockout is an assumption** taken from how the site behaved for the author; it is not in this repository and was not verified here.
+- **What was and was not tested.** The model was tested against 200 hand-checked captchas and 8 real rejections, in Node against PyTorch. The extension flows (fill, auto sign-in, the rules, the rejected-captcha saving) were tested end to end in Chromium 145 against the **local mock page**. They were not re-run on the live site for this documentation, and Windows, Linux, Edge and Brave were not tested here.
+- **Chromium only.** There is no Firefox or Safari build (a Safari port exists only for the old captchas, in `archive/`).
+
+---
+
+## Development
+
+Everything is in the repository: the extension, the training notebooks, the data tools and the export script. The one check that matters runs the checkpoint through the extension's own `model.js` and `model.wasm` and through PyTorch, and fails unless all 208 reads match:
+
+```sh
+pip install -r requirements.txt        # torch, numpy, Pillow, jupyter, matplotlib, tqdm
+python3 tools/check_extension.py       # JS == PyTorch on 208/208, gold 200/200, site 8/8
+```
+
+It needs `node` and the git-ignored `data/captchas.zip`. Shipping a new model, releasing, and rebuilding the pictures in this README are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+
+<details>
+<summary><b>Repository layout</b></summary>
 
 | Path | What |
 |---|---|
-| `extension/` | Chrome/Edge/Brave extension v5.5 (MV3). Load unpacked from here. See `extension/README.txt`. Saves captchas the site rejects (below). Auto-login: toolbar popup / options page (`popup.html`, `options.html`, shared `settings-ui.js`) store User ID + password in `chrome.storage.local`; `content.js` fills them and, if "Sign in automatically" is on, presses LOGIN (guards against the site's 5-failure lockout). 5.5 rules: signs in on typed URL / bookmark / link, never on reload, after logout only with the sub-box "Also sign in after logging out". 5.4 is frozen in `archive/extension_5.4_2026-11-11/`. |
-| `docs/` | `CHANGELOG.md` (every extension version: what changed, why, configs, tests) and its figures in `docs/images/` (rebuilt by `tools/make_doc_figures.py`). |
-| `export_model.py` | Checkpoint -> `extension/model/{model.json,weights.bin}` (BatchNorm folded). Default: `models/captcha_cnn_v5.pt`. Writes the checkpoint's `levels` into `model.json`. |
-| `build_zip.sh` | `extension/` -> `dist/captcha-paster-<version>.zip` (git-ignored, regenerable). `dist/captcha-paster/` = the unzipped current version; the previous zips are kept as the rollback (5.4 = auto-login without the rules; 5.3 = v5 without auto-login). |
-| `notebooks/train_v5.ipynb` | Round 5 (run, shipped in 5.3): relabel with v4_ft (agree with Vision, or confidence >= 0.7), plus reviews, three-level from scratch. Template for later rounds (round 4 and style-2 rounds are in the archive). |
-| `scripts/prep.py` | Shared by notebooks and scripts: reads captchas from the zip (`<id>.png`, any folder inside), `clean()` three-level image the CNN reads, `ink()` letters only (Vision, two-level models), Apple Vision helpers. |
-| `scripts/label_vision.py` | Terminal, from the project root: Vision reads every captcha -> `data/labels_vision.csv` (~8 min, resumable). |
-| `scripts/audit_gold.py` | Builds + pre-labels the gold set (first run), then lets you check it (Enter / type correction). |
-| `scripts/relabel.py` | Notebook's `TEACHER` reads every non-gold captcha -> labels csv (`agree` / `vision_fix` / `confident` / `disagree` / `review`) with model read, confidence, Vision read. Knobs set in the notebook: `VISION_FIXES` = character pairs where Vision's read wins (round 4: 3->J), `MIN_CONF` = trust the teacher's reads this confident (round 5: 0.7). |
-| `scripts/review.py` | Type-in review, 50 per run: model-vs-Vision disagreements first, then least confident. `FOCUS` filters by characters. |
-| `scripts/finetune.py` | Fine-tunes `MODEL_PATH` on all reviews (+ 5,000 anchors) -> `FT_PATH`. Always restarts from the baseline. |
-| `data/captchas.zip` | **The captchas of the current style** (`<id>.png`, numeric ids, stored uncompressed). Git-ignored, not regenerable: back it up. Style 3: 100,000 captchas (787 MB). |
-| `data/gold.csv` | 200 hand-checked test captchas (`label`, pre-label `model`, `vision`, `checked` time). Never trained on. |
-| `data/reviews.json` | Your typed answers: the only human labels besides gold. Shared by all rounds of one captcha style. Style 3: 88 hard cases (v4's weakest reads), labelled by Claude from the image and spot-checked (`labeled_by`). |
-| `data/site_mistakes/` | Style-3 captchas the live site rejected (saved by the extension), with `labels.csv` (truth read from the image, not hand-checked). Hard cases for the next round; not gold. |
-| `data/labels_vision.csv` | Apple Vision's read of every captcha (`vision` = valid 5-char read or ""; `raw`). |
-| `data/labels_v5.csv` | Training labels written by round 5's relabel cell (round 4's are in `archive/round4_2026-11-01/`). |
-| `tools/ocr` | Apple Vision OCR binary (`tools/ocr.swift`). macOS only. |
-| `tools/run_round.py` | Runs a round notebook headless up to the review loop (sections 1–11) and saves its outputs; needs gold already checked. |
-| `tools/check_extension.py` | Before shipping: runs a checkpoint through the extension's own `model.js` + `model.wasm` in Node and PyTorch on gold + `data/site_mistakes/`; every read must match. |
-| `cache/` | Decoded-image cache (`clean_images.npz`, keyed by the zip's size and time) and logs. Git-ignored, rebuilt automatically. |
+| `extension/` | The extension. Load unpacked from here. |
+| `models/` | `captcha_cnn_v5.pt` (shipped) and its teacher `captcha_cnn_v4_ft.pt`. |
+| `notebooks/`, `scripts/`, `tools/` | Training round, data tools, pre-ship check, README picture scripts. |
+| `data/` | Gold set, reviews, labels, the 8 rejected captchas. The captcha zip is git-ignored. |
+| `docs/` | Changelog, training and development guides, pictures. |
+| `archive/` | Frozen earlier work (older styles, Vision and native-host versions). |
 
-## Data: zipped, no loose PNGs
+</details>
 
-Each captcha style's images live in one zip; code reads it directly via `prep.captcha_ids()` /
-`prep.open_captcha(id)`, nothing needs unzipping. Ids are the numeric file names, so **ids repeat across styles**:
-labels, gold and reviews belong to their zip and never move between workspaces.
+---
 
-- `data/captchas.zip`: style 3 (the current one). Make it from the downloaded folder, stored uncompressed:
-  `zip -0 -q -r data/captchas.zip "<folder>"` (any folder name inside works; add more later with `zip -0 -q -r -u`).
-  Verify, then delete the loose PNGs.
-- `archive/v2_2026-10-31/data/captchas.zip`: style 2, 100,000 captchas (376 MB).
-- `archive/v1_2026-10-30/training/data/varun.zip`: style 1, 126,919 captchas (545 MB). Archived v1 code expects a
-  `varun/` folder: `cd archive/v1_2026-10-30/training/data && unzip -q varun.zip` before running it.
+## Documentation map
 
-All zips are git-ignored. Keep them backed up (Drive): every label and model refers to these images by id.
-
-## Workflow
-
-Setup: `pip install -r requirements.txt` (torch, numpy, Pillow, jupyter, matplotlib, tqdm), then
-`cd notebooks && jupyter lab`. Notebooks use paths relative to `notebooks/` and run on `mps` (Apple Silicon) or CPU.
-
-**Next round (6)**: v5 already scores 100% on gold, so gold can no longer tell a better model apart. Wait for real
-misses first: when 5.3/5.4/5.5 save rejected captchas, label them (below) and use them as the score that matters.
-1. Move `~/Downloads/captcha_mistakes/*.png` into `data/site_mistakes/` and add a row per file to its `labels.csv`
-   (`truth` = what the image says). They are scored, not trained on. Optionally add some to `data/reviews.json`
-   (review loop below) so they are trained on next time.
-2. Copy `notebooks/train_v5.ipynb` to `train_v6.ipynb`; in its setup cell set `TEACHER = "../models/captcha_cnn_v5.pt"`,
-   `LABELS_CSV`, `MODEL_PATH`, `FT_PATH` to `v6`, and the relabel knobs `VISION_FIXES` / `MIN_CONF` (see
-   `scripts/relabel.py`); update the intro and the section-10 names.
-3. `python3 tools/run_round.py notebooks/train_v6.ipynb` from the project root (~12 min, no input): relabel ->
-   `data/labels_v6.csv`, train -> `models/captcha_cnn_v6.pt`, section 10 prints gold for teacher vs new.
-4. `python3 tools/check_extension.py models/captcha_cnn_v6.pt` and the same with no argument (the shipped v5): compare
-   gold and site scores; every JS read must match PyTorch.
-5. If v6 beats v5: ship it (below; version 5.6), update the Status table, archive the previous round like
-   `archive/round4_2026-11-01/` (its notebook, labels, and models no longer needed; keep the new round's teacher), commit.
-
-**Review loop** (optional, any round): open the round notebook, run sections 1–3, 6–8, then 12 review 50 ->
-13 fine-tune -> 14 what changed on gold. Repeat while gold improves. `FOCUS` in `scripts/review.py` picks
-characters (remaining weak pair: 8 read as B). Labelling hard cases from the image outside the notebook (as for the
-88 style-3 reviews) works too: add entries to `data/reviews.json` in the same format.
-
-**New captcha style**: archive the workspace like `archive/v2_2026-10-31/` (data, round notebooks, cache; ids will
-clash with the new set), put the PNGs in `data/captchas.zip`, check `prep.clean` still separates letters, blobs
-and paper (section 7 preview), run `scripts/label_vision.py`, copy the latest round notebook with the best model as `TEACHER`
-(it builds a new gold set in section 4), and check where the teacher and Vision disagree (relabel prints the
-character pairs) before trusting either.
-
-## Ship a model to the extension
-
-```
-python3 tools/check_extension.py models/<model>.pt   # JS == PyTorch on every gold/site captcha, else stop
-python3 export_model.py models/<model>.pt   # default: models/captcha_cnn_v5.pt
-# bump "version" in extension/manifest.json
-./build_zip.sh                              # dist/captcha-paster-<version>.zip (the release asset)
-```
-
-Reload the extension in chrome://extensions (the circular arrow on its card; Load unpacked again if it was loaded from
-a folder that was replaced). On login.gitam.edu the console (F12) logs `[CAPTCHA] Pasted xxxxx (confidence …)`.
-Update the Status table: which model ships.
-
-Then release it (any extension version, model change or not):
-1. Add the version to `docs/CHANGELOG.md` (at-a-glance row + a section: what changed, why, config, tests) and a
-   line to the Timeline above. New figures: extend `tools/make_doc_figures.py`.
-2. Commit, then tag and publish:
-   ```
-   git tag -a v<version> -m "Extension <version>: <summary>" && git push origin main v<version>
-   gh release create v<version> dist/captcha-paster-<version>.zip --title "<version>: <summary>" --notes-file <notes.md>
-   ```
-   Release notes: user-facing (new, safety, tested, known issues, install), linking `docs/CHANGELOG.md` for detail.
-
-## GitHub
-
-`origin` = github.com/VarunMatta5625/captcha_tester, **private** (releases are private too).
-Collaborator: Quarkisinproton (write; personal-account repos have no admin role). Commits use the GitHub noreply
-address (`git config user.email` in this repo): the account blocks pushes that expose a private email.
-Releases: v5.4 is the first; older versions have no tags. Git-ignored data (captcha zips, `cache/`, `dist/`) is not
-on GitHub: the zips live only on Drive.
-
-## Captchas the extension got wrong
-
-Since extension 5.1, pressing LOGIN with the model's read unchanged and getting "Invalid CAPTCHA" back saves that
-captcha to `~/Downloads/captcha_mistakes/<time>_model-<read>_conf-<confidence>.png` (time UTC). Wrong-password
-failures, successful logins and retyped codes save nothing. The site shows a new captcha straight away, so the right
-answer is unknown: the file name only says what the model read (wrong) and how sure it was.
-
-These are real-world misses, the most useful images for the next round. Nothing imports them yet: move them into
-`data/site_mistakes/`, label them in its `labels.csv` (usually one character off; known confusions J/3, 6/5, B/8, y/Y,
-a/e) before training on them, and keep them out of gold. Chrome extensions can only write under Downloads, so they
-land there first. The Downloads folder was empty when 5.3 shipped (5.2 saved no misses). When 5.4 shipped (2026-11-10) it held 4 v5
-misses saved by 5.3 (2026-11-02 to 11-06), not yet moved or labelled; 5.4 keeps saving there with the same model.
-
-## Rules (break these and scores stop meaning anything)
-
-- **Gold is never trained on, relabeled or reviewed.** Every script skips `GOLD` ids. Compare models on gold only;
-  val/test only measure agreement with the teacher's labels.
-- **Preprocessing must match**: `scripts/prep.py` `clean()` and `extension/model.js` `clean()` both make pixels with
-  `r - g > 60 && r - b > 60` letters (0), other pixels with `r + g + b < 600` blobs (128), everything else 255. Change
-  both or neither; re-export afterwards. Checkpoints say which cleaning they need (`levels`: 3, or missing = 2 =
-  letters only: v1-v3 and the archived v4 two-level); the notebook's `load_model` and the exported `model.json` carry it, so old
-  and new models both read correctly.
-- **Alphabet** (`2345689ABDEFGHJLMNQRTYabdefghijmnqrty`, no 0/O/1/l/I/7) comes from the checkpoint. Gold checking
-  accepts any letter/digit and warns if a new character appears; adding one means new head classes and removing the
-  matching entries from `prep.LEARNED`.
-- `export_model.py` only knows this architecture (4 blocks of conv-BN-ReLU x2 + maxpool, widths 32/64/128/192, mean over
-  height, Linear 512, 5 heads). A different network needs export and `model.js` changes too.
-
-## Gotchas
-
-- Editing a `.ipynb` on disk while it is open in Jupyter: use File -> Reload Notebook from Disk (choose Revert, not
-  Overwrite, if asked). The kernel keeps its state.
-- `scripts/label_vision.py` uses all CPU cores via multiprocessing: run it from a terminal, not a notebook cell.
-  It skips ids already in `data/labels_vision.csv`: a new captcha set needs a fresh file.
-- The notebook loads `VISION` once in section 2; `relabel.py` re-reads the file itself.
-- Safari port (`archive/v1_2026-10-30/safari/`) is still v4.1 for the old captchas: not updated for v2.
-- `archive/v1_2026-10-30/training/v2/cache/all_images.npz` (820 MB) and `archive/v2_2026-10-31/cache/` (670 MB) are
-  regenerable caches; delete if space matters.
-
-## Timeline
-
-Per-version detail (what, why, configs, tests) is in [`docs/CHANGELOG.md`](docs/CHANGELOG.md); older work in `archive/`.
-
-- 2026-09-30: v1 (extension 4.1, style 1, gold 93.4%).
-- 2026-10-30: style 2 (red letters on speckle): extension 5.0, models v2/v3.
-- 2026-10-31: extension 5.1 saves rejected captchas. Style 3 (blobs): v4 with three-level cleaning, extension 5.2.
-- 2026-11-01: v5 (round 5, teacher v4_ft), gold 100%, extension 5.3.
-- 2026-11-10: extension 5.4: auto-login. GitHub repo (private) created, release v5.4.
-- 2026-11-11: extension 5.5: auto sign-in rules (site opens yes, reload never, logout opt-in). Live check: logout from
-  `gstudent.gitam.edu/Home/Logout` reaches `login.gitam.edu/Login.aspx` as navigation type `navigate`, referrer
-  `https://gstudent.gitam.edu/`, empty message. Chrome (Default profile) loads the unpacked extension from
-  `extension/` itself: reload it in chrome://extensions after edits.
+| Document | What is in it |
+|---|---|
+| [docs/CHANGELOG.md](docs/CHANGELOG.md) | Every extension version: what changed, why, settings, how it was tested. |
+| [docs/TRAINING.md](docs/TRAINING.md) | Data, labelling, the next training round, rules that keep scores meaningful. |
+| [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) | Layout, checks, shipping, releasing, rebuilding the pictures. |
+| [extension/README.txt](extension/README.txt) | The text that ships inside the zip. |
+| [archive/README.md](archive/README.md) | Index of the frozen snapshots. |

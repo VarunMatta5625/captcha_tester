@@ -1,6 +1,6 @@
 // The trained captcha CNN. Layer order comes from model/model.json, weights from model/weights.bin
 // (both from export_model.py, BatchNorm folded in); the number crunching runs in model.wasm
-// (wasm/kernels.c, WebAssembly + SIMD). No libraries, works in any Chrome.
+// (source: archive/v1_2026-10-30/wasm/kernels.c, WebAssembly + SIMD). No libraries, works in any Chrome.
 
 // canvas RGBA pixels -> what the model reads, exactly like training's prep.clean (scripts/prep.py): the letters
 // are red and the blobs and speckle gray, so a pixel is letter (0) when red beats green and blue by more than 60,
