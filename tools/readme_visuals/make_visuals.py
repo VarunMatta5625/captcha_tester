@@ -87,4 +87,4 @@ def run(which):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1:] or ["real_first", "real_refresh", "popup"])
+    run(sys.argv[1:] or ["real_first", "real_refresh", "real_fill", "popup", "install", "console", "rules", "hero"])   # hero last: it reuses the other pictures
