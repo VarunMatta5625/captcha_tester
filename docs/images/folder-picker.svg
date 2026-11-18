@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 520" width="1280" height="520" role="img" aria-label="Illustration of the folder picker: choose the captcha-paster folder and click Select">
+  <style>.t{font-family:Helvetica,Arial,sans-serif;fill:#111827}.g{fill:#6b7280}</style>
+  <rect width="1280" height="520" fill="#f6f8f7"/>
+  <rect x="40" y="40" width="760" height="440" rx="14" fill="#fff" stroke="#c5ccd6" stroke-width="2"/>
+  <rect x="40" y="40" width="760" height="46" rx="14" fill="#eceff3"/><rect x="40" y="70" width="760" height="16" fill="#eceff3"/>
+  <circle cx="68" cy="63" r="7" fill="#ff5f57"/><circle cx="92" cy="63" r="7" fill="#febc2e"/><circle cx="116" cy="63" r="7" fill="#28c840"/>
+  <text x="420" y="69" class="t" font-size="17" text-anchor="middle">Select the extension folder</text>
+  <g class="t" font-size="19">
+    <text x="70" y="130" class="g">Downloads</text>
+    <rect x="60" y="150" width="720" height="44" rx="8" fill="#dbeafe"/>
+    <text x="110" y="179">captcha-paster</text><rect x="72" y="162" width="28" height="22" rx="4" fill="#5aa9f0"/>
+    <text x="110" y="229">captcha-paster-5.5.zip</text><rect x="72" y="212" width="28" height="22" rx="4" fill="#c5ccd6"/>
+    <text x="110" y="279" class="g">other files ...</text>
+  </g>
+  <rect x="580" y="420" width="90" height="38" rx="8" fill="#fff" stroke="#c5ccd6" stroke-width="2"/><text x="625" y="445" class="t" font-size="18" text-anchor="middle">Cancel</text>
+  <rect x="682" y="420" width="100" height="38" rx="8" fill="#0a84ff"/><text x="732" y="445" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="700">Select</text>
+  <rect x="52" y="146" width="736" height="52" rx="10" fill="none" stroke="#e5251b" stroke-width="4"/>
+  <circle cx="52" cy="146" r="17" fill="#e5251b"/><text x="52" y="153" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+  <rect x="676" y="414" width="112" height="50" rx="10" fill="none" stroke="#e5251b" stroke-width="4"/>
+  <circle cx="676" cy="414" r="17" fill="#e5251b"/><text x="676" y="421" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+  <g class="t" font-size="21">
+    <rect x="850" y="120" width="390" height="120" rx="12" fill="#fff" stroke="#e5251b" stroke-width="3"/>
+    <text x="872" y="156">Pick the unzipped folder</text><text x="872" y="186">that contains <tspan font-family="Courier New,monospace" font-weight="700">manifest.json</tspan>.</text><text x="872" y="216" class="g" font-size="18">Keep it somewhere permanent.</text>
+    <rect x="850" y="270" width="390" height="90" rx="12" fill="#fff" stroke="#e5251b" stroke-width="3"/>
+    <text x="872" y="306">Then confirm the dialog. The</text><text x="872" y="336">extension appears in the list.</text>
+    <rect x="850" y="400" width="390" height="80" rx="12" fill="#fff4d6" stroke="#e0b64a" stroke-width="2"/>
+    <text x="872" y="432" font-size="17">ILLUSTRATION, not a screenshot: the folder</text><text x="872" y="456" font-size="17">picker is an operating system window.</text>
+  </g>
+</svg>

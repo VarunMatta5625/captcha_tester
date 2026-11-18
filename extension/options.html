@@ -33,7 +33,7 @@
 </head>
 <body>
 <h1>Auto-login for login.gitam.edu</h1>
-<p>When the login page opens, the extension fills your User ID and password, reads the CAPTCHA, and presses LOGIN once.</p>
+<p>When the login page opens, the extension fills your User ID and password, reads the CAPTCHA, and presses LOGIN (once, plus one retry if the site rejects the CAPTCHA).</p>
 
 <div class="field">
   <label for="username">User ID</label>
@@ -77,8 +77,10 @@
   The password is stored only inside this extension, on this machine only: never synced
   to a Brave/Google account, never sent anywhere but login.gitam.edu. Extension storage
   is not encrypted, so don't set this up on a shared computer. After a failed password
-  the login is not retried, and LOGIN is pressed at most twice per tab, so the site's
-  5-attempt lockout can never be triggered by the extension.
+  the login is not retried automatically, and LOGIN is pressed at most twice in a row per
+  tab. Opening the login page again starts a new count, so each fresh open with a wrong
+  saved password is one more failed login against the site's lockout: correct the password
+  or untick auto sign-in after the first failure.
 </div>
 
 <script src="settings-ui.js"></script>

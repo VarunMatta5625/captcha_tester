@@ -75,13 +75,23 @@ unpacking. Ids repeat across styles, so labels never move between style workspac
 
 ## Versions
 
+### Unreleased (not in the 5.5 zip)
+
+- **Fix:** with auto sign-in on (the default on a fresh install) and no credentials saved yet, the extension pressed LOGIN on empty
+  fields. `maybeAutoSubmit` now returns early unless a User ID and password are saved.
+- **Text:** the options page no longer says the 5-attempt lockout "can never" be triggered. The attempt counters live in per-tab
+  `sessionStorage` and reset when the login page is opened without a message, so a wrong saved password costs one failed login
+  per fresh open. The user-facing text now says so.
+
+---
+
 ### 5.5 — 2026-11-11: auto sign-in rules
 
 **Model unchanged (v5).** Auto-login now has rules for *when* it presses LOGIN (`loadKind()` in `content.js`):
 
 | Page load | Sign in? |
 |---|---|
-| Typed URL, bookmark, link from another site (navigation type `navigate`, referrer not on `gitam.edu`) | yes (if "Sign in automatically" is on) |
+| Typed URL, bookmark, link from another site (navigation type `navigate`, referrer not on `gitam.edu`) | yes (if "Auto sign-in when the site is opened" is on) |
 | Arrived from a `gitam.edu` page: logout, session timeout | only with the new sub-box **Also sign in after logging out** (`signInAfterLogout`, default off, disabled unless auto sign-in is on) |
 | Reload, back/forward, restored tab | never (changed from 5.4, which signed in on reloads too) |
 | "Invalid CAPTCHA" retry | unchanged (max 2 presses per tab) |
@@ -92,7 +102,7 @@ pages count as "logout" (same referrer).
 
 **Tests.** Logging out of the portal (`gstudent.gitam.edu/Home/Logout`) lands on `login.gitam.edu/Login.aspx` with navigation
 type `navigate`, referrer `https://gstudent.gitam.edu/` and an empty `#lblmessage`, so it is classed "internal". The
-sign-in decision itself still needs a run of 5.5 on the live site (the browser was still running 5.4 during that check).
+sign-in decision itself was not run on the live site (the browser was still running 5.4 during that check). Later it was run against a local mock login page (`tools/readme_visuals/`, real extension, fake credentials): a typed address signs in, a reload does not, a logout redirect from a mock `gstudent.gitam.edu` page signs in only with the sub-box ticked (`docs/images/rules.png`). That confirms the rules in code, not the live site.
 Cleanup in this release: removed a dead "unsure" branch and the unused `raw` field (the model always returns a 5-character read); `tools/check_extension.py` still JS == PyTorch on 208/208. No automated test of the sign-in rules (needs the live site). 5.4 is frozen in `archive/extension_5.4_2026-11-11/`.
 
 ---
@@ -105,7 +115,7 @@ Cleanup in this release: removed a dead "unsure" branch and the unused `raw` fie
 - **Toolbar popup and options page** (`popup.html`, `options.html`, shared logic in `settings-ui.js`) with:
   User ID, password, *minimum CAPTCHA confidence to press LOGIN*, and two checkboxes:
   - **Auto populate credentials only**: fills the User ID, password and captcha; you press LOGIN.
-  - **Sign in automatically on login.gitam.edu**: also presses LOGIN. Ticking it ticks the first box
+  - **Sign in automatically on login.gitam.edu** (called "Auto sign-in when the site is opened" since 5.5): also presses LOGIN. Ticking it ticks the first box
     automatically (signing in needs the credentials filled); unticking the first box unticks it.
 - **Icons and logo** for the toolbar and popup.
 - **New permission**: `storage` (for the settings).
@@ -158,7 +168,7 @@ came from v3 + Apple Vision agreement, which under-represents exactly those hard
    (`data/reviews.json`, spot-checked). Gold 100%, but it newly read some 8 as B and 9 as g.
 2. **Round 5** (`notebooks/train_v5.ipynb`, run headless with `tools/run_round.py`):
    v4_ft relabels all 100k captchas; a label is kept when v4_ft agrees with Vision **or** its weakest character is
-   >= 0.7 (`MIN_CONF`; 4.2% dropped), plus the 88 reviews. Train **from scratch** (the teacher's weights would carry
+   >= 0.7 (`MIN_CONF`; 2,906 of the 99,800 non-gold captchas, 2.9%, dropped), plus the 88 reviews. Train **from scratch** (the teacher's weights would carry
    its mistakes over: fine-tuning from v4 scored lower in the 5.2 experiment).
 
 **Training configuration (round 5)**
@@ -293,7 +303,7 @@ it (208/208); 5.0 was verified JS == PyTorch on its 200 gold before that tool ex
 ## Known weak spots
 
 - **8 vs B** is the last confusion v5 shows (1 of the 20 disputed captchas).
-- 4 captchas rejected by 5.3 (2026-11-02 to 11-06) are waiting in `~/Downloads/captcha_mistakes/`, read by v5
+- As of 2026-11-10, 4 captchas rejected by 5.3 (2026-11-02 to 11-06) were waiting in `~/Downloads/captcha_mistakes/`, read by v5
   with confidence **0.90–0.93**: confident misses the `minConfidence` guard cannot catch (each costs one login
   attempt; auto-login retries once). They are the starting point for round 6: gold is saturated at 100%, so real
   misses are now the score that matters.

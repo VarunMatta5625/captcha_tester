@@ -26,22 +26,25 @@ A rejected read logs
 Auto-login
 ----------
 Click the toolbar icon (or Details -> Extension options), enter your User ID and password,
-tick one of the two boxes, Save:
+choose from the three boxes, Save. A fresh install has the first two ticked, but nothing is filled
+or pressed until you save a User ID and password.
 - "Auto populate credentials only": fills User ID + password and the captcha, you press LOGIN.
-- "Sign in automatically": also presses LOGIN. Ticking it ticks the first box too; unticking
-  the first box unticks it.
+- "Auto sign-in when the site is opened": also presses LOGIN. Ticking it ticks the first box too;
+  unticking the first box unticks it.
+- "Also sign in after logging out": a sub-box of auto sign-in, off by default.
 
-- Auto sign-in rules: "Sign in automatically" presses LOGIN when you open the login page by typed
-  address, bookmark or a link, never on a reload or back/forward. Sub-box "Also sign in after
-  logging out" (off by default, only available while auto sign-in is on) also signs in when you
-  arrive from a gitam.edu page (logout, session timeout). Otherwise everything is still filled and
-  you press LOGIN. The retry after "Invalid CAPTCHA" is not affected. The console logs
-  `Page load: type ..., referrer ...`.
+Auto sign-in rules: "Auto sign-in when the site is opened" presses LOGIN when you open the login
+page by typed address, bookmark or a link, never on a reload or back/forward. The sub-box "Also sign
+in after logging out" (only available while auto sign-in is on) also signs in when you arrive from a
+gitam.edu page (logout, session timeout). Otherwise everything is still filled and you press LOGIN.
+The retry after "Invalid CAPTCHA" is not affected. The console logs `Page load: type ..., referrer ...`.
 
-Safety, in short:
-- The site pauses a User ID after 5 failed logins, so the extension is careful: no retry
-  after a wrong password (it stops for the tab and leaves the password box empty), at most one
-  retry after an invalid captcha, and nothing while the rate-limit break is showing.
+Safety, in short (the extension assumes the site pauses a User ID after 5 failed logins):
+- No retry after a wrong password (it stops for the tab and leaves the password box empty), at most
+  one retry after an invalid captcha, and nothing while the rate-limit break is showing.
+- Those counters are per tab and start again whenever the login page is opened without a message,
+  so a wrong saved password costs one failed login every time you open the page. Fix it after the
+  first failure.
 - Reads below the confidence minimum (default 0.5) still fill the captcha, but you press
   LOGIN, so a guess never costs an attempt.
 
@@ -73,7 +76,7 @@ background.js    loads the model, reads captchas, saves misread ones (downloads)
 model.js         image cleaning (letters / blobs / paper) + runs the network (layer order, softmax)
 model.wasm       the heavy maths, compiled to WebAssembly (archive/v1_2026-10-30/wasm/kernels.c)
 model/           trained weights (model.json + weights.bin)
-popup.html       toolbar popup: credentials + the two auto-login boxes
+popup.html       toolbar popup: credentials + the three auto-login boxes
 options.html     full options page (same form, plus security notes)
 settings-ui.js   form logic shared by both (storage, validation, linked checkboxes)
 popup.js         popup's link to the options page

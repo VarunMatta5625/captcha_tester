@@ -5,4 +5,5 @@ Pillow==11.1.0
 jupyter
 matplotlib
 tqdm
-# WASM rebuild only: emscripten (emcc) via brew/emsdk, not pip.
+# Rebuilding model.wasm (not needed normally; archive/v1_2026-10-30/build_wasm.sh): emscripten (emcc) via brew/emsdk, not pip.
+# Regenerating the README visuals (tools/readme_visuals/): pip install playwright && python3 -m playwright install chromium
