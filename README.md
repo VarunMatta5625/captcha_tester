@@ -21,7 +21,7 @@
 </div>
 
 > [!NOTE]
-> **The login page in every screenshot and GIF here is a local mock**, not the real site, so no real account or page appears. The browser, the extension and the model are the real ones. The mock page is plain and unbranded, and every login in the pictures uses a fake User ID and password. The one exception is the folder picker in step 2 of the install, which is a clearly labelled illustration because it is an operating system window.
+> **The login screenshots are of the real login page**, opened read-only in a throwaway browser profile (never my own browser): the page is loaded and the extension fills it, and **nothing is ever submitted**. Any User ID or password in a picture is a fake one. The two exceptions are labelled in place: pictures of *signing in* and of *rejected captchas* show console output from a test run on a local stand-in page, because those need a real account or a real rejection on the real site. The folder picker in the install step is an illustration, because it is an operating system window.
 
 ---
 
@@ -121,19 +121,11 @@ With only the first box ticked you get this, and the last click is yours:
   <img src="docs/images/fill-only.png" alt="Login form with User ID, password and captcha filled, the LOGIN button highlighted as the user's click" width="100%">
 </p>
 
-With auto sign-in on, opening the page is enough:
+With auto sign-in on, opening the page is enough: the extension reads the captcha, fills the form and presses LOGIN by itself. Signing in needs a real account, so this is shown as console output from a test run on a local stand-in page (not the real site):
 
 <p align="center">
-  <img src="docs/images/signin.gif" alt="The login page opens, then the portal home page appears without any click" width="100%">
+  <img src="docs/images/signin.png" alt="Console lines of an automatic sign-in: page load, captcha pasted, Auto-login signing in" width="100%">
 </p>
-
-<details>
-<summary><b>Auto sign-in as still pictures</b></summary>
-
-<p align="center"><img src="docs/images/signin-1.png" alt="The login page just opened, nothing filled yet" width="100%"></p>
-<p align="center"><img src="docs/images/signin-2.png" alt="The portal home page after the automatic sign-in, with the console lines" width="100%"></p>
-
-</details>
 
 > [!IMPORTANT]
 > The password is stored **unencrypted** in the extension's local storage on this machine (never synced). Do not use auto sign-in on a shared computer. Details in [Security](#security).
@@ -213,7 +205,7 @@ Pressing LOGIN is the risky part, because the extension assumes the site locks a
 | Reload, back/forward, restored tab | **Never** |
 | Site said "Invalid CAPTCHA" after a press | One automatic retry (at most 2 presses per tab) |
 
-In every case the credentials and captcha are still filled. These are real console lines from the shipped extension against the mock page:
+In every case the credentials and captcha are still filled. These are real console lines from the shipped extension, from a test run against a local stand-in page (a real sign-in needs a real account):
 
 <p align="center">
   <img src="docs/images/rules.png" alt="Four columns of console output for: typed address signs in, reload fills only, logout with the sub-box off fills only, logout with the sub-box on signs in" width="100%">
@@ -247,19 +239,10 @@ flowchart TD
 If you press LOGIN (or auto sign-in does) with the model's read unchanged and the reloaded page says "Invalid CAPTCHA", the captcha is saved to `Downloads/captcha_mistakes/<time>_model-<read>_conf-<confidence>.png` (time in UTC). A wrong password, a successful login or a code you retyped saves nothing. The right answer is unknown: the file name only says what the model read.
 
 <p align="center">
-  <img src="docs/images/reject.gif" alt="The site says Invalid CAPTCHA, the extension retries once, is rejected again and stops, and both captchas are listed as saved files" width="100%">
+  <img src="docs/images/reject.png" alt="Console lines: Invalid CAPTCHA, one automatic retry, rejected again, auto-login paused; the two saved file names and the two captchas" width="100%">
 </p>
 
-<details>
-<summary><b>The rejection as still pictures</b></summary>
-
-<p align="center"><img src="docs/images/reject-1.png" alt="Invalid CAPTCHA shown, the extension retries" width="100%"></p>
-<p align="center"><img src="docs/images/reject-2.png" alt="Rejected twice: the extension stops" width="100%"></p>
-<p align="center"><img src="docs/images/reject-3.png" alt="The two rejected captchas listed as saved files" width="100%"></p>
-
-</details>
-
-In this demonstration the mock rejects every read on purpose, even correct ones, to show the retry limit and the saving. The saved images are what the next training round uses ([TRAINING.md](docs/TRAINING.md#next-round-6)). A browser extension may only write under Downloads, so they land there first.
+In this test run the local stand-in page rejects every read on purpose, even correct ones, to show the retry limit and the saving. The saved images are what the next training round uses ([TRAINING.md](docs/TRAINING.md#next-round-6)). A browser extension may only write under Downloads, so they land there first.
 
 ---
 
@@ -364,7 +347,7 @@ What the code does, checked against `extension/`:
 - **Hard-coded page.** It looks for the element ids `imgCaptcha`, `txtCaptchaInput`, `txtusername`, `password`, `Submit`, `lblmessage`. If the site renames them the console says `Captcha elements not found`.
 - **No Google reCAPTCHA.** If the login shows reCAPTCHA instead of the image, auto sign-in does nothing.
 - **The 5-attempt lockout is an assumption** taken from how the site behaved for the author; it is not in this repository and was not verified here.
-- **What was and was not tested.** The model was tested against 200 hand-checked captchas and 8 real rejections, in Node against PyTorch. The extension flows (fill, auto sign-in, the rules, the rejected-captcha saving) were tested end to end in Chromium 145 against the **local mock page**. They were not re-run on the live site for this documentation, and Windows, Linux, Edge and Brave were not tested here.
+- **What was and was not tested.** The model was tested against 200 hand-checked captchas and 8 real rejections, in Node against PyTorch. The extension flows (fill, auto sign-in, the rules, the rejected-captcha saving) were tested end to end in Chromium 145 against a **local stand-in page** (the real login page was only opened read-only, never signed in to). Signing in, the rules and the rejected-captcha saving were therefore not run on the live site, and Windows, Linux, Edge and Brave were not tested here.
 - **Chromium only.** There is no Firefox or Safari build (a Safari port exists only for the old captchas, in `archive/`).
 
 ---

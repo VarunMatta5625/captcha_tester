@@ -197,7 +197,7 @@ def rejected_and_saved():
             x += pic.width + 40
         saved = names
         frames.append(im)
-        return frames, log, saved
+        return frames, log, saved, list(mock.served[:2])
 
 
 def rules():
@@ -281,3 +281,32 @@ def install_steps():
         frames.append(frame("3. The extension is installed", pg, boxes=[("#dev-reload-button", 1)],
                             notes=[(1, "This card means it worked. After you update the files or the model, press this circular arrow to reload the extension.")], sub=sub))
     return frames
+
+
+SUB_CONSOLE = "Test run on a local stand-in page, no real account"
+
+
+def console_signin(log):
+    im = canvas("Auto sign-in, as the console shows it", SUB_CONSOLE)
+    y = 84
+    y += note(im, (40, y), "With auto sign-in on and a login saved, the extension does these steps by itself as soon as the page opens: it reads the captcha, fills the form, presses LOGIN, and the portal opens. The real login page is not used for this picture because signing in needs a real account.", w=1200, size=22, n=1) + 20
+    console_panel(im, (40, y), (1200, 640 - y - 30), [l for l in log if "elements not found" not in l])
+    return im
+
+
+def console_reject(log, saved, served):
+    import os, prep
+    im = canvas("A rejected read: one retry, then it stops", SUB_CONSOLE)
+    y = 84
+    y += note(im, (40, y), "The stand-in page rejects every read on purpose, even correct ones, to show the retry limit and the saving of rejected captchas.", w=1200, size=21, n=1) + 14
+    lines = [l for l in log if "elements not found" not in l]
+    console_panel(im, (40, y), (1200, 30 + 24 * (len(lines) + 2)), lines, title="Console (real log lines)")
+    y += 40 + 24 * (len(lines) + 2)
+    x = 40
+    for i in served:
+        pic = prep.open_captcha(i).convert("RGB")
+        pic = pic.resize((pic.width * 2, pic.height * 2), Image.NEAREST)
+        paste_shot(im, pic, (x, y))
+        x += pic.width + 24
+    console_panel(im, (x + 10, y - 4), (1240 - x - 10, 640 - y + 4 - 14), ["Downloads/captcha_mistakes/"] + [f"  {n.split('/')[-1]}" for n in saved], title="Saved files")
+    return im
