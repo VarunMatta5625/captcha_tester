@@ -163,6 +163,7 @@ async function fillCredentials() {
 // The credential fill and the captcha read happen in either order; this fires only once both are done.
 function maybeAutoSubmit(settings) {
   if (!settings.autoLogin || autoSubmitted || !autoState.allowed || !modelRead) return;
+  if (!settings.username || !settings.password) return; // nothing saved yet: never press LOGIN on empty fields
   if (!submitBtn || submitBtn.disabled) return;
   if (document.getElementById('lblRateLimit')) return; // rate-limit break active
   if (visible('pnlGoogleCaptcha')) { // model cannot read reCAPTCHA
