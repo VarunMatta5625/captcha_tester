@@ -47,13 +47,26 @@ def run(which):
             d = ImageDraw.Draw(im)
             d.rectangle([0, 0, anno.W, 54], fill=anno.TEAL)
             d.text((22, 12), title, font=anno.font(26, True), fill="white")
-            d.text((anno.W - 22, 18), "Real extension, local mock login page, fake credentials", font=anno.font(18), fill=(207, 233, 229), anchor="ra")
+            d.text((anno.W - 22, 18), "Real extension, real login page (read-only), fake credentials", font=anno.font(18), fill=(207, 233, 229), anchor="ra")
             return im
-        story = [("first-run-1.png", "Open the login page", 1500), ("first-run-2.png", "The captcha is read and typed for you", 2400),
-                 ("refresh-2.png", "Refresh the captcha: it is read again", 1500), ("refresh-3.png", "Refresh the captcha: it is read again", 1500),
-                 ("popup-5.png", "Optional: save your login once", 2600), ("signin-1.png", "Open the page: auto sign-in starts", 1500),
-                 ("signin-2.png", "You are in, no clicks needed", 3200)]
+        story = [("first-run-1.png", "Open the login page", 1600), ("first-run-2.png", "The captcha is read and typed for you", 2600),
+                 ("refresh-2.png", "Click the captcha: the new one is read too", 1700), ("refresh-3.png", "Click the captcha: the new one is read too", 1700),
+                 ("popup-5.png", "Optional: save your login once", 2600), ("fill-only.png", "Next time the whole form is filled for you", 3200)]
         gif([load(n, t) for n, t, _ in story], "demo.gif", [d for _, _, d in story])
+    if "real_first" in which:
+        import real_scenes
+        b, a = real_scenes.first_run()
+        png(b, "first-run-1.png"); png(a, "first-run-2.png")
+        gif([b, a, a], "first-run.gif", [1800, 2600, 1200])
+    if "real_refresh" in which:
+        import real_scenes
+        fr = real_scenes.refresh()
+        for k, f in enumerate(fr, 1):
+            png(f, f"refresh-{k}.png")
+        gif(fr, "refresh.gif", [1500] * len(fr))
+    if "real_fill" in which:
+        import real_scenes
+        png(real_scenes.fill_only(), "fill-only.png")
     if "install" in which:
         fr = scenes.install_steps()
         for k, f in enumerate(fr, 1):
@@ -61,16 +74,11 @@ def run(which):
         gif(fr, "install.gif", [2500] * len(fr))
     if "fill" in which:
         png(scenes.fill_only(), "fill-only.png")
-    if "signin" in which:
-        fr, _ = scenes.auto_signin()
-        for k, f in enumerate(fr, 1):
-            png(f, f"signin-{k}.png")
-        gif(fr, "signin.gif", [2000, 3500])
-    if "reject" in which:
-        fr, _, saved = scenes.rejected_and_saved()
-        for k, f in enumerate(fr, 1):
-            png(f, f"reject-{k}.png")
-        gif(fr, "reject.gif", [2600, 2600, 4200])
+    if "console" in which:
+        _, slog = scenes.auto_signin()
+        png(scenes.console_signin(slog), "signin.png")
+        _, rlog, saved, served = scenes.rejected_and_saved()
+        png(scenes.console_reject(rlog, saved, served), "reject.png")
     if "rules" in which:
         im, cols = scenes.rules()
         png(im, "rules.png")
@@ -79,4 +87,4 @@ def run(which):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1:] or ["first_run", "refresh", "popup"])
+    run(sys.argv[1:] or ["real_first", "real_refresh", "popup"])

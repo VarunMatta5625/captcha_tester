@@ -36,7 +36,7 @@ python3 tools/check_extension.py models/<model>.pt    # a candidate
 
 It needs `node` and `data/captchas.zip` (for gold). Expected for v5: `JS == PyTorch on 208/208`, gold 200/200, site rejections 8/8. Syntax check of the extension scripts: `node --check extension/content.js` (and the other `.js` files).
 
-The auto-login rules have no unit test. They were run end to end against a local mock login page with the real extension (`tools/readme_visuals/`, see below), not against the live site.
+The auto-login rules have no unit test. They were run end to end against a local stand-in login page with the real extension (`tools/readme_visuals/`, see below), not against the live site, because signing in needs a real account.
 
 ## Ship a model to the extension
 
@@ -69,8 +69,9 @@ Any extension version, model change or not:
 
 The screenshots and GIFs in the README are real runs of the shipped extension, made by `tools/readme_visuals/`:
 
-- `mock_site.py`: a local, unbranded stand-in for the login page with the element ids `content.js` needs. Fake credentials only (`demo1234` / `demo-password`).
-- `browser.py`: Chromium with the extension in a throwaway profile. Only the mock hosts answer; every other request is aborted and no hostname resolves.
+- `real_scenes.py`: the screenshots of the **real** login page. Read-only: GET requests to `login.gitam.edu`, `cdn.gitam.edu` and `cdn.jsdelivr.net` only, everything else (and every POST) is aborted, so a login can never be sent. Fake credentials are stored in the throwaway profile for the "fill" picture, with auto sign-in off.
+- `mock_site.py`: a local, unbranded stand-in (used only for the console pictures of signing in, the rules and rejected captchas) for the login page with the element ids `content.js` needs. Fake credentials only (`demo1234` / `demo-password`).
+- `browser.py`: Chromium with the extension in a throwaway profile. In the mock scenes only the mock hosts answer, every other request is aborted and no hostname resolves.
 - `scenes.py`, `make_visuals.py`: the scenes and the GIF assembly. `model_visuals.py`: cleaning animation, per-character confidence and the accuracy chart, made from the model itself. `anno.py`: red boxes, numbered steps and panels.
 
 ```sh
@@ -79,7 +80,7 @@ python3 tools/readme_visuals/make_visuals.py     # browser scenes -> docs/images
 python3 tools/readme_visuals/model_visuals.py    # model figures  -> docs/images/
 ```
 
-Both need `data/captchas.zip` (the mock serves gold captchas). The diagrams `docs/images/banner.svg`, `network.svg` and `folder-picker.svg` are hand-written SVG. The folder picker is an illustration, not a screenshot, because it is an operating system window.
+The real-page scenes need network access to the login page; the mock scenes need `data/captchas.zip` (the mock serves gold captchas). Scene names for `make_visuals.py`: `real_first real_refresh real_fill popup install console rules hero`. The diagrams `docs/images/banner.svg`, `network.svg` and `folder-picker.svg` are hand-written SVG. The folder picker is an illustration, not a screenshot, because it is an operating system window.
 
 ## GitHub notes
 
