@@ -80,6 +80,8 @@ python3 tools/readme_visuals/make_visuals.py     # browser scenes -> docs/images
 python3 tools/readme_visuals/model_visuals.py    # model figures  -> docs/images/
 ```
 
+Which scene makes which image, and the rules for rebuilding, are in [tools/readme_visuals/README.md](../tools/readme_visuals/README.md). After editing any Markdown, run `python3 tools/readme_visuals/check_docs.py` (links, anchors, unused images, Mermaid and math parse).
+
 The real-page scenes need network access to the login page; the mock scenes need `data/captchas.zip` (the mock serves gold captchas). Scene names for `make_visuals.py`: `real_first real_refresh real_fill popup install console rules hero`. The diagrams `docs/images/banner.svg`, `network.svg` and `folder-picker.svg` are hand-written SVG. The folder picker is an illustration, not a screenshot, because it is an operating system window.
 
 ## GitHub notes
