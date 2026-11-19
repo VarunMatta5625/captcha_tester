@@ -1,6 +1,6 @@
-"""README scenes on the REAL login page (read-only: the page is opened and the extension fills it, nothing is ever
-submitted). The browser is a throwaway Chromium profile, not your own browser; fake credentials are typed into the
-extension's settings only for the "fill" picture, with auto sign-in off.
+"""README scenes that open the actual login page in a throwaway Chromium profile (not your own browser). The page is
+loaded and the extension fills it; nothing is ever submitted. Fake credentials go into the extension's settings only
+for the "fill" picture, with auto sign-in off.
 
 Only login.gitam.edu, cdn.gitam.edu and cdn.jsdelivr.net (the page's own assets) are reachable; everything else is
 aborted. Run through make_visuals.py (scene names: real_first, real_refresh, real_fill).
@@ -70,7 +70,7 @@ def rect(pg, sel):
             XY[0] + (b["x"] + b["width"] - CARD[0]) * K, XY[1] + (b["y"] + b["height"] - CARD[1]) * K)
 
 
-def frame(title, pg, boxes=(), notes=(), console=None, sub="The real login page, opened read-only in a throwaway browser"):
+def frame(title, pg, boxes=(), notes=(), console=None, sub="Illustration"):
     im = canvas(title, sub)
     paste_shot(im, card(pg), XY)
     for sel, n in boxes:
@@ -95,7 +95,7 @@ def first_run():
         pg, _ = open_page(ctx)
         pg.wait_for_timeout(500)
         before = frame("1. Without the extension: the captcha box is empty", pg, boxes=[("#txtCaptchaInput", 1)],
-                       notes=[(1, "This is the real login page with no extension installed. You would type the five characters yourself.")],
+                       notes=[(1, "The login page with no extension installed. You would type the five characters yourself.")],
                        console=[])
     with real() as (ctx, _):
         pg, log = open_page(ctx)

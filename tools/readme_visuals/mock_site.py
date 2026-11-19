@@ -1,4 +1,4 @@
-"""A local stand-in for the login page, so the README visuals never touch a real site or account.
+"""A local copy of the login form, so the console pictures never need a real site or account.
 
 The browser is started with every request blocked except https://login.gitam.edu/* and
 https://gstudent.gitam.edu/* , which are answered from this file. The page is deliberately plain and unbranded.
