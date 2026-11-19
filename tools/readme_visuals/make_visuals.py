@@ -40,19 +40,6 @@ def run(which):
         for k, f in enumerate(fr, 1):
             png(f, f"popup-{k}.png")
         gif(fr, "popup.gif", [2400] * len(fr))
-    if "hero" in which:
-        from PIL import Image, ImageDraw
-        def load(n, title):
-            im = Image.open(os.path.join(OUT, n)).convert("RGB")
-            d = ImageDraw.Draw(im)
-            d.rectangle([0, 0, anno.W, 54], fill=anno.TEAL)
-            d.text((22, 12), title, font=anno.font(26, True), fill="white")
-            d.text((anno.W - 22, 18), "Illustration", font=anno.font(18), fill=(207, 233, 229), anchor="ra")
-            return im
-        story = [("first-run-1.png", "Open the login page", 1600), ("first-run-2.png", "The captcha is read and typed for you", 2600),
-                 ("refresh-2.png", "Click the captcha: the new one is read too", 1700), ("refresh-3.png", "Click the captcha: the new one is read too", 1700),
-                 ("popup-5.png", "Optional: save your login once", 2600), ("fill-only.png", "Next time the whole form is filled for you", 3200)]
-        gif([load(n, t) for n, t, _ in story], "demo.gif", [d for _, _, d in story])
     if "real_first" in which:
         import real_scenes
         b, a = real_scenes.first_run()
@@ -84,6 +71,19 @@ def run(which):
         png(im, "rules.png")
         for t, ok, log in cols:
             print(t, ok, log)
+    if "hero" in which:
+        from PIL import Image, ImageDraw
+        def load(n, title):
+            im = Image.open(os.path.join(OUT, n)).convert("RGB")
+            d = ImageDraw.Draw(im)
+            d.rectangle([0, 0, anno.W, 54], fill=anno.TEAL)
+            d.text((22, 12), title, font=anno.font(26, True), fill="white")
+            d.text((anno.W - 22, 18), "Illustration", font=anno.font(18), fill=(207, 233, 229), anchor="ra")
+            return im
+        story = [("first-run-1.png", "Open the login page", 1600), ("first-run-2.png", "The captcha is read and typed for you", 2600),
+                 ("refresh-2.png", "Click the captcha: the new one is read too", 1700), ("refresh-3.png", "Click the captcha: the new one is read too", 1700),
+                 ("popup-5.png", "Optional: save your login once", 2600), ("fill-only.png", "Next time the whole form is filled for you", 3200)]
+        gif([load(n, t) for n, t, _ in story], "demo.gif", [d for _, _, d in story])
 
 
 if __name__ == "__main__":
