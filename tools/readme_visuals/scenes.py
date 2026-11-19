@@ -1,5 +1,5 @@
-"""Browser scenes for the README: each returns frames (PIL images) built from real runs of the shipped extension
-against the local mock login page. Run through make_visuals.py."""
+"""Browser scenes for the README: each returns frames (PIL images) built from runs of the extension against the
+local mock login page. Run through make_visuals.py."""
 import io, re, time
 from PIL import Image
 
@@ -183,11 +183,11 @@ def rejected_and_saved():
         frames.append(frame("2. Rejected twice: it stops", pg, boxes=[("#lblmessage", 1)],
                             notes=[(1, "Two LOGIN presses per tab is the limit. You take over from here.")],
                             console=[l for l in log if "Pasted" not in l]))
-        im = canvas("3. Both rejected captchas were saved", "File names from the extension's log, images from the throwaway downloads folder")
+        im = canvas("3. Both rejected captchas were saved", "Illustration")
         y = 84
         y += note(im, (40, y), "Each rejected read is saved as a PNG named with the time (UTC), what the model read and its confidence. The right answer is unknown: label these before training on them.", w=1200, size=22, n=1) + 24
         lines = ["~/Downloads/"] + [f"  {n}" for n in names] or ["(nothing saved)"]
-        console_panel(im, (40, y), (1200, 40 + 24 * len(lines)), lines, title="Saved files (real names from this run)")
+        console_panel(im, (40, y), (1200, 40 + 24 * len(lines)), lines, title="Saved files")
         x, y = 40, y + 70 + 24 * len(lines)
         import prep
         for i in mock.served[:2]:   # the two captchas the mock rejected, in the order they were sent
@@ -231,7 +231,7 @@ def rules():
         pg2.reload(); pg2.wait_for_timeout(2000)
         cols.append(("Reload or back/forward", pg2.url.startswith("https://gstudent"), L2[n0:]))
     order = [0, 3, 1, 2]   # typed, reload, logout off, logout on
-    im = canvas("When does auto sign-in press LOGIN?", "Real console output, local mock login page")
+    im = canvas("When does auto sign-in press LOGIN?", "Illustration: console output from a test page")
     x, w = 20, 300
     for idx in order:
         title, signed, log = cols[idx]
@@ -264,14 +264,14 @@ def fill_only():
 
 
 def install_steps():
-    """chrome://extensions with the real extension (loaded here with a launch flag instead of the folder picker)."""
+    """chrome://extensions with the extension (loaded here with a launch flag instead of the folder picker)."""
     mock = Mock()
     frames = []
     with session(mock) as (ctx, ext, dl):
         pg = ctx.new_page()
         pg.goto("chrome://extensions")
         pg.wait_for_timeout(1200)
-        sub = "Real chrome://extensions page (throwaway browser profile)"
+        sub = "Illustration"
         frames.append(frame("1. Turn on Developer mode", pg, boxes=[("#devMode", 1)],
                             notes=[(1, "Open chrome://extensions (Edge: edge://extensions, Brave: brave://extensions). Switch on Developer mode, top right.")], sub=sub))
         pg.click("#devMode")
@@ -283,7 +283,7 @@ def install_steps():
     return frames
 
 
-SUB_CONSOLE = "Test run on a local stand-in page, no real account"
+SUB_CONSOLE = "Illustration: console output from a test page"
 
 
 def console_signin(log):
@@ -300,7 +300,7 @@ def console_reject(log, saved, served):
     y = 84
     y += note(im, (40, y), "The stand-in page rejects every read on purpose, even correct ones, to show the retry limit and the saving of rejected captchas.", w=1200, size=21, n=1) + 14
     lines = [l for l in log if "elements not found" not in l]
-    console_panel(im, (40, y), (1200, 30 + 24 * (len(lines) + 2)), lines, title="Console (real log lines)")
+    console_panel(im, (40, y), (1200, 30 + 24 * (len(lines) + 2)), lines, title="Console output")
     y += 40 + 24 * (len(lines) + 2)
     x = 40
     for i in served:

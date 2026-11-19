@@ -1,16 +1,6 @@
 # Training and data
 
-How the model is trained, what data it uses, and how to run another round. For shipping a model to the extension see [DEVELOPMENT.md](DEVELOPMENT.md); for what each version changed see [CHANGELOG.md](CHANGELOG.md).
-
-- [Captcha styles](#captcha-styles)
-- [Current models](#current-models)
-- [Data](#data)
-- [Scripts](#scripts)
-- [Next round (6)](#next-round-6)
-- [Review loop](#review-loop)
-- [New captcha style](#new-captcha-style)
-- [Rules that keep scores meaningful](#rules-that-keep-scores-meaningful)
-- [Gotchas](#gotchas)
+How the model is trained, what data it uses, and how to run another round. Shipping a model is in [DEVELOPMENT.md](DEVELOPMENT.md), and what each version changed is in [CHANGELOG.md](CHANGELOG.md).
 
 Setup: `pip install -r requirements.txt` (torch, numpy, Pillow, jupyter, matplotlib, tqdm), then `cd notebooks && jupyter lab`. Notebooks use paths relative to `notebooks/` and run on `mps` (Apple Silicon) or CPU. Apple Vision labelling (`tools/ocr`, `scripts/label_vision.py`) is macOS only.
 
@@ -22,30 +12,30 @@ All captchas are 150x45 PNGs with 5 characters from the same 37-character alphab
 
 1. Black letters crossed by gray lines: v1, frozen in `archive/v1_2026-10-30/`.
 2. Red letters on fine gray speckle (2026-10-30): v2/v3, frozen in `archive/v2_2026-10-31/` (best gold 98.5%).
-3. **Current** (since 2026-10-31, between 03:02 and 08:04 UTC): the same red letters in a **bolder font** with gray blobs drawn over them. Letters-only cleaning leaves holes where a blob covers a letter, so since 2026-10-31 the model reads **three levels** (`prep.clean`: letters 0, blobs 128, paper 255; +1.5 points on gold in a controlled test). The new **J** has no top bar: every old model reads it as **3**. Other weak pairs: B/8, y/Y, g/9, a/e.
+3. Current (since 2026-10-31, between 03:02 and 08:04 UTC): the same red letters in a bolder font with gray blobs drawn over them. Cleaning that keeps only the letters leaves holes where a blob covers one, so the model now reads three levels (`prep.clean`: letters 0, blobs 128, paper 255), which was worth 1.5 points on gold in a controlled test. The new J has no top bar, and every old model reads it as a 3. Other weak pairs: B/8, y/Y, g/9, a/e.
 
 ## Current models
 
-100k style-3 captchas, 200 gold checked (2 labels fixed after a recheck). *Site* = the 8 style-3 captchas the site rejected from 5.1 (`data/site_mistakes/`). *Disputed* = the 20 test captchas where v4 and v4_ft disagree, truth read by eye (the best check of real accuracy beyond gold).
+100k style-3 captchas, 200 gold checked (2 labels fixed after a recheck). *Site* is the 8 style-3 captchas the site rejected from 5.1 (`data/site_mistakes/`). *Disputed* is the 20 test captchas where v4 and v4_ft disagree, with the truth read by eye. It's the best check of real accuracy beyond gold.
 
 | Model (`models/`) | Trained on | Gold | Site | Disputed |
 |---|---|---|---|---|
 | `captcha_cnn_v4_ft.pt` | v4 fine-tuned on the 88 hard cases in `data/reviews.json` (labelled by Claude from the image, spot-checked); teacher of round 5 | 100% | 8/8 | 15/20 (reads some 8 as B, 9 as g) |
-| `captcha_cnn_v5.pt` | round 5: v4_ft's labels where it agrees with Vision or its weakest character is >= 0.7 (96,806) + the 88 reviews = 96,894, three-level, from scratch | **100%** | **8/8** | **19/20** (one 8 read as B). **Ships in extensions 5.3, 5.4 and 5.5** |
+| `captcha_cnn_v5.pt` | round 5: v4_ft's labels where it agrees with Vision or its weakest character is >= 0.7 (96,806) + the 88 reviews = 96,894, three-level, from scratch | 100% | 8/8 | 19/20 (one 8 read as B). Ships in extensions 5.3, 5.4 and 5.5 |
 
-The gold and site numbers for v5 were re-checked on 2026-11-18 with `python3 tools/check_extension.py` (JS equals PyTorch on 208/208); the archived models' gold and site numbers below were re-run the same day with PyTorch. The *Disputed* column is from the project's earlier notes and was not re-run (the list of 20 is not stored in the repository).
+I re-checked v5's gold and site numbers on 2026-11-18 with `python3 tools/check_extension.py` (JS equals PyTorch on 208/208), and re-ran the archived models' numbers below with PyTorch the same day. The *Disputed* column comes from my earlier notes and wasn't re-run, because the list of 20 isn't stored in the repo.
 
 Archived: v3 (teacher of round 4, 86.0% on style-3 gold) and v4 (extension 5.2, 97.0%, 8/8, 5/20 disputed: 6 as 5, J as 3, y as Y) with round 4 in `archive/round4_2026-11-01/`; v2_ft (extension 5.1; style-3 gold 87.5%, 0/8 site) in `archive/v2_2026-10-31/models/`; v4 two-level (94.5% on corrected gold, 6/8 site) and the input-variant experiment in `archive/three_level_switch_2026-10-31/`.
 
 ## Data
 
-Each captcha style's images live in one zip. Code reads it directly via `prep.captcha_ids()` / `prep.open_captcha(id)`; nothing needs unzipping. Ids are the numeric file names, so **ids repeat across styles**: labels, gold and reviews belong to their zip and never move between workspaces.
+Each captcha style's images live in one zip. Code reads it directly with `prep.captcha_ids()` and `prep.open_captcha(id)`, so nothing needs unzipping. Ids are the numeric file names and they repeat across styles, so labels, gold and reviews belong to their zip and never move between workspaces.
 
 | File | What |
 |---|---|
-| `data/captchas.zip` | **The captchas of the current style** (`<id>.png`, stored uncompressed). Git-ignored and not regenerable: back it up. Style 3: 100,000 captchas (787 MB). |
+| `data/captchas.zip` | The captchas of the current style (`<id>.png`, stored uncompressed). Git-ignored and can't be regenerated, so back it up. Style 3: 100,000 captchas (787 MB). |
 | `data/gold.csv` | 200 hand-checked test captchas (`label`, pre-label `model`, `vision`, `checked` time). Never trained on. |
-| `data/reviews.json` | Typed answers: the only human labels besides gold. Style 3: 88 hard cases, labelled by Claude from the image and spot-checked (`labeled_by`). Shared by all rounds of one style. |
+| `data/reviews.json` | Typed answers, the only human labels besides gold. Style 3: 88 hard cases, labelled by Claude from the image and spot-checked (`labeled_by`). Shared by all rounds of one style. |
 | `data/site_mistakes/` | Style-3 captchas the live site rejected (saved by the extension), with `labels.csv` (truth read from the image, not hand-checked). Scored, not trained on. |
 | `data/labels_vision.csv` | Apple Vision's read of every captcha (`vision` = valid 5-character read or `""`; `raw`). |
 | `data/labels_v5.csv` | Training labels written by round 5's relabel cell: 57,437 `agree`, 39,369 `confident`, 88 `review` (used for training) and 2,906 `disagree` (not used). |
@@ -67,17 +57,17 @@ Older styles: `archive/v2_2026-10-31/data/captchas.zip` (style 2, 100,000 captch
 | `scripts/finetune.py` | Fine-tunes `MODEL_PATH` on all reviews plus 5,000 anchors into `FT_PATH`. Always restarts from the baseline, so re-running never stacks fine-tunes. |
 | `notebooks/train_v5.ipynb` | Round 5 (run, shipped in 5.3): relabel with v4_ft (agree with Vision, or confidence >= 0.7), plus reviews, three-level, from scratch. Template for later rounds (round 4 and the style-2 rounds are in the archive). |
 | `tools/run_round.py` | Runs a round notebook headless up to the review loop (sections 1–11) and saves its outputs; needs gold already checked. |
-| `tools/check_extension.py` | The pre-ship check, see [DEVELOPMENT.md](DEVELOPMENT.md#run-the-checks). |
+| `tools/check_extension.py` | The pre-ship check, see [DEVELOPMENT.md](DEVELOPMENT.md#checks). |
 
 ## Next round (6)
 
-v5 already scores 100% on gold, so gold can no longer tell a better model apart. Wait for real misses first: when 5.3 and later save rejected captchas, label them and use them as the score that matters.
+v5 already scores 100% on gold, so gold can't tell a better model apart any more. Wait for real misses first: when 5.3 and later save rejected captchas, label them and use them as the score that matters.
 
 1. Move `~/Downloads/captcha_mistakes/*.png` into `data/site_mistakes/` and add a row per file to its `labels.csv` (`truth` = what the image says). They are scored, not trained on. Optionally add some to `data/reviews.json` (review loop below) so they are trained on next time.
 2. Copy `notebooks/train_v5.ipynb` to `train_v6.ipynb`. In its setup cell set `TEACHER = "../models/captcha_cnn_v5.pt"` and `LABELS_CSV`, `MODEL_PATH`, `FT_PATH` to `v6`, plus the relabel knobs `VISION_FIXES` / `MIN_CONF` (see `scripts/relabel.py`). Update the intro and the section-10 names.
 3. `python3 tools/run_round.py notebooks/train_v6.ipynb` from the project root (about 12 minutes, no input): relabel into `data/labels_v6.csv`, train into `models/captcha_cnn_v6.pt`, and section 10 prints gold for teacher versus new.
 4. `python3 tools/check_extension.py models/captcha_cnn_v6.pt`, and the same with no argument (the shipped v5): compare gold and site scores. Every JS read must match PyTorch.
-5. If v6 beats v5: ship it ([DEVELOPMENT.md](DEVELOPMENT.md#ship-a-model-to-the-extension)), update the table above, archive the previous round like `archive/round4_2026-11-01/` (its notebook, labels and models; keep the new round's teacher) and commit.
+5. If v6 beats v5: ship it ([DEVELOPMENT.md](DEVELOPMENT.md#shipping-a-model)), update the table above, archive the previous round like `archive/round4_2026-11-01/` (its notebook, labels and models; keep the new round's teacher) and commit.
 
 ## Review loop
 
@@ -89,9 +79,9 @@ Archive the workspace like `archive/v2_2026-10-31/` (data, round notebooks, cach
 
 ## Rules that keep scores meaningful
 
-- **Gold is never trained on, relabelled or reviewed.** Every script skips `GOLD` ids. Compare models on gold only; val/test only measure agreement with the teacher's labels.
-- **Preprocessing must match**: `scripts/prep.py` `clean()` and `extension/model.js` `clean()` both make pixels with `r - g > 60 && r - b > 60` letters (0), other pixels with `r + g + b < 600` blobs (128), everything else 255. Change both or neither, then re-export. Checkpoints say which cleaning they need (`levels`: 3, or missing = 2 = letters only: v1-v3 and the archived v4 two-level). The notebook's `load_model` and the exported `model.json` carry it, so old and new models both read correctly.
-- **Alphabet** (`2345689ABDEFGHJLMNQRTYabdefghijmnqrty`, no 0/O/1/l/I/7) comes from the checkpoint. Gold checking accepts any letter or digit and warns if a new character appears. Adding one means new head classes and removing the matching entries from `prep.LEARNED`.
+- Gold is never trained on, relabelled or reviewed. Every script skips `GOLD` ids. Compare models on gold only. Val and test only measure agreement with the teacher's labels.
+- Preprocessing has to match: `scripts/prep.py` `clean()` and `extension/model.js` `clean()` both make pixels with `r - g > 60 && r - b > 60` letters (0), other pixels with `r + g + b < 600` blobs (128), everything else 255. Change both or neither, then re-export. Checkpoints say which cleaning they need (`levels`: 3, or missing = 2 = letters only: v1-v3 and the archived v4 two-level). The notebook's `load_model` and the exported `model.json` carry it, so old and new models both read correctly.
+- The alphabet (`2345689ABDEFGHJLMNQRTYabdefghijmnqrty`, no 0/O/1/l/I/7) comes from the checkpoint. Gold checking accepts any letter or digit and warns if a new character appears. Adding one means new head classes and removing the matching entries from `prep.LEARNED`.
 - `export_model.py` only knows this architecture (4 blocks of conv-BN-ReLU x2 + maxpool, widths 32/64/128/192, mean over height, Linear 512, 5 heads). A different network needs export and `model.js` changes too.
 
 ## Gotchas

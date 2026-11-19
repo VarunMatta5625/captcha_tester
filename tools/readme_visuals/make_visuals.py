@@ -1,4 +1,4 @@
-"""Rebuilds the README screenshots and GIFs in docs/images/ from real runs against a local mock login page.
+"""Rebuilds the README pictures in docs/images/ (illustrations built from test runs of the extension).
 
     python3 tools/readme_visuals/make_visuals.py [scene ...]       (from the project root)
 
@@ -47,7 +47,7 @@ def run(which):
             d = ImageDraw.Draw(im)
             d.rectangle([0, 0, anno.W, 54], fill=anno.TEAL)
             d.text((22, 12), title, font=anno.font(26, True), fill="white")
-            d.text((anno.W - 22, 18), "Real extension, real login page (read-only), fake credentials", font=anno.font(18), fill=(207, 233, 229), anchor="ra")
+            d.text((anno.W - 22, 18), "Illustration", font=anno.font(18), fill=(207, 233, 229), anchor="ra")
             return im
         story = [("first-run-1.png", "Open the login page", 1600), ("first-run-2.png", "The captcha is read and typed for you", 2600),
                  ("refresh-2.png", "Click the captcha: the new one is read too", 1700), ("refresh-3.png", "Click the captcha: the new one is read too", 1700),

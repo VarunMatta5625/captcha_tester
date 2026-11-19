@@ -1,83 +1,84 @@
 Instant CAPTCHA Paster
-=====================
+======================
 
-Fills the captcha on login.gitam.edu with a small neural network that runs inside the extension.
-Nothing else to install: no Python, no helper program. Works in Chrome (and Chromium-based
-browsers such as Edge and Brave) on macOS, Linux and Windows. Optionally it also fills your
-User ID and password, and can press LOGIN for you.
+Fills in the captcha on login.gitam.edu using a small neural network that runs inside the
+extension. There's nothing else to install: no Python, no helper program. It works in Chrome and
+other Chromium browsers (Edge, Brave). It can also fill in your User ID and password and press
+LOGIN for you, if you ask it to.
 
 Install
 -------
-1. Unzip this folder somewhere permanent (the browser keeps loading it from there).
+1. Unzip this folder somewhere it can stay. The browser keeps loading the extension from there.
 2. Open chrome://extensions (Edge: edge://extensions, Brave: brave://extensions).
-3. Turn on "Developer mode" (top right).
-4. Click "Load unpacked" and choose the unzipped folder (the one containing manifest.json).
-5. Open login.gitam.edu. The captcha box fills itself almost instantly, and again
-   every time the captcha refreshes.
+3. Turn on "Developer mode", top right.
+4. Click "Load unpacked" and pick the unzipped folder, the one with manifest.json in it.
+5. Open login.gitam.edu. The captcha box fills itself, and again each time the captcha refreshes.
 
-Check it is working
--------------------
-Right-click the login page -> Inspect -> Console. Each captcha logs a line like
+Checking that it works
+----------------------
+Right-click the login page, Inspect, Console. Every captcha logs a line like
     [CAPTCHA] Pasted mMy2g (confidence 0.922, model 30 ms, total 60 ms)
-Low confidence (below about 0.5) means the read is a guess: check the box before submitting.
-A rejected read logs
+A confidence below about 0.5 means it's guessing, so check the box before you submit.
+If the site turns down a read, you'll see
     [CAPTCHA] Site rejected the model's read, saved captcha_mistakes/20261031-025337_model-r6EAg_conf-0.900.png
 
 Auto-login
 ----------
-Click the toolbar icon (or Details -> Extension options), enter your User ID and password,
-choose from the three boxes, Save. A fresh install has the first two ticked, but nothing is filled
-or pressed until you save a User ID and password.
-- "Auto populate credentials only": fills User ID + password and the captcha, you press LOGIN.
-- "Auto sign-in when the site is opened": also presses LOGIN. Ticking it ticks the first box too;
-  unticking the first box unticks it.
+Click the toolbar icon (or Details, then Extension options), enter your User ID and password, tick
+what you want and hit Save. On a fresh install the first two boxes are ticked, but nothing gets
+filled in or pressed until you've saved a User ID and password.
+
+- "Auto populate credentials only": fills User ID, password and the captcha. You press LOGIN.
+- "Auto sign-in when the site is opened": also presses LOGIN. Ticking it ticks the first box too,
+  and unticking the first box unticks it.
 - "Also sign in after logging out": a sub-box of auto sign-in, off by default.
 
-Auto sign-in rules: "Auto sign-in when the site is opened" presses LOGIN when you open the login
-page by typed address, bookmark or a link, never on a reload or back/forward. The sub-box "Also sign
-in after logging out" (only available while auto sign-in is on) also signs in when you arrive from a
-gitam.edu page (logout, session timeout). Otherwise everything is still filled and you press LOGIN.
-The retry after "Invalid CAPTCHA" is not affected. The console logs `Page load: type ..., referrer ...`.
+When it signs in: with auto sign-in on, LOGIN gets pressed when you open the login page by typed
+address, bookmark or a link, and never on a reload or back/forward. With the sub-box ticked it also
+signs in when you arrive from another gitam.edu page (after a logout or a session timeout). In every
+other case everything is still filled in and you press LOGIN yourself. The retry after "Invalid
+CAPTCHA" works the same way either way. The console logs `Page load: type ..., referrer ...` so you
+can see what it decided.
 
-Safety, in short (the extension assumes the site pauses a User ID after 5 failed logins):
-- No retry after a wrong password (it stops for the tab and leaves the password box empty), at most
-  one retry after an invalid captcha, and nothing while the rate-limit break is showing.
-- Those counters are per tab and start again whenever the login page is opened without a message,
-  so a wrong saved password costs one failed login every time you open the page. Fix it after the
+A word on safety. The extension assumes the site pauses a User ID after 5 failed logins, so:
+- After a wrong password it stops for that tab and leaves the password box empty. After an invalid
+  captcha it retries once at most. It does nothing while the rate-limit break is showing.
+- Those counters are per tab and start over whenever the login page opens without a message on it.
+  So if the saved password is wrong, every fresh open costs one failed login. Fix it after the
   first failure.
-- Reads below the confidence minimum (default 0.5) still fill the captcha, but you press
-  LOGIN, so a guess never costs an attempt.
+- A read below the minimum confidence (0.5 by default) still fills the captcha, but you press LOGIN,
+  so a guess never costs an attempt.
 
-The password stays in the extension's own storage (chrome.storage.local) on this machine only,
-never synced. It is not encrypted, so skip this on shared computers. "Clear" removes it.
+The password is kept in the extension's own storage (chrome.storage.local), on this machine only,
+and never synced. It isn't encrypted, so skip auto sign-in on a shared computer. "Clear" removes it.
 
 Captchas the model got wrong
 ----------------------------
-When you press LOGIN with the model's answer and the site replies "Invalid CAPTCHA", the rejected
-captcha is saved automatically to
+If you press LOGIN with the model's answer and the site says "Invalid CAPTCHA", the rejected captcha
+is saved to
     Downloads/captcha_mistakes/<time>_model-<model's read>_conf-<confidence>.png
-(time is UTC). Only rejected reads are saved: correct reads, wrong-password failures and logins
-where you retyped the code yourself save nothing. The right answer is unknown; label these later.
+(the time is UTC). Only rejected reads are saved. Correct reads, wrong-password failures and logins
+where you typed the code yourself save nothing. The right answer isn't known, so label these later.
 
-Update the model
-----------------
-From the project root: python3 export_model.py [models/<model>.pt] (default models/captcha_cnn_v5.pt)
-rewrites model/model.json and model/weights.bin. Then click the reload icon on the extension in
-chrome://extensions. model.js cleans the image before reading exactly like training (scripts/prep.py):
-red letters 0, gray blobs 128, paper 255 (prep.clean), or letters only for models exported without
-"levels": 3 (prep.ink); change both together or not at all.
+Updating the model
+------------------
+From the project root, run python3 export_model.py [models/<model>.pt] (default
+models/captcha_cnn_v5.pt). That rewrites model/model.json and model/weights.bin. Then click the
+reload icon on the extension in chrome://extensions. model.js cleans the image the same way training
+did (scripts/prep.py): red letters 0, gray blobs 128, paper 255 (prep.clean), or letters only for
+models exported without "levels": 3 (prep.ink). Change both together or not at all.
 
 Files
 -----
-manifest.json    extension definition
-content.js       reads the captcha image on the page, fills the answer, spots rejected reads,
-                 fills credentials and presses LOGIN (auto-login, with the safety guards above)
+manifest.json    the extension definition
+content.js       reads the captcha image on the page, fills in the answer, spots rejected reads,
+                 fills credentials and presses LOGIN (with the guards described above)
 background.js    loads the model, reads captchas, saves misread ones (downloads)
-model.js         image cleaning (letters / blobs / paper) + runs the network (layer order, softmax)
-model.wasm       the heavy maths, compiled to WebAssembly (archive/v1_2026-10-30/wasm/kernels.c)
-model/           trained weights (model.json + weights.bin)
-popup.html       toolbar popup: credentials + the three auto-login boxes
-options.html     full options page (same form, plus security notes)
+model.js         image cleaning (letters / blobs / paper) and the network (layer order, softmax)
+model.wasm       the heavy math, compiled to WebAssembly (archive/v1_2026-10-30/wasm/kernels.c)
+model/           the trained weights (model.json + weights.bin)
+popup.html       toolbar popup: credentials and the three auto-login boxes
+options.html     the full options page (same form, plus security notes)
 settings-ui.js   form logic shared by both (storage, validation, linked checkboxes)
-popup.js         popup's link to the options page
+popup.js         the popup's link to the options page
 icons/, logo.png toolbar icons and the popup's logo

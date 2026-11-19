@@ -14,3 +14,7 @@ archive/v1_2026-10-30/training/v1/rejected/
 archive/v1_2026-10-30/training/v2/cache/
 archive/v1_2026-10-30/safari/xcode-project/CAPTCHA Paster/build/
 __pycache__/
+
+# intermediate frames made by tools/readme_visuals/make_visuals.py
+docs/images/*-[0-9].png
+docs/images/*-[0-9][0-9].png

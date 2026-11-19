@@ -78,7 +78,7 @@ def note(im, xy, text, w=420, size=19, fill=(255, 255, 255), outline=RED, color=
     return h
 
 
-def console_panel(im, xy, size, lines, title="Console (real log lines from this run)"):
+def console_panel(im, xy, size, lines, title="Console output"):
     """Dark DevTools-like panel. lines = list of strings; long ones wrap; the [CAPTCHA] prefix is tinted."""
     x, y = xy
     w, h = size
